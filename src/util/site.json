@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "iconimage": "/assets/tw-logo-white.svg",
+    "favicon32x32": "/icons/icon-512x512.png",
+    "favicon16x16": "/icons/icon-192x192.png",
+    "companyname": "TRON in 60 Seconds",
+    "siteUrl": "https://tronin60.netlify.app",
+    "twitterUsername": "toddlambert",
+    "titleDefault": "TRON in 60 Seconds",
+    "icon192": "/icons/icon-192x192.png",
+    "titleTemplate": "%s",
+    "title": "TRON in 60 seconds",
+    "image": "/assets/default-og-image.jpg",
+    "description": "Explore the movie TRON in only 60 seconds",
+    "icon512": "/icons/icon-512x512.png",
+    "showfooter": true,
+    "comments": "5708736052068352-proj"
+  },
+  "ga": "UA-220944517-1"
+}
