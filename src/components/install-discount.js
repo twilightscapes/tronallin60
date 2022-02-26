@@ -4,10 +4,10 @@ import React from 'react'
 // import { IoShareOutline } from 'react-icons/io5';
 // import { FaRegPlusSquare } from 'react-icons/fa';
 // import ScrollAnimation from 'react-animate-on-scroll'
-// import CookieConsent from "react-cookie-consent"
+import CookieConsent from "react-cookie-consent"
 // import { StaticImage } from "gatsby-plugin-image"
 import ReactPlayer from 'react-player/lazy'
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 import { AiOutlineAudioMuted } from "react-icons/ai"
 // import Greeter from "./GreetMe"
 import styled from "styled-components";
@@ -39,6 +39,9 @@ const CustomBox = styled.div`
 
 `
 
+const current = new Date();
+const date = `${current.getMonth()+2}/${current.getDate()+2}/${current.getFullYear()}`;
+
 const InstallDiscount = () => (
 <>
 
@@ -48,7 +51,7 @@ const InstallDiscount = () => (
 
 
 <div id="installer" className="popper1" style={{ display:'flex', justifyContent:'center', alignContent:'center', position: 'fixed', top:'60px',
-left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex:'5'}}>
+left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex:'15'}}>
 
 
 {/* <ReactPlayer
@@ -62,10 +65,10 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
           // ]}
           width=""
           height=""
-          style={{left:'', position:'', zIndex:'30', display:'grid', width:'500px', alignSelf:'center', placeContent:'center', justifyContent:'center', margin:'0 auto',border:'0px solid blue'}}
+          style={{left:'', position:'', zIndex:'1', display:'grid', width:'500px', alignSelf:'center', placeContent:'center', justifyContent:'center', margin:'0 auto',border:'0px solid blue'}}
           config={{
             youtube: {
-              playerVars: { showinfo:0, autoplay:1, controls:0, mute:0, start:5,  }
+              playerVars: { showinfo:0, autoplay:0, controls:1, mute:0, start:5,  }
             },
           }}
           loop
@@ -104,9 +107,10 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
 
 
 
-{/* <CookieConsent
+<CookieConsent
 	debug={true}
 	location="none"
+  className="actionJackson"
 	style={{ display:'flex', flexDirection:'column', color:'inherit',alignItems:'inherit',  textAlign:'center', justifyContent:'center', margin:'0 auto', top:'0', maxWidth:'62vw', position:'', border:'0px solid red',
   overflow:'hidden',
   background:'transparent',
@@ -126,23 +130,34 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
 
 
 
-<div className="container" style={{padding:'2rem 0', border:'0px solid #555', borderRadius:'8px', color:'#fff', textAlign:'center', position:'relative', textShadow:'2px 2px 0 #000', overflow:'hidden', borderRadius:'12px'}}>
+<div className="container" style={{padding:'1rem 2rem', border:'0px solid #555', borderRadius:'8px', color:'#fff', textAlign:'center', position:'relative', textShadow:'2px 2px 0 #000', overflow:'hidden', borderRadius:'12px', background:'radial-gradient(circle, rgba(10, 45, 48, 0.4) 17%, rgba(25, 96, 109, 0.4) 58%, rgba(10, 196, 206, 0.5) 97%)', backgroundSize:'140% 200%'}}>
 
 
 
 	
-	<p style={{textAlign:'center', fontSize:'clamp(1.6rem, -0.875rem + 7.333vw, 2.5rem)', padding:'0', margin:'0 0 10px 0', overflowWrap:'break-word'}}>Integrated PopUp Windows <br /> <strong></strong></p>
+	<p style={{textAlign:'center', fontSize:'clamp(1.3rem, 2.4vw, 2.5rem)', padding:'0', margin:'0 0 10px 0', overflowWrap:'break-word'}}>I'm Taking New Clients <br /> <strong></strong></p>
 
 
     
-    <p style={{fontSize:'90%', }}>
-      <strong>(an industry first - we invented em!)</strong>
-    </p>
+  <p style={{fontSize:'1.2rem', textAlign:'center', fontWeight:'bold'}}>
+Current Availability: &nbsp; {date}
+</p>
+
+
+    <p style={{fontSize:'clamp(.9rem, 1.5vw, 2rem)', textAlign:'center'}}>
+Looking for innovative design in a top-performing website app?</p>
+<p style={{fontSize:'clamp(1.2rem, 2.2vw, 3.8rem)', fontWeight:'bold', textAlign:'center', textShadow:'1px 1px 0 #666'}}>
+  Let's create something <span>great together</span>.</p>
+
+
+
+
+
 
  
-  <div style={{fontSize:'90%', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'middle', lineHeight:'200%', width:'90%', margin:'0 auto', padding:' .5rem 1rem', border:'1px solid #333', borderRadius:'12px', backdropFilter:'blur(14px)', background:'rgba(0,0,0,0.50)',}}>Some ideas:
+  <div style={{fontSize:'90%', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'middle', lineHeight:'200%', width:'90%', margin:'0 auto', padding:' .5rem 1rem', border:'1px solid #333', borderRadius:'12px', backdropFilter:'blur(14px)', background:'rgba(0,0,0,0.50)', backgroundSize:'140% 200%'}}>
 
-  <div style={{textAlign:'left', display:'flex', padding:'.5rem 0', justifyContent:'center',}}>
+  {/* <div style={{textAlign:'left', display:'flex', padding:'.5rem 0', justifyContent:'center',}}>
   1) You could have a sales promotion here
 </div>
 
@@ -154,9 +169,19 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
 3) You could have ads here (hey, it's up to you!)
  </div>
 
+
+ <div className="" style={{display:'grid', flexDiection:'', placeContent:'center', height:'', position:'absolute', left:'', right:'', top:'', width:'500px'}}> */}
+
+<button aria-label="Click To Play" className="actionJackson tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px',fontSize:'2vw', padding:'10% 5%', }}>
+  
+  <Link state={{modal: true}} to="/contact/" style={{color:'#37f8f8'}}>HIRE ME!</Link>
+  
+  </button>
+
+
  
     
-  <span style={{fontSize:'100%'}}>The hide link below sets a cookie and keeps this from displaying again for however long you set it.</span>
+  {/* <span style={{fontSize:'100%'}}>The hide link below sets a cookie and keeps this from displaying again for however long you set it.</span> */}
  
  </div>
 
@@ -164,7 +189,7 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
     <br />
     </div>
     
-</CookieConsent> */}
+</CookieConsent>
 
 
 </div>
