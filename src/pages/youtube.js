@@ -150,7 +150,8 @@ const CustomBox = styled.div`
     <CustomBox style={{}}>
 
 
-<div className='player-wrapper' style={{position:'relative', width:'100vw',  top:'', zIndex:'0', height:'content-fill', overflow:'hidden' }}>
+{/* <div className='player-wrapper' style={{position:'relative', width:'100vw',  top:'', zIndex:'0', height:'content-fill', overflow:'hidden' }}> */}
+<div className="wrap-element" style={{position:'absolute', top:'0', zIndex:''}}>
 
 {/* <div className='stack-layout' style={{position:'relative', width:'100vw', height:'100%', top:'', zIndex:'0', height:'content-fill', overflow:'' }}> */}
 

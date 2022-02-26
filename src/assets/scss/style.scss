@@ -76,7 +76,7 @@
       position: absolute;
       right: 0;
       top: 100%;
-      z-index: 1;
+      // z-index: 1;
       width: 100%;
       max-width: 320px;
       border-radius: 0 0 0 12px;
@@ -156,16 +156,16 @@
 .post-card {
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  transition: transform 250ms ease-in-out;
-  background-color:#111;
+  // transition: transform 250ms ease-in-out;
+  // background-color:#111;
 
   // background: linear-gradient(180deg, rgb(2, 176, 245) 10%, #111 80%);
-  background: rgba(2, 171, 201, 0.2);
-  // background: rgba(0, 0, 0, 0.2);
+  // background: rgba(2, 171, 201, 0.2);
+  // background: rgba(0, 0, 0, 0.5);
   border-left:1px solid rgba(255, 255, 255, 0.10);
-  box-shadow: 0 5px 10px rgb(0, 0, 0);
+  // box-shadow: 0 5px 10px rgb(0, 0, 0);
   border-radius: 12px;
-  transition: box-shadow 0.3s linear;
+  // transition: box-shadow 0.3s linear;
   .featured-image {
     border-radius: 12px;
     img {
@@ -175,12 +175,12 @@
     }
   }
 
-  .post-card:hover {
-    background: linear-gradient(640deg, #333 1%, #111 80%);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 1) !important;
-  }
+  // .post-card:hover {
+  //   background: linear-gradient(640deg, #333 1%, #111 80%);
+  //   box-shadow: 0 1px 4px rgba(0, 0, 0, 1) !important;
+  // }
 
-  .post-card img{border-radius: 12px !important;}
+  // .post-card img{border-radius: 12px !important;}
 
   .post-content{padding:0 1rem;}
 
@@ -194,7 +194,7 @@
   }
   &:hover {
     border: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
     .title {
     	color: var(--button-alternate-color);
     }
@@ -253,10 +253,10 @@ article blockquote {
   padding: 5px 5px 5px 20px;
   border-left: 3px solid rgba(0, 0, 0, 0.1);
 }
-article iframe {
-  border: 2px solid black;
-  box-sizing: border-box;
-}
+// article iframe {
+//   border: 2px solid black;
+//   box-sizing: border-box;
+// }
 article img {
   max-width: 100%;
 }
@@ -307,7 +307,7 @@ article img {
   // box-shadow:  0 4px 22px #999;
   display: inline-flex;
   align-items: center;
-  color:#fff !important;
+  color:rgb(236, 228, 228) !important;
   // padding: var(--padding) calc(var(--padding) * 2);
   // border-radius: 12px;
   // text-decoration: none;
@@ -342,10 +342,10 @@ article img {
   &.-outline {
     color: var(--primary-color);
     background: #fff;
-    &:hover {
-      // box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
-      // background: #f2f2f2;
-    }
+    // &:hover {
+    //   box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+    //   background: #f2f2f2;
+    // }
   }
   & + .button {
     margin-left: 20px;
@@ -361,10 +361,10 @@ article img {
   }
 }
 
-.button:hover{
-  box-shadow:  0 0px 22px var(--primary-color);
-  // filter: drop-shadow(0px 0px 10px rgba(155,155,155,.5)); 
-}
+// .button:hover{
+//   box-shadow:  0 0px 22px var(--primary-color);
+//   filter: drop-shadow(0px 0px 10px rgba(155,155,155,.5)); 
+// }
 
 
 
@@ -439,7 +439,7 @@ article img {
 
 .pagination {
   text-align: center;
-  padding: 50px 0;
+  padding: 0 0;
   ul {
     list-style: none;
     margin: 0;
@@ -447,23 +447,31 @@ article img {
   }
   ul li {
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 0;
+    max-width: 45vw;
   }
   a {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 5px 20px !important;
     font-weight: bold;
     line-height: 1;
+    background:rgba(0,0,0,0.50);
+    color:#ccc !important;
+    border-radius:12px;
+    &:hover {
+      color: #fff !important;
+      // pointer-events: none;
+    }
     &.is-active {
-      color: var(--header-bg);
+      // color: #fff;
       pointer-events: none;
     }
   }
   &.-post {
     text-align: inherit;
-    padding: 20px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    margin: 50px 0 0;
+    padding: 0 0;
+    // border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 30px 0 0;
     ul {
       display: flex;
       justify-content: space-between;
@@ -489,25 +497,25 @@ article img {
     }
   }
   @media (max-width: $breakpoint-md) {
-    padding: 50px 0 ul {
+    padding: 10px 0 ul {
       display: flex;
       justify-content: space-between;
     }
     &.-post ul {
       display: grid;
-      justify-content: normal;
+      // justify-content: normal;
       a {
         padding: 20px;
         border: 1px solid rgba(0, 0, 0, 0.1);
-        display: block;
+        display: inline-block;
         margin-bottom: 10px;
         border: 1px solid #3c3539;
         border-radius: 8px;
       }
     }
-    .num {
-      display: none;
-    }
+    // .num {
+    //   display: none;
+    // }
   }
 }
 

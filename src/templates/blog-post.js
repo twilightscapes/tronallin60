@@ -130,47 +130,47 @@ const CustomBox = styled.div`
 // };
 
 const Pagination = props => (
-  <div className="pagination -post">
-    <ul>
-      {props.previous && props.previous.frontmatter.template === "blog-post" && (
-        <li>
-          <Link to= {props.previous.frontmatter.slug + "/"} rel="prev">
-            <p
-              style={{
-                color: "inherit",
-              }}
-            >
-              <span className="icon -left">
-                <RiArrowLeftLine />
-              </span>{" "}
-              Previous
-            </p>
-            <span className="page-title">
-              {props.previous.frontmatter.title}
-            </span>
-          </Link>
-        </li>
-      )}
-      {props.next && props.next.frontmatter.template === "blog-post" && (
-        <li>
-          <Link to={props.next.frontmatter.slug + "/"} rel="next">
-            <p
-              style={{
-                color: "inherit",
-              }}
-            >
-              Next{" "}
-              <span className="icon -right">
-                <RiArrowRightLine />
+    <div className="pagination -post">
+      <ul className="" style={{display:'flex',}}>
+        {props.previous && props.previous.frontmatter.template === "blog-post" && (
+          <li>
+            <Link  to= {props.previous.frontmatter.slug + "/"} rel="prev">
+              <p
+                style={{
+                  color: "inherit",
+                }}
+              >
+                <span className="icon -left">
+                  <RiArrowLeftLine />
+                </span>{" "}
+                Previous
+              </p>
+              <span className="page-title">
+                {props.previous.frontmatter.title}
               </span>
-            </p>
-            <span className="page-title">{props.next.frontmatter.title}</span>
-          </Link>
-        </li>
-      )}
-    </ul>
-  </div>
-)
+            </Link>
+          </li>
+        )}
+        {props.next && props.next.frontmatter.template === "blog-post" && (
+          <li>
+            <Link  to={props.next.frontmatter.slug + "/"} rel="next">
+              <p
+                style={{
+                  color: "inherit",
+                }}
+              >
+                Next{" "}
+                <span className="icon -right">
+                  <RiArrowRightLine />
+                </span>
+              </p>
+              <span className="page-title">{props.next.frontmatter.title}</span>
+            </Link>
+          </li>
+        )}
+      </ul>
+    </div>
+  )
 
 
 
@@ -213,7 +213,7 @@ function AddSvg(){
 
 
   return (
-    <object className="" id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', top:'', left:'0', right:'0', bottom:'0', overflow:'hidden', border:'0px solid red', zIndex:'2', width:'100vw', height:'auto', background:'transparent'  }} alt="animated content" title="animated content" >You need a new browser</object>
+    <object className="" id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', top:'', left:'0', right:'0', bottom:'0', overflow:'hidden', border:'0px solid red', zIndex:'', width:'', height:'', maxHeight:'', maxWidth:'', background:'transparent'  }} alt="animated content" title="animated content" >You need a new browser</object>
   )
 }
 
@@ -309,8 +309,9 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
     return (
       <div>
               <ReactPlayer
-              className='react-player66'
+              className='react-player661'
               url={iframeUrl}
+              style={{position:'absolute', top:'0', zIndex:'3'}}
               // url={[
               //   iframeUrl,
               //   YoutuberSuggestion1,
@@ -354,11 +355,44 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
   function Iframer() {
     const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber
 
+
+    const [state, setState] = useState({
+        playing: true,
+        controls: true,
+        light: true,
+        muted: true,
+        loop: true,
+      });
+    
+      // const playerRef = useRef(null);
+      const controlsRef = useRef(null);
+    
+      const {
+        playing,
+        controls,
+        light,
+        muted,
+        loop,
+        played,
+
+      } = state;
+    
+      const handlePlayPause = () => {
+        setState({ ...state, playing: !state.playing });
+      };
+    
+      const hanldeMute = () => {
+        setState({ ...state, muted: !state.muted });
+      };
+
+
+
     return (
 
  <div>
               <ReactPlayer
               className='react-player66'
+        
               url={iframeUrl}
               // url={[
               //   iframeUrl,
@@ -373,8 +407,11 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
                   playerVars: { showinfo:0, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
                 },
               }}
-              loop
-              playing
+              playing={playing}
+              controls={true}
+              light={false}
+              loop={loop}
+              muted={muted}
               playsinline
               playIcon={
                 <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100%', background:'#111', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
@@ -396,7 +433,23 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
               </button>}
                 light="../assets/transparent.png"
               />
+
+
+
+<Controls
+            ref={controlsRef}
+            onPlayPause={handlePlayPause}
+            playing={playing}
+            played={played}
+            onMute={hanldeMute}
+            muted={muted}
+          />
+
 </div>
+
+
+
+
 
     )
   }
@@ -513,7 +566,10 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
 
 
 
-  const { siteUrl } = useSiteMetadata()
+  
+
+  const { iconimage } = useSiteMetadata()
+  const { siteUrl } = useSiteMetadata();
 
 const Completionist = () => <div style={{minWidth:'50%', width:'100%', maxWidth:'100vw', }}>
   { NftRedeem ? (
@@ -525,7 +581,7 @@ const Completionist = () => <div style={{minWidth:'50%', width:'100%', maxWidth:
   {/* <nft-card style={{}} contractAddress="0x495f947276749ce646f68ac8c248420045cb7b5e" tokenId="14583650834310525071617320783641503123203461641321595508191183187330132344833"> </nft-card> */}
   </div>
 
-const { iconimage } = useSiteMetadata()
+
 
   return (
     
@@ -553,7 +609,11 @@ const { iconimage } = useSiteMetadata()
 
 
 
-<div className='player-wrapper' style={{position:'relative', top:'0', zIndex:'0', height:'100%', maxHeight:'', overflow:'', filter: 'drop-shadow(0 0 20px #000)' }}>
+{/* <div className='player-wrapper' style={{position:'relative', top:'0', zIndex:'0', height:'100%', maxHeight:'', overflow:'hidden', filter: 'drop-shadow(0 0 20px #000)' }}> */}
+
+
+
+<div className="wrap-element" style={{position:'relative', top:'0', zIndex:'', overflow:'hidden'}}>
 
 
 
@@ -561,9 +621,6 @@ const { iconimage } = useSiteMetadata()
 
 
 
-<div style={{display:'grid', placeContent:'center', width:'100vw', height:'100%', overflow:'', position:'absolute', top:'0', zIndex:'', }}>
-
-<div style={{margin:'0 auto', width:'100%', overflow:''}}>
 {Image ? (
             <GatsbyImage
               image={Image}
@@ -582,10 +639,10 @@ const { iconimage } = useSiteMetadata()
             // <StaticImage src="../../assets/default-og-image.jpg" alt="Twilightscapes Default Image" style={{height:'auto', maxHeight:'60vh', position:'absolute', zIndex:'0', bottom:'',border:'0px solid !important', objectFit:'contain',}} />
   
           )}
-          </div>
+       
 
        
-</div>
+
 
 
 
@@ -638,14 +695,7 @@ const { iconimage } = useSiteMetadata()
           )}
 
 
-{Suggestion1 ? (
-            <div style={{position:'absolute', top:'0', zIndex:'0',}}>
-            <YouTubed />
-            </div>
-       
-          ) : (
-            ""
-          )}
+
 
 
 
@@ -681,12 +731,23 @@ const { iconimage } = useSiteMetadata()
 {/* <br />
 <br /> */}
 
+{/* 
+{Suggestion1 ? (
+            <div style={{position:'absolute', height:'', top:'', zIndex:'4', border:'0px solid yellow'}}>
+            <YouTubed />
+            </div>
+       
+          ) : (
+            ""
+          )} */}
 
 
 
 {Suggestion1 ? (
+
+    <div><YouTubed />
             <ShowSuggestion />
-       
+       </div>
           ) : (
             ""
           )}

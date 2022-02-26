@@ -88,10 +88,10 @@ function Panel2() {
 {/* GRID INTRO */}
 
 
-<div className="wrap-element" style={{position:'relative', top:'0', zIndex:'-1'}}>
+<div className="wrap-element" style={{position:'relative', top:'0', zIndex:'', overflow:'hidden', height:'100vh'}}>
 
           <ReactPlayer
-          
+         
           className=''
             width="100%"
             height="100%"
@@ -161,7 +161,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
     <h2 className="tronText TRON" style={{fontSize:'clamp(14px, 3vw, 4.2rem)', lineHeight:'150%', margin:'0 0 2rem 0', textAlign:'center', border:'0px solid red', width:'100%', position:''}}>The Grid <span className="neonText" style={{fontSize:'80%'}}>A digital frontier</span>.</h2>
 
 
-<div className="tronText" style={{lineHeight:'200%',fontSize:'clamp(2rem, 3.2vw, 3rem)', padding:'0 3rem', background:'rgba(0,0,0,0.50)', textAlign:'center'}}>I tried to picture clusters of information as they moved through the computer. What did they look like? Ships? Motorcycles? Were the circuits like freeways? <br />I kept dreaming of a world I thought I'd never see.</div>
+<div className="tronText" style={{lineHeight:'200%',fontSize:'clamp(1rem, 3.2vw, 3rem)', padding:'0 3rem', background:'rgba(0,0,0,0.50)', textAlign:'center'}}>I tried to picture clusters of information as they moved through the computer. What did they look like? Ships? Motorcycles? Were the circuits like freeways? <br />I kept dreaming of a world I thought I'd never see.</div>
 
 
 {/* <div style={{display:'grid', placeContent:'', position:'realtive', zIndex:'1', right:'', bottom:'', width:'', margin:'50px 0 0 10vw',}}>
