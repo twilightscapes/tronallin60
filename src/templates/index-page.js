@@ -1,90 +1,28 @@
-import React from "react"
-import { graphql } from "gatsby"
-// import Img from 'gatsby-image'
-//  import { GatsbyImage } from 'gatsby-plugin-image'
+import React, { useState, useRef } from "react";
+import { graphql, Link } from "gatsby"
+import ReactPlayer from 'react-player/lazy'
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
-import Newsignup from "../components/newssign"
-// import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
-// import GalleryMenu from "../components/galleryMenu"
-// import { StaticImage } from "gatsby-plugin-image"
-// import ShareSocial from '../components/share' 
-// import { RiArrowRightSLine } from "react-icons/ri"
-// import { RiSendPlane2Line } from "react-icons/ri"
-// import TwilightLogo from "../../static/assets/TSidebarHover.svg"
-// import { ImPlay } from "react-icons/im"
+import { ImPlay } from "react-icons/im"
+import { StaticImage } from "gatsby-plugin-image"
+
 import { Helmet } from "react-helmet"
 import { getSrc } from "gatsby-plugin-image"
-// import TwilightLogo from "../../static/assets/TSidebarHover.svg"
 import BlogListHome from "../components/blog-list-home"
-// import BlogListHome from "../components/blog-list-home"
-// import LightCycleBattle from "../../static/assets/light-cycle-battle.svg"
-// import LightCycleRear from "../../static/assets/light-cycle-rear.svg"
-// import LightCycle from "../../static/assets/light-cycle.svg"
-// import TronChick from "../../static/assets/tron-chick1.svg"
-// import PrayingMantis from "../../static/assets/yoga-master.svg"
-// import SamFly from "../../static/assets/sam-fly.svg"
-// import SamFlynn from "../../static/assets/sam-flynn.svg"
-// import CluGuy from "../../static/assets/clu.svg"
-// import TronGuy from "../../static/assets/tron.svg"
-// import MCP from "../../static/assets/mcp.svg"
-// import McpEffects from "../../static/assets/mcp-effects.svg"
-// import QuoraStand from "../../static/assets/quora-ass.svg"
-// import KevinFlynn from "../../static/assets/kevin-flynn.svg"
-// import GridLines from "../../static/assets/off-the-grid.mp4"
-// import QuoraStrike from "../../static/assets/quora-strike.svg"
-// import LoveSignal from "../../static/assets/love-signal.svg"
-// import Castor from "../../static/assets/castor.svg"
+import Newsignup from "../components/newssign"
 
-import GridLoader from "../../static/assets/FrontLoader.svg"
-import TheGrid from "../../static/assets/The-Grid-Intro.svg"
-
-// import InstallDiscount from "../components/install-discount"
-// import { AiOutlineAudioMuted } from "react-icons/ai"
-// import TechBG from "../../static/assets/tech-bg.mp4"
-// import { AnchorLink } from "gatsby-plugin-anchor-links"
-// import { FaHandPointDown } from "react-icons/fa"
-// import CommentBox from "../components/commentbox"
-// import GoBack from "../components/goBack"
-// import ScrollAnimation from 'react-animate-on-scroll'
-// import ReactPlayer from 'react-player/lazy'
 import { useSiteMetadata } from "../hooks/use-site-metadata"
-// import Newsignup from "./contact-page"
-// import TestIT from "../components/test"
-// import HomeHolder from "../components/homeholder"
+
+import Panel1 from "../pages/panel1"
 
 
-// import loadable from '@loadable/component'
-import Panel1 from '../pages/panel1'
 
-  // const Panel1 = loadable(() => import('../components/panel1'))
-  // const Panel2 = loadable(() => import('../components/panel2'), {
-  //   fallback: <div>Loading...</div>,
-  // })
-  // const Panel3 = loadable(() => import('../components/panel3'), {
-  //   fallback: <div>Loading...</div>,
-  // })
-  // const Panel4 = loadable(() => import('../components/panel4'), {
-  //   fallback: <div>Loading...</div>,
-  // })
-  // const Panel5 = loadable(() => import('../components/panel5'))
-  // const Panel6 = loadable(() => import('../components/panel6'))
-  // const Panel7 = loadable(() => import('../components/panel7'))
-  // const Panel8 = loadable(() => import('../components/panel8'))
-  // const Panel9 = loadable(() => import('../components/panel9'))
-  // const Panel10 = loadable(() => import('../components/panel10'))
-  // const Panel11 = loadable(() => import('../components/panel11'))
-  // const Panel12 = loadable(() => import('../components/panel12'))
-  // const Panel13 = loadable(() => import('../components/panel13'))
-
-  
+// import TimeAgo from 'react-timeago'
+// import Countdown from 'react-countdown'
 
 export const pageQuery = graphql`
-  query HomeQuery($id: String! ) {
+  query HomeQueryHomeQuery($id: String! ) {
     
-
-
-
     
     site {
       siteMetadata {
@@ -97,6 +35,8 @@ export const pageQuery = graphql`
         companyname
         showfooter
       }
+
+
 
       
 
@@ -148,8 +88,9 @@ export const pageQuery = graphql`
     }
 
 
- 
-  
+
+
+
 
     
 
@@ -158,7 +99,7 @@ export const pageQuery = graphql`
     posts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { template: { eq: "blog-post" } } }
-      limit: 6
+      limit: 3
     ) {
       edges {
         node {
@@ -186,10 +127,29 @@ export const pageQuery = graphql`
 
 
 
+
+
+
+
+
+
   // const Panel2 = loadable(() => import('../components/panel2'), {
 //   fallback: <div>Loading...</div>,
 // })
 
+
+// const ViewIt = () => <span>TRON - All In 60 Seconds - VIEW NOW!</span>
+// const renderer = ({ hours, minutes, seconds, completed }) => {
+//   if (completed) {
+//     return <ViewIt />;
+//   } else {
+//     return (
+//        <span>
+//        TRON - All In {seconds} Seconds
+//       </span> 
+//     )
+//   }
+// }
 
 
 const HomePage = ({ data }) => {
@@ -215,7 +175,7 @@ const HomePage = ({ data }) => {
 
     // const { iconimage } = useSiteMetadata()
 
-
+    // const imageData = data.desktop.childImageSharp.fluid
     const { siteUrl } = useSiteMetadata()
 
     // const YouTubeStart = frontmatter.youtubestart
@@ -231,54 +191,48 @@ const HomePage = ({ data }) => {
     
 
 
+    const [state, setState] = useState({
+      playing: true,
+      controls: true,
+      light: true,
+      muted: false,
+      loop: true,
+    });
+    
+    // const playerRef = useRef(null);
+    const controlsRef = useRef(null);
+    
+    const {
+      playing,
+      controls,
+      light,
+      muted,
+      loop,
+      playbackRate,
+      pip,
+      played,
+      seeking,
+      volume,
+    } = state;
+    
+    const handlePlayPause = () => {
+      setState({ ...state, playing: !state.playing });
+    };
+    
+    const hanldeMute = () => {
+      setState({ ...state, muted: !state.muted });
+    };
+    
+    const { iconimage } = useSiteMetadata()
 
-
-  //   const Panel1 = loadable(() => import('../components/panel1'), {
-  //     fallback: <div>Loading...</div>,
-  //   })
-  // const Panel2 = loadable(() => import('../components/panel2'), {
-  //     fallback: <div>Loading...</div>,
-  //   })
-  // const Panel3 = loadable(() => import('../components/panel3'), {
-  //     fallback: <div>Loading...</div>,
-  //   })
-  // const Panel4 = loadable(() => import('../components/panel4'), {
-  //     fallback: <div>Loading...</div>,
-  //   })
-  // const Panel5 = loadable(() => import('../components/panel5'), {
-  //     fallback: <div>Loading...</div>,
-  //   })
-  // const Panel6 = loadable(() => import('../components/panel6'), {
-  //     fallback: <div>Loading...</div>,
-  //   })
-  // const Panel7 = loadable(() => import('../components/panel7'), {
-  //     fallback: <div>Loading...</div>,
-  //   })
-  // const Panel8 = loadable(() => import('../components/panel8'), {
-  //     fallback: <div>Loading...</div>,
-  //   })
-  // const Panel9 = loadable(() => import('../components/panel9'), {
-  //     fallback: <div>Loading...</div>,
-  //   })
-  // const Panel10 = loadable(() => import('../components/panel10'), {
-  //     fallback: <div>Loading...</div>,
-  //   })
-  // const Panel11 = loadable(() => import('../components/panel11'), {
-  //     fallback: <div>Loading...</div>,
-  //   })
-  // const Panel12 = loadable(() => import('../components/panel12'), {
-  //     fallback: <div>Loading...</div>,
-  //   })
-  // const Panel13 = loadable(() => import('../components/panel13'), {
-  //     fallback: <div>Loading...</div>,
-  //   })
+ 
 
   
   return (
 
     <Layout>
     <Helmet>
-  <body className="homepage" />
+  <body className="homepage" style={{background:'#111'}} />
 </Helmet>
 {/* <Seo
           title={`VidSock - Video Multimedia NFT Platform`}
@@ -296,50 +250,17 @@ const HomePage = ({ data }) => {
    image={ siteUrl + getSrc(frontmatter.featuredImage) }
 />
       
-      
+
 
 
 
 {/* VIDEO URLS */}
 
-{/* d6zgqucG0CM VR*/}
-{/* EZn2593JNuI encom */}
 
-{/* /aVfadTsNiKk gane */}
-
-{/* _qN9kpN6XEk into */}
-
-{/* ush2U_WrCZ4 circuit */}
-
-{/* Hw8MjJG-TNw clips */}
-
-{/* vDMjLesTks0 fan */}
-
-{/* kyuHbs3N32U intro */}
-{/* ioAgSBnL4dY  GAME GRID ******* */}
-
-{/* aVWB4MoqyS0 ***** */}
-
-{/* Y7EZBP9j7h0  *** */}
-
-{/* tTDn-E8rwxY */}
-
-{/* M7b0nd_TcMU */}
-{/* JoX0bNYg1Wc */}
 
 {/* uCf3Q43fC_4 cool train */}
 
-{/* URVHRhBSjj8 */}
-{/* yttvb9ByOtY */}
-{/* CvyuuTc8F2o ** */}
-{/* ucTjKf8aapE *** */}
-{/* /nJ38P5elTkg **** */}
-{/* pAInLcN2su8 **** */}
-{/* /0dEv7mz-GGA  **** */}
-{/* pNOJ7wZqDWA ** */}
-{/* /dV_aOXXUTi0 */}
-{/* rDyTPKTooZk */}
-{/* E3Bx-l1DOws */}
+
 {/* Gg-RA_O16F4  CONTENDER - blue vert lines*/}
 {/* c_V1iD6F1kk  CONTENDER - cool animated interface*/}
 {/* naD-VHWSoZM  CONTENDER - spiral interface crash*/}
@@ -355,30 +276,173 @@ const HomePage = ({ data }) => {
 
 {/* <HomeHolder /> */}
 
+<div className="horizontal-holder" style={{position:'relative',}}>
+{/* <div className="RArrow"><span></span></div> */}
+
+
+<div id="" className="wrap-element" style={{overflow:'hidden', width:'100vw', height:'100vh', position:'fixed', top:'0'}}>
+<ReactPlayer
+         className='frontbg'
+         url="https://www.youtube.com/embed/c_V1iD6F1kk"
+         width="100%"
+         height="100vh"
+         playing={playing}
+            controls={true}
+            light={false}
+            loop={loop}
+            muted={muted}
+            config={{
+              file: {
+                attributes: {
+                  crossorigin: "anonymous",
+                },
+              },
+              youtube: {
+                playerVars: { showinfo:0, controls:0, start:20, end:41, mute:1 }
+              },
+            }}
+
+          playsinline
+            playIcon={
+              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'5', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+  
+          <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
+            
+  
+            <div style={{position:'relative', maxWidth:'100vw', margin:'10% 0', zIndex:'', display:'flex', justifyContent:'center', background:'transparent !important',}}>
+    <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
+  </div>
+        
+            <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
+    <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
+            </div>
+            </button>}
+         
+          /></div>
+
+
+<div className="horizontal-scroll panels sitegrad movingBG" style={{}}>
+
+
+
+<div className="" style={{height:'1px'}}></div>
+
 
 
 
 {/* <GridLoader /> */}
 
 
-<div id="homestart"><Panel1 /></div>
+{/* <div id="homestart"><Panel1 /></div> */}
+
+{/* <BackgroundImage
+      Tag="section"
+      className=""
+      fluid={imageData}
+      backgroundColor={`#111`}
+     > */}
 
 
 
-{/* <TheGrid /> */}
-{/* <BlogListHome data={posts} /> */}
 
-{/* <div className="donation" style={{}}>
-<Link to="/contact">
-<div style={{position:'relative', top:'', margin:'0', padding:'25% 0',  width:'', zIndex:'1', textAlign:'', borderRadius:'12px', textDecoration:'none'}}>
-  <Newsignup />
-  </div>
+<div className="donation2" style={{display:'grid',
+  placeContent:'center', width:'100vw', height:'100vh', justifyContent:'center', position:'relative', background:'rgba(0,0,0,0.50)', webkitBackdropFilter:'blur(10px)', backdropFilter:'blur(14px)'}}>
+
+  <h1 className="tronText " style={{fontSize:'7vw', padding:'3vh 8vw 20vh 8vw', position:'', top:'', border:'0px solid', diplay:'grid', placeContent:'center', maxWidth:'80vw', fontFamily:'inherit'}}><div className="lineOne">What Can You Do</div> <div className="lineTwo">In 60 Seconds?</div></h1>
+</div>
+{/* </BackgroundImage> */}
+
+
+<div className=" fire" style={{margin:'', height:'100%', textDecoration:'none'}}>
+{/* <a title="Shawshank Redemption by Stephen King - All In 60 Seconds" href="/shawshank/" className="navbar-item button fire" style={{margin:'', height:'100%', textDecoration:'none'}}> */}
+  <Panel1 />
+  {/* </a> */}
+</div>
+
+
+
+{/* <Panel2 /> */}
+
+
+{/* <div>
+<Link title="Shawshank Redemption by Stephen King - All In 60 Seconds"  to="/shawshank-trailer/" className="navbar-item button fire" style={{margin:'', height:'100%', textDecoration:'none'}}>
+<Panel3 />
+<StaticImage className=""
+alt="Shawshank Redemption by Stephen King - All In 60 Seconds" src="../../static/assets/shawshank.jpg" />
 </Link>
 </div> */}
 
 
-        
 
+{/* <div>
+<Link title="Pulp Fiction by Quentin Tarantino - All In 60 Seconds"  to="/pulp-fiction-trailer/" className="navbar-item  button fire" style={{margin:'', height:'100%', textDecoration:'none'}}>
+<Panel3 />
+<StaticImage className=""
+alt="Pulp Fiction by Quentin Tarantino - All In 60 Seconds" src="../../static/assets/pulpfiction.jpg" />
+</Link>
+</div> */}
+
+
+{/* <a href="https://tron.allin60.com/">
+<StaticImage className=""
+alt="Shawshank Redemption by Stephen King - All In 60 Seconds" src="../../static/assets/shawshank.jpg" />
+</a> */}
+
+
+{/* <div>
+<Link title="They Live by John Carpenter - All In 60 Seconds"  to="/they-live/" className="navbar-item  button fire" style={{margin:'', height:'100%', textDecoration:'none'}}>
+<StaticImage className=""
+alt="They Live by John Carpenter - All In 60 Seconds" src="../../static/assets/TheyLive-Header.jpg" />
+</Link>
+</div> */}
+
+
+{/* <a href="https://tron.allin60.com/">
+<StaticImage className=""
+alt="Pulp Fiction by Quentin Tarantino - All In 60 Seconds" src="../../static/assets/pulpfiction.jpg" />
+</a> */}
+
+
+{/* <div>
+<Link title="They Live by John Carpenter - All In 60 Seconds"  to="/mystery-science-theater-3022/" className="navbar-item  button fire" style={{margin:'', height:'100%', textDecoration:'none'}}>
+<StaticImage className=""
+alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/mystery-science.jpg" />
+</Link>
+</div> */}
+
+
+<BlogListHome data={posts} />
+
+
+{/* <div style={{overflow:'hidden'}}>
+<VideoPage />
+</div> */}
+
+<div className="pagination" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'', paddingTop:'1vh', background:''}}>
+<Link to="/posts/2/" title="View Archives">
+  <div  className="tronText" style={{fontSize:'3vw', marginTop:'1rem', lineHeight:'130%'}}><span style={{fontSize:'65%'}}>viewing:</span><br />Lastest Minutes</div>
+
+   
+    <div  className="tronText" style={{ background:'rgba(0,0,0,0.10)', width:'80vw', position:'relative', top:'', margin:'10vh auto', padding:'10% 10%', zIndex:'1', textAlign:'', border:'1px solid #000', borderRadius:'12px', textDecoration:'none', color:'#cccc'}}>
+    <h1 className="">View All Minutes?</h1>
+    </div>
+</Link>
+
+</div>
+
+
+<div className="donation2" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'', paddingTop:'0', background:''}}>
+{/* <Link to="/contact"> */}
+<div style={{ background:'rgba(0,0,0,0.10)', width:'80vw', position:'relative', top:'', margin:'5vh auto', padding:'4% 5%', zIndex:'1', textAlign:'', border:'1px solid #000', borderRadius:'12px', textDecoration:'none', color:'#cccc'}}>
+  <Newsignup />
+  </div>
+{/* </Link> */}
+</div>
+
+        
+</div>
+
+</div>
 
     </Layout>
   )

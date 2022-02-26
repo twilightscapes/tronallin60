@@ -121,8 +121,8 @@ function Panel1() {
 <div className="video-foreground"> */}
 {/* c_V1iD6F1kk */}
 {/* nJ38P5elTkg */}
-
-<div className="wrap-element" style={{overflow:'hidden'}}>
+<div id="homestart" style={{position:'absolute', top:'-100vh'}}></div>
+<div id="" className="wrap-element" style={{overflow:'hidden'}}>
 <ReactPlayer
          className='frontbg'
          url="https://www.youtube.com/embed/c_V1iD6F1kk"

@@ -1111,6 +1111,9 @@ overflow-x: hidden !important;
 .nextbutt .backbutton {display: flex; align-self: center; justify-content: center; margin-top:10px; text-align:center; border:0px solid blue; color:#fff !important; filter: drop-shadow(1px 0px 4px rgba(0,0,0,.9)); text-shadow: 1px 1px 0 #000; }
 
 
+html .backbutton {color:#fff !important}
+
+
 .ReactModalPortal div.toppad{border:0px solid blue !important; display: none !important;}
 
 /* .ReactModalPortal {margin:0 19% !important; width:80% !important; z-index: 2;} */
@@ -2108,7 +2111,7 @@ overflow: hidden}  */
   flex-direction: column;
   justify-content: flex-end;
   /* width: 250px; */
-  padding:75vh 0 0 0;
+  padding:85vh 0 0 0;
   transform: translateX(100vw);
   transition: transform 250ms ease-in-out;
 }
@@ -2122,11 +2125,11 @@ overflow: hidden}  */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color:#111;
+  /* background-color:#111; */
 
-  background-color:rgba(32, 140, 146, 0.493);
+  /* background-color:rgba(32, 140, 146, 0.493); */
   /* background:radial-gradient(circle, rgba(67,94,106,1) 17%, rgba(115,239,255,1) 58%, rgba(73,95,110,1) 97%); */
-  /* background:radial-gradient(circle, rgba(36,99,110,1) 17%, rgba(13,97,108,1) 58%, rgba(14,57,59,1) 97%); */
+  background:radial-gradient(circle, rgba(10, 45, 48, 0.4) 17%, rgba(25, 96, 109, 0.4) 58%, rgba(10, 196, 206, 0.5) 97%);
 
     /* background: linear-gradient(130deg, #183333 20%, #4d857e 100%); */
 
@@ -2150,7 +2153,7 @@ overflow: hidden}  */
 
 .sidebarMenuInner {
   transition: all .8s ease-in-out;
-      background-color: #111;
+  /* background-color:rgba(6, 184, 194, 0.493); */
                   /* background: linear-gradient(
                     45deg,
                      rgb(69, 19, 73),
@@ -2183,6 +2186,10 @@ overflow: hidden}  */
   cursor: pointer;
   text-decoration: none;
 }
+
+.sidebarMenuInner li:last-child{border-bottom:0px solid white !important; width:auto !important; text-decoration:underline; border-radius:0 0 0 12px;}
+
+
 input[type="checkbox"]:checked ~ #sidebarMenu {
   transform: translateX(100%);
 }
@@ -2207,7 +2214,7 @@ input[type=checkbox] {
   cursor: pointer;
   position: fixed;
   z-index: 3;
-  bottom: 20%;
+  bottom: 5%;
   right: 2%;
   /* height: 100px;
   width: 100px; */
@@ -2238,7 +2245,7 @@ filter: drop-shadow(1px 1px 10px var(--primary));
 
   @media (min-width: 1300px) {
     .sidebarIconToggle {
-      bottom: 20%;
+      bottom: 4%;
       right: 2%;
     }
     }
@@ -2392,6 +2399,10 @@ max-height: 60vh !important;
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCI+CjxmaWx0ZXIgaWQ9Im4iPgo8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjciIG51bU9jdGF2ZXM9IjEwIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIj48L2ZlVHVyYnVsZW5jZT4KPC9maWx0ZXI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjMDAwIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWx0ZXI9InVybCgjbikiIG9wYWNpdHk9IjAuNCI+PC9yZWN0Pgo8L3N2Zz4=");
 
 }
+
+
+
+.svg{font-family: TRON !important;}
 
 
 

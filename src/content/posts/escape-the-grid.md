@@ -23,7 +23,7 @@ comments: "1"
 shareable: "1"
 underlayImage: /assets/transparent.png
 featuredImage: /assets/tronin60.jpg
-svgImage: /assets/quora-strike.svg
+svgImage: /assets/FrontLoader.svg
 nftlink: ""
 nftdrop: ""
 nftredeem: ""
