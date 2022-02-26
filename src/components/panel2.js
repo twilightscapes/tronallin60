@@ -168,7 +168,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 <button className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'', filter:'drop-shadow(2px 2px 2px #000)', height:'', borderRadius:'200px',fontSize:'clamp(14px, 3vw, 4rem)', padding:'3% 5%', width:'150%' }}><Link state={{modal: true}} to="/proceed-to-games" style={{color:'#37f8f8'}}>I GOT IN</Link></button>
 </div> */}
 
-<LightCycle className="character TronType" style={{maxWidth:'100%', position:'relative', bottom:'20%', zIndex:'-1' }} />
+<LightCycle className="character TronType" style={{maxWidth:'100%', position:'relative', bottom:'40vh', zIndex:'-1' }} />
 
 </div>
 

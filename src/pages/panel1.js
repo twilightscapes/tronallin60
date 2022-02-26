@@ -124,7 +124,7 @@ function Panel1() {
 
 <div className="wrap-element" style={{overflow:'hidden'}}>
 <ReactPlayer
-         className=' frontbg'
+         className='frontbg'
          url="https://www.youtube.com/embed/c_V1iD6F1kk"
          width="100%"
          height="100%"

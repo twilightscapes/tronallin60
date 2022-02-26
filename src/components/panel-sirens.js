@@ -1,99 +1,180 @@
 
-import * as React from "react"
-import styled from "styled-components"
-
+import React, { useState, useRef } from "react";
 import { Link, navigate } from "gatsby"
-// import { graphql } from "gatsby"
-// import { GatsbyImage } from 'gatsby-plugin-image'
-// import TwilightLogo from "../../static/assets/logo.svg"
-// import { StaticImage } from "gatsby-plugin-image"
-// import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import ReactPlayer from 'react-player/lazy'
-// import { ImPlay } from "react-icons/im"
-// import LightCycle from "../../static/assets/light-cycle.svg"
-// import QuoraStrike from "../../static/assets/quora-strike.svg"
-// import LoveSignal from "../../static/assets/love-signal.svg"
-// import Castor from "../../static/assets/castor.svg"
-// import SamFly from "../../static/assets/sam-fly.svg"
-// import SamFlynn from "../../static/assets/sam-flynn.svg"
-// import CluGuy from "../../static/assets/clu.svg"
-// import TronGuy from "../../static/assets/tron.svg"
-// import MCP from "../../static/assets/mcp.svg"
-// import McpEffects from "../../static/assets/mcp-effects.svg"
-// import QuoraStand from "../../static/assets/quora-ass.svg"
-// import KevinFlynn from "../../static/assets/kevin-flynn.svg"
+import { ImPlay } from "react-icons/im"
 import TronChick from "../../static/assets/tron-chick1.svg"
-
-
+import { StaticImage } from "gatsby-plugin-image"
+import Controls from "../components/Controls";
+import { useSiteMetadata } from "../hooks/use-site-metadata"
+import styled from "styled-components"
 const CustomBox = styled.div`
-// .frontbg iframe{
-//   opacity:.6;
-// }
+
+.MuiSlider-root {
+  color:#ff00000 !important;
+}
+
+.wrap-element {
+  position: relative;
+  overflow: ;
+  padding-bottom: 56.25%;
+  height:100vh;
+
+}
+.wrap-element iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%; 
+  left: -100%; 
+  border: 0;
+  Z-index:-1;
+}
+
+
+@media (max-width: 48em) {
+  .wrap-element {
+    padding-bottom: 0;
+    height:300px;
+    overflow:visible;
+    border:0px solid red;
+  }
+}
+
+@media (min-width: 58em) {
+
+}
 `
 
-const Panel3 = () => (
-<CustomBox style={{}}>
+function PanelSirens() {
+  const [state, setState] = useState({
+    playing: true,
+    controls: true,
+    light: true,
+    muted: true,
+    loop: true,
+  });
 
-{/*  */}
-<div id="" style={{display:'',  padding:'0', outline:'0px solid yellow', height:'100vh', width:'100vw', position:'relative', overflow:'visible'}}>
+  // const playerRef = useRef(null);
+  const controlsRef = useRef(null);
 
-{/* <div style={{position:'absolute', right:'20vh', top:'0', width:'300px', height:'200px', background:'red', color:'#fff'}}>DAMN</div> */}
+  const {
+    playing,
+    controls,
+    light,
+    muted,
+    loop,
+    playbackRate,
+    pip,
+    played,
+    seeking,
+    volume,
+  } = state;
 
-{/* Panel Video */}
-<div className="vidbox" style={{position:'absolute', height:'100vh', width:'100vw', bottom:'0', zIndex:''}}>
-<div className="video-background">
-<div className="video-foreground">
-{/* c_V1iD6F1kk */}
-{/* nJ38P5elTkg */}
+  const handlePlayPause = () => {
+    setState({ ...state, playing: !state.playing });
+  };
 
-<ReactPlayer
-         className='youtubehide'
-         url="https://www.youtube.com/embed/yyovIAXi5mc"
-         width="100%"
-         height="100%"
-         config={{
-           youtube: {
-            playerVars: { showinfo:0, autoplay:1, controls:0, mute:1, start:44, end:140, loop:1  }
-           },
-         }}
-         loop
-         playing
-         playsinline
-//              playIcon={
-//                <button aria-label="Click To Play" className="clickplay1" style={{position:'relative', zIndex:'5', bottom:'0', right:'', left:'', border:'0px solid red', width:'50%', height:'100vh', background:'', color:'#fff', fontSize:'18px', display:'grid', placeContent:'center', padding:'0' }}>
+  const hanldeMute = () => {
+    setState({ ...state, muted: !state.muted });
+  };
+
+  const { iconimage } = useSiteMetadata()
+
+  return (
+
+    <CustomBox>
 
 
-// <div style={{textAlign:'center', position:'', top:'0', zIndex:'40'}}>
-//      <ImPlay style={{padding:'0 0 0 0', display:'flex', justifyContent:'center', fontSize:'60px', border:'0px solid blue',}} />
-// </div>    
+{/* GRID INTRO */}
 
-//              </button>
+
+<div className="wrap-element" style={{position:'relative', top:'0', zIndex:'', overflow:'hidden'}}>
+
+          <ReactPlayer
+          style={{paddingTop:'-5vh'}}
+          className=''
+            width="100%"
+            height="100%"
+            url="https://www.youtube.com/embed/yyovIAXi5mc"
+            playing={playing}
+            controls={true}
+            light={false}
+            loop={loop}
+            muted={muted}
+            config={{
+              file: {
+                attributes: {
+                  crossorigin: "anonymous",
+                },
+              },
+              youtube: {
+                playerVars: { showinfo:0, autoplay:1, controls:0, mute:1, start:44, end:140, loop:1  }
+              },
+            }}
+
+          playsinline
+            playIcon={
+              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'5', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+  
+          <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
+            
+  
+            <div style={{position:'relative', maxWidth:'100vw', margin:'10% 0', zIndex:'', display:'flex', justifyContent:'center', background:'transparent !important',}}>
+    <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
+  </div>
+        
+            <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
+    <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
+            </div>
+            </button>}
          
-//             }
-//                light="assets/grid-loader.svg"
-         />
+          />
+
+
+{/* <div style={{position:'absolute', bottom:'0', left:'0', zIndex:'1', width:'100vw', height:'100%', border:'0px solid yellow', padding:'0', margin:'0'}}>
+<StaticImage className=""
+alt="Todd Lambert Web development for photographers" src="../../static/assets/shawshank-stuff.png" style={{height:'100vh'}}  />
+</div> */}
+
+          <Controls
+            ref={controlsRef}
+            onPlayPause={handlePlayPause}
+            playing={playing}
+            played={played}
+            onMute={hanldeMute}
+            muted={muted}
+            style={{position:'absolute', zIndex:'1'}}
+          />
+       
+
+
+
+
 </div>
-</div>
-</div>
+
 {/* Panel Video */}
 
 {/* Panel Content */}
 
-
-{/* 
-<Link title="Sirens" state={{modal: true}} to="/sirens/"> */}
-<TronChick className="tronchick character" style={{maxHeight:'100vh', maxWidth:'', height:'', width:'', position:'absolute', right:'-30vw', bottom:'0', paddingTop:'0', zIndex:'0', border:'0px solid blue' }} />
-{/* </Link> */}
+<Link title="Sirens" state={{modal: true}} to="/the-grid/sirens/">
+<TronChick className="tronchick character" style={{maxHeight:'100vh', maxWidth:'', height:'', width:'', position:'absolute', left:'40vw', top:'0', paddingTop:'0', zIndex:'1', border:'0px solid blue' }} />
+</Link>
 
 
-    <div style={{fontSize:'clamp(.7rem, 2.5vw, 2.6rem)', lineHeight:'140%', paddingTop:'1rem'}}>
+<div style={{position:'relative', top:'0', width:'', height:''}}>
 
 
 
 
+    {/* <div style={{fontSize:'clamp(.7rem, 2.5vw, 2.6rem)', lineHeight:'140%', paddingTop:'1rem'}}> */}
 
 
-<div className="" style={{display:'', position:'relative', zindex:'3',   width:'60vw', height:'100%', padding:'4vh 1rem 1rem 1rem', fontSize:'clamp(.7rem, 3vw, 3.2rem)', left:'3vw', lineHeight:'100%',textShadow:'0 2px 7px #000',background:'rgba(0,0,0,0.50)', borderRadius:'12px' }}>
+
+
+
+
+{/* <div className="" style={{display:'', position:'relative', zindex:'',   width:'60vw', height:'100%', padding:'4vh 1rem 1rem 1rem', fontSize:'clamp(.7rem, 3vw, 3.2rem)', left:'3vw', lineHeight:'100%',textShadow:'0 2px 7px #000',background:'rgba(0,0,0,0.50)', borderRadius:'12px' }}> */}
   
   {/* <p>You will receive an identity disk.</p>
   
@@ -117,16 +198,16 @@ const Panel3 = () => (
     Proceed to games.</Link>
     </p> */}
 
-  </div>
+  {/* </div> */}
 
 
 
 
-</div>
+{/* </div> */}
 
 
 
-<div className="" style={{display:'', flexDiection:'column', justifyContent:'end', height:'', position:'absolute', left:'5%', top:'80vh'}}>
+<div className="" style={{display:'', flexDiection:'column', justifyContent:'end', height:'', position:'absolute', left:'5%', bottom:'15vh'}}>
 
 {/* <button className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px',fontSize:'2vw', padding:'10% 5%', }}>
   
@@ -136,22 +217,13 @@ const Panel3 = () => (
 </div>
 
 
-</div>
 
+
+</div>
 {/* Panel Content */}
 
 
-{/*  */}
-{/* Image Gallery */}
 
-  {/* {data.allFile.edges.map(edge => {
-  return <GatsbyImage
-  image={edge.node.childImageSharp.gatsbyImageData}
-  srl_gallery_image="true"
-  alt={edge.node.name}
-  key={edge.node.id}
-/>
-})} */}
 
 
 
@@ -159,5 +231,7 @@ const Panel3 = () => (
 
 
 </CustomBox>
-)
-export default Panel3
+);
+}
+
+export default PanelSirens;

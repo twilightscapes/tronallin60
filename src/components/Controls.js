@@ -21,9 +21,9 @@ const Controls = forwardRef(
 
 
     return (
-      <div ref={ref} className="" style={{width:'100vw', height:'100vh', border:'0px solid red', display:'grid', placeContent:'center',zIndex:'105', top:'0', position:'absolute'}}>
+      <div ref={ref} className="" style={{width:'100vw', height:'30vh', border:'0px solid red', display:'grid', placeContent:'center',zIndex:'2', top:'0', position:'absolute'}}>
        
-                <button
+                {/* <button
                   onClick={onPlayPause}
                   className=""
                   style={{
@@ -36,13 +36,13 @@ const Controls = forwardRef(
                     height:'100px',
                 }}
                 >
-                  {/* <MdPlayArrow style={{fontSize:'50px', position:'absolute'}}  /> */}
+
                   {playing ? (
                     <MdPause style={{fontSize:'100px', position:'absolute'}} />
                   ) : (
                     <MdPlayArrow style={{fontSize:'100px', position:'absolute'}}  />
                   )}
-                </button>
+                </button> */}
 
 
                 <button
@@ -52,20 +52,26 @@ const Controls = forwardRef(
                   style={{
                     position:'absolute',
                     zIndex:'105',
-                    right:'0',
-                    border:'2px solid yellow',
+                    right:'20px',
+                    top:'20px',
+                    border:'4px solid #07f8f8',
                     display:'grid',
                     placeContent:'center',
-                    width:'100px',
-                    height:'100px',
+                    width:'60px',
+                    height:'60px',
+                    background:'rgba(0, 0, 0, 0.7))',
+                    borderRadius:'50%',
+                    filter: 'dropShadow(0px 0px 3px rgba(0, 0, 0, 0.8))',
+                    color:'#07f8f8',
+        
                 }}
                 >
                   {muted ? (
-                    <MdVolumeOff fontSize="large" style={{fontSize:'100px', position:'absolute'}}  />
+                    <MdVolumeOff fontSize="large" style={{fontSize:'55px', position:'absolute'}}  />
                   ) : volume > 0.5 ? (
-                    <MdVolumeUp fontSize="large" style={{fontSize:'100px', position:'absolute'}}  />
+                    <MdVolumeUp fontSize="large" style={{fontSize:'55px', position:'absolute'}}  />
                   ) : (
-                    <MdVolumeDown fontSize="large" style={{fontSize:'100px', position:'absolute'}}  />
+                    <MdVolumeDown fontSize="large" style={{fontSize:'55px', position:'absolute'}}  />
                   )}
                 </button>
 
