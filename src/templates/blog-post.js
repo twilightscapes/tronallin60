@@ -130,47 +130,47 @@ const CustomBox = styled.div`
 // };
 
 const Pagination = props => (
-    <div className="pagination -post">
-      <ul className="" style={{display:'flex',}}>
-        {props.previous && props.previous.frontmatter.template === "blog-post" && (
-          <li>
-            <Link  to= {props.previous.frontmatter.slug + "/"} rel="prev">
-              <p
-                style={{
-                  color: "inherit",
-                }}
-              >
-                <span className="icon -left">
-                  <RiArrowLeftLine />
-                </span>{" "}
-                Previous
-              </p>
-              <span className="page-title">
-                {props.previous.frontmatter.title}
+  <div className="pagination -post">
+    <ul className="" style={{display:'flex',}}>
+      {props.previous && props.previous.frontmatter.template === "blog-post" && (
+        <li>
+          <Link  to= {props.previous.frontmatter.slug + "/"} rel="prev">
+            <p
+              style={{
+                color: "inherit",
+              }}
+            >
+              <span className="icon -left">
+                <RiArrowLeftLine />
+              </span>{" "}
+              Previous
+            </p>
+            <span className="page-title">
+              {props.previous.frontmatter.title}
+            </span>
+          </Link>
+        </li>
+      )}
+      {props.next && props.next.frontmatter.template === "blog-post" && (
+        <li>
+          <Link  to={props.next.frontmatter.slug + "/"} rel="next">
+            <p
+              style={{
+                color: "inherit",
+              }}
+            >
+              Next{" "}
+              <span className="icon -right">
+                <RiArrowRightLine />
               </span>
-            </Link>
-          </li>
-        )}
-        {props.next && props.next.frontmatter.template === "blog-post" && (
-          <li>
-            <Link  to={props.next.frontmatter.slug + "/"} rel="next">
-              <p
-                style={{
-                  color: "inherit",
-                }}
-              >
-                Next{" "}
-                <span className="icon -right">
-                  <RiArrowRightLine />
-                </span>
-              </p>
-              <span className="page-title">{props.next.frontmatter.title}</span>
-            </Link>
-          </li>
-        )}
-      </ul>
-    </div>
-  )
+            </p>
+            <span className="page-title">{props.next.frontmatter.title}</span>
+          </Link>
+        </li>
+      )}
+    </ul>
+  </div>
+)
 
 
 
@@ -357,34 +357,31 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
 
 
     const [state, setState] = useState({
-        playing: true,
-        controls: true,
-        light: true,
-        muted: true,
-        loop: true,
-      });
-    
-      // const playerRef = useRef(null);
-      const controlsRef = useRef(null);
-    
-      const {
-        playing,
-        controls,
-        light,
-        muted,
-        loop,
-        played,
-
-      } = state;
-    
-      const handlePlayPause = () => {
-        setState({ ...state, playing: !state.playing });
-      };
-    
-      const hanldeMute = () => {
-        setState({ ...state, muted: !state.muted });
-      };
-
+      playing: true,
+      controls: true,
+      light: true,
+      muted: true,
+      loop: true,
+    });
+  
+    // const playerRef = useRef(null);
+    const controlsRef = useRef(null);
+  
+    const {
+      playing,
+      light,
+      muted,
+      loop,
+      played,
+    } = state;
+  
+    const handlePlayPause = () => {
+      setState({ ...state, playing: !state.playing });
+    };
+  
+    const hanldeMute = () => {
+      setState({ ...state, muted: !state.muted });
+    };
 
 
     return (
@@ -409,12 +406,12 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
               }}
               playing={playing}
               controls={true}
-              light={false}
+              light={light}
               loop={loop}
               muted={muted}
               playsinline
               playIcon={
-                <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100%', background:'#111', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+                <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'', top:'0', border:'0px solid red', width:'100vw', height:'100%', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
     
             <div className="" style={{ textAlign:'center', animation:'fadeIn 3s', width:'', margin:'0 auto'}}>
               
@@ -431,7 +428,7 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
       {/* <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} /> */}
               </div>
               </button>}
-                light="../assets/transparent.png"
+                // light="../assets/transparent.png"
               />
 
 
@@ -470,30 +467,32 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
           width="100%"
           height="100%"
           style={{zIndex:'0'}}
-          playing
-          playsinline
+          // playing={playing}
+          // controls={true}
+          // light={false}
+          // loop={loop}
+          // muted={muted}
           config={{
             youtube: {
               playerVars: { showinfo:1, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:0  }
             },
           }}
-          playIcon={
-            <button aria-label="Click To Play" className="clickplay" style={{position:'relative', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100%', background:'#111', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItems:'center', paddingTop:'0', borderRadius:'12px'}}>
-              
-      
-      
-      
-        <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
-          <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
-      
-          <span className="headline" style={{fontWeight:'bold', padding:'0 0 0 0',}}>Click To Play</span>
-          
-          </div>
-          </button>}
-      
-      
-      
-            light="../assets/transparent.png"
+          playsinline
+            playIcon={
+              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'5', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+  
+          <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
+            
+  
+            <div style={{position:'relative', maxWidth:'100vw', margin:'10% 0', zIndex:'', display:'flex', justifyContent:'center', background:'transparent !important',}}>
+    <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
+  </div>
+        
+            <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
+    <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
+            </div>
+            </button>}
+         
           />
 </div>
 
@@ -531,9 +530,9 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
           playing
           playsinline
           playIcon={
-            <button aria-label="Click To Play" className="clickplays" style={{position:'relative', zIndex:'0', top:'', border:'0px  solid red', width:'100vw', height:'', background:'transparent', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItems:'center', paddingTop:'0', borderRadius:'12px'}}>
+            <button aria-label="Click To Play" className="clickplays" style={{position:'relative', zIndex:'', top:'', border:'0px  solid red', width:'100vw', height:'', background:'transparent', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItems:'center', paddingTop:'0', borderRadius:'12px'}}>
           
-        <div className="" style={{position:'absolute', top:'-70px', zIndex:'0', textAlign:'center', animation:'fadeIn 3s', display:'flex', justifyContent:'center', width:'auto', marginBottom:''}}>
+        <div className="" style={{position:'absolute', top:'-70px', zIndex:'', textAlign:'center', animation:'fadeIn 3s', display:'flex', justifyContent:'center', width:'auto', marginBottom:''}}>
           
       
           {/* <div className="" style={{fontSize:'14px', fontWeight:'', padding:'0 0 0 .3rem',}}>Click For Audio</div> */}
@@ -581,7 +580,7 @@ const Completionist = () => <div style={{minWidth:'50%', width:'100%', maxWidth:
   {/* <nft-card style={{}} contractAddress="0x495f947276749ce646f68ac8c248420045cb7b5e" tokenId="14583650834310525071617320783641503123203461641321595508191183187330132344833"> </nft-card> */}
   </div>
 
-
+const svgUrl = frontmatter.svgImage.publicURL
 
   return (
     
@@ -589,7 +588,7 @@ const Completionist = () => <div style={{minWidth:'50%', width:'100%', maxWidth:
 <CustomBox style={{}}>
 <Helmet>
   <body className="blogpost" />
-  <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script>
+  {/* <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script> */}
 </Helmet>
 
       <Seo
@@ -611,7 +610,9 @@ const Completionist = () => <div style={{minWidth:'50%', width:'100%', maxWidth:
 
 {/* <div className='player-wrapper' style={{position:'relative', top:'0', zIndex:'0', height:'100%', maxHeight:'', overflow:'hidden', filter: 'drop-shadow(0 0 20px #000)' }}> */}
 
-
+<div className="contact" style={{position:'fixed', bottom:'10px', zIndex:'1',  left:'0', right:'0', display:'flex', justifyContent:'center', width:'200px', margin:'0 auto'}}>
+  <Link state={{modal: true}}  to="/contact/" className="navbar-item  button fire" style={{margin:'1rem 2rem 0 2rem', textDecoration:'none'}}>Contact Me</Link>
+</div>
 
 <div className="wrap-element" style={{position:'relative', top:'0', zIndex:'', overflow:'hidden'}}>
 
@@ -626,18 +627,11 @@ const Completionist = () => <div style={{minWidth:'50%', width:'100%', maxWidth:
               image={Image}
               alt={frontmatter.title + " - Featured image"}
               className="featured-image1 layer1"
-              style={{ width:'100vw', position:'relative', top:'0', zIndex:'',  border:'0px solid red !important', paddingBottom:''}}
+              style={{ width:'100vw', position:'absolute', top:'0', zIndex:'-2',  border:'0px solid red !important', paddingBottom:'',}}
             />
-            // <InnerImageZoom src={getSrc(Image)} />
 
-
-            
-            
           ) : (
-
-       ""
-            // <StaticImage src="../../assets/default-og-image.jpg" alt="Twilightscapes Default Image" style={{height:'auto', maxHeight:'60vh', position:'absolute', zIndex:'0', bottom:'',border:'0px solid !important', objectFit:'contain',}} />
-  
+          ""
           )}
        
 
@@ -705,7 +699,7 @@ const Completionist = () => <div style={{minWidth:'50%', width:'100%', maxWidth:
               image={UnderlayImage}
               alt={frontmatter.title + " - image"}
               className="mcboaty"
-              style={{height:'auto', width:'100vw', maxHeight:'100%', overflow:'hidden', position:'absolute', bottom:'0', zIndex:'0',
+              style={{height:'auto', width:'100%', maxHeight:'100%', overflow:'hidden', position:'absolute', top:'0', zIndex:'1',
              objectFit:'contain', border:'0px solid red !important'}}
             />
             
@@ -713,19 +707,34 @@ const Completionist = () => <div style={{minWidth:'50%', width:'100%', maxWidth:
             ""
           )}
 
-{Svg ? (
+{/* {Svg ? (
             <AddSvg />
        
           ) : (
             ""
-          )}
+          )} */}
+
+<object className="" id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', top:'0', left:'', right:'', bottom:'', overflow:'', border:'0px solid red', zIndex:'1', width:'100vw', height:'100%', background:'transparent', objectFit:'contain'   }} alt="animated content" title="animated content" >You need a new browser</object>
+    
+
+    
+
+
+    {/* if (!Svg) {
+        
+      }
+      else{
+        <AddSvg />
+      } */}
 
 
 
       </div>
 
 
-
+      <div style={{padding:'0 5vw', color:'inherit !important'}}>
+      {(previous || next) && <Pagination {...props} />}
+      </div>
 
 
 {/* <br />
@@ -763,9 +772,9 @@ const Completionist = () => <div style={{minWidth:'50%', width:'100%', maxWidth:
 
 
 <article className="blog-post">
-        <header>
-          <section className="article-header" style={{textAlign:'center', margin:'0 4%', height:'auto', color:''}}>
-            <h1>{frontmatter.title}</h1>
+<header style={{height:'60vh', display:'grid', placeContent:'center'}}>
+          <section className="article-header" style={{textAlign:'center', margin:'0', height:'auto', color:''}}>
+            <h1 className="tronText" style={{fontSize:'7vw'}}>{frontmatter.title}</h1>
             {/* <time sx={{color: "muted"}}>{frontmatter.date}</time> */}
             {/* <TimeAgo date={frontmatter.date} style={{color:'#fff !important'}} /> */}
           </section>

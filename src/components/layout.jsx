@@ -4,7 +4,7 @@ import * as React from "react"
 // import { Footer } from "./footer"
 import { Seo } from "./seo"
 import { Link } from 'gatsby-plugin-modal-routing-3'
-import { ModalRoutingContext } from 'gatsby-plugin-modal-routing-3'
+// import { ModalRoutingContext } from 'gatsby-plugin-modal-routing-3'
 // import { AiOutlineClose } from "react-icons/ai"
 // import { FaHandPointDown } from "react-icons/fa"
 // import TwilightLogo from "../../static/assets/TSidebarHover.svg"
@@ -45,27 +45,7 @@ export function Layout({ children }) {
       <Seo />
       {/* <SkipNavLink /> */}
 
-      <ModalRoutingContext.Consumer>
-    {({ modal, closeTo }) => (
-      <div style={{overflow:''}}>
-        {modal ? (
-          <>
-          <div style={{display:'none', position:'fixed', top:'3%', right:'3%', padding:'0px', fontSize:'2rem', background:'#111 !important', opacity:'1 !important', zIndex:'5',  filter:' drop-shadow(0px 4px 3px #000)',}}>
-          <Link state={{noScroll: true }} to={closeTo} style={{fontSize:'2rem',  textDecoration:'none', lineHeight:'', display:'flex', flexDirection:'column', color:'', cursor:'pointer'}}>
-            {/* <AiOutlineClose /> */}
-            <span className="TRON">[</span>
-            
-            <span className="" style={{fontSize:'70%', textAlign:'center'}}>home</span>
-          </Link>
-          </div>
-          </>
-        ) : (
-''
-        )}
 
-      </div>
-    )}
-  </ModalRoutingContext.Consumer>
 
 
       {/* <Header /> */}
@@ -169,9 +149,7 @@ fontSize:'1.4rem'
 
  <li className="carto" style={{border:'none', margin:'0 0',textAlign:'center'}}>
 <Link title="Return To Home" to="/#homestart" aria-label="Return To Home"> 
-<div className="TronType tronText" style={{fontSize:'250%', margin:'0 0 0 0',}}>TRON</div>
-<div className="defont" style={{fontSize:'100%', fontWeight:'bold'}}>in 60</div>
-<div className="TRON tronText" style={{fontSize:'100%', margin:'0 0 1rem 0'}}>Seconds</div>
+<div className="TronType tronText" style={{fontSize:'250%', margin:'0 0 0 0'}}>TRON</div><div className="defont" style={{fontSize:'200%', fontWeight:'bold'}}>in 60</div><div className="TRON tronText" style={{fontSize:'100%', margin:'0 0 1rem 0'}}>Seconds</div>
 {/* <div className="TRON tronlogo" style={{textAlign:'center', opacity:'1', textShadow:'2px 2px 10px 2px #000', maxWidth:'', color:'#fff', borderRadius:'0', fontSize:'clamp(4rem, 6vw, 5.8rem)', margin:'1rem 0 0 0'}}>[</div> */}
 {/* 
   <span>More Coming Soon</span> */}
@@ -231,8 +209,8 @@ Contact Me<span>Ordering Questions?</span>
               The Vault <span>Full Photo archives</span>
               </Link>
       </li> */}
-<li className="carto" style={{textAlign:'center'}}>
-              <Link state={{modal: true}} className="navbar-item txtshadow" to="/the-grid/" style={{color:'#02e9fa'}}>
+<li className="carto" style={{textAlign:''}}>
+              <Link state={{modal: true}} className="navbar-item txtshadow" to="/enter-the-grid/" style={{color:'#02e9fa'}}>
               Enter the Grid
               {/* <span>Buy Todd's Photos</span> */}
               </Link>
@@ -244,14 +222,14 @@ Contact Me<span>Ordering Questions?</span>
               </Link>
       </li> */}
 
-      <li className="carto" style={{textAlign:'center'}}>
+      <li className="carto" style={{textAlign:''}}>
               <Link state={{modal: true}} className="navbar-item txtshadow" to="/the-grid/disc-grid/">
               LightDisc Grid
               {/* <span>Buy Todd's Photos</span> */}
               </Link>
       </li>
 
-      <li className="carto" style={{textAlign:'center'}}>
+      <li className="carto" style={{textAlign:''}}>
               <Link state={{modal: true}} className="navbar-item txtshadow" to="/the-grid/lightcycle-grid/">
               LightCycle Grid
               {/* <span>Buy Todd's Photos</span> */}
@@ -259,13 +237,13 @@ Contact Me<span>Ordering Questions?</span>
       </li>
 
 
-      <li className="carto" style={{textAlign:'center'}}>
+      <li className="carto" style={{textAlign:''}}>
               <Link state={{modal: true}} className="navbar-item txtshadow" to="/the-grid/end-of-line-club/">
               End of Line Club
               </Link>
       </li>
 
-      <li className="carto" style={{textAlign:'center'}}>
+      <li className="carto" style={{textAlign:''}}>
               <Link state={{modal: true}} className="navbar-item txtshadow" to="/the-grid/return-to-the-source/">
               Return to the Source
               {/* <span>Buy Todd's Photos</span> */}
@@ -273,7 +251,7 @@ Contact Me<span>Ordering Questions?</span>
       </li>
 
 
-      <li className="carto" style={{textAlign:'center'}}>
+      <li className="carto" style={{textAlign:''}}>
               <Link state={{modal: true}} className="navbar-item txtshadow" to="/the-grid/end-of-the-grid/">
               End of the Grid
               {/* <span>Buy Todd's Photos</span> */}

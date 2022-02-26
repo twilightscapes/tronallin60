@@ -4653,7 +4653,7 @@ height:100vh;
 .react-player__preview{
   background-color:transparent !important;
   /* background-size:50% !important; */
-  z-index:40 !important;
+  z-index: 2;
   position:relative !important;
 }
 

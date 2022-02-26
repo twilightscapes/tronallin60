@@ -146,7 +146,7 @@ function Panel1() {
 
           playsinline
             playIcon={
-              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'5', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'1', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
   
           <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
             
@@ -186,7 +186,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 
 
 {/* Panel Content */}
-<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:''}}>
+<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:'0'}}>
         <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>TRON</div>
       </h1>
 
@@ -195,8 +195,38 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 
 
  <div id="characters" className="characters" style={{position:'absolute', zIndex:'0', width:'', height:'', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'10vh 0 0 0',}}>
+
+ <ReactPlayer
+          className='playerpp'
+          url="https://www.youtube.com/embed/S5S6s5dZXNM"
+          width="100%"
+          height=""
+          style={{left:'', position:'absolute', zIndex:'2', display:'', width:'', alignSelf:'center', placeContent:'center', justifyContent:'center', margin:'0 auto', bottom:'30vh', border:'0px solid blue'}}
+          config={{
+            youtube: {
+              playerVars: { showinfo:0, autoplay:1, controls:0, mute:0, start:5,  }
+            },
+          }}
+          loop
+          playing
+          playsinline
+          playIcon={
+
+
+        <div className="" style={{display:'grid', flexDiection:'', placeContent:'center', height:'', position:'relative', left:'', right:'', bottom:'35vh', zIndex:'9', width:''}}>
+
+        <button aria-label="Click To Play" className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'', filter:'drop-shadow(2px 2px 2px #000)', width:'100%', borderRadius:'200px', padding:'8% 0%', lineHeight:'200%', fontSize:'clamp(2rem, 4vw, 3.6rem)' }}>
+          
+          <Link state={{modal: true}} to="/the-grid/" style={{color:'#37f8f8'}}>Enter The Grid</Link>
+          
+          </button>
+        
+        </div>
+        }
+            light="../assets/transparent.png"
+          />
     
-<div style={{display:'flex', flexDirection:'row', justifyContent:'space-around', zIndex:'-1' }}>
+<div style={{display:'flex', flexDirection:'row', justifyContent:'space-around', zIndex:'-2', position:'relative' }}>
 
     <div id="" className="" style={{position:'relative', display:'flex', justifyContent:'center', border:'0px solid red',}}>
              <Link state={{modal: true}} to="/the-grid/son-of-flynn/" title="Sam Flynn"  aria-label="Sam Flynn">
@@ -256,35 +286,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
 
 
 
-    <ReactPlayer
-          className='playerpp'
-          url="https://www.youtube.com/embed/S5S6s5dZXNM"
-          width="100%"
-          height=""
-          style={{left:'', position:'absolute', zIndex:'', display:'grid', width:'', alignSelf:'center', placeContent:'center', justifyContent:'center', margin:'0 auto', bottom:'30vh', border:'0px solid blue'}}
-          config={{
-            youtube: {
-              playerVars: { showinfo:0, autoplay:1, controls:0, mute:0, start:5,  }
-            },
-          }}
-          loop
-          playing
-          playsinline
-          playIcon={
-
-
-        <div className="" style={{display:'grid', flexDiection:'', placeContent:'center', height:'', position:'absolute', left:'', right:'', top:'', width:'500px'}}>
-
-        <button aria-label="Click To Play" className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px',fontSize:'2vw', padding:'10% 5%', }}>
-          
-          <Link state={{modal: true}} to="/the-grid/" style={{color:'#37f8f8'}}>Enter The Grid</Link>
-          
-          </button>
-        
-        </div>
-        }
-            light="../assets/transparent.png"
-          />
+  
 
        
 
@@ -310,6 +312,10 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
 })} */}
 
 </div>
+
+
+
+
 
 
 

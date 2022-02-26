@@ -353,7 +353,7 @@ const HomePage = ({ data }) => {
 <FrontLoader style={{positon:'absolute', top:'0', left:'', right:'', width:'100vw', height:'',}} />
 
 <div className="logointro" style={{position:'absolute', top:'20vh', width:'100vw', textAlign:'center', zIndex:'-1'}}>
-<div className="TronType tronText" style={{fontSize:'12vw', margin:'0 0 0 0'}}>TRON</div><div  style={{fontSize:'5vw', fontWeight:'bold', marginTop:'.5rem'}}><div className="defont">in 60</div></div><div className="TRON tronText" style={{fontSize:'4vw', margin:'0 0 1rem 0'}}>Seconds</div>
+<div className="TronType tronText" style={{fontSize:'12vw', margin:'0 0 0 0'}}>TRON</div><div  style={{fontSize:'5vw', fontWeight:'bold', marginTop:'.5rem,', color:'#fff'}}><div className="defont">in 60</div></div><div className="TRON tronText" style={{fontSize:'4vw', margin:'0 0 1rem 0'}}>Seconds</div>
 </div>
   {/* <h1 className="tronText " style={{fontSize:'7vw', padding:'3vh 8vw 20vh 8vw', position:'', top:'', border:'0px solid', diplay:'grid', placeContent:'center', maxWidth:'80vw', fontFamily:''}}>
     <div className="lineOne">TRON in 60 Seconds</div> <div className="lineTwo">In 60 Seconds?</div>

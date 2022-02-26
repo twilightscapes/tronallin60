@@ -135,7 +135,7 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
 
 
 	
-	<p style={{textAlign:'center', fontSize:'clamp(1.3rem, 2.4vw, 2.5rem)', padding:'0', margin:'0 0 10px 0', overflowWrap:'break-word'}}>I'm Taking New Clients <br /> <strong></strong></p>
+	<p style={{textAlign:'center', fontSize:'clamp(1.3rem, 2.4vw, 2.5rem)', padding:'0', margin:'0 0 10px 0', overflowWrap:'break-word'}}>I'm Accepting New Clients <br /> <strong></strong></p>
 
 
     
