@@ -1,5 +1,11 @@
 /** @jsx jsx */
 // import React from "react"
+
+import React, { useState, useRef, useEffect } from "react";
+import ReactPlayer from 'react-player/lazy'
+import Controls from "../components/Controls";
+
+
 import { jsx } from "theme-ui"
 import { Link, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
@@ -12,24 +18,55 @@ import { useSiteMetadata } from "../hooks/use-site-metadata"
 import Countdown from 'react-countdown'
 import { IoArrowRedoSharp, IoArrowUndoSharp } from "react-icons/io5"
 import { AiOutlineAudioMuted } from "react-icons/ai"
-// import { Footer } from "../components/footer"
+
 // import { SRLWrapper } from "simple-react-lightbox"
 import {CopyToClipboard} from 'react-copy-to-clipboard'
-import ReactPlayer from 'react-player/lazy'
+// import ReactPlayer from 'react-player/lazy'
 import YouTubed from "../pages/youtube"
 import { Seo } from "../components/seo"
 import { Layout } from "../components/layout"
 import ShareSocial from '../components/share' 
 import GoBack from "../components/goBack"
 import { ImPlay } from "react-icons/im"
-import TimeAgo from 'react-timeago'
+
 import styled from "styled-components"
-// import InnerImageZoom from 'react-inner-image-zoom'
-// import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css'
 const CustomBox = styled.div`
-@media (max-width: 48rem) {
-  .home-posts{flex-direction:column !important; width:90% !important; margin:0 auto !important;}
+
+.MuiSlider-root {
+  color:#ff00000 !important;
 }
+
+.wrap-element {
+  position: relative;
+  overflow: ;
+  padding-bottom: 56.25%;
+  height:100vh;
+
+}
+.wrap-element iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%; 
+  left: -100%; 
+  border: 0;
+}
+
+
+@media (max-width: 48em) {
+  .wrap-element {
+    padding-bottom: 0;
+    height:300px;
+    overflow:visible;
+    border:0px solid red;
+  }
+}
+
+@media (min-width: 58em) {
+
+}
+
+
 `
 
 // const options = {

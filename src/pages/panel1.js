@@ -127,7 +127,7 @@ function Panel1() {
          className='frontbg'
          url="https://www.youtube.com/embed/c_V1iD6F1kk"
          width="100%"
-         height="100%"
+         height="100vh"
          playing={playing}
             controls={true}
             light={false}
@@ -194,7 +194,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
  
 
 
- <div id="characters" className="characters" style={{position:'relative', zIndex:'0', width:'', height:'', top:'', background:'none', filter:'none', boxShadow:'none', padding:'10vh 0 0 0',}}>
+ <div id="characters" className="characters" style={{position:'absolute', zIndex:'0', width:'', height:'', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'10vh 0 0 0',}}>
     
 <div style={{display:'flex', flexDirection:'row', justifyContent:'space-around', zIndex:'-1' }}>
 
@@ -202,7 +202,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
              <Link state={{modal: true}} to="/the-grid/son-of-flynn/" title="Sam Flynn"  aria-label="Sam Flynn">
     {/* <SamFlynn className="character" style={{height:'100vh', width:'90%', margin:'0 0 0 0',}} /> */}
     <StaticImage className="character"
-style={{height:'80vh', width:'', margin:'0 0 0 0',}}
+style={{height:'', width:'', margin:'0 0 0 0',}}
 alt="Todd Lambert Web development for photographers" src="../../static/assets/sam-flynn.png" />
     </Link>
     </div>
@@ -212,7 +212,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sa
     <Link state={{modal: true}} to="/the-grid/meet-quorra" title="Quorra" aria-label="Quorra">
       {/* <QuoraStand className="character" style={{height:'100%', width:'85%', margin:'0 0 0 10%', right:'', zIndex:''}} /> */}
       <StaticImage className="character"
-style={{height:'80vh', width:'', margin:'0 0 0 0',}}
+style={{height:'', width:'', margin:'0 0 0 0',}}
 alt="Todd Lambert Web development for photographers" src="../../static/assets/quora-ass.png" />
       </Link>
     </div>
@@ -222,7 +222,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/qu
 <Link state={{modal: true}} to="/kevin-flynn/" title="Kevin Flynn" aria-label="Kevin Flynn">
     {/* <KevinFlynn className="character" style={{position:'relative', height:'100%', width:'130%', zIndex:'', margin:'0 0 0 -16%'}} /> */}
     <StaticImage className="character"
-style={{height:'80vh', width:'', margin:'0 0 0 0',}}
+style={{height:'', width:'', margin:'0 0 0 0',}}
 alt="Todd Lambert Web development for photographers" src="../../static/assets/kevin-flynn.png" />
     </Link>
     </div>
@@ -233,7 +233,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ke
       <Link state={{modal: true}} to="/tron/" title="Tron" aria-label="Tron">
     {/* <TronGuy className="character" style={{height:'100%', width:'100%', margin:'0 0 0 0', transform: 'scaleX(-1)'}} /> */}
     <StaticImage className="character"
-style={{height:'80vh', width:'', margin:'0 0 0 0',}}
+style={{height:'', width:'', margin:'0 0 0 0',}}
 alt="Todd Lambert Web development for photographers" src="../../static/assets/tron.png" />
     </Link>
     </div>
@@ -244,7 +244,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/tr
     <Link state={{modal: true}} to="/clu/" title="Clu" aria-label="Clu">
     {/* <CluGuy className="character evil" style={{height:'100%', width:'100%', margin:'0 0 0 -20%',}} /> */}
     <StaticImage className="character evil"
-style={{height:'80vh', width:'', margin:'0 0 0 0',}}
+style={{height:'', width:'', margin:'0 0 0 0',}}
 alt="Todd Lambert Web development for photographers" src="../../static/assets/clu.png" />
     </Link>
     </div>

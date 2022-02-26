@@ -154,10 +154,10 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 {/* Panel Video */}
 
 {/* Panel Content */}
-<div style={{position:'absolute', top:'0', width:'100vw', height:'100vh'}}>
+<div style={{position:'absolute', top:'0', width:'100vw', height:'100vh', color:'#fff'}}>
 
 <Link title="Sirens" state={{modal: true}} to="/the-grid/sirens/">
-<TronChick className="tronchick character" style={{maxHeight:'100vh', maxWidth:'', height:'', width:'', position:'absolute', left:'30vw', bottom:'0', paddingTop:'0', zIndex:'0', border:'0px solid blue' }} />
+<TronChick className="tronchick character" style={{maxHeight:'100vh', maxWidth:'', height:'', width:'', position:'absolute', right:'0', bottom:'0', paddingTop:'0', zIndex:'0', border:'0px solid blue' }} />
 </Link>
 
 
@@ -201,7 +201,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 
 
 
-<div className="" style={{display:'', flexDiection:'column', justifyContent:'end', height:'', position:'absolute', left:'5%', bottom:'5vh'}}>
+<div className="nextbutt" style={{display:'', flexDiection:'column', justifyContent:'end', height:'', position:'absolute', left:'5%', bottom:'5vh'}}>
 
 <button className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px',fontSize:'2vw', padding:'10% 5%', }}>
   

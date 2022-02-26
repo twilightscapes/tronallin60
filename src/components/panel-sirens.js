@@ -158,7 +158,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 {/* Panel Content */}
 
 <Link title="Sirens" state={{modal: true}} to="/the-grid/sirens/">
-<TronChick className="tronchick character" style={{maxHeight:'100vh', maxWidth:'', height:'', width:'', position:'absolute', left:'40vw', top:'0', paddingTop:'0', zIndex:'1', border:'0px solid blue' }} />
+<TronChick className="tronchick character" style={{maxHeight:'100vh', maxWidth:'', height:'', width:'', position:'absolute', right:'0', bottom:'0', paddingTop:'0', zIndex:'0', border:'0px solid blue' }} />
 </Link>
 
 

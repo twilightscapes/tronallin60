@@ -1,8 +1,11 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
+import { Helmet } from "react-helmet"
 import { Layout } from "../../../components/layout"
 import isEqual from "lodash.isequal"
 import { getSrc } from "gatsby-plugin-image"
+import { Footer } from "../../../components/footer"
+import { StaticImage } from "gatsby-plugin-image"
 // import { FaHandPointDown } from "react-icons/fa"
 // import ScrollAnimation from 'react-animate-on-scroll'
 // import InfoMenu from '../../../components/infomenu'
@@ -155,6 +158,9 @@ export default function Product({ data: { product, suggestions } }) {
   return (
 
     <Layout>
+          <Helmet>
+  <body className="forsale" style={{background:'#111'}} />
+</Helmet>
       <CustomBox>
       
       {firstImage ? (
@@ -164,7 +170,14 @@ export default function Product({ data: { product, suggestions } }) {
           image={getSrc(firstImage.gatsbyImageData)}
         />
         
+        
       ) : undefined}
+
+
+<div className="contact" style={{position:'fixed', bottom:'10px', zIndex:'1',  left:'0', right:'0', display:'flex', justifyContent:'center'}}>
+  <Link state={{modal: true}} to="/contact/" className="navbar-item  button fire" style={{margin:'1rem 2rem 0 2rem', textDecoration:'none'}}>Contact Me</Link>
+</div>
+
       <div className="" style={{paddingTop:'0 !important', marginTop:'0'}}>
         <div className="dd">
           {hasImages && (
@@ -362,26 +375,58 @@ export default function Product({ data: { product, suggestions } }) {
     </div>
 </Link>
   
-    {/* <StaticImage src="../../../img/todd-horizons.jpg" alt="Todd in the Field" className="round" /> */}
+    <StaticImage src="../../../img/todd-horizons.jpg" alt="Todd in the Field" className="round" />
         
 </div>
 
 <br />
 <br />
-<h3 style={{fontSize:'130%', fontWeight:'bold', textAlign:'center'}}>Other projects by Todd</h3>
+<h3 style={{fontSize:'130%', fontFamily:'inherit', fontWeight:'bold', textAlign:'center'}}>Other projects by Todd</h3>
+<br />
+
+<div className=" network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'space-between',}}>
+    <a className="noexit" href="https://twilightscapes.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>
+    <StaticImage src="../../../img/twilightscapes-button.jpg" alt="Todd Lambert Night photos"  /></a>
+    <br />
+    Experience a new style of landscape photography all through the eyes of Todd Lambert. Explore the unusual and see the night like you&apos;ve never seen it before.
+    <br /><br />
+    <div style={{textAlign:'center',}}><a className="post-card button " href="https://twilightscapes.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>Twilightscapes.com</a></div>
+    </div>
+
+<br />
+    <div className=" network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+    <a className="noexit" href="https://urbanfetish.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>
+    <StaticImage src="../../../img/urban-fetish-button.jpg" alt="Todd Lambert Night photos" style={{borderRadius:'8px'}}  /></a>
+    <br />
+    Take a walk on the wild side and follow along as Todd Lambert goes in search of the creepiest, freakiest, spookiest abandoned and desolate locations he can find. 
+    <br /><br />
+    <div style={{textAlign:'center',}}><a className="post-card button " href="https://urbanfetish.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>UrbanFetish.com</a></div>
+    </div>
 
 
+    <br />
+
+    <div className=" network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'space-between',}}>
+    <a className="noexit" href="https://toddlambert.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>
+    <StaticImage src="../../../img/toddlambert-promo-banner.png" alt="Todd Lambert is an independent artist, creator, design, developer and generally a unicorn" style={{borderRadius:'8px'}}  /></a>
+    <br />
+    Todd Lambert excels in design, development, marketing, conceptual photography and online strategy that bring results. Learn more about Todd and maybe hire him to help you?
+    <br /><br />
+    <div style={{textAlign:'center',}}><a className="post-card button " href="https://toddlambert.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>ToddLambert.com</a></div>
+    </div>
 
 
+<br />
 
-<a href="https://urbanfetish.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit', lineHeight:'1.7rem'}}>
- {/* <StaticImage src="../../../img/urban-fetish-button.jpg" alt="Urban Fetish" className="round" /> */}
- <br />
- 
- Take a walk on the wild side and follow along as Todd Lambert goes in search of the creepiest, freakiest, spookiest abandoned and desolate locations he can find. 
- 
- <h5 style={{textAlign:'center',}}>Visit UrbanFetish.com</h5></a>
 
+<div className=" network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+    <a className="noexit" href="https://vidsocks.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit'}}>
+    <StaticImage src="../../../img/vidsock-promo.jpg" alt="Todd builds Web Apps"  style={{borderRadius:'8px'}} /></a>
+    <br />
+Todd sells exceptionally fast and well-built multimedia web apps called VidSocks. They are a complete website solution that costs nothing to run and get top ranks in Google!
+    <br /><br />
+    <div style={{textAlign:'center',}}><a className="post-card button " href="https://vidsocks.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>VidSocks.com</a></div>
+    </div>
 
 
             </div>
@@ -402,7 +447,7 @@ export default function Product({ data: { product, suggestions } }) {
 
 
 
-        <div style={{textAlign:'center', margin:'20px'}}>
+        <div style={{textAlign:'center', margin:'5rem 0'}}>
           
     
 
@@ -421,13 +466,15 @@ export default function Product({ data: { product, suggestions } }) {
             </div>
       </div>
 
+<br /><br />
+      {/* <div className="print"><h3 style={{textAlign:'center', fontSize:'160%', fontWeight:'bold', maxWidth:'700px', margin:'3rem  auto 0 auto'}}>Have a private question or comment?</h3>
 
-      <div className="print"><h3 style={{textAlign:'center', fontSize:'160%', fontWeight:'bold', maxWidth:'700px', margin:'3rem  auto 0 auto'}}>Have a private question or comment?</h3>
-
-{/* <ScrollAnimation animateIn="bounce" duration={1} animateOnce={false} animatePreScroll={false} >
+<ScrollAnimation animateIn="bounce" duration={1} animateOnce={false} animatePreScroll={false} >
 <FaHandPointDown className="bounce" style={{fontSize:'80px', textAlign:'center', width:'100%', margin:'1rem auto'}} />
-</ScrollAnimation> */}
-</div>
+</ScrollAnimation>
+</div> */}
+
+<Footer />
 
       </CustomBox>
     </Layout>
