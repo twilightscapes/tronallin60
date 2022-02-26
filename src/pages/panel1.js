@@ -1,14 +1,16 @@
+import React, { useState, useRef } from "react";
 
-import * as React from "react"
-import styled from "styled-components"
 
 import { Link } from "gatsby"
 // import { graphql } from "gatsby"
 // import { GatsbyImage } from 'gatsby-plugin-image'
 // import TwilightLogo from "../../static/assets/logo.svg"
 import { StaticImage } from "gatsby-plugin-image"
+import { useSiteMetadata } from "../hooks/use-site-metadata"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import ReactPlayer from 'react-player/lazy'
+import Controls from "../components/Controls"
+import { ImPlay } from "react-icons/im"
 // import { ImPlay } from "react-icons/im"
 // import LightCycle from "../../static/assets/light-cycle.svg"
 // import QuoraStrike from "../../static/assets/quora-strike.svg"
@@ -25,58 +27,157 @@ import ReactPlayer from 'react-player/lazy'
 // import TronChick from "../../static/assets/tron-chick1.svg"
 
 
+import styled from "styled-components"
 const CustomBox = styled.div`
-.frontbg iframe{
-  opacity:.4;
+
+.MuiSlider-root {
+  color:#ff00000 !important;
 }
+
+.wrap-element {
+  position: relative;
+  overflow: ;
+  padding-bottom: 56.25%;
+  height:100vh;
+
+}
+.wrap-element iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%; 
+  left: -100%; 
+  border: 0;
+}
+
+
+@media (max-width: 48em) {
+  .wrap-element {
+    padding-bottom: 0;
+    height:300px;
+    overflow:visible;
+    border:0px solid red;
+  }
+}
+
+@media (min-width: 58em) {
+
+}
+
+
 `
 
-const Panel1 = () => (
+
+
+
+
+function Panel1() {
+
+  const [state, setState] = useState({
+    playing: true,
+    controls: true,
+    light: true,
+    muted: false,
+    loop: true,
+  });
+  
+  // const playerRef = useRef(null);
+  const controlsRef = useRef(null);
+  
+  const {
+    playing,
+    controls,
+    light,
+    muted,
+    loop,
+    playbackRate,
+    pip,
+    played,
+    seeking,
+    volume,
+  } = state;
+  
+  const handlePlayPause = () => {
+    setState({ ...state, playing: !state.playing });
+  };
+  
+  const hanldeMute = () => {
+    setState({ ...state, muted: !state.muted });
+  };
+  
+  const { iconimage } = useSiteMetadata()
+
+  return (
+  
 <CustomBox style={{}}>
 
 {/* GRID INTRO */}
-<div className="" id="" style={{display:'',  padding:'0', outline:'0px solid yellow', height:'100vh', width:'100vw', position:'relative', overflow:'visible'}}>
-
-{/* <div style={{position:'absolute', right:'20vh', top:'0', width:'300px', height:'200px', background:'red', color:'#fff'}}>DAMN</div> */}
-
-
 
 
 
 {/* Panel Video */}
-<div className="vidbox" style={{position:'absolute', height:'100vh', width:'100vw', bottom:'0', zIndex:''}}>
+{/* <div className="vidbox" style={{position:'absolute', height:'100vh', width:'100vw', bottom:'0', zIndex:''}}>
 <div className="video-background">
-<div className="video-foreground">
+<div className="video-foreground"> */}
 {/* c_V1iD6F1kk */}
 {/* nJ38P5elTkg */}
 
+<div className="wrap-element" style={{overflow:'hidden'}}>
 <ReactPlayer
-         className='youtubehide frontbg'
+         className=' frontbg'
          url="https://www.youtube.com/embed/c_V1iD6F1kk"
          width="100%"
          height="100%"
-         config={{
-           youtube: {
-             playerVars: { showinfo:0, autoplay:1, controls:0, mute:1, start:20, end:120, loop:1  }
-           },
-         }}
-         loop
-         playing
-         playsinline
-            //  playIcon={
-            //    <button aria-label="Click To Play" className="clickplay1" style={{position:'relative', zIndex:'5', bottom:'0', right:'', left:'', border:'0px solid red', width:'100vw', height:'100vh', background:'transparent', color:'#fff', fontSize:'18px', display:'block', placeContent:'center', padding:'0' }}>
+         playing={playing}
+            controls={true}
+            light={false}
+            loop={loop}
+            muted={muted}
+            config={{
+              file: {
+                attributes: {
+                  crossorigin: "anonymous",
+                },
+              },
+              youtube: {
+                playerVars: { showinfo:0, controls:0, start:20, end:41, mute:1 }
+              },
+            }}
 
-
-
-
-            //  </button>
+          playsinline
+            playIcon={
+              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'5', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+  
+          <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
+            
+  
+            <div style={{position:'relative', maxWidth:'100vw', margin:'10% 0', zIndex:'', display:'flex', justifyContent:'center', background:'transparent !important',}}>
+    <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
+  </div>
+        
+            <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
+    <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
+            </div>
+            </button>}
          
-            // }
-            //    light="assets/Front-Loader.svg"
-         />
-</div>
-</div>
-</div>
+          />
+
+
+{/* <div style={{position:'absolute', bottom:'0', left:'0', zIndex:'1', width:'100vw', height:'100%', border:'0px solid yellow', padding:'0', margin:'0'}}>
+<StaticImage className=""
+alt="Todd Lambert Web development for photographers" src="../../static/assets/shawshank-stuff.png" style={{height:'100vh'}}  />
+</div> */}
+
+          {/* <Controls
+            ref={controlsRef}
+            onPlayPause={handlePlayPause}
+            playing={playing}
+            played={played}
+            onMute={hanldeMute}
+            muted={muted}
+          /> */}
+      
+     
 {/* Panel Video */}
 
 
@@ -153,10 +254,42 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
     </div> 
     
 
+
+
+    <ReactPlayer
+          className='playerpp'
+          url="https://www.youtube.com/embed/S5S6s5dZXNM"
+          width="100%"
+          height=""
+          style={{left:'', position:'absolute', zIndex:'', display:'grid', width:'', alignSelf:'center', placeContent:'center', justifyContent:'center', margin:'0 auto', bottom:'30vh', border:'0px solid blue'}}
+          config={{
+            youtube: {
+              playerVars: { showinfo:0, autoplay:1, controls:0, mute:0, start:5,  }
+            },
+          }}
+          loop
+          playing
+          playsinline
+          playIcon={
+
+
+        <div className="" style={{display:'grid', flexDiection:'', placeContent:'center', height:'', position:'absolute', left:'', right:'', top:'', width:'500px'}}>
+
+        <button aria-label="Click To Play" className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px',fontSize:'2vw', padding:'10% 5%', }}>
+          
+          <Link state={{modal: true}} to="/the-grid/" style={{color:'#37f8f8'}}>Enter The Grid</Link>
+          
+          </button>
+        
+        </div>
+        }
+            light="../assets/transparent.png"
+          />
+
        
 
 
-</div>
+
 
 {/* Panel Content */}
 
@@ -176,11 +309,13 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
 />
 })} */}
 
-
+</div>
 
 
 
 
 </CustomBox>
-)
-export default Panel1
+  );
+}
+
+export default Panel1;

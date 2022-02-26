@@ -126,7 +126,7 @@ const Panel3 = () => (
 
 
 
-<div className="nextbutt" style={{display:'', flexDiection:'column', justifyContent:'end', height:'', position:'absolute', left:'5%', top:''}}>
+<div className="" style={{display:'', flexDiection:'column', justifyContent:'end', height:'', position:'absolute', left:'5%', bottom:'20vh'}}>
 
 <button className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px',fontSize:'2vw', padding:'10% 5%', }}>
   

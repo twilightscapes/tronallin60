@@ -55,7 +55,7 @@ import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 
 // import loadable from '@loadable/component'
-import Panel1 from '../components/panel1'
+import Panel1 from '../pages/panel1'
 
   // const Panel1 = loadable(() => import('../components/panel1'))
   // const Panel2 = loadable(() => import('../components/panel2'), {
@@ -355,34 +355,30 @@ const HomePage = ({ data }) => {
 
 {/* <HomeHolder /> */}
 
-<div className="horizontal-holder" style={{position:'relative'}}>
-<div className="RArrow">{/* <span></span> */}</div>
-<div className="horizontal-scroll-wrapper panels" style={{}}>
-<div className="" style={{height:'1px'}}></div>
 
 
-<GridLoader />
+
+{/* <GridLoader /> */}
 
 
 <div id="homestart"><Panel1 /></div>
 
 
 
-<TheGrid />
+{/* <TheGrid /> */}
 {/* <BlogListHome data={posts} /> */}
 
-<div className="donation" style={{}}>
-{/* <Link to="/contact"> */}
+{/* <div className="donation" style={{}}>
+<Link to="/contact">
 <div style={{position:'relative', top:'', margin:'0', padding:'25% 0',  width:'', zIndex:'1', textAlign:'', borderRadius:'12px', textDecoration:'none'}}>
-  {/* <Newsignup /> */}
+  <Newsignup />
   </div>
-{/* </Link> */}
-</div>
+</Link>
+</div> */}
 
 
         
-</div>
-</div>
+
 
     </Layout>
   )

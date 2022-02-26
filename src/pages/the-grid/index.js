@@ -52,45 +52,7 @@ export default function TheGrid() {
 
       <Panel2 />
 
-      <ReactPlayer
-          className='playerpp'
-          url="https://www.youtube.com/embed/S5S6s5dZXNM"
-          // url={[
-          //   iframeUrl,
-          //   Suggestion1,
-          //   Suggestion2,
-          //   Suggestion3
-          // ]}
-          width=""
-          height=""
-          style={{left:'', position:'absolute', zIndex:'', display:'grid', width:'500px', alignSelf:'center', placeContent:'center', justifyContent:'center', margin:'0 auto', bottom:'20vh', border:'0px solid blue'}}
-          config={{
-            youtube: {
-              playerVars: { showinfo:0, autoplay:1, controls:0, mute:0, start:5,  }
-            },
-          }}
-          loop
-          playing
-          playsinline
-          playIcon={
-
-
-        <div className="nextbutt" style={{display:'', flexDiection:'column', justifyContent:'end', height:'100%', position:'absolute', left:'5vw', top:'-1vh'}}>
-
-        <button aria-label="Click To Play" className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px',fontSize:'2vw', padding:'10% 5%', }}>
-          
-          <Link state={{modal: true}} to="/the-grid/proceed-to-games/" style={{color:'#37f8f8'}}>I GOT IN</Link>
-          
-          </button>
-        
-        </div>
-          
-
-          
-        }
-   
-            light="../assets/transparent.png"
-          />
+      
    
 
 
