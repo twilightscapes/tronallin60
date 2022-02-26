@@ -6,7 +6,7 @@ featuredImage: /assets/tronin60.jpg
 secondaryImage: /assets/transparent.png
 underlayImage: /assets/transparent.png
 showInfo: true
-youtuber: "iHxmNzMfDj4"
+youtuber: ""
 youtubeautostart: "1"
 title: All In 60 Seconds - allin60.com
 svgImage: /assets/null.svg

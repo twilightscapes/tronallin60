@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 //  import { GatsbyImage } from 'gatsby-plugin-image'
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
+import Newsignup from "../components/newssign"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 // import GalleryMenu from "../components/galleryMenu"
 // import { StaticImage } from "gatsby-plugin-image"
@@ -356,7 +357,7 @@ const HomePage = ({ data }) => {
 
 <div className="horizontal-holder" style={{position:'relative'}}>
 <div className="RArrow">{/* <span></span> */}</div>
-<div className="horizontal-scroll panels" style={{}}>
+<div className="horizontal-scroll-wrapper panels" style={{}}>
 <div className="" style={{height:'1px'}}></div>
 
 
@@ -368,8 +369,15 @@ const HomePage = ({ data }) => {
 
 
 <TheGrid />
-<BlogListHome data={posts} />
+{/* <BlogListHome data={posts} /> */}
 
+<div className="donation" style={{}}>
+{/* <Link to="/contact"> */}
+<div style={{position:'relative', top:'', margin:'0', padding:'25% 0',  width:'', zIndex:'1', textAlign:'', borderRadius:'12px', textDecoration:'none'}}>
+  {/* <Newsignup /> */}
+  </div>
+{/* </Link> */}
+</div>
 
 
         

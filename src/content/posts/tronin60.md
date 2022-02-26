@@ -1,9 +1,9 @@
 ---
 template: blog-post
-title: Transcendence
-slug: /transcendence
-date: 2022-01-01 01:43
-description: A groovy animation floating through the cosmos
+title: Tron in 60 Seconds
+slug: /tronin60
+date: 2022-02-01 01:43
+description: Tron in ONLY 60 seconds
 youtuber: "1kIihY252eE"
 youtuber2: "mkYKF5hQQ6M"
 youtubeshoworiginal: "1"
@@ -22,7 +22,7 @@ svgzindex: "0"
 comments: "1"
 shareable: "1"
 underlayImage: /assets/transparent.png
-featuredImage: /assets/night211.jpg
+featuredImage: /assets/tronin60.jpg
 svgImage: /assets/transcendence.svg
 nftlink: ""
 nftdrop: "2021-10-31T14:00:00"

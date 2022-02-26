@@ -233,8 +233,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://allin60.com',
-        sitemap: 'https://allin60.com/sitemap.xml',
+        host: 'https://tron.allin60.com',
+        sitemap: 'https://tron.allin60.com/sitemap.xml',
         resolveEnv: () => process.env.GATSBY_ENV,
         env: {
           development: {

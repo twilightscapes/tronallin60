@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
+import React from "react"
 // import { Link } from "gatsby"
 // import { RiArrowDownLine, RiArrowRightSLine } from "react-icons/ri"
 
@@ -18,8 +19,8 @@ export default function BlogListHome(props) {
 const PostMaker = ({ data }) => (
 
     
-<div style={{overflow:'', maxHeight:'', maxWidth:''}}>
 
+<>
         
 
 
@@ -27,8 +28,8 @@ const PostMaker = ({ data }) => (
 {data}
 
  
-</div>
 
+</>
     
 
 
