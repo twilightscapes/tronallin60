@@ -54,9 +54,9 @@ const NewsletterPage = () => (
 
 
             
-              <div className="txtshadow" style={{fontSize:'120%', textAlign:'center', marginTop:'10px'}}><strong>Follow Me Into The Night</strong></div>
-              
-              <span className="txtshadow" style={{fontSize:'85%'}}>night photography newsletter<br />(it's free!)</span>
+              <div className="txtshadow" style={{fontSize:'120%', textAlign:'center', marginTop:'10px'}}><strong>Get All The Latest Minutes</strong></div>
+              <br />
+              <span className="txtshadow" style={{fontSize:'95%'}}>Get notified when NEW Minutes drop </span>
 
              <div className="signbox" style={{display:'flex', gap:'10px'}}>
              
@@ -80,7 +80,7 @@ const NewsletterPage = () => (
               type="submit"
               style={{marginTop:'-8px', fontSize:'clamp(1rem, 1.5vw, 1.5rem)', whiteSpace:'nowrap'}}
             >
-              Follow Todd{" "}
+              Notify Me&nbsp;{" "}
               <span className="icon -right">
                 <RiSendPlane2Line />
               </span>

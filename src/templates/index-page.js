@@ -10,6 +10,7 @@ import { Helmet } from "react-helmet"
 import { getSrc } from "gatsby-plugin-image"
 import BlogListHome from "../components/blog-list-home"
 import Newsignup from "../components/newssign"
+import FrontLoader from "../../static/assets/FrontLoader.svg"
 
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 
@@ -325,7 +326,7 @@ const HomePage = ({ data }) => {
 
 
 
-<div className="" style={{height:'1px'}}></div>
+<div className="" style={{height:'100%'}}></div>
 
 
 
@@ -348,9 +349,19 @@ const HomePage = ({ data }) => {
 <div className="donation2" style={{display:'grid',
   placeContent:'center', width:'100vw', height:'100vh', justifyContent:'center', position:'relative', background:'rgba(0,0,0,0.50)', webkitBackdropFilter:'blur(10px)', backdropFilter:'blur(14px)'}}>
 
-  <h1 className="tronText " style={{fontSize:'7vw', padding:'3vh 8vw 20vh 8vw', position:'', top:'', border:'0px solid', diplay:'grid', placeContent:'center', maxWidth:'80vw', fontFamily:'inherit'}}><div className="lineOne">What Can You Do</div> <div className="lineTwo">In 60 Seconds?</div></h1>
+
+<FrontLoader style={{positon:'absolute', top:'0', left:'', right:'', width:'100vw', height:'',}} />
+
+<div className="logointro" style={{position:'absolute', top:'20vh', width:'100vw', textAlign:'center', zIndex:'-1'}}>
+<div className="TronType tronText" style={{fontSize:'12vw', margin:'0 0 0 0'}}>TRON</div><div  style={{fontSize:'5vw', fontWeight:'bold', marginTop:'.5rem'}}><div className="defont">in 60</div></div><div className="TRON tronText" style={{fontSize:'4vw', margin:'0 0 1rem 0'}}>Seconds</div>
+</div>
+  {/* <h1 className="tronText " style={{fontSize:'7vw', padding:'3vh 8vw 20vh 8vw', position:'', top:'', border:'0px solid', diplay:'grid', placeContent:'center', maxWidth:'80vw', fontFamily:''}}>
+    <div className="lineOne">TRON in 60 Seconds</div> <div className="lineTwo">In 60 Seconds?</div>
+  </h1> */}
+  
 </div>
 {/* </BackgroundImage> */}
+
 
 
 <div className=" fire" style={{margin:'', height:'100%', textDecoration:'none'}}>

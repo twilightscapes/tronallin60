@@ -89,7 +89,7 @@ export function Layout({ children }) {
   left:'10px',
   width:'150px',
 fontSize:'1.4rem'
-}}><a href="https://allin60.com">allin60.com</a></div>
+}}><a href="https://tron.allin60.com">tron.</a><a href="https://allin60.com">allin60.com</a></div>
 
 
 
@@ -169,7 +169,9 @@ fontSize:'1.4rem'
 
  <li className="carto" style={{border:'none', margin:'0 0',textAlign:'center'}}>
 <Link title="Return To Home" to="/#homestart" aria-label="Return To Home"> 
-<div className="TronType tronText" style={{fontSize:'250%', margin:'0 0 0 0'}}>TRON</div><div className="defont" style={{fontSize:'200%', fontWeight:'bold'}}>in 60</div><div className="TRON tronText" style={{fontSize:'100%', margin:'0 0 1rem 0'}}>Seconds</div>
+<div className="TronType tronText" style={{fontSize:'250%', margin:'0 0 0 0',}}>TRON</div>
+<div className="defont" style={{fontSize:'100%', fontWeight:'bold'}}>in 60</div>
+<div className="TRON tronText" style={{fontSize:'100%', margin:'0 0 1rem 0'}}>Seconds</div>
 {/* <div className="TRON tronlogo" style={{textAlign:'center', opacity:'1', textShadow:'2px 2px 10px 2px #000', maxWidth:'', color:'#fff', borderRadius:'0', fontSize:'clamp(4rem, 6vw, 5.8rem)', margin:'1rem 0 0 0'}}>[</div> */}
 {/* 
   <span>More Coming Soon</span> */}
