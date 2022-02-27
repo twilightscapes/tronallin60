@@ -110,7 +110,7 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
 <CookieConsent
 	debug={true}
 	location="none"
-  className="actionJackson"
+  className=""
 	style={{ display:'flex', flexDirection:'column', color:'inherit',alignItems:'inherit',  textAlign:'center', justifyContent:'center', margin:'0 auto', top:'0', maxWidth:'62vw', position:'', border:'0px solid red',
   overflow:'hidden',
   background:'transparent',
@@ -121,7 +121,7 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
   filter:' drop-shadow(0px 0px 10px rgba(0,0,0,.9))',
 }}
     buttonText="HIDE THIS"
-	buttonStyle={{ background: "transparent", textDecoration:'underline', textAlign:'center', fontSize: "16px", position:'relative', bottom:'20px',  right:'0', display:'flex', flexDirection:'column', justifyContent:'center', color:'inherit', border:'0px solid yellow', margin:'0 auto', color:'#fff', fontWeight:'normal', background:'#111', borderRadius:'12px', padding:'4px 50px', border:'1px solid #666'}}
+	buttonStyle={{ background: "transparent", textDecoration:'underline', textAlign:'center', fontSize: "16px", position:'relative', bottom:'20px',  right:'0', display:'flex', flexDirection:'column', justifyContent:'center', color:'inherit', border:'0px solid yellow', margin:'0 auto', color:'#fff', fontWeight:'normal', background:'', borderRadius:'12px', padding:'4px 50px', border:'0px solid #666'}}
     expires={1}
     cookieName="yoursite.com-install-discount-cookie"
 >
@@ -155,7 +155,7 @@ Looking for innovative design in a top-performing website app?</p>
 
 
  
-  <div style={{fontSize:'90%', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'middle', lineHeight:'200%', width:'90%', margin:'0 auto', padding:' .5rem 1rem', border:'1px solid #333', borderRadius:'12px', backdropFilter:'blur(14px)', background:'rgba(0,0,0,0.50)', backgroundSize:'140% 200%'}}>
+  <div style={{fontSize:'90%', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'middle', lineHeight:'200%', width:'90%', margin:'0 auto', padding:' .5rem 1rem', border:'1px solid #333', borderRadius:'50px', backdropFilter:'blur(14px)', background:'rgba(0,0,0,0.50)', backgroundSize:'140% 200%'}}>
 
   {/* <div style={{textAlign:'left', display:'flex', padding:'.5rem 0', justifyContent:'center',}}>
   1) You could have a sales promotion here
@@ -172,7 +172,7 @@ Looking for innovative design in a top-performing website app?</p>
 
  <div className="" style={{display:'grid', flexDiection:'', placeContent:'center', height:'', position:'absolute', left:'', right:'', top:'', width:'500px'}}> */}
 
-<button aria-label="Click To Play" className="actionJackson tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px',fontSize:'2vw', padding:'10% 5%', }}>
+<button aria-label="Click To Play" className="actionJackson tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'100%', borderRadius:'50px',fontSize:'2vw', padding:'5% 8%', }}>
   
   <Link state={{modal: true}} to="/contact/" style={{color:'#37f8f8'}}>HIRE ME!</Link>
   

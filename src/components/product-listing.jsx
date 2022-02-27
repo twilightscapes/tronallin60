@@ -10,7 +10,7 @@ export function ProductListing({ products }) {
     {/* // <div className={listingContainerStyle}>
     // <div className="masonry"> */}
 
-<div className="sliderholder" style={{display:'flex', justifyContent:'center', width:'100%', overflow:'hidden', position:'relative', padding:' 0',}}>
+<div className="sliderholder" style={{display:'flex', justifyContent:'center', width:'100%', overflow:'hidden', position:'relative', padding:' 0', background:'transparent'}}>
       
 <TwilightLogo className="bglogo" />
     
