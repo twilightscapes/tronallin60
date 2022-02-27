@@ -1,9 +1,9 @@
 ---
 template: blog-post
-title: Meet Marv!
-slug: /marve-the-mascot
-date: 2022-03-01 01:23
-description: Marv is an unscrupulous hacker who goes by the name "Neo"
+title: Meet Marv again!
+slug: /marve3
+date: 2022-02-01 01:23
+description: Sam Flynn's dog Marv, steals the show!
 youtuber: "https://youtu.be/s0fpz3DkCT4"
 youtuber2: ""
 youtubeshoworiginal: ""
@@ -28,7 +28,7 @@ nftlink: ""
 nftdrop: ""
 nftredeem: ""
 ---
-Sam Flynn's dog Marv, steals the show!
+One of the coolest scenes in the movie. The light cycles are always a crowd favorite and Disney spent no exceptions here. The scenes are just dripping with action and visually stunning.
 
 
 

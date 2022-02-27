@@ -430,7 +430,7 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
 </div> */}
 
 <div className="pagination tronpanel" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'100vh', paddingTop:'1vh', background:''}}>
-<Link to="/posts/2/" title="View Archives">
+<Link to="/minutes/2/" title="View Archives">
   <div  className="tronText" style={{fontSize:'3vw', marginTop:'1rem', lineHeight:'130%'}}><span style={{fontSize:'65%'}}>viewing:</span><br />Lastest Minutes</div>
 
    
