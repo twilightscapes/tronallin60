@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^3.0.2",
-    "@loadable/component": "^5.15.2",
     "@mdx-js/runtime": "^1.6.22",
     "@sindresorhus/slugify": "^2.1.0",
     "@theme-ui/color": "^0.13.1",
@@ -22,7 +21,6 @@
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-google-gtag": "^4.4.0",
     "gatsby-plugin-image": "^2.5.1",
-    "gatsby-plugin-loadable-components-ssr": "^4.2.0",
     "gatsby-plugin-manifest": "^4.5.1",
     "gatsby-plugin-modal-routing-3": "^3.0.0",
     "gatsby-plugin-netlify-cms": "^6.5.0",
@@ -60,7 +58,6 @@
     "react-dom": "^17.0.2",
     "react-helmet": "^6.0.0",
     "react-icons": "^4.2.0",
-    "react-images": "^1.2.0-beta.7",
     "react-inner-image-zoom": "^3.0.0",
     "react-player": "^2.9.0",
     "react-router-dom": "^6.2.1",

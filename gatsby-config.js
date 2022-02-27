@@ -109,7 +109,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    'gatsby-plugin-loadable-components-ssr',
+    // 'gatsby-plugin-loadable-components-ssr',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
