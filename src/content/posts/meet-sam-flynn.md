@@ -1,7 +1,7 @@
 ---
 template: blog-post
 title: Meet Sam Flynn
-slug: /sam-flynn
+slug: /meet-sam-flynn
 date: 2022-02-11 01:43
 description: Tron in ONLY 60 seconds
 youtuber: "https://youtu.be/loGNj5jJBTQ"
