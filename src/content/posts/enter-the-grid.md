@@ -22,7 +22,7 @@ svgzindex: "0"
 comments: "1"
 shareable: "1"
 underlayImage: /assets/transparent.png
-featuredImage: /assets/transparent.jpg
+featuredImage: /assets/tronin60.jpg
 svgImage: /assets/whereskevin.svg
 nftlink: ""
 nftdrop: ""
