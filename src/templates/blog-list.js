@@ -1,11 +1,13 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React from 'react'
+import React, { useState, useRef } from "react";
 // import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 // import { FaHandPointDown } from "react-icons/fa"
 // import ScrollAnimation from 'react-animate-on-scroll'
 // import { StaticImage } from "gatsby-plugin-image"
-
+import { ImPlay } from "react-icons/im"
+import ReactPlayer from 'react-player/lazy'
+import { useSiteMetadata } from "../hooks/use-site-metadata"
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 import { RiArrowRightLine, RiArrowLeftLine} from "react-icons/ri"
@@ -127,6 +129,13 @@ class BlogIndex extends React.Component {
       nextPage,
     }
 
+
+
+
+    
+    
+
+
     return (
       <Layout className="blog-page1">
 <Helmet>
@@ -141,12 +150,53 @@ class BlogIndex extends React.Component {
         
 
 
+        <div id="" className="wrap-element " style={{overflow:'hidden', width:'100vw', height:'100vh', position:'fixed', top:'0'}}>
+<ReactPlayer
+         className='frontbg'
+         url="https://www.youtube.com/embed/c_V1iD6F1kk"
+         width="100%"
+         height="100vh"
+         playing
+            controls={true}
+            light={false}
+            loop={true}
+            muted={true}
+            config={{
+              file: {
+                attributes: {
+                  crossorigin: "anonymous",
+                },
+              },
+              youtube: {
+                playerVars: { showinfo:0, controls:0, start:20, end:41, mute:1 }
+              },
+            }}
+
+          playsinline
+            playIcon={
+              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'5', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+  
+          <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
+            
+  
+            <div style={{position:'relative', maxWidth:'100vw', margin:'10% 0', zIndex:'', display:'flex', justifyContent:'center', background:'transparent !important',}}>
+    {/* <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} /> */}
+  </div>
+        
+            <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
+    <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
+            </div>
+            </button>}
+         
+          /></div>
+
+
 
 
 {/* <div id="contentscroll" name="container2" className="container" style={{display:'', justifySelf:'', width:'100%', maxWidth:'100%', height:'', border:'0px solid #000 !important', margin:'0', marginTop:'0', padding:'4%'}}> */}
 
 
-<div className="horizontal-holder" style={{position:'relative'}}>
+<div className="horizontal-holder allin60panel" style={{position:'relative'}}>
 
 {/* <h1 className="headline neonText" style={{fontSize:'250%', textAlign:'center', margin:'0', padding:'0'}}>Archive</h1> */}
 {/* VidSock - The World's First Multimedia 3D Blog for creating, hosting and marketing the next generation of NFTs. */}
@@ -156,10 +206,10 @@ class BlogIndex extends React.Component {
  {/* <div className="home-posts grids col-1 sm-2 lg-3" style={{clear:'both', textAlign:'left'}}> */}
 
 
- <div className="horizontal-scroll panels" style={{ scrollSnapType: '', maxHeight:'',}}>
+ <div className="horizontal-scroll panels sitegrad movingBG" style={{ scrollSnapType: '', maxHeight:'',}}>
 
 
-<div></div>
+ <div className="" style={{height:'100%'}}></div>
  {/* <article style={{textAlign:'center',}}><Link className="post-card button " to="/#posts" style={{textDecoration:'none', color:'inherit',}}><RiArrowLeftLine style={{fontSize:'20px'}} />  View Newest</Link></article> */}
 
 
@@ -174,7 +224,7 @@ class BlogIndex extends React.Component {
  <section style={{height:'auto'}}>
   <article className="" style={{height:'auto'}}> */}
 
-<Pagination {...props} />
+{/* <Pagination {...props} /> */}
 
 
  {posts}

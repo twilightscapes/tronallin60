@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet"
 import { getSrc } from "gatsby-plugin-image"
 import BlogListHome from "../components/blog-list-home"
 import Newsignup from "../components/newssign"
-import FrontLoader from "../../static/assets/FrontLoader.svg"
+import FrontLoader from "../../static/assets/grid-loader.svg"
 
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 
@@ -277,11 +277,11 @@ const HomePage = ({ data }) => {
 
 {/* <HomeHolder /> */}
 
-<div className="horizontal-holder" style={{position:'relative',}}>
+<div className="horizontal-holder allin60panel" style={{position:'relative',}}>
 {/* <div className="RArrow"><span></span></div> */}
 
 
-<div id="" className="wrap-element" style={{overflow:'hidden', width:'100vw', height:'100vh', position:'fixed', top:'0'}}>
+<div id="" className="wrap-element " style={{overflow:'hidden', width:'100vw', height:'100vh', position:'fixed', top:'0'}}>
 <ReactPlayer
          className='frontbg'
          url="https://www.youtube.com/embed/c_V1iD6F1kk"
@@ -346,7 +346,7 @@ const HomePage = ({ data }) => {
 
 
 
-<div className="donation2" style={{display:'grid',
+<div className="donation2 tronpanel" style={{display:'grid',
   placeContent:'center', width:'100vw', height:'100vh', justifyContent:'center', position:'relative', background:'rgba(0,0,0,0.50)', webkitBackdropFilter:'blur(10px)', backdropFilter:'blur(14px)'}}>
 
 
@@ -429,12 +429,12 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
 <VideoPage />
 </div> */}
 
-<div className="pagination" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'', paddingTop:'1vh', background:''}}>
+<div className="pagination tronpanel" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'100vh', paddingTop:'1vh', background:''}}>
 <Link to="/posts/2/" title="View Archives">
   <div  className="tronText" style={{fontSize:'3vw', marginTop:'1rem', lineHeight:'130%'}}><span style={{fontSize:'65%'}}>viewing:</span><br />Lastest Minutes</div>
 
    
-    <div  className="tronText" style={{ background:'rgba(0,0,0,0.10)', width:'80vw', position:'relative', top:'', margin:'10vh auto', padding:'10% 10%', zIndex:'1', textAlign:'', border:'1px solid #000', borderRadius:'12px', textDecoration:'none', color:'#cccc'}}>
+    <div  className="tronText " style={{ background:'rgba(0,0,0,0.10)', width:'80vw', position:'relative', top:'', margin:'10vh auto', padding:'10% 10%', zIndex:'1', textAlign:'', border:'1px solid #000', borderRadius:'12px', textDecoration:'none', color:'#cccc'}}>
     <h1 className="">View All Minutes?</h1>
     </div>
 </Link>
@@ -442,7 +442,7 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
 </div>
 
 
-<div className="donation2" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'', paddingTop:'0', background:''}}>
+<div className="tronpanel" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'100vh', paddingTop:'0', background:''}}>
 {/* <Link to="/contact"> */}
 <div style={{ background:'rgba(0,0,0,0.10)', width:'80vw', position:'relative', top:'', margin:'5vh auto', padding:'4% 5%', zIndex:'1', textAlign:'', border:'1px solid #000', borderRadius:'12px', textDecoration:'none', color:'#cccc'}}>
   <Newsignup />

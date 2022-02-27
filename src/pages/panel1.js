@@ -122,8 +122,8 @@ function Panel1() {
 {/* c_V1iD6F1kk */}
 {/* nJ38P5elTkg */}
 <div id="homestart" style={{position:'absolute', top:'-100vh'}}></div>
-<div id="" className="wrap-element" style={{overflow:'hidden'}}>
-<ReactPlayer
+<div id="" className="wrap-element tronpanel" style={{overflow:'hidden'}}>
+{/* <ReactPlayer
          className='frontbg'
          url="https://www.youtube.com/embed/c_V1iD6F1kk"
          width="100%"
@@ -160,7 +160,7 @@ function Panel1() {
             </div>
             </button>}
          
-          />
+          /> */}
 
 
 {/* <div style={{position:'absolute', bottom:'0', left:'0', zIndex:'1', width:'100vw', height:'100%', border:'0px solid yellow', padding:'0', margin:'0'}}>

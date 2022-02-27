@@ -27,7 +27,7 @@ const PostCard = ({ data }) => (
         <GatsbyImage
           image={data.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
           alt={data.frontmatter.title + " - Featured image"}
-          className="featured-image"
+          className="featured-image tronpanel"
           style={{position:'relative', zIndex:'1'}}
         />
         {/* <div
