@@ -353,7 +353,7 @@ const HomePage = ({ data }) => {
 <FrontLoader style={{positon:'absolute', top:'0', left:'', right:'', width:'100vw', height:'',}} />
 
 <div className="logointro" style={{position:'absolute', top:'20vh', width:'100vw', textAlign:'center', zIndex:'-1'}}>
-<div className="TronType tronText" style={{fontSize:'12vw', margin:'0 0 0 0'}}>TRON</div><div  style={{fontSize:'5vw', fontWeight:'bold', marginTop:'.5rem,', color:'#fff'}}><div className="defont">in 60</div></div><div className="TRON tronText" style={{fontSize:'4vw', margin:'0 0 1rem 0'}}>Seconds</div>
+<div className="TronType tronText" style={{fontSize:'12vw', margin:'0 0 0 0'}}>TRON</div><div  style={{fontSize:'5vw', fontWeight:'bold', marginTop:'.5rem,', color:'#fff'}}><div className="defont" style={{color:'rgb(0, 225, 255)'}}>in 60</div></div><div className="TRON tronText" style={{fontSize:'4vw', margin:'0 0 1rem 0'}}>Seconds</div>
 </div>
   {/* <h1 className="tronText " style={{fontSize:'7vw', padding:'3vh 8vw 20vh 8vw', position:'', top:'', border:'0px solid', diplay:'grid', placeContent:'center', maxWidth:'80vw', fontFamily:''}}>
     <div className="lineOne">TRON in 60 Seconds</div> <div className="lineTwo">In 60 Seconds?</div>
@@ -454,6 +454,21 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
 </div>
 
 </div>
+
+
+<div>
+
+<h1>Tron is an American film in the <strong>science fiction genre</strong>. It is a media franchise created by Steven Lisberger, which began with <strong>the original 1982 film: TRON</strong>. The original film portrays Jeff Bridges as Kevin Flynn, a computer programmer/hacker and video game developer who is accidentally transported into a digital virtual reality known as <em>"The Grid"</em>.  Once on the Grid, he interacts with programs, many that he wrote,  in his amazing quest to escape the Grid and return to his young son, Sam.</h1>
+
+<h2>Produced and released by Walt Disney Pictures, Tron became a cult film and was acclaimed for its groundbreaking visual effects and extensive use of early computer-generated imagery. It was followed by the 2010 sequel film Tron: Legacy, which takes place 28 years after the events of the first film and depicts the attempts of Flynn's son Sam in retrieving his lost father from within the Grid, now ruled by a corrupt program.</h2>
+
+<h3>The film series has spawned various tie-ins, including video games, a comic book miniseries, music recording albums, theme park attractions, and an animated television series that aired on Disney XD in June 2012. A third feature film is in development.</h3>
+
+
+</div>
+
+
+
 
     </Layout>
   )

@@ -149,7 +149,7 @@ fontSize:'1.4rem'
 
  <li className="carto" style={{border:'none', margin:'0 0',textAlign:'center'}}>
 <Link title="Return To Home" to="/#homestart" aria-label="Return To Home"> 
-<div className="TronType tronText" style={{fontSize:'250%', margin:'0 0 0 0'}}>TRON</div><div className="defont" style={{fontSize:'200%', fontWeight:'bold'}}>in 60</div><div className="TRON tronText" style={{fontSize:'100%', margin:'0 0 1rem 0'}}>Seconds</div>
+<div className="TronType tronText" style={{fontSize:'250%', margin:'0 0 0 0'}}>TRON</div><div className="defont" style={{fontSize:'200%', fontWeight:'bold', color:'rgb(0, 225, 255)'}}>in 60</div><div className="TRON tronText" style={{fontSize:'100%', margin:'0 0 1rem 0'}}>Seconds</div>
 {/* <div className="TRON tronlogo" style={{textAlign:'center', opacity:'1', textShadow:'2px 2px 10px 2px #000', maxWidth:'', color:'#fff', borderRadius:'0', fontSize:'clamp(4rem, 6vw, 5.8rem)', margin:'1rem 0 0 0'}}>[</div> */}
 {/* 
   <span>More Coming Soon</span> */}
@@ -204,13 +204,16 @@ Contact Me<span>Ordering Questions?</span>
       
 
 
-      {/* <li className="carto">
-              <Link className="navbar-item txtshadow" to="/vault/favorites/">
-              The Vault <span>Full Photo archives</span>
+      <li className="carto" style={{textAlign:'center'}}>
+              <Link className="navbar-item txtshadow" to="/minutes/">
+              View Latest Minutes
               </Link>
-      </li> */}
+      </li>
+
+
+
 <li className="carto" style={{textAlign:''}}>
-              <Link state={{modal: true}} className="navbar-item txtshadow" to="/enter-the-grid/" style={{color:'#02e9fa'}}>
+              <Link className="navbar-item txtshadow" to="/enter-the-grid/" style={{color:'#02e9fa'}}>
               Enter the Grid
               {/* <span>Buy Todd's Photos</span> */}
               </Link>
@@ -223,14 +226,14 @@ Contact Me<span>Ordering Questions?</span>
       </li> */}
 
       <li className="carto" style={{textAlign:''}}>
-              <Link state={{modal: true}} className="navbar-item txtshadow" to="/the-grid/disc-grid/">
+              <Link className="navbar-item txtshadow" to="/the-grid/disc-grid/">
               LightDisc Grid
               {/* <span>Buy Todd's Photos</span> */}
               </Link>
       </li>
 
       <li className="carto" style={{textAlign:''}}>
-              <Link state={{modal: true}} className="navbar-item txtshadow" to="/the-grid/lightcycle-grid/">
+              <Link className="navbar-item txtshadow" to="/the-grid/lightcycle-grid/">
               LightCycle Grid
               {/* <span>Buy Todd's Photos</span> */}
               </Link>
@@ -238,21 +241,21 @@ Contact Me<span>Ordering Questions?</span>
 
 
       <li className="carto" style={{textAlign:''}}>
-              <Link state={{modal: true}} className="navbar-item txtshadow" to="/the-grid/end-of-line-club/">
+              <Link className="navbar-item txtshadow" to="/the-grid/end-of-line-club/">
               End of Line Club
               </Link>
       </li>
 
       <li className="carto" style={{textAlign:''}}>
-              <Link state={{modal: true}} className="navbar-item txtshadow" to="/the-grid/return-to-the-source/">
-              Return to the Source
+              <Link className="navbar-item txtshadow" to="/the-grid/return-to-the-source/">
+              Return the Source
               {/* <span>Buy Todd's Photos</span> */}
               </Link>
       </li>
 
 
       <li className="carto" style={{textAlign:''}}>
-              <Link state={{modal: true}} className="navbar-item txtshadow" to="/the-grid/end-of-the-grid/">
+              <Link className="navbar-item txtshadow" to="/the-grid/end-of-the-grid/">
               End of the Grid
               {/* <span>Buy Todd's Photos</span> */}
               </Link>

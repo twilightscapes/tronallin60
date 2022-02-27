@@ -388,7 +388,7 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
 
  <div>
               <ReactPlayer
-              className='react-player66'
+              className='react-player'
         
               url={iframeUrl}
               // url={[
@@ -424,7 +424,7 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
       {/* <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'300px', height:'150px', maxWidth:'300px', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} /> */}
     </div>
           <br />
-              <div className="button" style={{width:'', margin:'0 auto', fontWeight:'bold', padding:'0 1rem', fontSize:'2rem',  borderRadius:'12px', border:'1px solid #333',filter:'drop-shadow(2px 2px 2px #000)'}}><span style={{filter:'drop-shadow(2px 2px 2px #000)'}}>Click To Play</span></div>
+              <div className="actionJackson" style={{width:'', margin:'0 auto', fontWeight:'bold', padding:'0 1rem', fontSize:'2rem', background:'transparent', borderRadius:'12px', border:'1px solid #333',filter:'drop-shadow(2px 2px 2px #000)'}}><span style={{filter:'drop-shadow(2px 2px 2px #000)'}}>Click To Play</span></div>
       {/* <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} /> */}
               </div>
               </button>}
@@ -610,9 +610,9 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 {/* <div className='player-wrapper' style={{position:'relative', top:'0', zIndex:'0', height:'100%', maxHeight:'', overflow:'hidden', filter: 'drop-shadow(0 0 20px #000)' }}> */}
 
-<div className="contact" style={{position:'fixed', bottom:'10px', zIndex:'1',  left:'0', right:'0', display:'flex', justifyContent:'center', width:'200px', margin:'0 auto'}}>
+{/* <div className="contact" style={{position:'fixed', bottom:'10px', zIndex:'1',  left:'0', right:'0', display:'flex', justifyContent:'center', width:'200px', margin:'0 auto'}}>
   <Link state={{modal: true}}  to="/contact/" className="navbar-item  button fire" style={{margin:'1rem 2rem 0 2rem', textDecoration:'none'}}>Contact Me</Link>
-</div>
+</div> */}
 
 <div className="wrap-element" style={{position:'relative', top:'0', zIndex:'', overflow:'hidden'}}>
 

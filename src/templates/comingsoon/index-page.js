@@ -2,9 +2,9 @@ import React from "react"
 import { graphql } from "gatsby"
 // import Img from 'gatsby-image'
 //  import { GatsbyImage } from 'gatsby-plugin-image'
-import { Layout } from "../components/layout"
-import { Seo } from "../components/seo"
-import Newsignup from "../components/newssign"
+import { Layout } from "../../components/layout"
+import { Seo } from "../../components/seo"
+// import Newsignup from "../../components/newssign"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 // import GalleryMenu from "../components/galleryMenu"
 // import { StaticImage } from "gatsby-plugin-image"
@@ -16,7 +16,7 @@ import Newsignup from "../components/newssign"
 import { Helmet } from "react-helmet"
 import { getSrc } from "gatsby-plugin-image"
 // import TwilightLogo from "../../static/assets/TSidebarHover.svg"
-import BlogListHome from "../components/blog-list-home"
+// import BlogListHome from "../../components/blog-list-home"
 // import BlogListHome from "../components/blog-list-home"
 // import LightCycleBattle from "../../static/assets/light-cycle-battle.svg"
 // import LightCycleRear from "../../static/assets/light-cycle-rear.svg"
@@ -36,8 +36,8 @@ import BlogListHome from "../components/blog-list-home"
 // import LoveSignal from "../../static/assets/love-signal.svg"
 // import Castor from "../../static/assets/castor.svg"
 
-import GridLoader from "../../static/assets/FrontLoader.svg"
-import TheGrid from "../../static/assets/The-Grid-Intro.svg"
+// import GridLoader from "../../static/assets/FrontLoader.svg"
+// import TheGrid from "../../static/assets/The-Grid-Intro.svg"
 
 // import InstallDiscount from "../components/install-discount"
 // import { AiOutlineAudioMuted } from "react-icons/ai"
@@ -48,14 +48,14 @@ import TheGrid from "../../static/assets/The-Grid-Intro.svg"
 // import GoBack from "../components/goBack"
 // import ScrollAnimation from 'react-animate-on-scroll'
 // import ReactPlayer from 'react-player/lazy'
-import { useSiteMetadata } from "../hooks/use-site-metadata"
+import { useSiteMetadata } from "../../hooks/use-site-metadata"
 // import Newsignup from "./contact-page"
 // import TestIT from "../components/test"
 // import HomeHolder from "../components/homeholder"
 
 
 // import loadable from '@loadable/component'
-import Panel1 from '../pages/panel1'
+import Panel1 from '../../pages/panel1'
 
   // const Panel1 = loadable(() => import('../components/panel1'))
   // const Panel2 = loadable(() => import('../components/panel2'), {
