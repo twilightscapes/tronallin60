@@ -183,7 +183,16 @@ module.exports = {
       },
     },
     // 'gatsby-plugin-sharp-exif',
-    `gatsby-plugin-sass`,
+    // `gatsby-plugin-sass`,
+
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("node-sass"),
+      },
+    },
+
+    
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-theme-ui`,
   

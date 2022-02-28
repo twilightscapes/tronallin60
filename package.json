@@ -73,6 +73,7 @@
     "webpack-filter-warnings-plugin": "^1.2.1"
   },
   "devDependencies": {
-    "sass": "^1.48.0"
+    "sass-loader": "^7.2.0",
+    "node-sass": "^5.0.0"
   }
 }
