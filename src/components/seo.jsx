@@ -49,9 +49,6 @@ export function Seo({
     // image = image[0] === "/" ? "https://twilightscapes.com" + image : image
   }
 
-//   function refreshPage(){
-//     window.location.reload();
-// } 
 
   return (
 
@@ -209,11 +206,3 @@ export function Seo({
 </>
   )
 }
-
-
-// <Link state={{noScroll: true }} to={closeTo} style={{fontSize:'2rem',  textDecoration:'none', lineHeight:'', display:'flex', flexDirection:'column', color:'', cursor:'pointer'}}>
-//         {/* <AiOutlineClose /> */}
-//         <span className="TRON">[</span>
-//           <a onClick="window.location.reload()" style={{border:'1px solid', position:'absolute', top:'200px'}}>Refresh</a>
-//         <span className="" style={{fontSize:'70%', textAlign:'center'}}>home</span>
-//       </Link>
