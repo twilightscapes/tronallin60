@@ -123,13 +123,13 @@ function Panel1() {
 {/* nJ38P5elTkg */}
 <div id="homestart" style={{position:'absolute', top:'-100vh'}}></div>
 <div id="" className="wrap-element tronpanel" style={{overflow:'hidden'}}>
-{/* <ReactPlayer
+<ReactPlayer
          className='frontbg'
          url="https://www.youtube.com/embed/c_V1iD6F1kk"
          width="100%"
          height="100vh"
          playing={playing}
-            controls={true}
+            controls={false}
             light={false}
             loop={loop}
             muted={muted}
@@ -160,7 +160,7 @@ function Panel1() {
             </div>
             </button>}
          
-          /> */}
+          />
 
 
 {/* <div style={{position:'absolute', bottom:'0', left:'0', zIndex:'1', width:'100vw', height:'100%', border:'0px solid yellow', padding:'0', margin:'0'}}>
@@ -204,10 +204,10 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
           style={{left:'', position:'absolute', zIndex:'2', display:'', width:'', alignSelf:'', placeContent:'', justifyContent:'', margin:'0 auto', bottom:'0', border:'0px solid blue'}}
           config={{
             youtube: {
-              playerVars: { showinfo:0, autoplay:1, controls:0, mute:0, start:5,  }
+              playerVars: { showinfo:0, autoplay:1, controls:0, mute:0, start:5, end:41 }
             },
           }}
-          loop
+       
           playing
           playsinline
           playIcon={

@@ -2,7 +2,7 @@
 template: blog-post
 title: Enter The Grid
 slug: /enter-the-grid
-date: 2022-03-01 01:43
+date: 2021-01-01 01:43
 description: Where is Kevin Flynn? Presumed dead after missing for 30 years. 
 youtuber: "https://youtu.be/ueQSIDYz_R4"
 youtuber2: ""
@@ -22,7 +22,7 @@ svgzindex: "0"
 comments: "1"
 shareable: "1"
 underlayImage: /assets/transparent.png
-featuredImage: /assets/tronin60.jpg
+featuredImage: /assets/enter-the-grid.png
 svgImage: /assets/whereskevin.svg
 nftlink: ""
 nftdrop: ""

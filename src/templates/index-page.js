@@ -283,8 +283,8 @@ const HomePage = ({ data }) => {
 
 <div id="" className="wrap-element " style={{overflow:'hidden', width:'100vw', height:'100vh', position:'fixed', top:'0'}}>
 <ReactPlayer
-         className='frontbg'
-         url="https://www.youtube.com/embed/c_V1iD6F1kk"
+         className='frontbg2'
+         url="https://youtu.be/LltRzgvyrps"
          width="100%"
          height="100vh"
          playing={playing}
@@ -442,11 +442,11 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
 </div> */}
 
 
-{/* <div className="tronpanel" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'100vh', paddingTop:'0', background:''}}>
+<div className="allin60panel" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'100vh', paddingTop:'0', background:''}}>
 <div style={{ background:'rgba(0,0,0,0.10)', width:'80vw', position:'relative', top:'', margin:'5vh auto', padding:'4% 5%', zIndex:'1', textAlign:'', border:'1px solid #000', borderRadius:'12px', textDecoration:'none', color:'#cccc'}}>
   <Newsignup />
   </div>
-</div> */}
+</div>
 
         
 </div>
