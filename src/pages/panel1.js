@@ -194,14 +194,14 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
  
 
 
- <div id="characters" className="characters" style={{position:'absolute', zIndex:'0', width:'', height:'', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'10vh 0 0 0',}}>
+ <div id="characters" className="characters" style={{position:'absolute', zIndex:'0', width:'', height:'100%', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'10vh 0 0 0',}}>
 
  <ReactPlayer
           className='playerpp'
           url="https://www.youtube.com/embed/S5S6s5dZXNM"
           width="100%"
           height=""
-          style={{left:'', position:'absolute', zIndex:'2', display:'', width:'', alignSelf:'center', placeContent:'center', justifyContent:'center', margin:'0 auto', bottom:'30vh', border:'0px solid blue'}}
+          style={{left:'', position:'absolute', zIndex:'2', display:'', width:'', alignSelf:'', placeContent:'', justifyContent:'', margin:'0 auto', bottom:'0', border:'0px solid blue'}}
           config={{
             youtube: {
               playerVars: { showinfo:0, autoplay:1, controls:0, mute:0, start:5,  }
@@ -213,11 +213,18 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
           playIcon={
 
 
-        <div className="" style={{display:'grid', flexDiection:'', placeContent:'center', height:'', position:'relative', left:'', right:'', bottom:'35vh', zIndex:'9', width:''}}>
+        <div className="" style={{display:'', flexDiection:'', placeContent:'center', height:'', position:'absolute', left:'', right:'', bottom:'0', zIndex:'9', width:'', height:'100vh', border:'0px solid red'}}>
 
-        <button aria-label="Click To Play" className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'', filter:'drop-shadow(2px 2px 2px #000)', width:'100%', borderRadius:'200px', padding:'8% 0%', lineHeight:'200%', fontSize:'clamp(2rem, 4vw, 3.6rem)' }}>
+        <button aria-label="Click To Play" className="actionJackson TRON tronText"
+       >
           
-          <Link state={{modal: true}} to="/the-grid/" style={{color:'#37f8f8'}}>Enter The Grid</Link>
+          <Link state={{modal: true}} to="/the-grid/" style={{color:'#37f8f8', display:'block', height:'100vh', width:'100vw', display:'grid', placeContent:'center', border:'0px solid yellow', position:'relative', top:'40vh'}}>
+            <div className="" style={{
+          display:'flex', justifyContent:'center', zIndex:'', filter:'drop-shadow(2px 2px 2px #000)', width:'100%',  padding:'5% 1rem', borderRadius:'200px', border:'3px dotted #666', lineHeight:'200%', fontSize:'clamp(2rem, 4vw, 3.6rem)', background:'radial-gradient(circle, rgba(10, 45, 48, 0.4) 17%, rgba(25, 96, 109, 0.4) 58%, rgba(10, 196, 206, 0.5) 97%)', textShadow:'2px 2px 2px #333'
+          }}>
+            Enter The Grid
+            </div>
+          </Link>
           
           </button>
         

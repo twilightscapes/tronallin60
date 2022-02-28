@@ -1,6 +1,6 @@
 ---
 template: blog-post
-title: Download Encom OS 12 for FREE! Thanks Sam!
+title: Encom OS 12
 slug: /encom-os-12-download
 date: 2022-03-01 01:43
 description: Sam Flynn broke into Encom tower, hacked the OS, releaseed it to the world for free, and then dove off the top of the building. The least you could do is download it!
@@ -28,7 +28,7 @@ nftlink: ""
 nftdrop: ""
 nftredeem: ""
 ---
-One of the coolest scenes in the movie. The light cycles are always a crowd favorite and Disney spent no exceptions here. The scenes are just dripping with action and visually stunning.
+Download Encom OS 12 for FREE! Thanks Sam!
 
 
 

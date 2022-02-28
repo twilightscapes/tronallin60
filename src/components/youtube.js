@@ -136,8 +136,8 @@ const CustomBox = styled.div`
 
 
 {urlNoProtocol ? (
-  <div className="wrap-element" style={{position:'relative', top:'0', zIndex:'', overflow:'hidden'}}>
-     <Iframed /></div>
+  
+     <Iframed />
         ) : (
           ""
         )}

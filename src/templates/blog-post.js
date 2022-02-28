@@ -32,35 +32,6 @@ import { ImPlay } from "react-icons/im"
 import styled from "styled-components"
 const CustomBox = styled.div`
 
-.MuiSlider-root {
-  color:#ff00000 !important;
-}
-
-.wrap-element {
-  position: relative;
-  overflow: ;
-  padding-bottom: 56.25%;
-  height:100vh;
-
-}
-.wrap-element iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300%; 
-  left: -100%; 
-  border: 0;
-}
-
-
-@media (max-width: 48em) {
-  .wrap-element {
-    padding-bottom: 0;
-    height:300px;
-    overflow:visible;
-    border:0px solid red;
-  }
-}
 
 @media (min-width: 58em) {
 
@@ -616,7 +587,7 @@ const svgUrl = frontmatter.svgImage.publicURL
   <Link state={{modal: true}}  to="/contact/" className="navbar-item  button fire" style={{margin:'1rem 2rem 0 2rem', textDecoration:'none'}}>Contact Me</Link>
 </div> */}
 
-<div className="wrap-element" style={{position:'relative', top:'0', zIndex:'', overflow:'hidden'}}>
+<div className="wrap-element" style={{position:'relative', top:'0', height:'100vh', zIndex:'0', overflow:'hidden'}}>
 
 
 
@@ -734,13 +705,14 @@ const svgUrl = frontmatter.svgImage.publicURL
         ""
    
       ) : (
-        <Iframer3 />
+
+       <div style={{position:'absolute', top:'0', height:'100vh', overflow:'hidden'}}> <Iframer3 /></div>
+
       )}
 
 
 
-<div style={{zIndex:'1', overflow:'hidden', position:'absolute', bottom:'0', maxHeight:'100vh', width:'100vw'}}><YouTubed /></div>
-      </div>
+
 
 
       <div style={{padding:'0 5vw', color:'inherit !important'}}>
@@ -763,24 +735,29 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-{Suggestion1 ? (
+      </div>
+
+      {/* <div style={{zIndex:'1', overflow:'', position:'absolute', bottom:'0', maxHeight:'', width:'100vw'}}><YouTubed /></div> */}
+
+{/* {Suggestion1 ? (
+
 
 <div>
         <ShowSuggestion />
    </div>
       ) : (
         ""
-      )}
+      )} */}
 
 
 
 
 
 
-<article className="blog-post">
+<article id="pagecontent" className="blog-post">
 <header style={{height:'60vh', display:'grid', placeContent:'center'}}>
           <section className="article-header" style={{textAlign:'center', margin:'0', height:'auto', color:''}}>
-            <h1 className="tronText" style={{fontSize:'7vw'}}>{frontmatter.title}</h1>
+            <h1 className="tronText" style={{fontSize:'5vw'}}>{frontmatter.title}</h1>
             {/* <time sx={{color: "muted"}}>{frontmatter.date}</time> */}
             {/* <TimeAgo date={frontmatter.date} style={{color:'#fff !important'}} /> */}
           </section>
@@ -796,7 +773,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-<div id="pagecontent" className="home-posts" style={{clear:'both', display:'',  justifyContent:'space-around', textAlign:'left', width:'90vw', margin:'0 auto', height:'', maxHeight:'', border:'0px solid blue'}}>
+<div className="home-posts" style={{clear:'both', display:'',  justifyContent:'space-around', textAlign:'left', width:'90vw', margin:'0 auto', height:'', maxHeight:'', border:'0px solid blue'}}>
 
 
 

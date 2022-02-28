@@ -49,9 +49,9 @@ export function Seo({
     // image = image[0] === "/" ? "https://twilightscapes.com" + image : image
   }
 
-  function refreshPage(){
-    window.location.reload();
-} 
+//   function refreshPage(){
+//     window.location.reload();
+// } 
 
   return (
 
@@ -176,10 +176,27 @@ export function Seo({
   <div style={{overflow:'hidden'}}>
     {modal ? (
       <>
-      <div style={{display:'', position:'fixed', top:'3%', right:'30%', padding:'0px', fontSize:'2rem', background:'#111 !important', opacity:'1 !important', zIndex:'15',  filter:' drop-shadow(0px 4px 3px #000)',}}>
-      <Link to="#pagecontent" onClick={refreshPage} style={{border:'1px solid', position:'absolute', top:'20px', right:'20px'}}>Refresh</Link>
+
+
+{/*  */}
+
+      {/* <div style={{display:'', position:'fixed', top:'3%', right:'30%', padding:'0px', fontSize:'2rem', background:'#111 !important', opacity:'1 !important', zIndex:'15',  filter:' drop-shadow(0px 4px 3px #000)',}}> */}
       
+      <div style={{display:'', flexDirection:'', justifyContent:'center', color:'#ccc', position:'fixed', bottom:'30px', zIndex:'15', display:'flex', justifyContent:'center', width:'100vw'}}>
+        <button className="back" style={{display:'',}}>
+        <Link to="#pagecontent" style={{border:'0px solid', }}>
+          View Page Content
+        <br />
+        <div style={{fontSize:'50px'}}>&#812;</div>
+        </Link>
+ 
+        
+
+        </button>
       </div>
+
+    
+      {/* </div> */}
       </>
     ) : (
 ''

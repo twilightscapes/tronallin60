@@ -214,7 +214,7 @@ Contact Me<span>Ordering Questions?</span>
 
 
 <li className="carto" style={{textAlign:''}}>
-              <Link className="navbar-item txtshadow" to="/enter-the-grid/" style={{color:'#02e9fa'}}>
+              <Link state={{modal: true}} className="navbar-item txtshadow" to="/enter-the-grid/" style={{color:'#02e9fa'}}>
               Enter the Grid
               {/* <span>Buy Todd's Photos</span> */}
               </Link>
