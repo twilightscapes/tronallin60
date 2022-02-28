@@ -214,7 +214,7 @@ Contact Me<span>Ordering Questions?</span>
 
 
 <li className="carto" style={{textAlign:''}}>
-              <Link state={{modal: true}} className="navbar-item txtshadow" to="/grid-loader/">
+              <Link state={{modal: true}} className="navbar-item txtshadow" to="/grid-launcher/">
               Enter the Grid
               </Link>
       </li>
