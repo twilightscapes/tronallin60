@@ -21,7 +21,7 @@ isnftforsale: ""
 svgzindex: "0"
 comments: "1"
 shareable: "1"
-underlayImage: ""
+underlayImage: "/assets/transparent.png"
 featuredImage: /assets/tronin60.jpg
 svgImage: /assets/null.svg
 nftlink: ""
