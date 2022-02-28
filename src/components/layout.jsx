@@ -15,6 +15,13 @@ import { Toast } from "./toast"
 // import { FaRegPlusSquare } from 'react-icons/fa';
 // import Fullscreen from "../components/FullScreen"
 import { ImArrowRight } from "react-icons/im"
+import { FaPhotoVideo, FaUserAstronaut } from "react-icons/fa"
+import { BsFillPeopleFill } from "react-icons/bs"
+import { DiJsBadge } from "react-icons/di"
+import { SiAboutdotme } from "react-icons/si"
+
+
+
 import { CartButton } from "./cart-button"
 // import SearchIcon from "../../static/assets/search"
 import Theme from "../components/theme"
@@ -206,17 +213,23 @@ Contact Me<span>Ordering Questions?</span>
 
 
       <li className="carto" style={{textAlign:'center'}}>
-              <Link className="navbar-item txtshadow" to="/minutes/">
-              View Latest Minutes
+              <Link className="navbar-item txtshadow" to="/minutes/" style={{color:'#02e9fa'}}>
+              <div style={{display:'flex', alignItems:'center', gap:'10px'}}>
+      <FaPhotoVideo style={{fontSize:'2vw'}} />
+              Latest Minutes
+              </div>
               </Link>
       </li>
 
-
+      
 
 <li className="carto" style={{textAlign:''}}>
-              <Link state={{modal: true}} className="navbar-item txtshadow" to="/enter-the-grid/" style={{color:'#02e9fa'}}>
-              Enter the Grid
-              {/* <span>Buy Todd's Photos</span> */}
+              <Link state={{modal: true}} className="navbar-item txtshadow" to="/grid-launcher/" style={{color:''}}>
+              <div style={{display:'flex', alignItems:'center', gap:'10px'}}>
+      <span className="TRON" style={{lineHeight:'20px'}}>[</span>Enter the Grid
+      </div>
+    
+  
               </Link>
       </li>
       
@@ -228,45 +241,59 @@ Contact Me<span>Ordering Questions?</span>
 
       <li className="carto" style={{textAlign:''}}>
               <Link className="navbar-item txtshadow" to="/the-grid/disc-grid/">
+              <div style={{display:'flex', justifyContent:'start', alignItems:'center', gap:'10px'}}>
+              <span className="TRON" style={{fontSize:'150%'}}>@</span>
               LightDisc Grid
-              {/* <span>Buy Todd's Photos</span> */}
+              </div>
               </Link>
       </li>
 
       <li className="carto" style={{textAlign:''}}>
               <Link className="navbar-item txtshadow" to="/the-grid/lightcycle-grid/">
-              LightCycle Grid
-              {/* <span>Buy Todd's Photos</span> */}
+              <div style={{display:'flex', gap:'10px'}}>
+              <span className="TRON" style={{fontSize:'100%', maxWidth:'40px'}}>|</span>
+       LightCycle Grid
+              </div>
               </Link>
       </li>
 
 
       <li className="carto" style={{textAlign:''}}>
               <Link className="navbar-item txtshadow" to="/the-grid/end-of-line-club/">
+              <div style={{display:'flex', gap:'10px'}}>
+      <FaUserAstronaut style={{fontSize:'2vw'}} />
               End of Line Club
+              </div>
               </Link>
       </li>
 
       <li className="carto" style={{textAlign:''}}>
               <Link className="navbar-item txtshadow" to="/the-grid/return-to-the-source/">
+              <div style={{display:'flex', gap:'10px'}}>
+      <DiJsBadge style={{fontSize:'2vw'}} />
               Return the Source
-              {/* <span>Buy Todd's Photos</span> */}
+              </div>
               </Link>
       </li>
 
 
       <li className="carto" style={{textAlign:''}}>
               <Link className="navbar-item txtshadow" to="/the-grid/end-of-the-grid/">
-              End of the Grid
-              {/* <span>Buy Todd's Photos</span> */}
+              <div style={{display:'flex', gap:'10px'}}>
+              <BsFillPeopleFill style={{fontSize:'2vw'}} />
+              
+               End of the Grid
+              </div>
               </Link>
       </li>
 
 
 <li className="carto" style={{textAlign:'center'}}>
               <Link className="navbar-item txtshadow" to="/about/">
+              <div style={{display:'flex', gap:'10px'}}>
+              <SiAboutdotme style={{fontSize:'2vw'}} />
               About This Site
-              {/* <span>Buy Todd's Photos</span> */}
+              </div>
               </Link>
       </li> 
 

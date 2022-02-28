@@ -108,7 +108,7 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
 
 
 <CookieConsent
-	debug={true}
+	debug={false}
 	location="none"
   className=""
 	style={{ display:'flex', flexDirection:'column', color:'inherit',alignItems:'inherit',  textAlign:'center', justifyContent:'center', margin:'0 auto', top:'0', maxWidth:'62vw', position:'', border:'0px solid red',
