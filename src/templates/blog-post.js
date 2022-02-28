@@ -107,23 +107,22 @@ const Pagination = props => (
   <div className="pagination -post navbutt" style={{position:'absolute', zIndex:'2' }}>
     <ul className="" style={{display:'flex', justifyContent:'space-between', border:'0px solid yellow', width:'90vw'}}>
       {props.previous && props.previous.frontmatter.template === "blog-post" && (
-        ""
-        // <li className="prevbutton">
-        //   <button className="actionJackson TRON " style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px', padding:'10% 5%', }}>
-        //   <Link state={{modal: true}} to= {props.previous.frontmatter.slug + "/"} rel="prev" style={{background:'transparent', border:'none'}}>
+        <li className="prevbutton">
+          <button className="actionJackson TRON " style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px', padding:'10% 5%', }}>
+          <Link state={{modal: true}} to= {props.previous.frontmatter.slug + "/"} rel="prev" style={{background:'transparent', border:'none'}}>
             
-        //     <p
-        //       style={{
-        //         fontSize:'2vw',
-        //         color: "inherit",
-        //         background:'transparent'
-        //       }}
-        //       className="page-title">
-        //       {props.previous.frontmatter.title}
-        //     </p>
-        //   </Link>
-        //   </button>
-        // </li>
+            <p
+              style={{
+                fontSize:'2vw',
+                color: "inherit",
+                background:'transparent'
+              }}
+              className="page-title">
+              {props.previous.frontmatter.title}
+            </p>
+          </Link>
+          </button>
+        </li>
       )}
       {props.next && props.next.frontmatter.template === "blog-post" && (
         <li className="nextbutton">
