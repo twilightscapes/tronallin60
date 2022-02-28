@@ -242,16 +242,14 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
     
     
     
-    <div srl_exclude="true" id="mylink15" className="donation2" style={{position:'relative', left:'', transform:'', width:'100vw', height:'100vh', 
-    // background:'rgba(6, 70, 90, 0.6)', 
-    padding:' 0', display:'flex', justifyContent:'center', border:'0px solid red',}}>
 
-    <Link state={{modal: true}} to="/clu/" title="Clu" aria-label="Clu">
-    <StaticImage className="character evil"
+
+
+    <StaticImage className="character"
 style={{height:'', width:'', margin:'0 0 0 0',}}
 alt="Todd Lambert Web development for photographers" src="../../static/assets/sam-flynn.png" />
-    </Link>
-    </div>
+
+
 
 
     

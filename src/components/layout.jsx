@@ -213,7 +213,7 @@ Contact Me<span>Ordering Questions?</span>
 
 
       <li className="carto" style={{textAlign:'center'}}>
-              <Link className="navbar-item txtshadow" to="/minutes/">
+              <Link className="navbar-item txtshadow" to="/minutes/" style={{color:'#02e9fa'}}>
               <div style={{display:'flex', alignItems:'center', gap:'10px'}}>
       <FaPhotoVideo style={{fontSize:'2vw'}} />
               Latest Minutes
@@ -224,7 +224,7 @@ Contact Me<span>Ordering Questions?</span>
       
 
 <li className="carto" style={{textAlign:''}}>
-              <Link state={{modal: true}} className="navbar-item txtshadow" to="/grid-launcher/" style={{color:'#02e9fa'}}>
+              <Link state={{modal: true}} className="navbar-item txtshadow" to="/grid-launcher/" style={{color:''}}>
               <div style={{display:'flex', alignItems:'center', gap:'10px'}}>
       <span className="TRON" style={{lineHeight:'20px'}}>[</span>Enter the Grid
       </div>

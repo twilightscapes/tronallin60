@@ -241,22 +241,22 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
     
     
     <div srl_exclude="true" id="mylink15" className="donation2" style={{position:'relative', transform:'', width:'100vw', height:'100vh', 
-    // background:'rgba(6, 70, 90, 0.6)', 
+
     padding:' 0', display:'flex', justifyContent:'center', border:'0px solid red',}}>
 
-    <Link state={{modal: true}} to="/clu/" title="Clu" aria-label="Clu">
-    {/* <CluGuy className="character evil" style={{height:'100%', width:'100%', margin:'0 0 0 -20%',}} /> */}
+    {/* <Link state={{modal: true}} to="/clu/" title="Clu" aria-label="Clu">
+
     <StaticImage className="character evil"
 style={{height:'', width:'', margin:'0 0 0 0',}}
 alt="Todd Lambert Web development for photographers" src="../../static/assets/clu.png" />
-    </Link>
+    </Link> */}
 
     </div>
 
 
     <div className="masonry" style={{gap:'2rem', justifyContent:'start'}}>
 
-<div>
+{/* <div>
 <h1 className="tronText" style={{fontSize:'clamp(2rem, 3vw, 3rem)'}}>CLU</h1>
 <ul style={{fontSize:'clamp(1rem, 1.5vw, 2rem)', listStyle:'none', background:'rgba(0, 0, 0, .4)', padding:'1rem', borderRadius:'12px'}}>
 <li><strong>Actor:</strong> Jeff Bridges</li>
@@ -268,7 +268,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
 
 
 <p style={{fontSize:'clamp(1rem, 1.5vw, 2rem)', marginTop:'2rem', background:'rgba(0, 0, 0, .4)', padding:'1rem', borderRadius:'12px'}}>Clu was originally a search program created by Kevin Flynn to explore inside the ENCOM mainframe for proof he created ENCOM's most-popular games. Clu was found and destroyed by the Master Control Program. Flynn created another program named CLU after returning from the Grid with a more specific task in mind.
-</p>
+</p> */}
       </div>
       
       </div>
@@ -278,9 +278,9 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
 
       </div>
 
-      </div>
+     
 
-      </div>
+     
     
     
 
