@@ -296,7 +296,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
           
   
             <div className="tronText TronType" style={{
-          display:'flex', justifyContent:'center', zIndex:'', filter:'drop-shadow(2px 2px 2px #000)', width:'80%',  padding:'2% 1rem', borderRadius:'200px', border:'3px dotted #666', lineHeight:'200%', fontSize:'clamp(1.2rem, 3vw, 2.8rem)',  textShadow:'2px 2px 2px #333'
+          display:'flex', justifyContent:'center', zIndex:'', filter:'drop-shadow(2px 2px 2px #000)', width:'80%',  padding:'2% 1rem', borderRadius:'200px', border:'3px dotted #04e2ff', lineHeight:'200%', fontSize:'clamp(1.2rem, 3vw, 2.8rem)', color:'rgb(6, 232, 240)',  textShadow:'2px 2px 2px #333'
           }}>
             CHOOSE YOUR CHARACTER
             </div>

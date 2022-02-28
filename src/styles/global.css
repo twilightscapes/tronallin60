@@ -4233,7 +4233,7 @@ height:100vh;
                            justify-content:center;
                            border-radius:12px;
                            bottom:50vh; right:12vh;
-                           color:#fff;
+                           color:rgb(6, 232, 240);
                            transform: rotate(90deg);
                            font-size:clamp(2rem, 3vw, 3rem);
                            text-shadow:2px 2px 2px #333;
