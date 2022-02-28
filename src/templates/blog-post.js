@@ -133,45 +133,37 @@ const CustomBox = styled.div`
 
 
 const Pagination = props => (
-  <div className="pagination -post nextbutt" style={{position:'absolute', zIndex:'2' }}>
+  <div className="pagination -post navbutt" style={{position:'absolute', zIndex:'2' }}>
     <ul className="" style={{display:'flex', justifyContent:'space-between', border:'0px solid yellow', width:'90vw'}}>
       {props.previous && props.previous.frontmatter.template === "blog-post" && (
-        <li>
-          <button className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px',fontSize:'2vw', padding:'10% 5%', }}>
-          <Link  to= {props.previous.frontmatter.slug + "/"} rel="prev">
+        <li className="prevbutton">
+          <button className="actionJackson TRON " style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px', padding:'10% 5%', }}>
+          <Link to= {props.previous.frontmatter.slug + "/"} rel="prev" style={{background:'transparent', border:'none'}}>
             
             <p
               style={{
+                fontSize:'2vw',
                 color: "inherit",
+                background:'transparent'
               }}
-            >
-              <span className="icon -left">
-                <RiArrowLeftLine />
-              </span>{" "}
-              Previous
-            </p>
-            <span className="page-title">
+              className="page-title">
               {props.previous.frontmatter.title}
-            </span>
+            </p>
           </Link>
           </button>
         </li>
       )}
       {props.next && props.next.frontmatter.template === "blog-post" && (
-        <li>
-          <button className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px',fontSize:'2vw', padding:'10% 5%', }}>
-          <Link  to={props.next.frontmatter.slug + "/"} rel="next">
+        <li className="nextbutton">
+          <button className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px', padding:'10% 5%', }}>
+          <Link to={props.next.frontmatter.slug + "/"} rel="next" style={{background:'transparent', border:'none'}}>
             <p
               style={{
+                fontSize:'2vw',
                 color: "inherit",
+                background:'transparent'
               }}
-            >
-              Next{" "}
-              <span className="icon -right">
-                <RiArrowRightLine />
-              </span>
-            </p>
-            <span className="page-title">{props.next.frontmatter.title}</span>
+           className="page-title">{props.next.frontmatter.title}</p>
           </Link>
           </button>
         </li>
@@ -257,7 +249,7 @@ function ShowSuggestion() {
   
 
   
-<div style={{width:'90%', maxWidth:'400px', margin:'85px auto 0 auto', fontSize:'90%', padding:'5px 0 ', border:'4px dotted', borderRadius:'12px', textAlign:'center', position:'relative', }}>
+<div style={{width:'100%', maxWidth:'400px', margin:'0 auto 0 auto', fontSize:'90%', padding:'5px 0 ', border:'4px dotted', borderRadius:'12px', textAlign:'center', position:'relative', zIndex:'1', display:'grid', justifyContent:'center'}}>
 <IoArrowRedoSharp style={{position:'absolute', top:'0', left:'0', fontSize:'60px', transform: 'rotate(-45deg)', }} />
 <IoArrowUndoSharp style={{position:'absolute', top:'0', right:'0', fontSize:'60px', transform: 'rotate(45deg)', }} />
   
@@ -771,14 +763,14 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-{/* {Suggestion1 ? (
+{Suggestion1 ? (
 
 <div>
         <ShowSuggestion />
    </div>
       ) : (
         ""
-      )} */}
+      )}
 
 
 
