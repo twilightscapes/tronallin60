@@ -72,7 +72,7 @@ const CustomBox = styled.div`
 
 
 
-function KevinPage() {
+function GridLauncher() {
 
   const [state, setState] = useState({
     playing: true,
@@ -129,7 +129,6 @@ function KevinPage() {
          url="https://www.youtube.com/embed/c_V1iD6F1kk"
          width="100%"
          height="100vh"
-         style={{position:'fixed', top:'0', zIndex:'-1'}}
          playing={playing}
             controls={false}
             light={false}
@@ -196,14 +195,14 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
  
 
 
- <div id="characters" className="characters" style={{position:'relative', zIndex:'0', width:'100vw', height:'100vh', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'10vh 0 0 0', overflow:'hidden', border:'0px solid blue'}}>
+ <div id="characters" className="characters" style={{position:'absolute', zIndex:'0', width:'', height:'100%', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'10vh 0 0 0',}}>
 
  <ReactPlayer
           className='playerpp'
           url="https://www.youtube.com/embed/S5S6s5dZXNM"
           width="100%"
           height=""
-          style={{left:'', position:'absolute', zIndex:'2', display:'', width:'', alignSelf:'', placeContent:'', justifyContent:'', margin:'0 auto', bottom:'', border:'0px solid green'}}
+          style={{left:'', position:'absolute', zIndex:'2', display:'', width:'', alignSelf:'', placeContent:'', justifyContent:'', margin:'0 auto', bottom:'0', border:'0px solid blue'}}
           config={{
             youtube: {
               playerVars: { showinfo:0, autoplay:1, controls:0, mute:0, start:5, end:41 }
@@ -218,12 +217,11 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
         <div className="" style={{display:'', flexDiection:'', placeContent:'center', height:'', position:'absolute', left:'', right:'', bottom:'0', zIndex:'9', width:'', height:'100vh', border:'0px solid red'}}>
 
         <button aria-label="Click To Play" className="actionJackson TRON tronText"
-        style={{position:'', right:'', height:'100vh'}}
        >
           
-          <Link state={{modal: true}} to="/the-grid/" style={{color:'#37f8f8', display:'block', height:'100vh', width:'100vw', display:'grid', placeContent:'center', border:'0px solid yellow', position:'relative', top:'100vh'}}>
+          <Link state={{modal: true}} to="/the-grid/" style={{color:'#37f8f8', display:'block', height:'100vh', width:'100vw', display:'grid', placeContent:'center', border:'0px solid yellow', position:'relative', top:'40vh'}}>
             <div className="" style={{
-          display:'flex', justifyContent:'center', marginTop:'150px', zIndex:'', filter:'drop-shadow(2px 2px 2px #000)', width:'100%',  padding:'5% 1rem', borderRadius:'200px', border:'3px dotted #666', lineHeight:'200%', fontSize:'clamp(2rem, 4vw, 3.6rem)', background:'radial-gradient(circle, rgba(10, 45, 48, 0.4) 17%, rgba(25, 96, 109, 0.4) 58%, rgba(10, 196, 206, 0.5) 97%)', textShadow:'2px 2px 2px #333'
+          display:'flex', justifyContent:'center', zIndex:'', filter:'drop-shadow(2px 2px 2px #000)', width:'100%',  padding:'5% 1rem', borderRadius:'200px', border:'3px dotted #666', lineHeight:'200%', fontSize:'clamp(2rem, 4vw, 3.6rem)', background:'radial-gradient(circle, rgba(10, 45, 48, 0.4) 17%, rgba(25, 96, 109, 0.4) 58%, rgba(10, 196, 206, 0.5) 97%)', textShadow:'2px 2px 2px #333'
           }}>
             Enter The Grid
             </div>
@@ -236,48 +234,42 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
             light="../assets/transparent.png"
           />
     
-<div style={{display:'flex', flexDirection:'row', justifyContent:'space-around', zIndex:'-2', position:'relative', width:'100vw' }}>
+<div style={{display:'flex', flexDirection:'row', justifyContent:'space-around', zIndex:'-2', position:'relative' }}>
 
     
     
     
     
-    <div srl_exclude="true" id="mylink15" className="donation2" style={{position:'relative', left:'', transform:'', width:'100vw', height:'100vh', 
+    <div srl_exclude="true" id="mylink15" className="donation2" style={{position:'relative', transform:'', width:'100vw', height:'100vh', 
     // background:'rgba(6, 70, 90, 0.6)', 
     padding:' 0', display:'flex', justifyContent:'center', border:'0px solid red',}}>
 
     <Link state={{modal: true}} to="/clu/" title="Clu" aria-label="Clu">
+    {/* <CluGuy className="character evil" style={{height:'100%', width:'100%', margin:'0 0 0 -20%',}} /> */}
     <StaticImage className="character evil"
 style={{height:'', width:'', margin:'0 0 0 0',}}
-alt="Todd Lambert Web development for photographers" src="../../static/assets/kevin-flynn.png" />
+alt="Todd Lambert Web development for photographers" src="../../static/assets/clu.png" />
     </Link>
+
     </div>
 
 
-    
+    <div className="masonry" style={{gap:'2rem', justifyContent:'start'}}>
 
-
-    <div className="" style={{display:'flex', gap:'', justifyContent:'', position:'absolute', left:'10vw',  marginTop:'10vh', marginRight:''}}>
-
-    <div>
-<h1 className="tronText" style={{fontSize:'clamp(2rem, 3vw, 3rem)'}}>Kevin Flynn</h1>
+<div>
+<h1 className="tronText" style={{fontSize:'clamp(2rem, 3vw, 3rem)'}}>CLU</h1>
 <ul style={{fontSize:'clamp(1rem, 1.5vw, 2rem)', listStyle:'none', background:'rgba(0, 0, 0, .4)', padding:'1rem', borderRadius:'12px'}}>
 <li><strong>Actor:</strong> Jeff Bridges</li>
-{/* <li>User: Kevin Flynn</li> */}
-<li><strong>Allies:</strong> Quorra, Sam Flynn</li>
-<li><strong>Enemies:</strong> Jarvis, Rinzler, Black Guard, all of Clu's faithful</li>
+<li><strong>User:</strong> Kevin Flynn</li>
+<li><strong>Allies:</strong> Jarvis, Rinzler, Black Guard, Sentries</li>
+<li><strong>Enemies:</strong> Programs defying system rules</li>
 </ul>
 <div>
 
-{/* <div>
+
 <p style={{fontSize:'clamp(1rem, 1.5vw, 2rem)', marginTop:'2rem', background:'rgba(0, 0, 0, .4)', padding:'1rem', borderRadius:'12px'}}>Clu was originally a search program created by Kevin Flynn to explore inside the ENCOM mainframe for proof he created ENCOM's most-popular games. Clu was found and destroyed by the Master Control Program. Flynn created another program named CLU after returning from the Grid with a more specific task in mind.
 </p>
-</div> */}
-</div>
-
-
-
-
+      </div>
       
       </div>
 
@@ -336,4 +328,4 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ke
   );
 }
 
-export default KevinPage;
+export default GridLauncher;
