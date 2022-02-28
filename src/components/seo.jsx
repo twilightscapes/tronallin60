@@ -49,6 +49,9 @@ export function Seo({
     // image = image[0] === "/" ? "https://twilightscapes.com" + image : image
   }
 
+  function refreshPage(){
+    window.location.reload();
+} 
 
   return (
 
@@ -170,16 +173,12 @@ export function Seo({
 
 <ModalRoutingContext.Consumer>
 {({ modal, closeTo }) => (
-  <div style={{overflow:''}}>
+  <div style={{overflow:'hidden'}}>
     {modal ? (
       <>
-      <div style={{display:'none', position:'fixed', top:'3%', right:'3%', padding:'0px', fontSize:'2rem', background:'#111 !important', opacity:'1 !important', zIndex:'15',  filter:' drop-shadow(0px 4px 3px #000)',}}>
-      <Link state={{noScroll: true }} to={closeTo} style={{fontSize:'2rem',  textDecoration:'none', lineHeight:'', display:'flex', flexDirection:'column', color:'', cursor:'pointer'}}>
-        {/* <AiOutlineClose /> */}
-        <span className="TRON">[</span>
-        
-        <span className="" style={{fontSize:'70%', textAlign:'center'}}>home</span>
-      </Link>
+      <div style={{display:'', position:'fixed', top:'3%', right:'30%', padding:'0px', fontSize:'2rem', background:'#111 !important', opacity:'1 !important', zIndex:'15',  filter:' drop-shadow(0px 4px 3px #000)',}}>
+      <Link to="#pagecontent" onClick={refreshPage} style={{border:'1px solid', position:'absolute', top:'20px', right:'20px'}}>Refresh</Link>
+      
       </div>
       </>
     ) : (
@@ -193,3 +192,11 @@ export function Seo({
 </>
   )
 }
+
+
+// <Link state={{noScroll: true }} to={closeTo} style={{fontSize:'2rem',  textDecoration:'none', lineHeight:'', display:'flex', flexDirection:'column', color:'', cursor:'pointer'}}>
+//         {/* <AiOutlineClose /> */}
+//         <span className="TRON">[</span>
+//           <a onClick="window.location.reload()" style={{border:'1px solid', position:'absolute', top:'200px'}}>Refresh</a>
+//         <span className="" style={{fontSize:'70%', textAlign:'center'}}>home</span>
+//       </Link>

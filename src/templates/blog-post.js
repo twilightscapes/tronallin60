@@ -138,7 +138,7 @@ const Pagination = props => (
       {props.previous && props.previous.frontmatter.template === "blog-post" && (
         <li className="prevbutton">
           <button className="actionJackson TRON " style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px', padding:'10% 5%', }}>
-          <Link to= {props.previous.frontmatter.slug + "/"} rel="prev" style={{background:'transparent', border:'none'}}>
+          <Link state={{modal: true}} to= {props.previous.frontmatter.slug + "/"} rel="prev" style={{background:'transparent', border:'none'}}>
             
             <p
               style={{
@@ -156,7 +156,7 @@ const Pagination = props => (
       {props.next && props.next.frontmatter.template === "blog-post" && (
         <li className="nextbutton">
           <button className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px', padding:'10% 5%', }}>
-          <Link to={props.next.frontmatter.slug + "/"} rel="next" style={{background:'transparent', border:'none'}}>
+          <Link state={{modal: true}} to={props.next.frontmatter.slug + "/"} rel="next" style={{background:'transparent', border:'none'}}>
             <p
               style={{
                 fontSize:'2vw',
@@ -796,7 +796,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-<div className="home-posts" style={{clear:'both', display:'',  justifyContent:'space-around', textAlign:'left', width:'90vw', margin:'0 auto', height:'', maxHeight:'', border:'0px solid blue'}}>
+<div id="pagecontent" className="home-posts" style={{clear:'both', display:'',  justifyContent:'space-around', textAlign:'left', width:'90vw', margin:'0 auto', height:'', maxHeight:'', border:'0px solid blue'}}>
 
 
 
