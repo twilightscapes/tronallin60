@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-
+import { Layout } from "../components/layout";
 
 import { Link } from "gatsby"
 // import { graphql } from "gatsby"
@@ -9,9 +9,9 @@ import { StaticImage } from "gatsby-plugin-image"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import ReactPlayer from 'react-player/lazy'
-import Controls from "../components/Controls"
+// import Controls from "../components/Controls"
 import { ImPlay } from "react-icons/im"
-import LightCycle from "../../static/assets/light-cycle.svg"
+// import LightCycle from "../../static/assets/light-cycle.svg"
 // import { ImPlay } from "react-icons/im"
 // import LightCycle from "../../static/assets/light-cycle.svg"
 // import QuoraStrike from "../../static/assets/quora-strike.svg"
@@ -111,7 +111,7 @@ function KevinPage() {
   return (
   
 <CustomBox style={{}}>
-
+<Layout>
 {/* GRID INTRO */}
 
 
@@ -327,7 +327,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ke
 
 
 
-
+</Layout>
 </CustomBox>
   );
 }
