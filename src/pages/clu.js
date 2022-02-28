@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-
+import { Layout } from "../components/layout"
 
 import { Link } from "gatsby"
 // import { graphql } from "gatsby"
@@ -111,7 +111,7 @@ function TronPage() {
   return (
   
 <CustomBox style={{}}>
-
+<Layout className="">
 {/* GRID INTRO */}
 
 
@@ -331,7 +331,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
 
 
 
-
+</Layout>
 </CustomBox>
   );
 }
