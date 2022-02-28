@@ -7,9 +7,9 @@ description: Sam Flynn's dog Marv, steals the show!
 youtuber: "https://youtu.be/s0fpz3DkCT4"
 youtuber2: ""
 youtubeshoworiginal: ""
-youtubersuggestion1: ""
-youtubersuggestion2: ""
-youtubersuggestion3: ""
+youtubersuggestion1: "https://youtu.be/ErvxEjDUO4s"
+youtubersuggestion2: "https://youtu.be/UfWnQuAxa5Y"
+youtubersuggestion3: "https://youtu.be/LE5m5aawuao"
 youtubestart: ""
 youtubeend: ""
 youtubemute: "1"
@@ -21,7 +21,7 @@ isnftforsale: ""
 svgzindex: "0"
 comments: "1"
 shareable: "1"
-underlayImage: /assets/transparent.png
+underlayImage: ""
 featuredImage: /assets/tronin60.jpg
 svgImage: /assets/null.svg
 nftlink: ""

@@ -7,9 +7,9 @@ description: Where is Kevin Flynn? Presumed dead after missing for 30 years.
 youtuber: "https://youtu.be/ueQSIDYz_R4"
 youtuber2: ""
 youtubeshoworiginal: ""
-youtubersuggestion1: ""
-youtubersuggestion2: ""
-youtubersuggestion3: ""
+youtubersuggestion1: "https://youtu.be/ErvxEjDUO4s"
+youtubersuggestion2: "https://youtu.be/UfWnQuAxa5Y"
+youtubersuggestion3: "https://youtu.be/LE5m5aawuao"
 youtubestart: "0"
 youtubeend: "60"
 youtubemute: "1"
@@ -21,7 +21,7 @@ isnftforsale: ""
 svgzindex: "0"
 comments: "1"
 shareable: "1"
-underlayImage: /assets/transparent.png
+underlayImage: /assets/tronin60.png
 featuredImage: /assets/tronin60.jpg
 svgImage: /assets/whereskevin.svg
 nftlink: ""

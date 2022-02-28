@@ -47,6 +47,14 @@ export function Layout({ children }) {
 
 
 
+      <div className="" style={{
+  position:'fixed', 
+  zIndex:'10',
+  top:'10px',
+  left:'10px',
+  width:'150px',
+fontSize:'1rem'
+}}><a href="https://tron.allin60.com">tron.</a><a href="https://allin60.com">allin60.com</a></div>
 
       {/* <Header /> */}
 
@@ -62,14 +70,7 @@ export function Layout({ children }) {
 
 {/* <Link to="/"><img id="logo" className="twlogo1" src={twLogo} alt="Twilightscapes Logo" style={{margin:'16px 0 40px 4vw', minWidth:'100px', maxWidth:'100px', height:'auto', padding:'0', border:'0px solid red', position:'fixed', zIndex:'2'}} /></Link> */}
 
-<div className="tronText" style={{
-  position:'fixed', 
-  zIndex:'10',
-  top:'0',
-  left:'10px',
-  width:'150px',
-fontSize:'1.4rem'
-}}><a href="https://tron.allin60.com">tron.</a><a href="https://allin60.com">allin60.com</a></div>
+
 
 
 

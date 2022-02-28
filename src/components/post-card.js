@@ -22,13 +22,13 @@ const PostCard = ({ data }) => (
 
 
     {data.frontmatter.featuredImage ? (
-      
+      <div id="" className="wrap-element tronpanel" style={{overflow:'hidden', width:'100vw', height:'100vh', display:'flex', flexDirection:'column', justifyContent:'center', padding:'10% 0' }}>
       <Link to={data.frontmatter.slug}>
         <GatsbyImage
           image={data.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
           alt={data.frontmatter.title + " - Featured image"}
           className="featured-image tronpanel"
-          style={{position:'relative', zIndex:'1'}}
+          style={{position:'relative', zIndex:'1', height:'100vh'}}
         />
         {/* <div
               style={{
@@ -64,7 +64,7 @@ const PostCard = ({ data }) => (
 </svg>
         </div> */}
       </Link>
-      
+      </div>
     ) : (
       // <Link  to={data.frontmatter.slug}><StaticImage className="featured-image" src="assets/default-og-image.jpg" alt="VidSock Default Image" style={{position:'relative', zIndex:''}} /></Link>
       ''

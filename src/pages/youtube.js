@@ -109,16 +109,16 @@ const CustomBox = styled.div`
         
                 <ReactPlayer
   className='react-player'
-      url={FinalUrl}
+      url={Url}
       width='100%'
       height='100%'
       config={{
         youtube: {
-          playerVars: { showinfo:1, controls:1, mute:1, }
+          playerVars: { showinfo:1, controls:0, mute:1, }
         },
       }}
       playing
-      color="white"
+ 
 
       // playIcon={<button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'#111', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', paddingTop:'5%'}}>
         
@@ -151,7 +151,7 @@ const CustomBox = styled.div`
 
 
 {/* <div className='player-wrapper' style={{position:'relative', width:'100vw',  top:'', zIndex:'0', height:'content-fill', overflow:'hidden' }}> */}
-<div className="wrap-element" style={{position:'absolute', top:'0', zIndex:''}}>
+<div id="" className="wrap-element " style={{overflow:'hidden', width:'100vw', height:'100%', position:'fixed', top:'0', Zindex:'40', border:''}}>
 
 {/* <div className='stack-layout' style={{position:'relative', width:'100vw', height:'100%', top:'', zIndex:'0', height:'content-fill', overflow:'' }}> */}
 

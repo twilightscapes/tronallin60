@@ -129,12 +129,17 @@ const CustomBox = styled.div`
 //   },
 // };
 
+
+
+
 const Pagination = props => (
-  <div className="pagination -post">
-    <ul className="" style={{display:'flex',}}>
+  <div className="pagination -post nextbutt" style={{position:'absolute', zIndex:'2' }}>
+    <ul className="" style={{display:'flex', justifyContent:'space-between', border:'0px solid yellow', width:'90vw'}}>
       {props.previous && props.previous.frontmatter.template === "blog-post" && (
         <li>
+          <button className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px',fontSize:'2vw', padding:'10% 5%', }}>
           <Link  to= {props.previous.frontmatter.slug + "/"} rel="prev">
+            
             <p
               style={{
                 color: "inherit",
@@ -149,10 +154,12 @@ const Pagination = props => (
               {props.previous.frontmatter.title}
             </span>
           </Link>
+          </button>
         </li>
       )}
       {props.next && props.next.frontmatter.template === "blog-post" && (
         <li>
+          <button className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px',fontSize:'2vw', padding:'10% 5%', }}>
           <Link  to={props.next.frontmatter.slug + "/"} rel="next">
             <p
               style={{
@@ -166,6 +173,7 @@ const Pagination = props => (
             </p>
             <span className="page-title">{props.next.frontmatter.title}</span>
           </Link>
+          </button>
         </li>
       )}
     </ul>
@@ -285,8 +293,8 @@ Add your own in the comments below!
 }
 
 const YoutuberSuggestion1 = frontmatter.youtubersuggestion1
-// const YoutuberSuggestion2 = frontmatter.youtubersuggestion2
-// const YoutuberSuggestion3 = frontmatter.youtubersuggestion3
+const YoutuberSuggestion2 = frontmatter.youtubersuggestion2
+const YoutuberSuggestion3 = frontmatter.youtubersuggestion3
 const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
   const YouTube = frontmatter.youtuber
 
@@ -311,7 +319,7 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
               <ReactPlayer
               className='react-player661'
               url={iframeUrl}
-              style={{position:'absolute', top:'0', zIndex:'3'}}
+              // style={{position:'absolute', top:'0', zIndex:'100'}}
               // url={[
               //   iframeUrl,
               //   YoutuberSuggestion1,
@@ -342,7 +350,7 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
       <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
               </div>
               </button>}
-                light="../assets/transparent.png"
+                // light="../assets/transparent.png"
               />
 
               
@@ -358,8 +366,8 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
 
     const [state, setState] = useState({
       playing: true,
-      controls: true,
-      light: true,
+      controls: false,
+      light: false,
       muted: true,
       loop: true,
     });
@@ -373,6 +381,7 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
       muted,
       loop,
       played,
+      controls
     } = state;
   
     const handlePlayPause = () => {
@@ -390,18 +399,18 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
               <ReactPlayer
               className='react-player'
         
-              url={iframeUrl}
-              // url={[
-              //   iframeUrl,
-              //   Suggestion1,
-              //   Suggestion2,
-              //   Suggestion3
-              // ]}
+              // url={iframeUrl}
+              url={[
+                iframeUrl,
+                Suggestion1,
+                Suggestion2,
+                Suggestion3
+              ]}
               width="100%"
               height="100%"
               config={{
                 youtube: {
-                  playerVars: { showinfo:0, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
+                  playerVars: { showinfo:0, autoplay:YouTubeAutostart, controls:false, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
                 },
               }}
               playing={playing}
@@ -466,10 +475,10 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
           url={iframeUrl2}
           width="100%"
           height="100%"
-          style={{zIndex:'0'}}
+
           // playing={playing}
           // controls={true}
-          // light={false}
+          light={false}
           // loop={loop}
           // muted={muted}
           config={{
@@ -477,6 +486,7 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
               playerVars: { showinfo:1, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:0  }
             },
           }}
+          playing
           playsinline
             playIcon={
               <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'5', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
@@ -728,7 +738,16 @@ const svgUrl = frontmatter.svgImage.publicURL
       } */}
 
 
+{ !YouTube2 ? (
+        ""
+   
+      ) : (
+        <Iframer3 />
+      )}
 
+
+
+<div style={{zIndex:'1', overflow:'hidden', position:'absolute', bottom:'0', maxHeight:'100vh', width:'100vw'}}><YouTubed /></div>
       </div>
 
 
@@ -752,21 +771,16 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-{Suggestion1 ? (
+{/* {Suggestion1 ? (
 
-    <div><YouTubed />
-            <ShowSuggestion />
-       </div>
-          ) : (
-            ""
-          )}
+<div>
+        <ShowSuggestion />
+   </div>
+      ) : (
+        ""
+      )} */}
 
-{ !YouTube2 ? (
-            ""
-       
-          ) : (
-            <Iframer3 />
-          )}
+
 
 
 

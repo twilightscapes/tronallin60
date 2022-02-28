@@ -2248,7 +2248,7 @@ input[type=checkbox] {
   cursor: pointer;
   position: fixed;
   z-index: 3;
-  bottom: 5%;
+  bottom: 20%;
   right: 2%;
   /* height: 100px;
   width: 100px; */
@@ -2270,7 +2270,7 @@ filter: drop-shadow(1px 1px 10px var(--primary));
 }
 
 
-@media (min-width: 1100px) {
+/* @media (min-width: 1100px) {
   .sidebarIconToggle, .toastWrapper {
   bottom: 0;
   right: 0;
@@ -2282,7 +2282,7 @@ filter: drop-shadow(1px 1px 10px var(--primary));
       bottom: 4%;
       right: 2%;
     }
-    }
+    } */
 
 
 
@@ -4656,10 +4656,10 @@ height:100vh;
 .nextbutt::before{
   content: " next up \276F ";
   text-align:left;
-  position:relative;
+  position:absolute;
   display: block;
-  top:-5%;
-  left:inherit;
+  bottom:-25%;
+  right:0;
   /* color: var(--primary-color); */
   color:#fff;
   filter: drop-shadow(3px 4px 10px rgb(0, 238, 255));

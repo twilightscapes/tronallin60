@@ -94,33 +94,34 @@ const CustomBox = styled.div`
   
               return (
         
-                
+                ""
 
-                <ReactPlayer
-  className='react-player'
-      url={FinalUrl}
-      width='100%'
-      height='100%'
-      shownfo={false}
-      controls={false}
-      autoplay={true}
-      playing
-      fullscreen
-      color="white"
-      muted={true}
-      // playIcon={<button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'10', top:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'#111', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', paddingTop:'5%'}}>
+  //               <ReactPlayer
+  // className='react-player'
+  //     style={{position:'absolute', top:'0', zIndex:'5'}}
+  //     url={FinalUrl}
+  //     width='100%'
+  //     height='100%'
+  //     shownfo={false}
+  //     controls={false}
+  //     autoplay={true}
+  //     playing
+  //     fullscreen
+  //     color="white"
+  //     muted={true}
+  //     // playIcon={<button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'10', top:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'#111', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', paddingTop:'5%'}}>
         
 
-      //   <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
-      //   <div style={{ textAlign:'center', fontSize:'30px'}}>
-      //      Ads Removed!</div>
-      // <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
-      // <span style={{fontWeight:'bold', padding:'0 0 0 1rem', fontSize:'60px'}}>Click To Play</span>
+  //     //   <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
+  //     //   <div style={{ textAlign:'center', fontSize:'30px'}}>
+  //     //      Ads Removed!</div>
+  //     // <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
+  //     // <span style={{fontWeight:'bold', padding:'0 0 0 1rem', fontSize:'60px'}}>Click To Play</span>
       
-      // </div>
-      // </button>}
-      // light="../static/assets/transparent.png"
-    />
+  //     // </div>
+  //     // </button>}
+  //     // light="../static/assets/transparent.png"
+  //   />
 
               )
             }
@@ -135,7 +136,8 @@ const CustomBox = styled.div`
 
 
 {urlNoProtocol ? (
-     <Iframed />
+  <div className="wrap-element" style={{position:'relative', top:'0', zIndex:'', overflow:'hidden'}}>
+     <Iframed /></div>
         ) : (
           ""
         )}
