@@ -196,7 +196,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 
  <div id="characters" className="characters" style={{position:'absolute', zIndex:'0', width:'', height:'100%', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'10vh 0 0 0',}}>
 
- {/* <ReactPlayer
+ <ReactPlayer
           className='playerpp'
           url="https://www.youtube.com/embed/S5S6s5dZXNM"
           width="100%"
@@ -231,12 +231,12 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
         </div>
         }
             light="../assets/transparent.png"
-          /> */}
+          />
     
 <div style={{display:'flex', flexDirection:'row', justifyContent:'space-around', zIndex:'-2', position:'relative' }}>
 
     <div id="" className="" style={{position:'relative', display:'flex', justifyContent:'center', border:'0px solid red',}}>
-             <Link to="/sam-flynn/" title="Sam Flynn"  aria-label="Sam Flynn">
+             <Link state={{modal: true}} to="/the-grid/son-of-flynn/" title="Sam Flynn"  aria-label="Sam Flynn">
     {/* <SamFlynn className="character" style={{height:'100vh', width:'90%', margin:'0 0 0 0',}} /> */}
     <StaticImage className="character"
 style={{height:'', width:'', margin:'0 0 0 0',}}
@@ -246,7 +246,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sa
     
     <div id="" className="" style={{position:'relative', transform:'', maxWidth:'', height:'100vh',
      padding:' 0', display:'flex', justifyContent:'center', border:'0px solid red',}}>
-    <Link to="/quorra" title="Quorra" aria-label="Quorra">
+    <Link state={{modal: true}} to="/the-grid/meet-quorra" title="Quorra" aria-label="Quorra">
       {/* <QuoraStand className="character" style={{height:'100%', width:'85%', margin:'0 0 0 10%', right:'', zIndex:''}} /> */}
       <StaticImage className="character"
 style={{height:'', width:'', margin:'0 0 0 0',}}
@@ -256,7 +256,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/qu
     
     <div id="" className="" style={{position:'relative', transform:'', maxWidth:'', height:'100vh',
      padding:' 0', display:'flex', justifyContent:'center',}}>
-<Link to="/kevin-flynn/" title="Kevin Flynn" aria-label="Kevin Flynn">
+<Link state={{modal: true}} to="/kevin-flynn/" title="Kevin Flynn" aria-label="Kevin Flynn">
     {/* <KevinFlynn className="character" style={{position:'relative', height:'100%', width:'130%', zIndex:'', margin:'0 0 0 -16%'}} /> */}
     <StaticImage className="character"
 style={{height:'', width:'', margin:'0 0 0 0',}}
@@ -267,7 +267,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ke
     <div id="" className="" style={{position:'relative', transform:'', maxWidth:'', height:'100vh',
     display:'flex', flexDiection:'column', justifyContent:'center',
     padding:'0', border:'0px solid red',}}>
-      <Link to="/tron/" title="Tron" aria-label="Tron">
+      <Link state={{modal: true}} to="/tron/" title="Tron" aria-label="Tron">
     {/* <TronGuy className="character" style={{height:'100%', width:'100%', margin:'0 0 0 0', transform: 'scaleX(-1)'}} /> */}
     <StaticImage className="character"
 style={{height:'', width:'', margin:'0 0 0 0',}}
@@ -278,7 +278,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/tr
     <div srl_exclude="true" id="mylink15" className="donation2" style={{position:'relative', transform:'', maxWidth:'', height:'100vh', 
     // background:'rgba(6, 70, 90, 0.6)', 
     padding:' 0', display:'flex', justifyContent:'center', border:'0px solid red',}}>
-    <Link to="/clu/" title="Clu" aria-label="Clu">
+    <Link state={{modal: true}} to="/clu/" title="Clu" aria-label="Clu">
     {/* <CluGuy className="character evil" style={{height:'100%', width:'100%', margin:'0 0 0 -20%',}} /> */}
     <StaticImage className="character evil"
 style={{height:'', width:'', margin:'0 0 0 0',}}
@@ -290,21 +290,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
 
     </div> 
     
-<div className="" style={{display:'flex', flexDiection:'', justifyContent:'center', height:'', position:'absolute', left:'', right:'', bottom:'20vh', zIndex:'', width:'100vw', margin:'0 auto', height:'', border:'0px solid red', textAlign:'center'}}>
 
-   
-          
-  
-            <div className="tronText TronType" style={{
-          display:'flex', justifyContent:'center', zIndex:'', filter:'drop-shadow(2px 2px 2px #000)', width:'80%',  padding:'2% 1rem', borderRadius:'200px', border:'3px dotted #04e2ff', lineHeight:'200%', fontSize:'clamp(1.2rem, 3vw, 2.8rem)', color:'rgb(6, 232, 240)',  textShadow:'2px 2px 2px #333'
-          }}>
-            CHOOSE YOUR CHARACTER
-            </div>
-
-          
-        
-        
-        </div>
 
 
   
