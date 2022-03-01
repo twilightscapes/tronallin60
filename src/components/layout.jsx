@@ -108,7 +108,7 @@ fontSize:'1rem'
   {/* </label> */}
 
 
-  <label htmlFor="openSidebarMenu" className="backdrop1" ></label>
+  <label htmlFor="openSidebarMenu" className="backdrop1" aria-label="Return To Home" ></label>
 
 
    <div id="sidebarMenu" style={{minWidth:'', width:''}}>
