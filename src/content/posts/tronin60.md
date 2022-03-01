@@ -7,7 +7,7 @@ description: Tron in ONLY 60 seconds
 youtuber: "1kIihY252eE"
 youtuber2: "mkYKF5hQQ6M"
 youtubeshoworiginal: ""
-youtubersuggestion1: "https://youtu.be/ErvxEjDUO4s"
+youtubersuggestion1: "https://youtu.be/sqJdG95juso"
 youtubersuggestion2: "https://youtu.be/UfWnQuAxa5Y"
 youtubersuggestion3: "https://youtu.be/LE5m5aawuao"
 youtubestart: "1"

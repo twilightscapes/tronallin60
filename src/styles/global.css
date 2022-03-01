@@ -1417,12 +1417,14 @@ height:100%;
               } */
 
               .horizontal-scroll::before{
-                content:' [ \2329  swipe ';
+                /* content:' [ \2329  swipe '; */
+                content:' |  \276F \276F ';
+                
                 position:absolute;
                 z-index:2;
                 display: inline-block;
                 margin:auto;
-                padding:10px 20px;
+                padding:0 0px;
                 background:rgba(0, 0, 0, .7);
                 opacity:.7;
                 /* display:flex;
@@ -1435,6 +1437,8 @@ height:100%;
                 font-size:clamp(2rem, 4vw, 3.3rem);
                 text-shadow:2px 2px 2px #333;
                 font-family:TRON ;
+                background:radial-gradient(circle, rgba(100, 86, 7, 0.6) 17%, rgba(170, 145, 5, 0.7) 58%, rgba(236, 221, 9, 0.8) 97%);
+                background-size: 140% 200%;
               }
 
   /* .horizontal-scroll-wrapper:hover::before{
@@ -1451,12 +1455,12 @@ height:100%;
 .horizontal-scroll-wrapper::before, .sliderholder1::before{
                 content:' scroll \276F \276F ' !important;
               }
-.horizontal-scroll::before, .sliderholder1::before{
+/* .horizontal-scroll::before, .sliderholder1::before{
                 content:'|  \276F \276F ' !important;
                 font-size:5vw;
-                /* background:radial-gradient(circle, rgba(10, 45, 48, 0.4) 17%, rgba(25, 96, 109, 0.4) 58%, rgba(10, 196, 206, 0.5) 97%);
-                background-size: 140% 200%; */
-              }
+                background:radial-gradient(circle, rgba(100, 86, 7, 0.6) 17%, rgba(170, 145, 5, 0.7) 58%, rgba(236, 221, 9, 0.8) 97%);
+                background-size: 140% 200%;
+              } */
 
              }
 
@@ -1470,7 +1474,7 @@ height:100%;
                 z-index: 1;
                 display: inline-block;
                 margin:auto;
-                padding:10px 10px;
+                padding:0;
                 background:rgba(0, 0, 0, .7);
                 opacity:.7;
                 display:flex;

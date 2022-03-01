@@ -95,7 +95,7 @@ function TronPage() {
 {/* c_V1iD6F1kk */}
 {/* nJ38P5elTkg */}
 {/* <div id="homestart" style={{position:'absolute', top:'-100vh'}}></div> */}
-<div id="" className="wrap-element tronpanel" style={{overflow:'hidden'}}>
+<div id="" className="wrap-element tronpanel" style={{overflow:'', height:'100vh'}}>
 <ReactPlayer
          className='frontbg'
          url="https://www.youtube.com/embed/c_V1iD6F1kk"
@@ -168,7 +168,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
  
 
 
- <div id="characters" className="characters" style={{position:'relative', zIndex:'0', width:'100vw', height:'100vh', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'10vh 0 0 0', overflow:'hidden', border:'0px solid blue'}}>
+ <div id="characters" className="characters" style={{position:'relative', zIndex:'0', width:'100vw', height:'100vh', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'20vh 0 0 0', overflow:'hidden', border:'0px solid blue'}}>
 
  <ReactPlayer
           className='playerpp'
@@ -232,7 +232,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
     <div className="" style={{display:'flex', gap:'', justifyContent:'', position:'absolute', left:'10vw',  marginTop:'10vh', marginRight:''}}>
 
 <div>
-<h1 className="tronText" style={{fontSize:'clamp(2rem, 3vw, 3rem)'}}>CLU</h1>
+<h1 className="tronText" style={{paddingTop:'18vh', fontSize:'clamp(2rem, 3vw, 3rem)'}}>CLU</h1>
 <ul style={{fontSize:'clamp(1rem, 1.5vw, 2rem)', listStyle:'none', background:'rgba(0, 0, 0, .4)', padding:'1rem', borderRadius:'12px'}}>
 <li><strong>Actor:</strong> Jeff Bridges</li>
 <li><strong>User:</strong> Kevin Flynn</li>

@@ -31,35 +31,7 @@ import { ImPlay } from "react-icons/im"
 import styled from "styled-components"
 const CustomBox = styled.div`
 
-.MuiSlider-root {
-  color:#ff00000 !important;
-}
 
-.wrap-element {
-  position: relative;
-  overflow: ;
-  padding-bottom: 56.25%;
-  height:100vh;
-
-}
-.wrap-element iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300%; 
-  left: -100%; 
-  border: 0;
-}
-
-
-@media (max-width: 48em) {
-  .wrap-element {
-    padding-bottom: 0;
-    height:300px;
-    overflow:visible;
-    border:0px solid red;
-  }
-}
 
 @media (min-width: 58em) {
 
@@ -123,7 +95,7 @@ function KevinPage() {
 {/* c_V1iD6F1kk */}
 {/* nJ38P5elTkg */}
 {/* <div id="homestart" style={{position:'absolute', top:'-100vh'}}></div> */}
-<div id="" className="wrap-element tronpanel" style={{overflow:'hidden'}}>
+<div id="" className="wrap-element tronpanel" style={{overflow:'', height:'100vh'}}>
 <ReactPlayer
          className='frontbg'
          url="https://www.youtube.com/embed/c_V1iD6F1kk"
@@ -196,7 +168,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
  
 
 
- <div id="characters" className="characters" style={{position:'relative', zIndex:'0', width:'100vw', height:'100vh', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'10vh 0 0 0', overflow:'hidden', border:'0px solid blue'}}>
+ <div id="characters" className="characters" style={{position:'relative', zIndex:'0', width:'100vw', height:'100vh', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'15vh 0 0 0', overflow:'hidden', border:'0px solid blue'}}>
 
  <ReactPlayer
           className='playerpp'
@@ -256,7 +228,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ke
     <div className="" style={{display:'flex', gap:'', justifyContent:'', position:'absolute', left:'10vw',  marginTop:'10vh', marginRight:''}}>
 
     <div>
-<h1 className="tronText" style={{fontSize:'clamp(2rem, 3vw, 3rem)'}}>Kevin Flynn</h1>
+<h1 className="tronText" style={{paddingTop:'18vh', fontSize:'clamp(2rem, 3vw, 3rem)'}}>Kevin Flynn</h1>
 <ul style={{fontSize:'clamp(1rem, 1.5vw, 2rem)', listStyle:'none', background:'rgba(0, 0, 0, .4)', padding:'1rem', borderRadius:'12px'}}>
 <li><strong>Actor:</strong> Jeff Bridges</li>
 {/* <li>User: Kevin Flynn</li> */}

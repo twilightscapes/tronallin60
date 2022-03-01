@@ -166,7 +166,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
  
 
 
- <div id="characters" className="characters" style={{position:'absolute', zIndex:'0', width:'', height:'100%', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'10vh 0 0 0',}}>
+ <div id="characters" className="characters" style={{position:'absolute', zIndex:'0', width:'', height:'100%', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'20vh 0 0 0',}}>
 
  {/* <ReactPlayer
           className='playerpp'

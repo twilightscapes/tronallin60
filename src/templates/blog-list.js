@@ -158,7 +158,7 @@ class BlogIndex extends React.Component {
          width="100%"
          height="100vh"
          playing
-            controls={true}
+            controls={false}
             light={false}
             loop={true}
             muted={true}
