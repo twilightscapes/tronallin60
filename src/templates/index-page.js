@@ -284,7 +284,7 @@ const HomePage = ({ data }) => {
 <div id="" className="wrap-element " style={{overflow:'', width:'100vw', height:'100vh', position:'fixed', top:'0'}}>
 
 <ReactPlayer
-         className='frontbg2'
+         className='frontbg2 '
          url="https://youtu.be/LltRzgvyrps"
          width="100%"
          height="100vh"
@@ -347,8 +347,8 @@ const HomePage = ({ data }) => {
 
 
 
-<div className="donation2 tronpanel fire" style={{display:'grid',
-  placeContent:'center', width:'100vw', height:'100vh', justifyContent:'center', position:'relative', background:'rgba(0,0,0,0.50)', backdropFilter:'blur(14px)'}}>
+<div className="donation2 allin60panel fire" style={{display:'grid',
+  placeContent:'center', width:'100vw', height:'100vh', justifyContent:'center', position:'relative', background:'rgba(0,0,0,0.50)',}}>
 
 
 <FrontLoader style={{positon:'absolute', top:'0', left:'', right:'', width:'100vw', height:'',}} />
@@ -447,6 +447,14 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
 <div style={{ background:'rgba(0,0,0,0.10)', width:'80vw', position:'relative', top:'', margin:'5vh auto', padding:'4% 5%', zIndex:'1', textAlign:'', border:'1px solid #000', borderRadius:'12px', textDecoration:'none', color:'#cccc'}}>
   <Newsignup />
   </div>
+</div>
+
+
+
+
+<div className="allin60panel actionJackson frontdrop" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'100vh', paddingTop:'0', background:''}}>
+
+  spacer
 </div>
 
         

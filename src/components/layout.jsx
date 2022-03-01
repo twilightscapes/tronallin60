@@ -211,9 +211,15 @@ Contact Me<span>Ordering Questions?</span>
               </Link>
       </li>
 
+<li className="carto" style={{textAlign:'center'}}>
+              <Link className="navbar-item txtshadow" to="/about/">
+              About This Site
+              </Link>
+      </li> 
 
 
-<li className="carto" style={{textAlign:''}}>
+<div style={{background:'rgba(0,0,0,0.50)'}}>
+<li className="carto" style={{textAlign:'', color:'#777', cursor:'not-allowed'}}>
               {/* <Link state={{modal: true}} className="navbar-item txtshadow" to="/grid-launcher/"> */}
               Enter the Grid
               {/* </Link> */}
@@ -225,44 +231,40 @@ Contact Me<span>Ordering Questions?</span>
               </Link>
       </li> */}
 
-      <li className="carto" style={{textAlign:''}}>
+      <li className="carto" style={{textAlign:'', color:'#777', cursor:'not-allowed'}}>
               {/* <Link className="navbar-item txtshadow" to="/the-grid/disc-grid/"> */}
               LightDisc Grid
               {/* </Link> */}
       </li>
 
-      <li className="carto" style={{textAlign:''}}>
+      <li className="carto" style={{textAlign:'', color:'#777', cursor:'not-allowed'}}>
               {/* <Link className="navbar-item txtshadow" to="/the-grid/lightcycle-grid/"> */}
               LightCycle Grid
               {/* </Link> */}
       </li>
 
 
-      <li className="carto" style={{textAlign:''}}>
+      <li className="carto" style={{textAlign:'', color:'#777', cursor:'not-allowed'}}>
               {/* <Link className="navbar-item txtshadow" to="/the-grid/end-of-line-club/"> */}
               End of Line Club
               {/* </Link> */}
       </li>
 
-      <li className="carto" style={{textAlign:''}}>
+      <li className="carto" style={{textAlign:'', color:'#777', cursor:'not-allowed'}}>
               {/* <Link className="navbar-item txtshadow" to="/the-grid/return-to-the-source/"> */}
               Return the Source
               {/* </Link> */}
       </li>
 
 
-      <li className="carto" style={{textAlign:''}}>
+      <li className="carto" style={{textAlign:'', color:'#777', cursor:'not-allowed'}}>
               {/* <Link className="navbar-item txtshadow" to="/the-grid/end-of-the-grid/"> */}
               End of the Grid
               {/* </Link> */}
       </li>
+</div>
 
 
-<li className="carto" style={{textAlign:'center'}}>
-              <Link className="navbar-item txtshadow" to="/about/">
-              About This Site
-              </Link>
-      </li> 
 
       {/* <li className="carto">
               <Link className="navbar-item txtshadow" to="/nft/">
@@ -295,7 +297,7 @@ Contact Me<span>Ordering Questions?</span>
 
       
 
-      <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', verticalAlign:'center', padding:'5px 0 0 0' , background:'rgba(0,0,0,0.50)' }}>
+      <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', verticalAlign:'center', padding:'5px 0 0 0' ,  }}>
   
       <Theme  style={{padding:'0'}} />
    {/* <Link className="sherlock" to="/search/" style={{marginRight:'0', marginTop:'5px'}}>
