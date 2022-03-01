@@ -347,7 +347,7 @@ display: none !important;
 
 .gatsby-image-wrapper [data-main-image] {
   /* border-radius: var(--radius-sm); */
-  border-radius: 0;
+  border-radius: 0 0 20px 20px !important;
 }
 
 .gatsby-image-wrapper [data-main-image] {
@@ -930,11 +930,12 @@ body.homepage .post-content a, body.bloglist .post-content a{color:#fff !importa
 
 
 
-body.bloglist .post-content .featured-image{
+body.bloglist .featured-image{
   position:absolute;
   height:auto !important;
   top:0;
 border:0px solid red !important;
+border-radius: 0 0 40px 40px !important;
 }
 
 body.bloglist section.child{
@@ -2147,6 +2148,10 @@ overflow: hidden}  */
 }
 
 
+
+.gatsby-image-wrapper, .gatsby-image-wrapper img{
+  border-radius:40px !important;
+}
 
 
 .tronpanel::before{

@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useLocation } from "@reach/router"
 import { Link } from 'gatsby-plugin-modal-routing-3'
+import { AiOutlineClose } from "react-icons/ai"
+
 import { ModalRoutingContext } from 'gatsby-plugin-modal-routing-3'
 
 export function Seo({
@@ -177,20 +179,25 @@ export function Seo({
 
 {/*  */}
 
-      {/* <div style={{display:'', position:'fixed', top:'3%', right:'30%', padding:'0px', fontSize:'2rem', background:'#111 !important', opacity:'1 !important', zIndex:'15',  filter:' drop-shadow(0px 4px 3px #000)',}}> */}
+ 
+<div style={{position:'fixed', top:'60px', right:'5vw', padding:'10px', fontSize:'40px', background:'#111 !important', opacity:'1 !important', zIndex:'3',  filter:' drop-shadow(0px 4px 3px #000)',}}>
+          <Link state={{noScroll: true }} to={closeTo}>
+            <AiOutlineClose />
+          </Link>
+          </div>
       
-      <div style={{ flexDirection:'', color:'#ccc', position:'fixed', bottom:'30px', zIndex:'15', display:'flex', justifyContent:'center', width:'100vw'}}>
-        <button className="back" style={{display:'',}}>
+      {/* <div style={{ flexDirection:'', color:'#ccc', position:'fixed', bottom:'30px', zIndex:'1', display:'flex', justifyContent:'center', width:'', textAlign:'center'}}>
+        <button className="" style={{display:'',}}>
         <Link to="#pagecontent" style={{border:'0px solid', }}>
-          View Page Content
-        <br />
-        <div style={{fontSize:'50px'}}>&#812;</div>
+          View More
+      
+        <div style={{fontSize:'50px', height:'20px', width:'20px', overflow:'hidden', border:'1px solid yellow'}}>&#812;todd</div>
         </Link>
  
         
 
         </button>
-      </div>
+      </div> */}
 
     
       {/* </div> */}

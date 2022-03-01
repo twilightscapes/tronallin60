@@ -39,7 +39,7 @@ const styles = {
 export const blogListQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___date] }
       filter: { frontmatter: { template: { eq: "blog-post" } } }
       limit: $limit
       skip: $skip

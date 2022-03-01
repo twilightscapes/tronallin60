@@ -205,11 +205,11 @@ Contact Me<span>Ordering Questions?</span>
       
 
 
-      {/* <li className="carto" style={{textAlign:'center'}}>
+      <li className="carto" style={{textAlign:'center'}}>
               <Link className="navbar-item txtshadow" to="/minutes/" style={{color:'#02e9fa'}}>
               View Latest Minutes
               </Link>
-      </li> */}
+      </li>
 
 
 
