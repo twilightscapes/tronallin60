@@ -179,7 +179,7 @@ export function Seo({
 
       {/* <div style={{display:'', position:'fixed', top:'3%', right:'30%', padding:'0px', fontSize:'2rem', background:'#111 !important', opacity:'1 !important', zIndex:'15',  filter:' drop-shadow(0px 4px 3px #000)',}}> */}
       
-      <div style={{display:'', flexDirection:'', justifyContent:'center', color:'#ccc', position:'fixed', bottom:'30px', zIndex:'15', display:'flex', justifyContent:'center', width:'100vw'}}>
+      <div style={{ flexDirection:'', color:'#ccc', position:'fixed', bottom:'30px', zIndex:'15', display:'flex', justifyContent:'center', width:'100vw'}}>
         <button className="back" style={{display:'',}}>
         <Link to="#pagecontent" style={{border:'0px solid', }}>
           View Page Content

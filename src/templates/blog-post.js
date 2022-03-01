@@ -1,7 +1,7 @@
 /** @jsx jsx */
 // import React from "react"
 
-import React, { useState, useRef, useEffect } from "react";
+import  { useState, useRef } from "react";
 import ReactPlayer from 'react-player/lazy'
 import Controls from "../components/Controls";
 
@@ -11,7 +11,7 @@ import { Link, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { getSrc } from "gatsby-plugin-image"
-import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
+// import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
 import CommentBox from "../components/commentbox"
 // import { StaticImage } from "gatsby-plugin-image"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
@@ -22,7 +22,7 @@ import { Footer } from "../components/footer"
 // import { SRLWrapper } from "simple-react-lightbox"
 import {CopyToClipboard} from 'react-copy-to-clipboard'
 // import ReactPlayer from 'react-player/lazy'
-import YouTubed from "../pages/youtube"
+// import YouTubed from "../pages/youtube"
 import { Seo } from "../components/seo"
 import { Layout } from "../components/layout"
 import ShareSocial from '../components/share' 
@@ -257,8 +257,8 @@ Add your own in the comments below!
 }
 
 const YoutuberSuggestion1 = frontmatter.youtubersuggestion1
-const YoutuberSuggestion2 = frontmatter.youtubersuggestion2
-const YoutuberSuggestion3 = frontmatter.youtubersuggestion3
+// const YoutuberSuggestion2 = frontmatter.youtubersuggestion2
+// const YoutuberSuggestion3 = frontmatter.youtubersuggestion3
 const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
   const YouTube = frontmatter.youtuber
 
@@ -345,7 +345,7 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
       muted,
       loop,
       played,
-      controls
+      // controls
     } = state;
   
     const handlePlayPause = () => {
@@ -367,8 +367,8 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
               url={[
                 iframeUrl,
                 Suggestion1,
-                Suggestion2,
-                Suggestion3
+                // Suggestion2,
+                // Suggestion3
               ]}
               width="100%"
               height="100%"

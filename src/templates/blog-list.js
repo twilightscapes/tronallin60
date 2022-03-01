@@ -1,13 +1,14 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React, { useState, useRef } from "react";
+// import React, { useState, useRef } from "react";
+import React from "react"
 // import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 // import { FaHandPointDown } from "react-icons/fa"
 // import ScrollAnimation from 'react-animate-on-scroll'
 // import { StaticImage } from "gatsby-plugin-image"
 import { ImPlay } from "react-icons/im"
 import ReactPlayer from 'react-player/lazy'
-import { useSiteMetadata } from "../hooks/use-site-metadata"
+// import { useSiteMetadata } from "../hooks/use-site-metadata"
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 import { RiArrowRightLine, RiArrowLeftLine} from "react-icons/ri"

@@ -1,14 +1,14 @@
-import React, { useState, useRef } from "react";
-import { graphql, Link } from "gatsby"
+import React, { useState } from "react";
+import { graphql } from "gatsby"
 import ReactPlayer from 'react-player/lazy'
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
 import { ImPlay } from "react-icons/im"
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 
 import { Helmet } from "react-helmet"
 import { getSrc } from "gatsby-plugin-image"
-import BlogListHome from "../components/blog-list-home"
+// import BlogListHome from "../components/blog-list-home"
 import Newsignup from "../components/newssign"
 import FrontLoader from "../../static/assets/grid-loader.svg"
 
@@ -90,41 +90,41 @@ export const pageQuery = graphql`
 
 
 
+  }
 
-
-
+`
     
 
     
 
-    posts: allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { template: { eq: "blog-post" } } }
-      limit: 3
-    ) {
-      edges {
-        node {
-          id
-          excerpt(pruneLength: 250)
-          frontmatter {
-            date(formatString: "YYYY-MM-DD-HH-MM-SS")
-            slug
-            title
-            nftdrop
+//     posts: allMarkdownRemark(
+//       sort: { order: DESC, fields: [frontmatter___date] }
+//       filter: { frontmatter: { template: { eq: "blog-post" } } }
+//       limit: 3
+//     ) {
+//       edges {
+//         node {
+//           id
+//           excerpt(pruneLength: 250)
+//           frontmatter {
+//             date(formatString: "YYYY-MM-DD-HH-MM-SS")
+//             slug
+//             title
+//             nftdrop
   
             
-            featuredImage {
-              publicURL
-              childImageSharp {
-                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
+//             featuredImage {
+//               publicURL
+//               childImageSharp {
+//                 gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 
 
@@ -160,7 +160,7 @@ const HomePage = ({ data }) => {
 
 
   // const { postcount } = useSiteMetadata()
-  const { markdownRemark, posts } = data // data.markdownRemark holds your post data
+  const { markdownRemark } = data 
   const { frontmatter, excerpt } = markdownRemark
   // const Image = frontmatter.featuredImage
   //   ? frontmatter.featuredImage.childImageSharp.gatsbyImageData
@@ -192,7 +192,7 @@ const HomePage = ({ data }) => {
     
 
 
-    const [state, setState] = useState({
+    const [state] = useState({
       playing: true,
       controls: true,
       light: true,
@@ -201,28 +201,28 @@ const HomePage = ({ data }) => {
     });
     
     // const playerRef = useRef(null);
-    const controlsRef = useRef(null);
+    // const controlsRef = useRef(null);
     
     const {
       playing,
-      controls,
-      light,
+      // controls,
+      // light,
       muted,
       loop,
-      playbackRate,
-      pip,
-      played,
-      seeking,
-      volume,
+      // playbackRate,
+      // pip,
+      // played,
+      // seeking,
+      // volume,
     } = state;
     
-    const handlePlayPause = () => {
-      setState({ ...state, playing: !state.playing });
-    };
+    // const handlePlayPause = () => {
+    //   setState({ ...state, playing: !state.playing });
+    // };
     
-    const hanldeMute = () => {
-      setState({ ...state, muted: !state.muted });
-    };
+    // const hanldeMute = () => {
+    //   setState({ ...state, muted: !state.muted });
+    // };
     
     const { iconimage } = useSiteMetadata()
 
@@ -288,7 +288,7 @@ const HomePage = ({ data }) => {
          width="100%"
          height="100vh"
          playing={playing}
-            controls={true}
+            controls={false}
             light={false}
             loop={loop}
             muted={muted}

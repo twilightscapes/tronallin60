@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Layout } from "../components/layout"
 
 import { Link } from "gatsby"
@@ -9,9 +9,9 @@ import { StaticImage } from "gatsby-plugin-image"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import ReactPlayer from 'react-player/lazy'
-import Controls from "../components/Controls"
+// import Controls from "../components/Controls"
 import { ImPlay } from "react-icons/im"
-import LightCycle from "../../static/assets/light-cycle.svg"
+// import LightCycle from "../../static/assets/light-cycle.svg"
 // import { ImPlay } from "react-icons/im"
 // import LightCycle from "../../static/assets/light-cycle.svg"
 // import QuoraStrike from "../../static/assets/quora-strike.svg"
@@ -31,35 +31,7 @@ import LightCycle from "../../static/assets/light-cycle.svg"
 import styled from "styled-components"
 const CustomBox = styled.div`
 
-.MuiSlider-root {
-  color:#ff00000 !important;
-}
 
-.wrap-element {
-  position: relative;
-  overflow: ;
-  padding-bottom: 56.25%;
-  height:100vh;
-
-}
-.wrap-element iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300%; 
-  left: -100%; 
-  border: 0;
-}
-
-
-@media (max-width: 48em) {
-  .wrap-element {
-    padding-bottom: 0;
-    height:300px;
-    overflow:visible;
-    border:0px solid red;
-  }
-}
 
 @media (min-width: 58em) {
 
@@ -74,7 +46,7 @@ const CustomBox = styled.div`
 
 function TronPage() {
 
-  const [state, setState] = useState({
+  const [state] = useState({
     playing: true,
     controls: true,
     light: true,
@@ -83,28 +55,28 @@ function TronPage() {
   });
   
   // const playerRef = useRef(null);
-  const controlsRef = useRef(null);
+  // const controlsRef = useRef(null);
   
   const {
     playing,
-    controls,
-    light,
+    // controls,
+    // light,
     muted,
     loop,
-    playbackRate,
-    pip,
-    played,
-    seeking,
-    volume,
+    // playbackRate,
+    // pip,
+    // played,
+    // seeking,
+    // volume,
   } = state;
   
-  const handlePlayPause = () => {
-    setState({ ...state, playing: !state.playing });
-  };
+  // const handlePlayPause = () => {
+  //   setState({ ...state, playing: !state.playing });
+  // };
   
-  const hanldeMute = () => {
-    setState({ ...state, muted: !state.muted });
-  };
+  // const hanldeMute = () => {
+  //   setState({ ...state, muted: !state.muted });
+  // };
   
   const { iconimage } = useSiteMetadata()
 
@@ -215,13 +187,13 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
           playIcon={
 
 
-        <div className="" style={{display:'', flexDiection:'', placeContent:'center', height:'', position:'absolute', left:'', right:'', bottom:'0', zIndex:'9', width:'', height:'100vh', border:'0px solid red'}}>
+        <div className="" style={{display:'', flexDiection:'', placeContent:'center',  position:'absolute', left:'', right:'', bottom:'0', zIndex:'9', width:'', height:'100vh', border:'0px solid red'}}>
 
         <button aria-label="Click To Play" className="actionJackson TRON tronText"
         style={{position:'', right:'', height:'100vh'}}
        >
           
-          <Link state={{modal: true}} to="/the-grid/" style={{color:'#37f8f8', display:'block', height:'100vh', width:'100vw', display:'grid', placeContent:'center', border:'0px solid yellow', position:'relative', top:'100vh'}}>
+          <Link state={{modal: true}} to="/the-grid/" style={{color:'#37f8f8',  height:'100vh', width:'100vw', display:'grid', placeContent:'center', border:'0px solid yellow', position:'relative', top:'100vh'}}>
             <div className="" style={{
           display:'flex', justifyContent:'center', marginTop:'150px', zIndex:'', filter:'drop-shadow(2px 2px 2px #000)', width:'100%',  padding:'5% 1rem', borderRadius:'200px', border:'3px dotted #666', lineHeight:'200%', fontSize:'clamp(2rem, 4vw, 3.6rem)', background:'radial-gradient(circle, rgba(10, 45, 48, 0.4) 17%, rgba(25, 96, 109, 0.4) 58%, rgba(10, 196, 206, 0.5) 97%)', textShadow:'2px 2px 2px #333'
           }}>

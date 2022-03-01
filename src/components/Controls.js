@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
-import { MdPlayArrow } from "react-icons/md"
-import { MdPause } from "react-icons/md"
+// import { MdPlayArrow } from "react-icons/md"
+// import { MdPause } from "react-icons/md"
 import { MdVolumeOff } from "react-icons/md"
 import { MdVolumeDown } from "react-icons/md"
 import { MdVolumeUp } from "react-icons/md"

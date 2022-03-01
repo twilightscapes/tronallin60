@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 
 import { Link } from "gatsby"
@@ -9,7 +9,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import ReactPlayer from 'react-player/lazy'
-import Controls from "../components/Controls"
+// import Controls from "../components/Controls"
 import { ImPlay } from "react-icons/im"
 // import { ImPlay } from "react-icons/im"
 // import LightCycle from "../../static/assets/light-cycle.svg"
@@ -30,35 +30,7 @@ import { ImPlay } from "react-icons/im"
 import styled from "styled-components"
 const CustomBox = styled.div`
 
-.MuiSlider-root {
-  color:#ff00000 !important;
-}
 
-.wrap-element {
-  position: relative;
-  overflow: ;
-  padding-bottom: 56.25%;
-  height:100vh;
-
-}
-.wrap-element iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300%; 
-  left: -100%; 
-  border: 0;
-}
-
-
-@media (max-width: 48em) {
-  .wrap-element {
-    padding-bottom: 0;
-    height:300px;
-    overflow:visible;
-    border:0px solid red;
-  }
-}
 
 @media (min-width: 58em) {
 
@@ -73,7 +45,7 @@ const CustomBox = styled.div`
 
 function Panel1() {
 
-  const [state, setState] = useState({
+  const [state] = useState({
     playing: true,
     controls: true,
     light: true,
@@ -82,28 +54,28 @@ function Panel1() {
   });
   
   // const playerRef = useRef(null);
-  const controlsRef = useRef(null);
+  // const controlsRef = useRef(null);
   
   const {
     playing,
-    controls,
-    light,
+    // controls,
+    // light,
     muted,
     loop,
-    playbackRate,
-    pip,
-    played,
-    seeking,
-    volume,
+    // playbackRate,
+    // pip,
+    // played,
+    // seeking,
+    // volume,
   } = state;
   
-  const handlePlayPause = () => {
-    setState({ ...state, playing: !state.playing });
-  };
+  // const handlePlayPause = () => {
+  //   setState({ ...state, playing: !state.playing });
+  // };
   
-  const hanldeMute = () => {
-    setState({ ...state, muted: !state.muted });
-  };
+  // const hanldeMute = () => {
+  //   setState({ ...state, muted: !state.muted });
+  // };
   
   const { iconimage } = useSiteMetadata()
 
@@ -290,7 +262,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
 
     </div> 
     
-<div className="" style={{display:'flex', flexDiection:'', justifyContent:'center', height:'', position:'absolute', left:'', right:'', bottom:'20vh', zIndex:'', width:'100vw', margin:'0 auto', height:'', border:'0px solid red', textAlign:'center'}}>
+<div className="" style={{display:'flex', flexDiection:'', justifyContent:'center',  position:'absolute', left:'', right:'', bottom:'20vh', zIndex:'', width:'100vw', margin:'0 auto', height:'', border:'0px solid red', textAlign:'center'}}>
 
    
           

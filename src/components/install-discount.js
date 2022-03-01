@@ -6,9 +6,9 @@ import React from 'react'
 // import ScrollAnimation from 'react-animate-on-scroll'
 import CookieConsent from "react-cookie-consent"
 // import { StaticImage } from "gatsby-plugin-image"
-import ReactPlayer from 'react-player/lazy'
+// import ReactPlayer from 'react-player/lazy'
 import { Link } from "gatsby"
-import { AiOutlineAudioMuted } from "react-icons/ai"
+// import { AiOutlineAudioMuted } from "react-icons/ai"
 // import Greeter from "./GreetMe"
 import styled from "styled-components";
 
@@ -116,12 +116,11 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
   background:'transparent',
   borderRadius:'12px',
   padding:'0',
-  margin:'0',
   height:'auto',
   filter:' drop-shadow(0px 0px 10px rgba(0,0,0,.9))',
 }}
     buttonText="HIDE THIS"
-	buttonStyle={{ background: "transparent", textDecoration:'underline', textAlign:'center', fontSize: "16px", position:'relative', bottom:'20px',  right:'0', display:'flex', flexDirection:'column', justifyContent:'center', color:'inherit', border:'0px solid yellow', margin:'0 auto', color:'#fff', fontWeight:'normal', background:'', borderRadius:'12px', padding:'4px 50px', border:'0px solid #666'}}
+	buttonStyle={{ background: "transparent", textDecoration:'underline', textAlign:'center', fontSize: "16px", position:'relative', bottom:'20px',  right:'0', display:'flex', flexDirection:'column', justifyContent:'center', margin:'0 auto', color:'#fff', fontWeight:'normal', padding:'4px 50px', border:'0px solid #666'}}
     expires={1}
     cookieName="tron.allin60.com-install-cookie"
 >
@@ -130,7 +129,7 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
 
 
 
-<div className="container" style={{padding:'1rem 2rem', border:'0px solid #555', borderRadius:'8px', color:'#fff', textAlign:'center', position:'relative', textShadow:'2px 2px 0 #000', overflow:'hidden', borderRadius:'12px', background:'radial-gradient(circle, rgba(10, 45, 48, 0.4) 17%, rgba(25, 96, 109, 0.4) 58%, rgba(10, 196, 206, 0.5) 97%)', backgroundSize:'140% 200%'}}>
+<div className="container" style={{padding:'1rem 2rem', border:'0px solid #555',  color:'#fff', textAlign:'center', position:'relative', textShadow:'2px 2px 0 #000', overflow:'hidden', borderRadius:'12px', background:'radial-gradient(circle, rgba(10, 45, 48, 0.4) 17%, rgba(25, 96, 109, 0.4) 58%, rgba(10, 196, 206, 0.5) 97%)', backgroundSize:'140% 200%'}}>
 
 
 
