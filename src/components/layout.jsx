@@ -205,18 +205,18 @@ Contact Me<span>Ordering Questions?</span>
       
 
 
-      <li className="carto" style={{textAlign:'center'}}>
+      {/* <li className="carto" style={{textAlign:'center'}}>
               <Link className="navbar-item txtshadow" to="/minutes/" style={{color:'#02e9fa'}}>
               View Latest Minutes
               </Link>
-      </li>
+      </li> */}
 
 
 
 <li className="carto" style={{textAlign:''}}>
-              <Link state={{modal: true}} className="navbar-item txtshadow" to="/grid-launcher/">
+              {/* <Link state={{modal: true}} className="navbar-item txtshadow" to="/grid-launcher/"> */}
               Enter the Grid
-              </Link>
+              {/* </Link> */}
       </li>
       
 {/* <li className="carto" style={{textAlign:'center'}}>
@@ -226,35 +226,35 @@ Contact Me<span>Ordering Questions?</span>
       </li> */}
 
       <li className="carto" style={{textAlign:''}}>
-              <Link className="navbar-item txtshadow" to="/the-grid/disc-grid/">
+              {/* <Link className="navbar-item txtshadow" to="/the-grid/disc-grid/"> */}
               LightDisc Grid
-              </Link>
+              {/* </Link> */}
       </li>
 
       <li className="carto" style={{textAlign:''}}>
-              <Link className="navbar-item txtshadow" to="/the-grid/lightcycle-grid/">
+              {/* <Link className="navbar-item txtshadow" to="/the-grid/lightcycle-grid/"> */}
               LightCycle Grid
-              </Link>
+              {/* </Link> */}
       </li>
 
 
       <li className="carto" style={{textAlign:''}}>
-              <Link className="navbar-item txtshadow" to="/the-grid/end-of-line-club/">
+              {/* <Link className="navbar-item txtshadow" to="/the-grid/end-of-line-club/"> */}
               End of Line Club
-              </Link>
+              {/* </Link> */}
       </li>
 
       <li className="carto" style={{textAlign:''}}>
-              <Link className="navbar-item txtshadow" to="/the-grid/return-to-the-source/">
+              {/* <Link className="navbar-item txtshadow" to="/the-grid/return-to-the-source/"> */}
               Return the Source
-              </Link>
+              {/* </Link> */}
       </li>
 
 
       <li className="carto" style={{textAlign:''}}>
-              <Link className="navbar-item txtshadow" to="/the-grid/end-of-the-grid/">
+              {/* <Link className="navbar-item txtshadow" to="/the-grid/end-of-the-grid/"> */}
               End of the Grid
-              </Link>
+              {/* </Link> */}
       </li>
 
 

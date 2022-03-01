@@ -1,22 +1,93 @@
 import React, { useState } from "react";
+import { Layout } from "../../components/layout";
+
 import { Link } from "gatsby"
-// import { useSiteMetadata } from "../hooks/use-site-metadata"
+// import { graphql } from "gatsby"
+// import { GatsbyImage } from 'gatsby-plugin-image'
+// import TwilightLogo from "../../static/assets/logo.svg"
+// import { StaticImage } from "gatsby-plugin-image"
+import { useSiteMetadata } from "../../hooks/use-site-metadata"
+// import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import ReactPlayer from 'react-player/lazy'
+// import Controls from "../components/Controls"
 import { ImPlay } from "react-icons/im"
+// import LightCycle from "../../static/assets/light-cycle.svg"
+// import { ImPlay } from "react-icons/im"
+// import LightCycle from "../../static/assets/light-cycle.svg"
+// import QuoraStrike from "../../static/assets/quora-strike.svg"
+// import LoveSignal from "../../static/assets/love-signal.svg"
+// import Castor from "../../static/assets/castor.svg"
+// import SamFly from "../../static/assets/sam-fly.svg"
+// import SamFlynn from "../../static/assets/sam-flynn.png"
+// import CluGuy from "../../static/assets/clu.png"
+// import TronGuy from "../../static/assets/tron.png"
+// import MCP from "../../static/assets/mcp.svg"
+// import McpEffects from "../../static/assets/mcp-effects.svg"
+// import QuoraStand from "../../static/assets/quora-ass.png"
+// import KevinFlynn from "../../static/assets/kevin-flynn.png"
+// import TronChick from "../../static/assets/tron-chick1.svg"
+
+import SorryFolks from "../../../static/assets/sorry-folks-moose.svg"
 import { RiArrowLeftSLine, RiBugLine } from "react-icons/ri"
-
-// import { AiFillRobot } from "react-icons/ai"
-import { Seo } from "../components/seo"
-import { Layout } from "../components/layout"
-import SorryFolks from "../../static/assets/sorry-folks-moose.svg"
+import styled from "styled-components"
+const CustomBox = styled.div`
 
 
-const NotFound = () => (
 
+@media (min-width: 58em) {
+
+}
+
+
+`
+
+
+
+
+
+function TheGrid() {
+
+  const [state] = useState({
+    playing: true,
+    controls: true,
+    light: true,
+    muted: false,
+    loop: true,
+  });
   
-  <Layout className="not-found-page">
-    <Seo title="Page not found" />
-    <div id="" className="wrap-element tronpanel" style={{position:'fixed', top:'0', zIndex:'2', overflow:'', height:'100vh', width:'100vw'}}>
+  // const playerRef = useRef(null);
+  // const controlsRef = useRef(null);
+  
+  const {
+    playing,
+    // controls,
+    // light,
+    muted,
+    loop,
+    // playbackRate,
+    // pip,
+    // played,
+    // seeking,
+    // volume,
+  } = state;
+  
+  // const handlePlayPause = () => {
+  //   setState({ ...state, playing: !state.playing });
+  // };
+  
+  // const hanldeMute = () => {
+  //   setState({ ...state, muted: !state.muted });
+  // };
+  
+  const { iconimage } = useSiteMetadata()
+
+  return (
+  
+<CustomBox style={{}}>
+<Layout>
+{/* GRID INTRO */}
+
+<div id="" className="wrap-element tronpanel" style={{position:'fixed', top:'0', zIndex:'2', overflow:'', height:'100vh', width:'100vw'}}>
 <h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:'0'}}>
         <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>TRON</div>
       </h1>
@@ -66,11 +137,11 @@ const NotFound = () => (
          width="100%"
          height="100vh"
          style={{position:'fixed', top:'0', zIndex:'-1', opacity:'.3'}}
-         playing={true}
+         playing={playing}
             controls={false}
             light={false}
-            loop={true}
-            muted={true}
+            loop={loop}
+            muted={muted}
             config={{
               file: {
                 attributes: {
@@ -90,7 +161,7 @@ const NotFound = () => (
             
   
             <div style={{position:'relative', maxWidth:'100vw', margin:'10% 0', zIndex:'', display:'flex', justifyContent:'center', background:'transparent !important',}}>
-    {/* <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} /> */}
+    <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
   </div>
         
             <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
@@ -100,8 +171,88 @@ const NotFound = () => (
          
           />
 
-          </div>
-  </Layout>
-)
 
-export default NotFound
+{/* <div style={{position:'absolute', bottom:'0', left:'0', zIndex:'1', width:'100vw', height:'100%', border:'0px solid yellow', padding:'0', margin:'0'}}>
+<StaticImage className=""
+alt="Todd Lambert Web development for photographers" src="../../static/assets/shawshank-stuff.png" style={{height:'100vh'}}  />
+</div> */}
+
+          {/* <Controls
+            ref={controlsRef}
+            onPlayPause={handlePlayPause}
+            playing={playing}
+            played={played}
+            onMute={hanldeMute}
+            muted={muted}
+          /> */}
+      
+     
+{/* Panel Video */}
+
+
+
+
+
+
+{/* Panel Content */}
+
+
+
+ 
+
+
+
+
+      </div>
+
+     
+
+     
+    
+    
+
+
+   
+    
+
+
+
+  
+
+       
+
+
+
+
+{/* Panel Content */}
+
+
+
+
+
+{/*  */}
+{/* Image Gallery */}
+
+  {/* {data.allFile.edges.map(edge => {
+  return <GatsbyImage
+  image={edge.node.childImageSharp.gatsbyImageData}
+  srl_gallery_image="true"
+  alt={edge.node.name}
+  key={edge.node.id}
+/>
+})} */}
+
+
+
+
+
+
+
+
+
+</Layout>
+</CustomBox>
+  );
+}
+
+export default TheGrid;
