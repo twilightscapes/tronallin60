@@ -5,7 +5,7 @@ import { Layout } from "../components/layout"
 
 import { Link } from "gatsby"
 import { RiArrowLeftSLine } from "react-icons/ri"
-import { AiTwotoneCamera } from "react-icons/ai"
+// import { AiTwotoneCamera } from "react-icons/ai"
 
 
 
@@ -39,21 +39,21 @@ export default function SignedUpPage() {
         margin:'0 auto',
       }}
     ><div className="spacer33"></div> 
-      <AiTwotoneCamera
+      {/* <AiTwotoneCamera
         style={{
           fontSize: "150px",
           color: "var(--primary-color)",
           margin:'0 auto',
           textAlign:'center'
         }}
-      />
-      <h1 className="neonText" style={{fontSize:'200%'}}>Thank you for joining the newsletter!</h1>
+      /> */}
+      <h1 className="neonText" style={{fontSize:'200%'}}>Thank you!<br />We'll let you know the instant we release new material.</h1>
    
 
       <div className="spacer33"></div> 
       <Link to="/" className="button">
         <RiArrowLeftSLine className="icon -left" />
-        Lets go back to Homepage
+        For now, check out the latest All in 60 Seconds.
       </Link>
     </div>
     <div className="spacer33"></div> 
