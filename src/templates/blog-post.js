@@ -146,12 +146,12 @@ const Post = ({ data, pageContext }) => {
   const Svg = frontmatter.svgImage
   // const svgZindex = frontmatter.svgzindex
 
-// function AddSvg(){
+function AddSvg(){
   
-//   return (
-//     <object className="" id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'', top:'', left:'0', right:'0', bottom:'0', overflow:'', border:'0px solid red', zIndex:'', width:'100vw', height:'', background:'transparent', objectFit:'contain'   }} alt="animated content" title="animated content" ></object>
-//   )
-// }
+  return (
+    <object className="" id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'', top:'', left:'0', right:'0', bottom:'0', overflow:'', border:'0px solid red', zIndex:'', width:'100vw', height:'', background:'transparent', objectFit:'contain'   }} alt="animated content" title="animated content" ></object>
+  )
+}
 
 
 const IsNft = frontmatter.isnftforsale
@@ -524,7 +524,7 @@ const svgUrl = frontmatter.svgImage.publicURL
               image={Image}
               alt={frontmatter.title + " - Featured image"}
               className="featured-image1 layer1"
-              style={{ width:'100vw', position:'absolute', top:'-1', zIndex:'',  border:'0px solid red !important', paddingBottom:'',}}
+              style={{ width:'100vw', position:'absolute', top:'', zIndex:'',  border:'0px solid red !important', paddingBottom:'',}}
             />
 
           ) : (
@@ -569,7 +569,7 @@ const svgUrl = frontmatter.svgImage.publicURL
         > */}
           <ReactPlayer
             // ref={playerRef}
-            style={{position:'', zIndex:'0'}}
+            style={{position:'', zIndex:''}}
             width="100%"
             height="100%"
             url={iframeUrl}
@@ -608,7 +608,7 @@ const svgUrl = frontmatter.svgImage.publicURL
               image={Image}
               alt={frontmatter.title + " - Featured image"}
               className="featured-image1 layer1"
-              style={{ width:'100vw', position:'absolute', top:'-1', zIndex:'2',  border:'0px solid red !important', paddingBottom:'',}}
+              style={{ width:'100vw', position:'absolute', top:'-1', zIndex:'',  border:'0px solid red !important', paddingBottom:'',}}
             />
 
           ) : (
@@ -674,7 +674,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
         <div
-        className="blog-post-content" style={{ fontSize:'1.1rem', textAlign:'left', width:'100%', maxWidth:'', height:'100vh', padding:'10vh 0', margin:'0 auto', color:'inherit !important', border:'0px solid yellow', position:'absolute', top:'0', left:'0', zindex:'-2', display:'grid', placeContent:'center'}}
+        className="blog-post-content" style={{ fontSize:'1.1rem', textAlign:'left', width:'100%', maxWidth:'', height:'100vh', padding:'10vh 0', margin:'0 auto', color:'inherit !important', border:'0px solid yellow', position:'absolute', top:'0', left:'0', zindex:'0', display:'grid', placeContent:'center'}}
         dangerouslySetInnerHTML={{ __html: html }}
       />
 
