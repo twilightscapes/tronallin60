@@ -18,10 +18,16 @@ body {
 }
 
 
- body.homepage{
+body.homepage{
+  /* overflow-y: hidden !important; */
+  overflow-x: hidden !important;
+}
+
+body.blogpost{
   overflow-y: hidden !important;
   overflow-x: hidden !important;
 }
+
 
 /* body.homepage, body.bloglist {
 
@@ -2302,7 +2308,7 @@ input[type=checkbox] {
   cursor: pointer;
   position: fixed;
   z-index: 3;
-  bottom: 20%;
+  bottom: 25%;
   right: 2%;
   /* height: 100px;
   width: 100px; */

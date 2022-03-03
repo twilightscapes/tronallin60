@@ -1,143 +1,115 @@
 /** @jsx jsx */
 // import React from "react"
 
-import  { useState, useRef } from "react";
-import ReactPlayer from 'react-player/lazy'
+import React, { useState, useRef } from "react";
+
 import Controls from "../components/Controls";
 
-
+import { IoArrowRedoSharp, IoArrowUndoSharp } from "react-icons/io5"
 import { jsx } from "theme-ui"
 import { Link, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { getSrc } from "gatsby-plugin-image"
-// import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
+import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
 import CommentBox from "../components/commentbox"
 // import { StaticImage } from "gatsby-plugin-image"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
-import Countdown from 'react-countdown'
-import { IoArrowRedoSharp, IoArrowUndoSharp } from "react-icons/io5"
+// import Countdown from 'react-countdown'
+// import { IoArrowRedoSharp, IoArrowUndoSharp } from "react-icons/io5"
 import { AiOutlineAudioMuted } from "react-icons/ai"
 import { Footer } from "../components/footer"
 // import { SRLWrapper } from "simple-react-lightbox"
 import {CopyToClipboard} from 'react-copy-to-clipboard'
-// import ReactPlayer from 'react-player/lazy'
-// import YouTubed from "../pages/youtube"
+import ReactPlayer from 'react-player/lazy'
+
+import YouTubed from "../pages/youtube"
 import { Seo } from "../components/seo"
 import { Layout } from "../components/layout"
 import ShareSocial from '../components/share' 
 import GoBack from "../components/goBack"
 import { ImPlay } from "react-icons/im"
-
+// import TimeAgo from 'react-timeago'
 import styled from "styled-components"
 const CustomBox = styled.div`
 
-
-@media (min-width: 58em) {
-
+.wrap-element {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  aspect-ratio: 16 / 9;
+  z-index:0;
+  max-width:100%;
+  max-height:75vh !important;
 }
+.wrap-element iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%; 
+  left: -100%; 
+  border: 0;
+  overflow:hidden;
+}
+
+
+
+// .pagination{ position:relative; top:-205px;}
+
+
+@media (max-width: 48em) {
+  .wrap-element {
+    padding-bottom: 0;
+    height:300px;
+    overflow:visible;
+    border:0px solid red;
+  }
+  .pagination{maxWidth:'100vw'}
+}
+
+
+@media (min-width: 1300px) {
+  .pagination{position:relative; top:-185px;}
+  }
 
 
 `
 
-// const options = {
-//   settings: {
-//     autoplaySpeed: 3000,
-//     // boxShadow: '0px 0px 20px #fff',
-//     disableKeyboardControls: false,
-//     disablePanzoom: false,
-//     disableWheelControls: false,
-//     hideControlsAfter: false,
-//     lightboxTransitionSpeed: 0.3,
-//     lightboxTransitionTimingFunction: 'linear',
-//     // overlayColor: 'rgba(185, 7, 230, 0.5)',
-//     slideAnimationType: 'slide',
-//     slideSpringValues: [300, 50],
-//     slideTransitionSpeed: 0.6,
-//     slideTransitionTimingFunction: 'linear',
-//     usingPreact: false
-//   },
-//   buttons: {
-//     backgroundColor: 'rgba(30,30,36,0.8)',
-//     iconColor: 'rgba(255, 255, 255, 0.8)',
-//     iconPadding: '10px',
-//     showAutoplayButton: true,
-//     showCloseButton: true,
-//     showDownloadButton: true,
-//     showFullscreenButton: true,
-//     showNextButton: true,
-//     showPrevButton: true,
-//     showThumbnailsButton: true,
-//     size: '40px'
-//   },
-//   caption: {
-// captionAlignment: 'start',
-// captionColor: '#FFFFFF',
-// captionContainerPadding: '20px 12% 30px 12%',
-// captionFontFamily: 'inherit',
-// captionFontSize: 'inherit',
-// captionFontStyle: 'inherit',
-// captionFontWeight: 'inherit',
-// captionTextTransform: 'inherit',
-// showCaption: true
-//   },
-//   thumbnails: {
-//     showThumbnails: true,
-//     thumbnailsAlignment: 'center',
-//     thumbnailsContainerBackgroundColor: 'transparent',
-//     thumbnailsContainerPadding: '0',
-//     thumbnailsGap: '0 1px',
-//     thumbnailsIconColor: '#ffffff',
-//     thumbnailsOpacity: 0.4,
-//     thumbnailsPosition: 'bottom',
-//     thumbnailsSize: ['100px', '80px']
-//   },
-//   progressBar: {
-//     backgroundColor: '#f2f2f2',
-//     fillColor: '#000000',
-//     height: '3px',
-//     showProgressBar: true
-//   },
-// };
-
-
 
 
 const Pagination = props => (
-  <div className="pagination -post navbutt" style={{position:'absolute', zIndex:'2' }}>
-    <ul className="" style={{display:'flex', justifyContent:'space-between', border:'0px solid yellow', width:'90vw'}}>
+  <div className="pagination -post1" style={{maxWidth:'', position:'relative', right:'2vw'}}>
+    <ul className="" style={{display:'flex', justifyContent:'flex-end', gap:"30px", border:'0px solid purple',}}>
       {props.previous && props.previous.frontmatter.template === "blog-post" && (
-        ""
-        // <li className="prevbutton">
-        //   <button className="actionJackson TRON " style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px', padding:'10% 5%', }}>
-        //   <Link state={{modal: true}} to= {props.previous.frontmatter.slug + "/"} rel="prev" style={{background:'transparent', border:'none'}}>
-            
-        //     <p
-        //       style={{
-        //         fontSize:'2vw',
-        //         color: "inherit",
-        //         background:'transparent'
-        //       }}
-        //       className="page-title">
-        //       {props.previous.frontmatter.title}
-        //     </p>
-        //   </Link>
-        //   </button>
-        // </li>
+        // <li style={{border:'1px solid', borderRadius:'12px', filter:'drop-shadow(0 0px 6px rgba(0, 0, 0, 1))'}}>
+        <li style={{fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'1rem', background:'rgba(51, 51, 51, 0.3)', borderRadius:'8px', border:'1px solid #666', filter:'drop-shadow(2px 2px 2px #000)', cursor:'pointer'}}>
+          <Link style={{color:'#fff'}}  to= {props.previous.frontmatter.slug + "/"} rel="prev">
+            <p>
+              <span className="icon -left">
+                <RiArrowLeftLine />
+              </span>{" "}
+              Previous
+            </p>
+            <span className="page-title">
+              {props.previous.frontmatter.title}
+            </span>
+          </Link>
+        </li>
       )}
       {props.next && props.next.frontmatter.template === "blog-post" && (
-        <li className="nextbutton">
-          <button className="actionJackson TRON tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'30vw', borderRadius:'200px', padding:'10% 5%', }}>
-          <Link state={{modal: true}} to={props.next.frontmatter.slug + "/"} rel="next" style={{background:'transparent', border:'none'}}>
+        <li style={{fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'1rem', background:'rgba(51, 51, 51, 0.3)', borderRadius:'8px', border:'1px solid #666', filter:'drop-shadow(2px 2px 2px #000)', cursor:'pointer'}}>
+          <Link  to={props.next.frontmatter.slug + "/"} rel="next">
             <p
               style={{
-                fontSize:'2vw',
-                color: "inherit",
-                background:'transparent'
               }}
-           className="page-title">{props.next.frontmatter.title}</p>
+            >
+              Next Up{" "}
+              <span className="icon -right">
+                <RiArrowRightLine />
+              </span>
+            </p>
+            <span className="page-title">{props.next.frontmatter.title}</span>
           </Link>
-          </button>
         </li>
       )}
     </ul>
@@ -173,21 +145,13 @@ const Post = ({ data, pageContext }) => {
 
   const Svg = frontmatter.svgImage
   // const svgZindex = frontmatter.svgzindex
-  if (!Svg) {
-    
-  }
-  else{
-    <AddSvg />
-  }
-function AddSvg(){
-  const svgUrl = frontmatter.svgImage.publicURL
 
-
-
-  return (
-    <object className="" id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', top:'0', left:'0', right:'0', bottom:'0', overflow:'hidden', border:'0px solid red', zIndex:'', width:'100%', height:'100%', maxHeight:'100vh', maxWidth:'100vw', background:'transparent', objectFit:'cover'  }} alt="animated content" title="animated content" >You need a new browser</object>
-  )
-}
+// function AddSvg(){
+  
+//   return (
+//     <object className="" id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'', top:'', left:'0', right:'0', bottom:'0', overflow:'', border:'0px solid red', zIndex:'', width:'100vw', height:'', background:'transparent', objectFit:'contain'   }} alt="animated content" title="animated content" ></object>
+//   )
+// }
 
 
 const IsNft = frontmatter.isnftforsale
@@ -257,8 +221,8 @@ Add your own in the comments below!
 }
 
 const YoutuberSuggestion1 = frontmatter.youtubersuggestion1
-// const YoutuberSuggestion2 = frontmatter.youtubersuggestion2
-// const YoutuberSuggestion3 = frontmatter.youtubersuggestion3
+const YoutuberSuggestion2 = frontmatter.youtubersuggestion2
+const YoutuberSuggestion3 = frontmatter.youtubersuggestion3
 const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
   const YouTube = frontmatter.youtuber
 
@@ -275,21 +239,74 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
 
 
 
+  function Iframer2() {
+    const iframeUrl2 = "https://www.youtube.com/embed/" + frontmatter.youtuber
+    return (
+
+<div>
+<ReactPlayer
+          className='react-player66'
+          url={iframeUrl2}
+          width="100%"
+          height="100%"
+
+          // playing={playing}
+          // controls={true}
+          // light={true}
+          // loop={loop}
+          // muted={muted}
+          config={{
+            youtube: {
+              playerVars: { showinfo:1, autoplay:0, controls:1, start:0, mute:0  }
+            },
+          }}
+          playsinline
+          playIcon={
+            <button aria-label="Click To Play" className="clickplay" style={{position:'relative', zIndex:'0', top:'0', border:'0px solid red', width:'100vw', height:'100%', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+
+
+{/*   
+        <div className="" style={{ textAlign:'center', display:'flex', justifyContent:'center', flexDirection:'column', animation:'fadeIn 3s',}}> */}
+          
+
+          {/* <div style={{position:'relative', maxWidth:'100vw', height:'70vh', margin:'10% 0', zIndex:'', display:'flex', justifyContent:'center', background:'transparent !important',}}>
+  <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
+</div> */}
+      
+          <div style={{display:'grid', placeContent:'center', fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem', width:'100%'}}>Support Our Video Sponsors
+
+  <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
+  Click to play original video
+  </div>
+          {/* </div> */}
+
+
+          </button>}
+       light="../assets/transparent.png"
+          />
+</div>
+
+
+
+    )
+  }
+
+
 
   function IframeSuggestions() {
     
     return (
       <div>
               <ReactPlayer
-              className='react-player661'
-              url={iframeUrl}
+              className='react repo'
+              // url={iframeUrl}
               // style={{position:'absolute', top:'0', zIndex:'100'}}
-              // url={[
-              //   iframeUrl,
-              //   YoutuberSuggestion1,
-              //   YoutuberSuggestion2,
-              //   YoutuberSuggestion3
-              // ]}
+              url={[
+                iframeUrl,
+                YoutuberSuggestion1,
+                YoutuberSuggestion2,
+                YoutuberSuggestion3
+              ]}
               width="100%"
               height="100%"
               config={{
@@ -324,167 +341,14 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
 
   }
 
-  function Iframer() {
-    const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber
 
-
-    const [state, setState] = useState({
-      playing: true,
-      controls: false,
-      light: false,
-      muted: true,
-      loop: true,
-    });
-  
-    // const playerRef = useRef(null);
-    const controlsRef = useRef(null);
-  
-    const {
-      playing,
-      light,
-      muted,
-      loop,
-      played,
-      // controls
-    } = state;
-  
-    const handlePlayPause = () => {
-      setState({ ...state, playing: !state.playing });
-    };
-  
-    const hanldeMute = () => {
-      setState({ ...state, muted: !state.muted });
-    };
-
-
-    return (
-
- <div>
-              <ReactPlayer
-              className='react-player'
-        
-              // url={iframeUrl}
-              url={[
-                iframeUrl,
-                Suggestion1,
-                // Suggestion2,
-                // Suggestion3
-              ]}
-              width="100%"
-              height="100%"
-              config={{
-                youtube: {
-                  playerVars: { showinfo:0, autoplay:YouTubeAutostart, controls:false, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
-                },
-              }}
-              playing={playing}
-              controls={true}
-              light={light}
-              loop={loop}
-              muted={muted}
-              playsinline
-              playIcon={
-                <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'', top:'0', border:'0px solid red', width:'100vw', height:'100%', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
-    
-            <div className="" style={{ textAlign:'center', animation:'fadeIn 3s', width:'', margin:'0 auto'}}>
-              
-    
-              <div style={{position:'relative', maxWidth:'', margin:'0 0', zIndex:'0', display:'flex', justifyContent:'center', background:'transparent !important',}}>
-
-              {/* <object className="" id="vidsock-logo" data={iconimage} type="image/svg+xml" style={{ overflow:'hidden', border:'0px solid red', zIndex:'0', width:'30vw', maxWidth:'', height:'auto', background:'transparent'  }} alt="animated content" title="animated content" >You need a new browser</object> */}
-
-
-      {/* <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'300px', height:'150px', maxWidth:'300px', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} /> */}
-    </div>
-          <br />
-              <div className="actionJackson" style={{width:'', margin:'0 auto', fontWeight:'bold', padding:'0 1rem', fontSize:'2rem', background:'transparent', borderRadius:'12px', border:'1px solid #333',filter:'drop-shadow(2px 2px 2px #000)'}}><span style={{filter:'drop-shadow(2px 2px 2px #000)'}}>Click To Play</span></div>
-      {/* <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} /> */}
-              </div>
-              </button>}
-                // light="../assets/transparent.png"
-              />
-
-
-
-<Controls
-            ref={controlsRef}
-            onPlayPause={handlePlayPause}
-            playing={playing}
-            played={played}
-            onMute={hanldeMute}
-            muted={muted}
-          />
-
-</div>
-
-
-
-
-
-    )
-  }
-
-
-
-
-
-
-  function Iframer2() {
-    const iframeUrl2 = "https://www.youtube.com/embed/" + frontmatter.youtuber
-    return (
-
-<div>
-<ReactPlayer
-          className='react-player66'
-          url={iframeUrl2}
-          width="100%"
-          height="100%"
-
-          // playing={playing}
-          // controls={true}
-          light={false}
-          // loop={loop}
-          // muted={muted}
-          config={{
-            youtube: {
-              playerVars: { showinfo:1, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:0  }
-            },
-          }}
-          playing
-          playsinline
-            playIcon={
-              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'5', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
-  
-          <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
-            
-  
-            <div style={{position:'relative', maxWidth:'100vw', margin:'10% 0', zIndex:'', display:'flex', justifyContent:'center', background:'transparent !important',}}>
-    <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
-  </div>
-        
-            <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
-    <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
-            </div>
-            </button>}
-         
-          />
-</div>
-
-
-
-    )
-  }
-
-  const YouTube2 = frontmatter.youtuber2
-  const AudioStart = frontmatter.audiostart
-  const AudioEnd = frontmatter.audioend
 
   function Iframer3() {
     const iframeUrl3 = "https://www.youtube.com/embed/" + frontmatter.youtuber2
     return (
 
 <ReactPlayer
-          className='react-player67'
+          className='audioframe'
           url={iframeUrl3}
           // url={[
           //   iframeUrl,
@@ -492,9 +356,9 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
           //   Suggestion2,
           //   Suggestion3
           // ]}
-          width="100%"
-          height=""
-          style={{marginTop:'80px', position:'relative'}}
+          width="150px"
+          height="150px"
+          style={{marginTop:'-50px', position:'absolute', zIndex:'0'}}
           config={{
             youtube: {
               playerVars: { showinfo:0, autoplay:1, controls:0, start:AudioStart, end:AudioEnd, mute:0,  }
@@ -506,12 +370,12 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
           playIcon={
             <button aria-label="Click To Play" className="clickplays" style={{position:'relative', zIndex:'', top:'', border:'0px  solid red', width:'100vw', height:'', background:'transparent', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItems:'center', paddingTop:'0', borderRadius:'12px'}}>
           
-        <div className="" style={{position:'absolute', top:'-70px', zIndex:'', textAlign:'center', animation:'fadeIn 3s', display:'flex', justifyContent:'center', width:'auto', marginBottom:''}}>
+        <div className="" style={{position:'absolute', top:'-200px', left:'10px', zIndex:'', textAlign:'center', animation:'fadeIn 3s', display:'flex', justifyContent:'center', width:'auto', marginBottom:''}}>
           
       
           {/* <div className="" style={{fontSize:'14px', fontWeight:'', padding:'0 0 0 .3rem',}}>Click For Audio</div> */}
 
-          <div className="popped" style={{display:'flex', width:'', margin:'0 auto', fontWeight:'bold', padding:'.5rem', fontSize:'2rem', background:'linear-gradient(180deg, #777 30%, #333 80%)', borderRadius:'12px', border:'1px solid #333', filter:'drop-shadow(2px 2px 2px #000)'}}><AiOutlineAudioMuted style={{margin:'0 auto', fontSize:'20px', filter:'drop-shadow(2px 2px 2px #000)'}} /><div style={{fontSize:'14px', fontWeight:'', padding:'0 0 0 .3rem', filter:'drop-shadow(2px 2px 2px #000)'}}>Click For Audio</div></div>
+          <div className="popped" style={{display:'flex', width:'', margin:'0 auto', fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'2rem', background:'rgba(51, 51, 51, 0.3)', borderRadius:'8px', border:'1px solid #666', filter:'drop-shadow(2px 2px 2px #000)', cursor:'pointer'}}><AiOutlineAudioMuted style={{margin:'0 auto', fontSize:'20px', filter:'drop-shadow(2px 2px 2px #000)'}} /><div style={{fontSize:'14px', fontWeight:'', padding:'0 0 0 .3rem', filter:'drop-shadow(2px 2px 2px #000)', color:'#999', }}>Extra Audio</div></div>
           
           </div>
           </button>}
@@ -527,8 +391,16 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
   }
 
 
+const svgUrl = frontmatter.svgImage.publicURL
+  
+    
 
 
+  const YouTube2 = frontmatter.youtuber2
+  const AudioStart = frontmatter.audiostart
+  const AudioEnd = frontmatter.audioend
+
+  
 
   const { previous, next } = pageContext
 
@@ -539,29 +411,50 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
 
 
 
-  
-
+  const { siteUrl } = useSiteMetadata()
   const { iconimage } = useSiteMetadata()
-  const { siteUrl } = useSiteMetadata();
 
-const Completionist = () => <div style={{minWidth:'50%', width:'100%', maxWidth:'100vw', }}>
-  { NftRedeem ? (
-      ""
-      // <a href={NftRedeem} style={{fontSize:'1.4rem', display:'flex', alignSelf:'center', justifySelf:'center', width:'', maxWidth:'400px',  margin:'10px auto',  textAlign:'center', justifyContent:'center', border:'1px solid', borderRadius:'12px', color:'green', textShadow:'1px 1px 0px #666',}}>REDEEM UNLOCKABLE CONTENT</a>
-      ) : (
-        ""
-      )}
-  {/* <nft-card style={{}} contractAddress="0x495f947276749ce646f68ac8c248420045cb7b5e" tokenId="14583650834310525071617320783641503123203461641321595508191183187330132344833"> </nft-card> */}
-  </div>
 
-const svgUrl = frontmatter.svgImage.publicURL
+  const [state, setState] = useState({
+    playing: true,
+    controls: false,
+    light: true,
+    muted: false,
+    loop: true,
+  });
+
+  // const playerRef = useRef(null);
+  const controlsRef = useRef(null);
+
+  const {
+    playing,
+    controls,
+    light,
+    muted,
+    loop,
+    playbackRate,
+    pip,
+    played,
+    seeking,
+    volume,
+  } = state;
+
+  const handlePlayPause = () => {
+    setState({ ...state, playing: !state.playing });
+  };
+
+  const hanldeMute = () => {
+    setState({ ...state, muted: !state.muted });
+  };
+
+  
 
   return (
     
     <Layout className="page">
 <CustomBox style={{}}>
 <Helmet>
-  <body className="blogpost" />
+  <body className="blogpost" style={{background:''}} />
   {/* <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script> */}
 </Helmet>
 
@@ -577,22 +470,136 @@ const svgUrl = frontmatter.svgImage.publicURL
       />
 
 
+
+{/* <Seo
+          title={`Welcome to the GRID`}
+          description={`I tried to picture clusters of information as they moved through the computer. What did they look like? Ships? Motorcycles? Were the circuits like freeways? I kept dreaming of a world I thought I'd never see.`}
+          image={'https://allin60.com/tronin60.jpg'}
+        /> */}
+
+
+{/* <div className='player-wrapper intro' style={{position:'relative', bottom:'0', zIndex:'', height:'100vh', maxHeight:'', overflow:'', filter: 'drop-shadow(0 0 20px #000)',  }}> */}
+
+
+<div className="contact" style={{position:'fixed', bottom:'20px', zIndex:'1',  left:'20px', right:'', display:'flex', justifyContent:'center', width:'400px', margin:'0 auto', gap:'30px'}}>
+
+  <Link state={{modal: true}}  to="/contact/" className=" " style={{margin:'', textDecoration:''}}>contact</Link>
+
+  <Link to="#original" style={{border:'0px solid', }}>
+  credits &amp; legal
+        </Link>
+
+        {ShareThis ? (
+<Link to="#sharethis" style={{}}>
+  share this
+        </Link>
+ ) : (
+  ""
+)}
+
+{Comments ? (
+          <Link to="#comments" style={{}}>
+  comments
+        </Link>
+       
+          ) : (
+            ""
+          )}
+
+</div>
+
+
+
+
+        
+
+
+
+
+
+<div className="wrap-element" style={{overflow:'hidden', height:'50vh'}}>
+
+{Image ? (
+            <GatsbyImage
+              image={Image}
+              alt={frontmatter.title + " - Featured image"}
+              className="featured-image1 layer1"
+              style={{ width:'100vw', position:'absolute', top:'-1', zIndex:'',  border:'0px solid red !important', paddingBottom:'',}}
+            />
+
+          ) : (
+          ""
+          )}
+    
+
+
+
+
+
+
+
+
+   
+    
+
+    
+
+
+{/* if (!Svg) {
+    
+  }
+  else{
+    <AddSvg />
+  } */}
+
+
+
+
+
+
+
+
+
+
+{/* <div
+          onMouseMove={handleMouseMove}
+          onMouseLeave={hanldeMouseLeave}
+          ref={playerContainerRef}
+          className={classes.playerWrapper}
+        > */}
+          <ReactPlayer
+            // ref={playerRef}
+            style={{position:'', zIndex:'0'}}
+            width="100%"
+            height="100%"
+            url={iframeUrl}
+            // url="https://youtu.be/lZzai6at_xA"
+            playing={playing}
+            controls={true}
+            light={light}
+            loop={loop}
+            muted={muted}
+            config={{
+              file: {
+                attributes: {
+                  crossorigin: "anonymous",
+                },
+              },
+              youtube: {
+                playerVars: { showinfo:1, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
+              },
+            }}
+
+          playsinline
+            playIcon={
+              <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+{/*   
+          <div className="" style={{ textAlign:'center', display:'flex', justifyContent:'center', flexDirection:'column', animation:'fadeIn 3s',}}> */}
+            
   
-{/* <div className="video-background1" style={{position:'absolute', top:'0', right:'0', left:'0', zIndex:'0', height:'100vh', overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'flex-end'}}> */}
-
-
-
-{/* <div className='player-wrapper' style={{position:'relative', top:'0', zIndex:'0', height:'100%', maxHeight:'', overflow:'hidden', filter: 'drop-shadow(0 0 20px #000)' }}> */}
-
-{/* <div className="contact" style={{position:'fixed', bottom:'10px', zIndex:'1',  left:'0', right:'0', display:'flex', justifyContent:'center', width:'200px', margin:'0 auto'}}>
-  <Link state={{modal: true}}  to="/contact/" className="navbar-item  button fire" style={{margin:'1rem 2rem 0 2rem', textDecoration:'none'}}>Contact Me</Link>
-</div> */}
-
-<div className="wrap-element" style={{position:'relative', top:'0', height:'100vh', zIndex:'0', overflow:'hidden'}}>
-
-
-
-
+            {/* <div style={{position:'relative', maxWidth:'100vw', height:'70vh', margin:'10% 0', zIndex:'', display:'flex', justifyContent:'center', background:'transparent !important',}}>
+    <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
+  </div> */}
 
 
 
@@ -601,132 +608,39 @@ const svgUrl = frontmatter.svgImage.publicURL
               image={Image}
               alt={frontmatter.title + " - Featured image"}
               className="featured-image1 layer1"
-              style={{ width:'100vw', position:'absolute', top:'0', zIndex:'-2',  border:'0px solid red !important', paddingBottom:'',}}
+              style={{ width:'100vw', position:'absolute', top:'-1', zIndex:'2',  border:'0px solid red !important', paddingBottom:'',}}
             />
 
           ) : (
           ""
           )}
-       
-
-       
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-{/* {Svg2 ? (
-            <AddSvg2 />
-       
-          ) : (
-            ""
-          )} */}
-
-  {/* {OverlayImage ? (
-            <GatsbyImage
-              image={OverlayImage}
-              alt={frontmatter.title + " - image"}
-              className="layer2"
-              style={{height:'100vh', zIndex:'1', postion:'absolute', bottom:'0', left:'0', objectFit:'contain' }}
-            />
-          ) : (
-            ""
-          )} */}
-
-
-
-
-
-
-
-
-
-{ !YouTube ? (
-            ""
-       
-          ) : (
-            <Iframer />
-          )}
-
-
-
-
-
-
-
-{UnderlayImage ? (
-            <GatsbyImage
-              image={UnderlayImage}
-              alt={frontmatter.title + " - image"}
-              className="mcboaty"
-              style={{height:'auto', width:'100%', maxHeight:'100%', overflow:'hidden', position:'absolute', top:'0', zIndex:'1',
-             objectFit:'contain', border:'0px solid red !important'}}
-            />
-            
-          ) : (
-            ""
-          )}
-
-{/* {Svg ? (
-            <AddSvg />
-       
-          ) : (
-            ""
-          )} */}
-
-<object className="" id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', top:'0', left:'', right:'', bottom:'', overflow:'', border:'0px solid red', zIndex:'1', width:'100vw', height:'100%', background:'transparent', objectFit:'contain'   }} alt="animated content" title="animated content" >You need a new browser</object>
-    
-
-    
-
-
-    {/* if (!Svg) {
         
-      }
-      else{
-        <AddSvg />
-      } */}
+            <div style={{display:'grid', placeContent:'center', fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem', width:'100%', position:'absolute', zIndex:'2'}}>Click To Play
+
+    <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} /></div>
+            {/* </div> */}
 
 
-{ !YouTube2 ? (
-        ""
-   
-      ) : (
-
-       <div style={{position:'absolute', top:'0', height:'100vh', overflow:'hidden'}}> <Iframer3 /></div>
-
-      )}
+            </button>}
+         light="../assets/transparent.png"
+          />
 
 
 
 
+<Controls
+            ref={controlsRef}
+            onPlayPause={handlePlayPause}
+            playing={playing}
+            played={played}
+            onMute={hanldeMute}
+            muted={muted}
+          />
 
 
-      <div style={{padding:'0 5vw', color:'inherit !important'}}>
-      {(previous || next) && <Pagination {...props} />}
-      </div>
 
-
-{/* <br />
-<br /> */}
-
-{/* 
-{Suggestion1 ? (
-            <div style={{position:'absolute', height:'', top:'', zIndex:'4', border:'0px solid yellow'}}>
+{/* {Suggestion1 ? (
+            <div style={{position:'absolute', top:'-130px', left:'0', bottom:'', zIndex:'', maxWidth:'100vw', height:'85vh'}}>
             <YouTubed />
             </div>
        
@@ -736,169 +650,65 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-      </div>
+{UnderlayImage ? (
+            <GatsbyImage
+              image={UnderlayImage}
+              alt={frontmatter.title + " - image"}
+              className="mcboaty"
+              style={{height:'auto', width:'100%', maxHeight:'100%', overflow:'hidden', position:'absolute', top:'0', zIndex:'',
+             objectFit:'contain', border:'0px solid red !important'}}
+            />
+            
+          ) : (
+            ""
+          )}
 
-      {/* <div style={{zIndex:'1', overflow:'', position:'absolute', bottom:'0', maxHeight:'', width:'100vw'}}><YouTubed /></div> */}
+          
+{/* <object className="" id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', top:'0', left:'', right:'', bottom:'', overflow:'', border:'0px solid red', zIndex:'', width:'100vw', height:'100%', background:'transparent', objectFit:'contain'   }} alt="animated content" title="animated content" ></object> */}
+
+
+
+ 
+
+
+
+
+        <div
+        className="blog-post-content" style={{ fontSize:'1.1rem', textAlign:'left', width:'100%', maxWidth:'', height:'100vh', padding:'10vh 0', margin:'0 auto', color:'inherit !important', border:'0px solid yellow', position:'absolute', top:'0', left:'0', zindex:'-2', display:'grid', placeContent:'center'}}
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+
+
+        </div>
+
+
+
+      {/* </div> */}
+
+
+
+
+
+
+      
+
 
 {/* {Suggestion1 ? (
-
-
-<div>
-        <ShowSuggestion />
-   </div>
-      ) : (
-        ""
-      )} */}
-
-
-
-
-
-
-<article id="pagecontent" className="blog-post">
-<header style={{height:'60vh', display:'grid', placeContent:'center'}}>
-          <section className="article-header" style={{textAlign:'center', margin:'0', height:'auto', color:''}}>
-            <h1 className="tronText" style={{fontSize:'5vw'}}>{frontmatter.title}</h1>
-            {/* <time sx={{color: "muted"}}>{frontmatter.date}</time> */}
-            {/* <TimeAgo date={frontmatter.date} style={{color:'#fff !important'}} /> */}
-          </section>
-        </header>
-
-
-
-
-<br />
-      <GoBack />
- <br />
-
-
-
-
-<div className="home-posts" style={{clear:'both', display:'',  justifyContent:'space-around', textAlign:'left', width:'90vw', margin:'0 auto', height:'', maxHeight:'', border:'0px solid blue'}}>
-
-
-
-<div style={{padding:'0 0', borderTop:'0px solid', margin:'0 0', textAlign:'center', fontSize:'1.5rem', minWidth:'50%', width:'100%', maxWidth:'', border:'0px solid yellow'}}>
-
-{IsNft ? (
-            <strong style={{padding:'2rem 1rem'}}>Artist's Notes:</strong>
+            <ShowSuggestion style={{position:'relative', top:'', zIndex:'0',}} />
        
           ) : (
             ""
-          )}
+          )} */}
 
-{/* 
-<SRLWrapper options={options} className=""> */}
-      <div
-        className="blog-post-content" style={{ padding:'0 ', fontSize:'1.1rem', textAlign:'left', width:'100%', maxWidth:'', margin:'0 auto', color:'inherit !important'}}
-        dangerouslySetInnerHTML={{ __html: html }}
-      />    
-      {/* </SRLWrapper>   */}
-     
-     <br /><br />
- 
-</div>
-
-
-
-{IsNft ? (
-
-        <div style={{minWidth:'50%', width:'100%', maxWidth:'1000px', maxHeight:'', position:'relative', right:'0', border:'0px solid red', margin:'0 auto'}}>
-            {/* <NFTDetails /> */}
-            
-
-  
-
-
-
-{NftLink ? (
- <div className='NFTiframer-wrapper' style={{position:'relative', top:'0', zIndex:'0', width:'100%', maxWidth:'60vw', margin:'0 auto', overflow:'hidden', filter: 'drop-shadow(0 0 20px #000)', background:'#fff', borderRadius:'12px' }}>
-
- <iframe title="VidSock" id="youtube2" className="blog-video1" width="100%" height="400" src={NftLink} frameBorder="0" playsInline  style={{position:'absolute', top:'0', left:'0', right:'0', zIndex:'0', width:'100%', height:'100%', minHeight:'40vh', borderRadius:'12px'  }} />
- </div>
-       
-          ) : (
+{ !YouTube2 ? (
             ""
-          )}
-
-
-
-
-
-
-
-       
-
-       { NftDrop ? (
-
-         
-            <div className="countdown" style={{display:'flex', alignSelf:'center', fontSize:'540%', textAlign:'center', filter: 'drop-shadow(10px 0px 10px #000)', textShadow:'1px 1px 0px #000', border:'0px solid', width:'100%', height:'', padding:'0 0', borderRadius:'12px', flexDirection:'column' }}>
-  <Countdown daysInHours date={NftDrop} >
-<Completionist />
-  </Countdown>
-
-
-
-  
-
-
-</div>
-
-
        
           ) : (
-""
-       
-
-          )}
-
-</div>
-
-
-          ) : (
-            ""
+            <Iframer3 />
           )}
 
 
-       
-
-
- </div>
-
-
-
-
- <br />
-<br />
-<br />
-
-      {/* <object data="/art/boatswains-blunder" width="100%" height="1000"></object> */}
-
-
-
-      <br />
-<br />
-<br />
- {ShowOriginal ? (
-          <div style={{position:'relative', width:'100%', maxWidth:'800px', margin:'0 auto', textAlign:'center', display:'flex', flexDirection:'column', fontSize:'100%', borderRadius:'12px' }}>Click to view original video
-<div style={{maxWidth:'90vw', width:'100%', height:'440px', maxHeight:'40vh', padding:'0', position:'relative', bottom:'0', textAlign:'center', border:'0px solid blue', margin:'0 auto', borderRadius:'12px'}}>
-  
-                    <Iframer2 />
-                    
-       </div></div>
-       
-          ) : (
-            ""
-          )}
-        
-        
-
-
-      </article>
-  
-
-
-      <div style={{padding:'0 5vw', color:'inherit !important'}}>
+<div style={{padding:'0 5vw', color:'inherit !important'}}>
       {(previous || next) && <Pagination {...props} />}
       </div>
 
@@ -906,13 +716,45 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-{/* <Countdown
-    // date={Date.now() + 10000}
-    date='2022-10-03T04:02:03'
-    intervalDelay={0}
-    precision={3}
-    renderer={props => <div>{props.total}</div>}
-  /> */}
+
+
+        
+        
+
+
+     
+  
+
+
+
+
+
+<div id="original" style={{height:'100vh', marginTop:'100vh'}}>
+
+      {ShowOriginal ? (
+          <div style={{position:'relative', width:'100%', maxWidth:'800px', margin:'0 auto', textAlign:'center', display:'flex', flexDirection:'column', fontSize:'100%', borderRadius:'12px' }}>
+<div style={{maxWidth:'90vw', width:'100%', height:'440px', maxHeight:'40vh', padding:'0', position:'relative', bottom:'0', textAlign:'center', border:'0px solid blue', margin:'0 auto', borderRadius:'12px'}}>
+  
+                    <Iframer2 />
+                   
+       </div>
+       Please visit our video sponsor and be sure to click to view original video above. Thank you.
+       </div>
+       
+          ) : (
+            ""
+          )}
+          <br />
+
+
+          <div style={{textAlign: 'center', margin: '2rem 10px 1rem 10px', justifyContent: 'center', fontSize: '.95rem', textDecoration:'none'}}>
+            Legal:<br />
+            <Link to="/disclaimer/">Disclaimer</Link>  |  <Link to="/privacy/">Privacy Policy</Link>  |  <Link to="/terms/">Terms of Service</Link></div>
+
+<br />
+  <GoBack />
+</div>
+
 
 
       
@@ -925,52 +767,107 @@ const svgUrl = frontmatter.svgImage.publicURL
    
 
 
-
-
-       
-
-
-
-
-
-
-
 {ShareThis ? (
-<div style={{width:'100%', padding:'0', margin:'0 auto'}}>
 
+<div id="sharethis" style={{height:'100vh', display:'block', width:'80%', padding:'0', margin:'0 auto'}}>
 
-  
-                    <ShareSocial />
-    
-       </div>
-       
-          ) : (
-            ""
-          )}
-
+  <br />
+<ShareSocial />
 <br />
+<GoBack />
 
-{Suggestion1 ? (
-            <div style={{padding:'1vh 5vw', borderTop:'0px solid', marginTop:'3rem', textAlign:'center', fontSize:'1.5rem'}}>
-            Find a good one? Post your link Below and then Share it Above. 
-      
-           </div>
-       
+
+<div style={{padding:'0 5vw', marginTop:'200px',  color:'inherit !important'}}>
+{(previous || next) && <Pagination {...props} />}
+</div>
+</div>
           ) : (
             ""
           )}
 
 
-{Comments ? (
-<div style={{width:'80%', padding:'0', margin:'0 auto'}}>
-  
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {Comments ? (
+
+<div id="comments" style={{height:'100vh', display:'block', width:'80%', padding:'0', margin:'0 auto'}}>
+  <GoBack />
+  <br />
 <CommentBox />
-    
-       </div>
-       
+<br />
+<GoBack />
+
+
+<div style={{padding:'0 5vw', marginTop:'200px',  color:'inherit !important'}}>
+{(previous || next) && <Pagination {...props} />}
+</div>
+</div>
           ) : (
             ""
           )}
+
+
+
+
+
+
+
+
+
+
+
+      <article className="blog-post">
+        <header style={{height:'', display:'grid', placeContent:'center'}}>
+          <section className="article-header1" style={{textAlign:'center', margin:'0', height:'auto', color:''}}>
+            <h1 className="tronText" style={{fontSize:'4vw'}}>{frontmatter.title}</h1>
+            {/* <time sx={{color: "muted"}}>{frontmatter.date}</time> */}
+            {/* <TimeAgo date={frontmatter.date} style={{color:'#fff !important'}} /> */}
+          </section>
+        </header>
+ </article>
+
+
+
+
+
+
+
+
+
+
+
+<div style={{padding:'0 0', borderTop:'0px solid', margin:'0 0', textAlign:'center', fontSize:'1.5rem', minWidth:'50%', width:'100%', maxWidth:'', border:'0px solid yellow'}}>
+
+
+      <div
+        className="blog-post-content" style={{ fontSize:'1.1rem', textAlign:'left', width:'100%', maxWidth:'', padding:'10vh 0', margin:'0 auto', color:'inherit !important'}}
+        dangerouslySetInnerHTML={{ __html: html }}
+      />    
+  
+ 
+</div>
+
       
 
       

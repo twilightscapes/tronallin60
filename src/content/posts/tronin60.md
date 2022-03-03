@@ -12,7 +12,7 @@ youtubersuggestion2: "https://youtu.be/UfWnQuAxa5Y"
 youtubersuggestion3: "https://youtu.be/LE5m5aawuao"
 youtubestart: "1"
 youtubeend: ""
-youtubemute: "1"
+youtubemute: "0"
 audiostart: "33"
 audioend: "5000"
 youtubecontrols: "0"
@@ -25,7 +25,7 @@ underlayImage: /assets/transparent.png
 featuredImage: /assets/tronin60.jpg
 svgImage: /assets/transcendence.svg
 nftlink: ""
-nftdrop: "2021-10-31T14:00:00"
+nftdrop: ""
 nftredeem: ""
 ---
 Shot in the Valley of the Gods in southern Utah, the original image is comprised of 72 photos shot during time-lapse and then stacked together to illustrate the movement of the earth.
