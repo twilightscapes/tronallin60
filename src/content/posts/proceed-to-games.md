@@ -28,34 +28,40 @@ nftlink: ""
 nftdrop: ""
 nftredeem: ""
 ---
+<div style="position:relative; top:0; z-index:0; border:px solid blue; height:100vh; width:100vw; overflow:hidden; display:flex; ">
 
-<div class="" style="position:absolute; z-index:0; width:60vw; height:100%; padding:4vh 1rem 1rem 3rem; font-size:clamp(.7rem, 3vw, 3.2rem); left:5vw;, top:4vh; line-height:100%; text-shadow:0 2px 7px #000; background:rgba(0,0,0,0.50); border-radius:12px;">
-  
+
+<div class="" style="position:relative; z-index:0; min-width:; height:100%; padding:4vh 1rem 1rem 3rem; font-size:clamp(.7rem, 3vw, 3.2rem); left:5vw;, top:4vh; line-height:100%; text-shadow:0 2px 7px #000; background:rgba(0,0,0,0.50); border-radius:12px; border:0px solid yellow;">
   <p>You will receive an identity disk.</p>
-  
   <p>Everything you do or learn</p>
-  
   <p>will be imprinted on this disk.</p>
   <br />
   <p>If you lose your disk or fail to</p>
-  
   <p>follow commands, you will be</p>
-  
   <p>subject to immediate de-resolution.</p>
   <br />
   <p>Mirroring complete. Disk Activated.</p>
-  
   <br />
-
-
-
   <p class="TRON txtshadow tronText actionJackson" style="cursor:pointer; margin:0 auto; padding: 0; text-decoration:none; text-shadow:3px 3px 6px rgb(0, 162, 184); font-size:80%;">Proceed to games.</p>
-   
+</div>
 
-  </div>
 
-  <object class="" id="svg1" data="/assets/tron-chick1.svg" type="image/svg+xml" style="position:relative; top:0; z-index:0; width:100vw; height:100%; background:transparent; object-fit:contain;"  alt="animated content" title="animated content" ></object>
+<div style="position:relative; top:0; right:; border:0px solid; z-index:; max-width:30vw; height:100vh; background:;">
 
+
+<a href="/enter-the-grid/" style="position:relative; z-index:400;">
+<object style="height:100vh;" class="" id="svg1" data="/assets/tron-chick1.svg" type="image/svg+xml"   alt="animated content" title="animated content" ></object>
+</a>
+
+
+
+
+</div>
+
+
+
+<!-- end -->
+</div>
 
 
 

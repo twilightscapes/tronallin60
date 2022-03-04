@@ -30,17 +30,24 @@ nftredeem: ""
 ---
 
 
-<!-- sdlgsdhgskghsdg sdlkhg sdgklsdhg lskdhgls glskdgh  -->
+<!-- need wrapper for SVG zindex  -->
 
-<div style="position:relative; top:-30vh; z-index:;">
+<div style="position:relative; top:0; z-index:0; border:0px solid blue; height:100vh; width:100%; overflow:hidden; ">
+
+
+
 <h2 class="tronText TRON" style="font-size:clamp(14px, 3.5vw, 4.6rem); line-height:150%; margin:2rem 0 2rem 0; text-align:center">The Grid  <span class="neonText" style="font-size:80%">A digital frontier</span>.</h2>
 
 <div class="tronText" style="line-height:200%; font-size:clamp(1rem, 2.2vw, 3rem); padding:0 8%; background:rgba(0,0,0,0.50)">I tried to picture clusters of information as they moved through the computer. What did they look like? Ships? Motorcycles? Were the circuits like freeways? I kept dreaming of a world I thought I'd never see.</div>
 
+<button class="actionJackson TRON tronText" style="position:relative; z-index:400;"><a href="/enter-the-grid/">I Got In</a></button>
 
- <object style="position:absolute; z-index:;" class="" id="" data="/assets/light-cycle.svg" type="image/svg+xml" style="position:absolute; bottom:10vh; z-index:0; width:100vw; height:100%; background:transparent; object-fit:contain;"  alt="animated content" title="animated content" ></object>
- 
+ <object class="" id="" data="/assets/light-cycle.svg" type="image/svg+xml" style="position:absolute; bottom:0; z-index:0; width:100%; height:100%; background:transparent; object-fit:contain;"  alt="animated content" title="animated content" ></object>
+
+
 </div>
+
+
 
 
 

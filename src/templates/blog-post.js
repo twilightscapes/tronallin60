@@ -358,7 +358,7 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
           // ]}
           width="150px"
           height="150px"
-          style={{marginTop:'-50px', position:'absolute', zIndex:'0'}}
+          style={{marginTop:'-150px', position:'absolute', zIndex:'0'}}
           config={{
             youtube: {
               playerVars: { showinfo:0, autoplay:1, controls:0, start:AudioStart, end:AudioEnd, mute:0,  }
@@ -545,12 +545,7 @@ const svgUrl = frontmatter.svgImage.publicURL
     
 
 
-{/* if (!Svg) {
-    
-  }
-  else{
-    <AddSvg />
-  } */}
+
 
 
 
@@ -649,6 +644,9 @@ const svgUrl = frontmatter.svgImage.publicURL
           )} */}
 
 
+          
+
+
 
 {UnderlayImage ? (
             <GatsbyImage
@@ -674,9 +672,14 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
         <div
-        className="blog-post-content" style={{ fontSize:'1.1rem', textAlign:'left', width:'100%', maxWidth:'', height:'100vh', padding:'10vh 0', margin:'0 auto', color:'inherit !important', border:'0px solid yellow', position:'absolute', top:'0', left:'0', zindex:'0', display:'grid', placeContent:'center'}}
+        className="blog-post-content" style={{ fontSize:'1.1rem', textAlign:'left', width:'100%', maxWidth:'', height:'100vh', padding:'10vh 0', margin:'0 auto', color:'inherit !important', border:'0px solid yellow', position:'absolute', top:'0', left:'0', zindex:'1', display:'grid', placeContent:'center'}}
         dangerouslySetInnerHTML={{ __html: html }}
-      />
+      >
+
+
+</div>
+
+
 
 
         </div>
@@ -708,6 +711,9 @@ const svgUrl = frontmatter.svgImage.publicURL
           )}
 
 
+
+
+
 <div style={{padding:'0 5vw', color:'inherit !important'}}>
       {(previous || next) && <Pagination {...props} />}
       </div>
@@ -730,6 +736,8 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 <div id="original" style={{height:'100vh', marginTop:'100vh'}}>
+
+  
 
       {ShowOriginal ? (
           <div style={{position:'relative', width:'100%', maxWidth:'800px', margin:'0 auto', textAlign:'center', display:'flex', flexDirection:'column', fontSize:'100%', borderRadius:'12px' }}>
