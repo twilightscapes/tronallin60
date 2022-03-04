@@ -603,14 +603,14 @@ const svgUrl = frontmatter.svgImage.publicURL
               image={Image}
               alt={frontmatter.title + " - Featured image"}
               className="featured-image1 layer1"
-              style={{ width:'100vw', position:'absolute', top:'-1', zIndex:'',  border:'0px solid red !important', paddingBottom:'',}}
+              style={{ width:'100vw', position:'absolute', top:'0', zIndex:'',  border:'0px solid red !important', paddingBottom:'', height:'100vh'}}
             />
 
           ) : (
           ""
           )}
         
-            <div style={{display:'grid', placeContent:'center', fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem', width:'100%', position:'absolute', zIndex:'2'}}>Click To Play
+            <div style={{display:'grid', placeContent:'center', fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem', width:'100%', position:'absolute', zIndex:'2', top:'30%'}}>Click To Play
 
     <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} /></div>
             {/* </div> */}

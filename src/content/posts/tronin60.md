@@ -28,9 +28,16 @@ nftlink: ""
 nftdrop: ""
 nftredeem: ""
 ---
+<div style="position:relative; top:0; z-index:0; border:px solid blue; height:100vh; width:100vw; overflow:hidden; display:flex; ">
+<!-- https://youtu.be/sqJdG95juso -->
+
+
+
+<!-- <div class="" style="position:relative; z-index:0; min-width:; height:100%; padding:4vh 1rem 1rem 3rem; font-size:clamp(.7rem, 3vw, 3.2rem); left:5vw;, top:4vh; line-height:100%; text-shadow:0 2px 7px #000; background:rgba(0,0,0,0.50); border-radius:12px; border:0px solid yellow;">
 Shot in the Valley of the Gods in southern Utah, the original image is comprised of 72 photos shot during time-lapse and then stacked together to illustrate the movement of the earth.
 
 May peace always be with you.
+</div> -->
 
 
 
@@ -38,8 +45,6 @@ May peace always be with you.
 
 
 
- 
-
- 
 
 <!-- XjuLZwlDxh8 -->
+</div>

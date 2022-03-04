@@ -2308,7 +2308,7 @@ input[type=checkbox] {
   cursor: pointer;
   position: fixed;
   z-index: 3;
-  bottom: 25%;
+  bottom: 35%;
   right: 2%;
   /* height: 100px;
   width: 100px; */
@@ -2329,17 +2329,25 @@ filter: drop-shadow(1px 1px 10px var(--primary));
   text-shadow:1px 1px 0px #000;
 }
 
+@media (max-width: 48rem) {
+  .sidebarIconToggle, .toastWrapper {
+  bottom: 20vh;
+  right: 0;
+  }
+  }
+
+
 
 /* @media (min-width: 1100px) {
   .sidebarIconToggle, .toastWrapper {
   bottom: 0;
   right: 0;
   }
-  }
+  } */
 
-  @media (min-width: 1300px) {
+  /* @media (min-width: 1300px) {
     .sidebarIconToggle {
-      bottom: 4%;
+      bottom: 0;
       right: 2%;
     }
     } */

@@ -28,16 +28,21 @@ nftlink: ""
 nftdrop: ""
 nftredeem: ""
 ---
-One of the coolest scenes in the movie. The light cycles are always a crowd favorite and Disney spent no exceptions here. The scenes are just dripping with action and visually stunning.
-
+<div style="position:relative; top:0; z-index:0; border:px solid blue; height:100vh; width:100vw; overflow:hidden; display:flex; ">
 <!-- https://youtu.be/sqJdG95juso -->
 
 
 
 
 
- 
 
- 
+
+
+
+
+
+
+
 
 <!-- XjuLZwlDxh8 -->
+</div>
