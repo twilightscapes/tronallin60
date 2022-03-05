@@ -18,12 +18,12 @@ import { useSiteMetadata } from "../hooks/use-site-metadata"
 // import Countdown from 'react-countdown'
 // import { IoArrowRedoSharp, IoArrowUndoSharp } from "react-icons/io5"
 import { AiOutlineAudioMuted } from "react-icons/ai"
-import { Footer } from "../components/footer"
+// import { Footer } from "../components/footer"
 // import { SRLWrapper } from "simple-react-lightbox"
 import {CopyToClipboard} from 'react-copy-to-clipboard'
 import ReactPlayer from 'react-player/lazy'
 
-import YouTubed from "../pages/youtube"
+// import YouTubed from "../pages/youtube"
 import { Seo } from "../components/seo"
 import { Layout } from "../components/layout"
 import ShareSocial from '../components/share' 
@@ -851,15 +851,15 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-      <article className="blog-post">
+      {/* <article className="blog-post">
         <header style={{height:'', display:'grid', placeContent:'center'}}>
           <section className="article-header1" style={{textAlign:'center', margin:'0', height:'auto', color:''}}>
             <h1 className="tronText" style={{fontSize:'4vw'}}>{frontmatter.title}</h1>
-            {/* <time sx={{color: "muted"}}>{frontmatter.date}</time> */}
-            {/* <TimeAgo date={frontmatter.date} style={{color:'#fff !important'}} /> */}
+            <time sx={{color: "muted"}}>{frontmatter.date}</time>
+            <TimeAgo date={frontmatter.date} style={{color:'#fff !important'}} />
           </section>
         </header>
- </article>
+ </article> */}
 
 
 
@@ -871,7 +871,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-<div style={{padding:'0 0', borderTop:'0px solid', margin:'0 0', textAlign:'center', fontSize:'1.5rem', minWidth:'50%', width:'100%', maxWidth:'', border:'0px solid yellow'}}>
+{/* <div style={{padding:'0 0', borderTop:'0px solid', margin:'0 0', textAlign:'center', fontSize:'1.5rem', minWidth:'50%', width:'100%', maxWidth:'', border:'0px solid yellow'}}>
 
 
       <div
@@ -880,7 +880,7 @@ const svgUrl = frontmatter.svgImage.publicURL
       />    
   
  
-</div>
+</div> */}
 
       
 
@@ -892,7 +892,7 @@ const svgUrl = frontmatter.svgImage.publicURL
    <br />
    <br />
    </CustomBox>
-   <Footer />
+   {/* <Footer /> */}
     </Layout>
 
 

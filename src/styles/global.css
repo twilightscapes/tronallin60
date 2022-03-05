@@ -19,12 +19,12 @@ body {
 
 
 body.homepage{
-  /* overflow-y: hidden !important; */
+  overflow-y: hidden !important;
   overflow-x: hidden !important;
 }
 
 body.blogpost{
-  overflow-y: hidden !important;
+  /* overflow-y: hidden !important; */
   overflow-x: hidden !important;
 }
 
