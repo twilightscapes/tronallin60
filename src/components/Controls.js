@@ -42,7 +42,7 @@ const Controls = forwardRef(
  </div> */}
 
 
-<div
+{/* <div
                   onClick={onPlayPause}
                   className=""
                   style={{
@@ -68,14 +68,14 @@ const Controls = forwardRef(
                   
                   {playing ? (
                     <>
-                    {/* <MdPause style={{fontSize:'56px', position:'absolute'}} /> */}
+                    <MdPause style={{fontSize:'56px', position:'absolute'}} />
                     </>
                   ) : (
               <>
-              {/* <MdPlayArrow style={{fontSize:'56px', position:'absolute'}}  /> */}
+              <MdPlayArrow style={{fontSize:'56px', position:'absolute'}}  />
               </>
                   )}
-                </div>
+                </div> */}
 
 
 

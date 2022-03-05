@@ -21,17 +21,25 @@ isnftforsale: ""
 svgzindex: "0"
 comments: "1"
 shareable: "1"
-underlayImage: "/assets/transparent.png"
+underlayImage: ""
 featuredImage: /assets/encom-os-12.jpg
 svgImage: /assets/null.svg
 nftlink: ""
 nftdrop: ""
 nftredeem: ""
 ---
-Download Encom OS 12 for FREE! Thanks Sam!
+<div style="position:relative; top:0; z-index:0; border:0px solid blue; height:100vh; width:100vw; overflow:hidden; display:flex; ">
+<!-- Download Encom OS 12 for FREE! Thanks Sam! -->
 
-<a href="/the-grid/marv/" style="position:relative; top:0; left:0; display:block; width:40%; height:100%; right:0; z-index:; border:1px solid green; background:;"></a>
 
+<object style="aspect-ratio: 16 / 9; height:100%;" class="" id="svg1" data="/assets/encom-os-12.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
+
+
+<!-- <div style="position:absolute; top:0; left:0;; border:1px solid green; background:; height:100%; width:30%;">
+<a href="/the-grid/marv/" style="display:block; width:100%; height:100%;">
+<img src="/assets/encom-os-12-box.png" alt="alt text" width="200"/>
+</a>
+</div> -->
 
 
 
@@ -40,3 +48,4 @@ Download Encom OS 12 for FREE! Thanks Sam!
  
 
 <!-- XjuLZwlDxh8 -->
+</div>

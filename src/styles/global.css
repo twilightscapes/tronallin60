@@ -2308,7 +2308,7 @@ input[type=checkbox] {
   cursor: pointer;
   position: fixed;
   z-index: 3;
-  bottom: 32%;
+  bottom: 35%;
   right: 2%;
   /* height: 100px;
   width: 100px; */
@@ -2347,7 +2347,7 @@ filter: drop-shadow(1px 1px 10px var(--primary));
 
   @media (min-width: 1300px) {
     .sidebarIconToggle {
-      top: 50%;
+      top: 45%;
       right: 2%;
     }
     }

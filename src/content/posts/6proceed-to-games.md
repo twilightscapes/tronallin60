@@ -49,13 +49,13 @@ nftredeem: ""
 
 
 
-<div style="position:relative; top:0; right:; border:0px solid; z-index:; max-width:30vw; height:100vh; background:;">
+<div style="position:relative; top:0; right:; border:0px solid; z-index:1; max-width:30vw; height:100vh; background:;">
 
 
 
-
-<object style="height:100vh;" class="" id="svg1" data="/assets/tron-chick1.svg" type="image/svg+xml"   alt="animated content" title="animated content" ></object>
-
+<!-- <a href="/the-grid/sirens/" style="position:absolute; top:0; right:0; display:block; width:40%; height:100%; right:0; z-index:1; border:0px solid green; background:;"> -->
+<object style="height:100vh;" class="" id="svg1" data="/assets/tron-chick1.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
+<!-- </a> -->
 
 
 
@@ -63,7 +63,7 @@ nftredeem: ""
 </div>
 
 
-<a href="/the-grid/sirens/" style="position:absolute; top:0; right:0; display:block; width:40%; height:100%; right:0; z-index:; border:0px solid green; background:;"></a>
+
 <!-- end -->
 </div>
 

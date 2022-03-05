@@ -35,7 +35,7 @@ nftredeem: ""
 
 
 
- <object class="" id="" data="/assets/whereskevin.svg" type="image/svg+xml" style="position:absolute; bottom:0; z-index:0; width:100%; height:100%; background:transparent; object-fit:contain;"  alt="animated content" title="animated content" ></object>
+ <object class="" id="" data="/assets/whereskevin.svg" type="image/svg+xml" style="position:absolute; top:0; z-index:0; aspect-ratio: 16 / 9; height:; background:transparent; object-fit:contain;"  alt="animated content" title="animated content" ></object>
 
 
 
