@@ -22,7 +22,7 @@ const PostCard = ({ data }) => (
 
 
     {data.frontmatter.featuredImage ? (
-      <div id="" className="wrap-element allin60panel" style={{overflow:'hidden', width:'96vw', height:'90vh', display:'flex', flexDirection:'column', justifyContent:'center', padding:'10% 0', borderRadius:'0 0 40px 40px', border:'4px solid  rgba(5, 255, 255, 0.4)', borderTop:'0px', filter:'drop-shadow(0 0 10px rgb(0, 238, 255))', boxShadow:'0 4px 22px rgba(5, 255, 255, 0.3)', opacity:'.98',background:'radial-gradient(circle, rgba(10, 45, 48, 0.2) 17%, rgba(25, 96, 109, 0.2) 58%, rgba(10, 196, 206, 0.2) 97%)', backgroundSize:'140% 200%'}}>
+      <div id="" className="wrap-element allin60panel" style={{overflow:'hidden', width:'96vw', height:'90vh', display:'flex', flexDirection:'column', justifyContent:'flex-start', padding:'0', borderRadius:'40px', border:'4px solid  rgba(5, 255, 255, 0.4)', borderTop:'0px', filter:'drop-shadow(0 0 10px rgb(0, 238, 255))', boxShadow:'0 4px 22px rgba(5, 255, 255, 0.3)', opacity:'.98',background:'radial-gradient(circle, rgba(10, 45, 48, 0.2) 17%, rgba(25, 96, 109, 0.2) 58%, rgba(10, 196, 206, 0.2) 97%)', backgroundSize:'140% 200%'}}>
       <Link to={data.frontmatter.slug}>
         <GatsbyImage
           image={data.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
