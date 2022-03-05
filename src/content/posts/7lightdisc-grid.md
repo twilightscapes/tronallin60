@@ -1,0 +1,49 @@
+---
+template: blog-post
+title: LightDisc Grid
+slug: /lightdisc-grid
+date: 2021-07-01 01:43
+description: Tron in ONLY 60 seconds
+youtuber: ""
+youtuber2: ""
+youtubeshoworiginal: "https://youtu.be/YyoKXfBQgXw"
+youtubersuggestion1: ""
+youtubersuggestion2: ""
+youtubersuggestion3: ""
+youtubestart: "54"
+youtubeend: "81"
+youtubemute: "0"
+audiostart: ""
+audioend: ""
+youtubecontrols: "0"
+youtubeautostart: "1"
+isnftforsale: ""
+svgzindex: "0"
+comments: "1"
+shareable: "1"
+underlayImage: /assets/transparent.png
+featuredImage: /assets/lightdisc-grid.jpg
+svgImage: /assets/null.svg
+nftlink: ""
+nftdrop: ""
+nftredeem: ""
+---
+<div style="position:relative; top:0; z-index:0; border:0px solid blue; height:100vh; width:100vw; overflow:hidden; display:flex; display:grid; place-content:center; ">
+<!-- https://youtu.be/sqJdG95juso -->
+
+
+
+
+
+<div style="display:flex; justify-content:center; color:#ccc; position:relative; bottom:-20vh;"><a href="/minutes/" title="go back"><button class="back button" style="display:flex; justify-content:center;">Coming Soon</button></a></div>
+      </div>
+
+
+
+
+
+
+
+
+<!-- XjuLZwlDxh8 -->
+</div>

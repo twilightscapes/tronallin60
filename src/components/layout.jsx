@@ -211,18 +211,14 @@ Contact Me<span>Ordering Questions?</span>
               </Link>
       </li>
 
-<li className="carto" style={{textAlign:'center'}}>
-              <Link className="navbar-item txtshadow" to="/about/">
-              About This Site
-              </Link>
-      </li> 
+
 
 
 <div style={{background:'rgba(0,0,0,0.50)'}}>
 <li className="carto" style={{textAlign:'', color:'#777', cursor:'not-allowed'}}>
-              {/* <Link state={{modal: true}} className="navbar-item txtshadow" to="/grid-launcher/"> */}
+              <Link state={{modal: true}} className="navbar-item txtshadow" to="/grid-launcher/">
               Enter the Grid
-              {/* </Link> */}
+              </Link>
       </li>
       
 {/* <li className="carto" style={{textAlign:'center'}}>
@@ -281,7 +277,11 @@ Contact Me<span>Ordering Questions?</span>
       </li> */}
 
 
-
+<li className="carto" style={{textAlign:'center'}}>
+              <Link className="navbar-item txtshadow" to="/about/">
+              About This Site
+              </Link>
+      </li> 
       
     
       <li className="carta">

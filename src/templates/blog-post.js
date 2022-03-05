@@ -72,6 +72,13 @@ const CustomBox = styled.div`
   .pagination{position:relative; top:-185px;}
   }
 
+  // .sidebarIconToggle{bottom:40% !important;}
+
+
+}
+
+
+
 
 `
 
@@ -519,7 +526,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 <div className="wrap-element" style={{overflow:'hidden', height:'50vh'}}>
 
-{Image ? (
+{/* {Image ? (
             <GatsbyImage
               image={Image}
               alt={frontmatter.title + " - Featured image"}
@@ -529,7 +536,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
           ) : (
           ""
-          )}
+          )} */}
     
 
 

@@ -1,9 +1,9 @@
 ---
 template: blog-post
-title: Then One Day... I Got In
-slug: /one-day-i-got-in
-date: 2022-02-03 01:23
-description: Sam Flynn gets in. Welcome to the Grid.
+title: Enter The Grid
+slug: /enter-the-grid
+date: 2021-01-03 01:23
+description: Kevin describes the Grid.
 youtuber: "https://youtu.be/nJ38P5elTkg"
 youtuber2: "S5S6s5dZXNM"
 youtubeshoworiginal: "1"
@@ -22,7 +22,7 @@ svgzindex: "0"
 comments: "1"
 shareable: "1"
 underlayImage: /assets/transparent.png
-featuredImage: /assets/tronin60.jpg
+featuredImage: /assets/enter-the-grid.jpg
 svgImage: /assets/light-cycle.svg
 nftlink: ""
 nftdrop: ""
@@ -40,7 +40,7 @@ nftredeem: ""
 
 <div class="tronText" style="line-height:200%; font-size:clamp(1rem, 2.2vw, 3rem); padding:0 8%; background:rgba(0,0,0,0.50)">I tried to picture clusters of information as they moved through the computer. What did they look like? Ships? Motorcycles? Were the circuits like freeways? I kept dreaming of a world I thought I'd never see.</div>
 
-<button class="actionJackson TRON tronText" style="position:relative; z-index:400;"><a href="/enter-the-grid/">I Got In</a></button>
+<button class="actionJackson TRON tronText" style="position:absolute; right:20%; z-index:400; margin-top:2rem;"><a href="/where-is-kevin-flynn/">I Got In</a></button>
 
  <object class="" id="" data="/assets/light-cycle.svg" type="image/svg+xml" style="position:absolute; bottom:0; z-index:0; width:100%; height:100%; background:transparent; object-fit:contain;"  alt="animated content" title="animated content" ></object>
 

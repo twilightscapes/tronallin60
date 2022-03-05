@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Layout } from "../../components/layout";
 
 import { Link } from "gatsby"
@@ -9,7 +9,7 @@ import { Link } from "gatsby"
 import { useSiteMetadata } from "../../hooks/use-site-metadata"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import ReactPlayer from 'react-player/lazy'
-// import Controls from "../components/Controls"
+import Controls from "../../components/Controls"
 import { ImPlay } from "react-icons/im"
 // import LightCycle from "../../static/assets/light-cycle.svg"
 // import { ImPlay } from "react-icons/im"
@@ -45,40 +45,38 @@ const CustomBox = styled.div`
 
 
 
-function TheGrid() {
+function Marv() {
 
-  const [state] = useState({
+  const [state, setState] = useState({
     playing: true,
-    controls: true,
+    controls: false,
     light: true,
-    muted: false,
+    muted: true,
     loop: true,
   });
-  
   // const playerRef = useRef(null);
-  // const controlsRef = useRef(null);
+  const controlsRef = useRef(null);
   
   const {
     playing,
-    // controls,
-    // light,
+    controls,
+    light,
     muted,
     loop,
-    // playbackRate,
-    // pip,
-    // played,
-    // seeking,
-    // volume,
+    playbackRate,
+    pip,
+    played,
+    seeking,
+    volume,
   } = state;
   
-  // const handlePlayPause = () => {
-  //   setState({ ...state, playing: !state.playing });
-  // };
+  const handlePlayPause = () => {
+    setState({ ...state, playing: !state.playing });
+  };
   
-  // const hanldeMute = () => {
-  //   setState({ ...state, muted: !state.muted });
-  // };
-  
+  const hanldeMute = () => {
+    setState({ ...state, muted: !state.muted });
+  };
   const { iconimage } = useSiteMetadata()
 
   return (
@@ -87,28 +85,21 @@ function TheGrid() {
 <Layout>
 {/* GRID INTRO */}
 
-<div id="" className="wrap-element tronpanel" style={{position:'fixed', top:'0', zIndex:'2', overflow:'', height:'100vh', width:'100vw'}}>
-<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:'0'}}>
-        <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>TRON</div>
+<div id="" className="wrap-element tronpanel" style={{position:'absolute', top:'0', zIndex:'2', overflow:'', height:'100vh', width:'100vw'}}>
+<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'8vw', position:'absolute', top:'0', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:'0'}}>
+        <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>ENCOM OS 12</div>
       </h1>
 
-<header className="wrapper" style={{textAlign:'center', position:'relative', zIndex:'0'}}>
+{/* <header className="wrapper" style={{textAlign:'center', position:'relative', zIndex:'0'}}>
         <br /> <br />
-        {/* <AiFillRobot
-          style={{
-            fontSize: "160px",
-            color: "var(--primary-color)",
-            margin:'0 auto',
-        textAlign:'center'
-          }}
-        /> */}
+
     
     <SorryFolks style={{maxWidth:'90vw', maxHeight:'55vh', display:'grid', placeContents:'center'}}/>
         <h1 className="TRON tronText neonText" style={{fontSize:'180%', lineHeight:'23vh',}}>This attraction is <div style={{color:'red', paddingTop:'2rem', fontSize:'150%', fontFamily:'san serit !important'}}>closed</div><br /> <div style={{marginTop:'0rem'}}>for maintenance.</div></h1>
-        {/* <p className="tronText" style={{fontSize:'150%', padding:'2rem'}}>
+        <p className="tronText" style={{fontSize:'150%', padding:'2rem'}}>
           Please check back soon!
-        </p> */}
-      </header>
+        </p>
+      </header> */}
 
       {/* <div style={{display:'flex', justifyContent:'center', width:'100%', marginTop:'2rem', gap:'2rem'}}>
         <Link to="/" className="actionJackson">
@@ -120,7 +111,7 @@ function TheGrid() {
       </Link></div> */}
 
    
-    <div className="spacer33"></div> 
+
 
 
 {/* Panel Video */}
@@ -131,15 +122,17 @@ function TheGrid() {
 {/* nJ38P5elTkg */}
 {/* <div id="homestart" style={{position:'absolute', top:'-100vh'}}></div> */}
 
+<div className="wrap-element" style={{overflow:'hidden', position:'relative', top:'0'}}>
+
+
 <ReactPlayer
          className=''
-         url="https://www.youtube.com/embed/c_V1iD6F1kk"
+         url="https://www.youtube.com/embed/s0fpz3DkCT4"
          width="100%"
          height="100vh"
-         style={{position:'fixed', top:'0', zIndex:'-1', opacity:'.3'}}
          playing={playing}
-            controls={false}
-            light={false}
+            controls={controls}
+            light={light}
             loop={loop}
             muted={muted}
             config={{
@@ -149,7 +142,7 @@ function TheGrid() {
                 },
               },
               youtube: {
-                playerVars: { showinfo:0, controls:0, start:20, end:41, mute:1 }
+                playerVars: { showinfo:0, controls:0, start:0, end:500, mute:0 }
               },
             }}
 
@@ -157,18 +150,16 @@ function TheGrid() {
             playIcon={
               <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'1', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
   
-          <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
+          <div className="" style={{ textAlign:'center', animation:'fadeIn 3s', marginTop:'20%', display:'grid', placeContent:'center'}}>
             
   
-            <div style={{position:'relative', maxWidth:'100vw', margin:'10% 0', zIndex:'', display:'flex', justifyContent:'center', background:'transparent !important',}}>
-    <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
-  </div>
+
         
-            <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
-    <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
+            <div className="actionJackson" style={{fontWeight:'bold', padding:'0 20px', fontSize:'2rem'}}>Open Encom OS 12 now ?</div>
+    {/* <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} /> */}
             </div>
             </button>}
-         
+         light="../assets/transparent.png"
           />
 
 
@@ -177,14 +168,19 @@ function TheGrid() {
 alt="Todd Lambert Web development for photographers" src="../../static/assets/shawshank-stuff.png" style={{height:'100vh'}}  />
 </div> */}
 
-          {/* <Controls
+
+
+
+
+
+          <Controls
             ref={controlsRef}
             onPlayPause={handlePlayPause}
             playing={playing}
             played={played}
             onMute={hanldeMute}
             muted={muted}
-          /> */}
+          />
       
      
 {/* Panel Video */}
@@ -200,15 +196,23 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 
  
 
+    
+<div style={{border:'0px red', display:'block', width:'100vw', height:'100vh', position:'absolute', zIndex:'1', bottom:'0', left:'', background:'transparent', display:'grid', placeContent:'center'}}>
+
+
+      <div style={{display:'', justifyContent:'', color:'#ccc', position:'relative', bottom:'-45vh',}}><a href="/encom-os-12-download/" title="go back"><button className="" style={{display:'flex', justifyContent:'center'}}>Go Back</button></a></div>
+      </div>
+
+
+      </div>
+
+
 
 
 
       </div>
 
      
-
-     
-    
     
 
 
@@ -255,4 +259,4 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
   );
 }
 
-export default TheGrid;
+export default Marv;

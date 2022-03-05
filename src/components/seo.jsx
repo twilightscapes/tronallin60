@@ -181,9 +181,9 @@ export function Seo({
 
  
 <div style={{position:'fixed', top:'60px', right:'5vw', padding:'10px', fontSize:'40px', background:'#111 !important', opacity:'1 !important', zIndex:'3',  filter:' drop-shadow(0px 4px 3px #000)',}}>
-          <Link state={{noScroll: true }} to={closeTo}>
+          {/* <Link state={{noScroll: true }} to={closeTo}>
             <AiOutlineClose />
-          </Link>
+          </Link> */}
           </div>
       
       {/* <div style={{ flexDirection:'', color:'#ccc', position:'fixed', bottom:'30px', zIndex:'1', display:'flex', justifyContent:'center', width:'', textAlign:'center'}}>

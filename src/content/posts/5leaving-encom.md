@@ -2,7 +2,7 @@
 template: blog-post
 title: Leaving Encom
 slug: /leaving-encom
-date: 2021-04-11 01:43
+date: 2021-05-11 01:43
 description: Tron in ONLY 60 seconds
 youtuber: "https://youtu.be/L9szn1QQfas"
 youtuber2: ""
@@ -22,7 +22,7 @@ svgzindex: "0"
 comments: "1"
 shareable: "1"
 underlayImage: /assets/transparent.png
-featuredImage: /assets/tronin60.jpg
+featuredImage: /assets/leaving-encom.jpg
 svgImage: /assets/null.svg
 nftlink: ""
 nftdrop: ""
