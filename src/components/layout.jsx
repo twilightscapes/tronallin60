@@ -23,7 +23,7 @@ import Theme from "../components/theme"
 // import { IoMdFingerPrint } from 'react-icons/io'
 // import { Link } from "gatsby-plugin-anchor-links"
 
-// import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 // import Consent from './Consent'
 import Install from './install-discount'
 // 
