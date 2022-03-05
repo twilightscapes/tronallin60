@@ -488,6 +488,10 @@ const svgUrl = frontmatter.svgImage.publicURL
 {/* <div className='player-wrapper intro' style={{position:'relative', bottom:'0', zIndex:'', height:'100vh', maxHeight:'', overflow:'', filter: 'drop-shadow(0 0 20px #000)',  }}> */}
 
 
+<div className="contact" style={{position:'fixed', bottom:'0', zIndex:'1',  left:'0', right:'', display:'block', justifyContent:'center', width:'500px', height:'60px', margin:'0 auto', background:'#111', opacity:'.5', borderRadius:'0 12px 0 0'  }}></div>
+
+
+
 <div className="contact" style={{position:'fixed', bottom:'20px', zIndex:'1',  left:'20px', right:'', display:'flex', justifyContent:'center', width:'400px', margin:'0 auto', gap:'30px'}}>
 
   <Link state={{modal: true}}  to="/contact/" className=" " style={{margin:'', textDecoration:''}}>contact</Link>
@@ -576,7 +580,7 @@ const svgUrl = frontmatter.svgImage.publicURL
             height="100%"
             url={iframeUrl}
             // url="https://youtu.be/lZzai6at_xA"
-            playing={playing}
+            // playing={playing}
             controls={controls}
             light={false}
             loop={loop}
@@ -591,7 +595,7 @@ const svgUrl = frontmatter.svgImage.publicURL
                 playerVars: { showinfo:1, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
               },
             }}
-
+            playing
           playsinline
             playIcon={
               <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'', justifyContent:'center', alignItem:'center', paddingTop:''}}>
