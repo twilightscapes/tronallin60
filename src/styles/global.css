@@ -2347,7 +2347,7 @@ filter: drop-shadow(1px 1px 10px var(--primary));
 
   @media (min-width: 1300px) {
     .sidebarIconToggle {
-      bottom: 30%;
+      top: 50%;
       right: 2%;
     }
     }

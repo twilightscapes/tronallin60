@@ -126,17 +126,17 @@ const Controls = forwardRef(
                     placeContent:'center',
                     width:'60px',
                     height:'60px',
-                    fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'1rem', background:'rgba(51, 51, 51, 0.3)', borderRadius:'8px', border:'1px solid #666', filter:'drop-shadow(2px 2px 2px #000)', cursor:'pointer',
+                    fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'1rem',  borderRadius:'8px', border:'1px solid #666', cursor:'pointer',
                 }}
                 >
                   {/* <MdPlayArrow style={{fontSize:'50px', position:'absolute'}}  /> */}
                   {playing ? (
                     <>
-                    <MdPause style={{fontSize:'56px', position:'absolute'}} />
+                    <MdPause style={{fontSize:'55px', position:'absolute'}} />
                     </>
                   ) : (
               <>
-              <MdPlayArrow style={{fontSize:'56px', position:'absolute'}}  />
+              <MdPlayArrow style={{fontSize:'55px', position:'absolute'}}  />
               </>
                   )}
                 </div>
@@ -162,7 +162,7 @@ const Controls = forwardRef(
                     placeContent:'center',
                     width:'60px',
                     height:'60px',
-                    fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'1rem', background:'rgba(51, 51, 51, 0.3)', borderRadius:'8px', border:'1px solid #666', filter:'drop-shadow(2px 2px 2px #000)', cursor:'pointer',
+                    fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'1rem',  borderRadius:'8px', border:'1px solid #666', cursor:'pointer',
                 }}
                 >
                   {muted ? (
