@@ -51,9 +51,10 @@ export function Layout({ children }) {
   position:'fixed', 
   zIndex:'10',
   top:'10px',
-  left:'10px',
-  width:'150px',
-fontSize:'1rem'
+  right:'10px',
+  width:'',
+fontSize:'1rem',
+border:'0px solid'
 }}><a href="https://tron.allin60.com">tron.</a><a href="https://allin60.com">allin60.com</a></div>
 
       {/* <Header /> */}

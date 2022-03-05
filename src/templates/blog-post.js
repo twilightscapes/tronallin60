@@ -725,7 +725,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-<div style={{padding:'0 5vw', color:'inherit !important'}}>
+<div style={{padding:'0 ', color:'inherit !important'}}>
       {(previous || next) && <Pagination {...props} />}
       </div>
 
@@ -796,9 +796,8 @@ const svgUrl = frontmatter.svgImage.publicURL
 <GoBack />
 
 
-<div style={{padding:'0 5vw', marginTop:'200px',  color:'inherit !important'}}>
-{(previous || next) && <Pagination {...props} />}
-</div>
+
+
 </div>
           ) : (
             ""
@@ -837,10 +836,6 @@ const svgUrl = frontmatter.svgImage.publicURL
 <br />
 <GoBack />
 
-
-<div style={{padding:'0 5vw', marginTop:'200px',  color:'inherit !important'}}>
-{(previous || next) && <Pagination {...props} />}
-</div>
 </div>
           ) : (
             ""
