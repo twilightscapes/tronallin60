@@ -110,7 +110,7 @@ const Controls = forwardRef(
 </div> */}
                 <div
                   onClick={onPlayPause}
-                  className="controls"
+                  className="controls actionJackson" 
                   style={{
                     // animation:'fade1',
                     // animationDuration:'1s',
@@ -151,7 +151,7 @@ const Controls = forwardRef(
                 <div
                   // onClick={() => setState({ ...state, muted: !state.muted })}
                   onClick={onMute}
-                  className="controls"
+                  className="controls actionJackson"
                   style={{
                     // position:'relative',
                     // zIndex:'',

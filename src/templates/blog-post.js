@@ -91,31 +91,29 @@ const Pagination = props => (
         // <li style={{border:'1px solid', borderRadius:'12px', filter:'drop-shadow(0 0px 6px rgba(0, 0, 0, 1))'}}>
         <li style={{}}>
           <Link style={{}}  to= {props.previous.frontmatter.slug + "/"} rel="prev">
-            <p>
-              <span className="icon -left">
+          <button className="actionJackson">
+              <span className="TronType icon -left">
                 <RiArrowLeftLine />
+            
               </span>{" "}
-              Previous
-            </p>
+             
+            
             <span className="page-title">
               {props.previous.frontmatter.title}
-            </span>
+            </span></button>
           </Link>
         </li>
       )}
       {props.next && props.next.frontmatter.template === "blog-post" && (
         <li style={{}}>
           <Link to={props.next.frontmatter.slug + "/"} rel="next">
-            <p
-              style={{
-              }}
-            >
-              Next Up{" "}
+          <button className="actionJackson">
+            
+            
+            <span className="page-title">{props.next.frontmatter.title}</span> {" "}
               <span className="icon -right">
                 <RiArrowRightLine />
-              </span>
-            </p>
-            <span className="page-title">{props.next.frontmatter.title}</span>
+              </span></button>
           </Link>
         </li>
       )}
@@ -123,7 +121,7 @@ const Pagination = props => (
   </div>
 )
 
-
+{/* <button className="actionJackson TRON tronText" style="display: flex; justify-content: center; z-index: 2; filter: drop-shadow(rgb(0, 0, 0) 2px 2px 2px); width: 30vw; border-radius: 200px; font-size: 2vw; padding: 10% 5%;"><a href="/#match2" style="color: rgb(55, 248, 248);">Match Two <span style="font-size: 150%;">@</span></a></button> */}
 
 
 
