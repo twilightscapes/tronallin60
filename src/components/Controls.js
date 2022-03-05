@@ -49,28 +49,30 @@ const Controls = forwardRef(
                     animation:'fade1',
                     animationDuration:'1s',
                     animationDelay:'5s',
-                    opacity:'0',
+                    opacity:'1',
                     animationFillMode:'forwards',
                     position:'relative',
-                    zIndex:'1',
-                    right:'',
+                    zIndex:'2',
+                    right:'0',
+                    left:'0',
+                    top:'0',
                     bottom:'',
-                    border:'2px solid ',
+                    border:'0px solid red',
                     display:'grid',
                     placeContent:'center',
                     width:'100vw',
                     height:'100vh',
-                    fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'1rem', background:'rgba(51, 51, 51, 0.3)', borderRadius:'8px', border:'1px solid #666', filter:'drop-shadow(2px 2px 2px #000)', cursor:'pointer',
+                    fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'1rem',  borderRadius:'8px', cursor:'pointer',
                 }}
                 >
-                  {/* <MdPlayArrow style={{fontSize:'50px', position:'absolute'}}  /> */}
+                  
                   {playing ? (
                     <>
-                    <MdPause style={{fontSize:'56px', position:'absolute'}} />
+                    {/* <MdPause style={{fontSize:'56px', position:'absolute'}} /> */}
                     </>
                   ) : (
               <>
-              <MdPlayArrow style={{fontSize:'56px', position:'absolute'}}  />
+              {/* <MdPlayArrow style={{fontSize:'56px', position:'absolute'}}  /> */}
               </>
                   )}
                 </div>
@@ -87,9 +89,9 @@ const Controls = forwardRef(
   <>
       <div style={{position:'absolute', display:'block', background:'#000', height:'60px', width:'100%', zIndex:'', top:'0', right:'0', textAlign:'center', paddingTop:'10px' }}>allin60.com</div>
 
-  <div style={{position:'absolute', display:'block', background:'#111', height:'175px', width:'100%', zIndex:'1', bottom:'0', right:'0', textAlign:'center', display:'grid', placeContent:'center' }}>
+  <div style={{position:'absolute', display:'block', background:'#111', height:'100vh', width:'100%', zIndex:'1', bottom:'0', right:'0', textAlign:'center', display:'grid', placeContent:'center' }}>
  
-  {/* <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'30vw', height:'', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} /> */}
+  <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'30vw', height:'', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
 
   </div>
   </>
