@@ -28,6 +28,57 @@ const Controls = forwardRef(
     return (
 
 <>
+
+
+
+{/* <div style={{position:'relative', background:'', height:'100vh', width:'100%', zIndex:'1', top:'0', right:'0', textAlign:'center', display:'grid', placeContent:'center',  }}>
+ 
+ <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'30vw', height:'', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
+
+<div onClick={onPlayPause} style={{fontSize:'56px', position:'relative', top:'0', height:'100vw', width:'100vw', border:'1px solid red', animation:'fadeout1', animationDuration:'1s', animationDelay:'5s', opacity:'', animationFillMode:'forwards', display:'block',}}>
+
+</div>
+
+ </div> */}
+
+
+<div
+                  onClick={onPlayPause}
+                  className=""
+                  style={{
+                    animation:'fade1',
+                    animationDuration:'1s',
+                    animationDelay:'5s',
+                    opacity:'0',
+                    animationFillMode:'forwards',
+                    position:'relative',
+                    zIndex:'1',
+                    right:'',
+                    bottom:'',
+                    border:'2px solid ',
+                    display:'grid',
+                    placeContent:'center',
+                    width:'100vw',
+                    height:'100vh',
+                    fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'1rem', background:'rgba(51, 51, 51, 0.3)', borderRadius:'8px', border:'1px solid #666', filter:'drop-shadow(2px 2px 2px #000)', cursor:'pointer',
+                }}
+                >
+                  {/* <MdPlayArrow style={{fontSize:'50px', position:'absolute'}}  /> */}
+                  {playing ? (
+                    <>
+                    <MdPause style={{fontSize:'56px', position:'absolute'}} />
+                    </>
+                  ) : (
+              <>
+              <MdPlayArrow style={{fontSize:'56px', position:'absolute'}}  />
+              </>
+                  )}
+                </div>
+
+
+
+
+
       {playing ? (
         <>
 
@@ -36,13 +87,18 @@ const Controls = forwardRef(
   <>
       <div style={{position:'absolute', display:'block', background:'#000', height:'60px', width:'100%', zIndex:'', top:'0', right:'0', textAlign:'center', paddingTop:'10px' }}>allin60.com</div>
 
-  <div style={{position:'absolute', display:'block', background:'#000', height:'100%', width:'100%', zIndex:'1', bottom:'0', right:'0', textAlign:'center', display:'grid', placeContent:'center' }}>
+  <div style={{position:'absolute', display:'block', background:'#111', height:'175px', width:'100%', zIndex:'1', bottom:'0', right:'0', textAlign:'center', display:'grid', placeContent:'center' }}>
  
-  <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'30vw', height:'', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
+  {/* <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'30vw', height:'', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} /> */}
 
   </div>
   </>
       )}
+
+
+
+
+      
 
 
       <div ref={ref} className="" style={{width:'', height:'', border:'0px solid red', display:'flex', justifyContent:'center', bottom:'22px', position:'absolute', right:'4vw', zIndex:'55', gap:'40px'}}>
@@ -54,10 +110,10 @@ const Controls = forwardRef(
                   onClick={onPlayPause}
                   className=""
                   style={{
-                    animation:'fade',
+                    animation:'fade1',
                     animationDuration:'1s',
                     animationDelay:'5s',
-                    opacity:'0',
+                    opacity:'1',
                     animationFillMode:'forwards',
                     position:'relative',
                     zIndex:'',

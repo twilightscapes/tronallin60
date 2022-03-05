@@ -262,13 +262,13 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
 
     </div> 
     
-<div className="" style={{display:'flex', flexDiection:'', justifyContent:'center',  position:'absolute', left:'', right:'', bottom:'20vh', zIndex:'', width:'100vw', margin:'0 auto', height:'', border:'0px solid red', textAlign:'center'}}>
+<div className="" style={{display:'flex', flexDiection:'', justifyContent:'center',  position:'absolute', left:'', right:'', bottom:'20%', zIndex:'1', width:'100vw', margin:'0 auto', height:'', border:'0px solid red', textAlign:'center'}}>
 
    
           
   
             <div className="tronText TronType" style={{
-          display:'flex', justifyContent:'center', zIndex:'', filter:'drop-shadow(2px 2px 2px #000)', width:'80%',  padding:'2% 1rem', borderRadius:'200px', border:'3px dotted #04e2ff', lineHeight:'200%', fontSize:'clamp(1.2rem, 3vw, 2.8rem)', color:'rgb(6, 232, 240)',  textShadow:'2px 2px 2px #333'
+          display:'flex', justifyContent:'center', zIndex:'', filter:'drop-shadow(2px 2px 2px #000)', width:'80%',  padding:'2% 1rem', borderRadius:'200px', border:'3px dotted #04e2ff', lineHeight:'200%', fontSize:'clamp(1.2rem, 3vw, 2.8rem)', color:'rgb(6, 232, 240)',  textShadow:'2px 2px 2px #333', zIndex:''
           }}>
             CHOOSE YOUR CHARACTER
             </div>
