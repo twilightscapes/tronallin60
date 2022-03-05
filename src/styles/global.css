@@ -3111,9 +3111,97 @@ border:1px solid #222;
 
     .social *{color:#fff !important;}
 
-  
+  /* HUD CONTROLS */
 
+/* 
+DEFAULT
 .pagination a{ color:inherit !important;}
+.pagination {position:relative; right:2vw;}
+.pagination ul{
+display:flex; justify-content:flex-end; gap:20px;}
+.pagination ul li{
+  font-weight: bold;
+  padding:.3rem;
+  color:#999;
+  font-size: 1rem;
+  border-radius: 12px;
+  filter: drop-shadow(2px 2px 2px #000);
+  cursor:pointer;
+}
+.controls{
+animation:fade1;
+animation-duration:1s;
+animation-delay:5s;
+opacity:1;
+animation-fill-mode:forwards;
+position:relative;
+border:2px solid;
+display:grid;
+place-content:center;
+width:60px;
+height:60px;
+font-weight:bold;
+padding:2px;
+color:#999;
+font-size:1rem;
+border-radius:12px;
+border:1px solid #666;
+cursor:pointer;          
+}
+.hudicon{
+  font-size: 60px;
+  position:absolute;
+}
+
+*/
+
+
+.pagination a{ color:#ccc !important;}
+.pagination a:hover{ color:rgb(3, 240, 248) !important;}
+.pagination {position:relative; right:2vw;}
+.pagination ul{
+display:flex; justify-content:flex-end; gap:20px;}
+.pagination ul li{
+  font-weight: bold;
+
+  color:rgb(2, 221, 250) !important;
+  font-size: 1rem;
+  border-radius: 20%;
+  border:0px double rgb(2, 221, 250);
+  filter: drop-shadow(2px 2px 2px #000);
+  cursor:pointer;
+
+
+
+}
+.controls{
+animation:fade1;
+animation-duration:1s;
+animation-delay:5s;
+opacity:1;
+animation-fill-mode:forwards;
+position:relative;
+border:2px solid;
+display:grid;
+place-content:center;
+width:66px;
+height:66px;
+font-weight:bold;
+padding:2px;
+color:rgb(2, 221, 250);
+font-size:1rem;
+border-radius:50%;
+border:3px solid rgb(2, 221, 250);
+cursor:pointer;          
+}
+.hudicon{
+  font-size: 60px;
+  position:absolute;
+  
+}
+
+  /* HUD CONTROLS */
+
 
 .numerals{display:inline-block; padding:.4rem; outline:0px solid}
 

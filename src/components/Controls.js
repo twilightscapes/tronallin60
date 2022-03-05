@@ -44,7 +44,7 @@ const Controls = forwardRef(
 
 {/* <div
                   onClick={onPlayPause}
-                  className=""
+                  className="controls"
                   style={{
                     animation:'fade1',
                     animationDuration:'1s',
@@ -110,33 +110,33 @@ const Controls = forwardRef(
 </div> */}
                 <div
                   onClick={onPlayPause}
-                  className=""
+                  className="controls"
                   style={{
-                    animation:'fade1',
-                    animationDuration:'1s',
-                    animationDelay:'5s',
-                    opacity:'1',
-                    animationFillMode:'forwards',
-                    position:'relative',
-                    zIndex:'',
-                    right:'',
-                    bottom:'',
-                    border:'2px solid ',
-                    display:'grid',
-                    placeContent:'center',
-                    width:'60px',
-                    height:'60px',
-                    fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'1rem',  borderRadius:'8px', border:'1px solid #666', cursor:'pointer',
+                    // animation:'fade1',
+                    // animationDuration:'1s',
+                    // animationDelay:'5s',
+                    // opacity:'1',
+                    // animationFillMode:'forwards',
+                    // position:'relative',
+                    // zIndex:'',
+                    // right:'',
+                    // bottom:'',
+                    // border:'2px solid ',
+                    // display:'grid',
+                    // placeContent:'center',
+                    // width:'60px',
+                    // height:'60px',
+                    // fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'1rem',  borderRadius:'8px', border:'1px solid #666', cursor:'pointer',
                 }}
                 >
                   {/* <MdPlayArrow style={{fontSize:'50px', position:'absolute'}}  /> */}
                   {playing ? (
                     <>
-                    <MdPause style={{fontSize:'55px', position:'absolute'}} />
+                    <MdPause className="hudicon" style={{}} />
                     </>
                   ) : (
               <>
-              <MdPlayArrow style={{fontSize:'55px', position:'absolute'}}  />
+              <MdPlayArrow className="hudicon" style={{}}  />
               </>
                   )}
                 </div>
@@ -151,26 +151,26 @@ const Controls = forwardRef(
                 <div
                   // onClick={() => setState({ ...state, muted: !state.muted })}
                   onClick={onMute}
-                  className=""
+                  className="controls"
                   style={{
-                    position:'relative',
-                    zIndex:'',
-                    right:'',
-                    bottom:'',
-                    border:'2px solid ',
-                    display:'grid',
-                    placeContent:'center',
-                    width:'60px',
-                    height:'60px',
-                    fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'1rem',  borderRadius:'8px', border:'1px solid #666', cursor:'pointer',
+                    // position:'relative',
+                    // zIndex:'',
+                    // right:'',
+                    // bottom:'',
+                    // border:'2px solid ',
+                    // display:'grid',
+                    // placeContent:'center',
+                    // width:'60px',
+                    // height:'60px',
+                    // fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'1rem',  borderRadius:'8px', border:'1px solid #666', cursor:'pointer',
                 }}
                 >
                   {muted ? (
-                    <MdVolumeOff fontSize="large" style={{fontSize:'56px', position:'absolute'}}  />
+                    <MdVolumeOff className="hudicon" fontSize="large" style={{}}  />
                   ) : volume > 0.5 ? (
-                    <MdVolumeUp fontSize="large" style={{fontSize:'56px', position:'absolute'}}  />
+                    <MdVolumeUp className="hudicon" fontSize="large" style={{}}  />
                   ) : (
-                    <MdVolumeDown fontSize="large" style={{fontSize:'56px', position:'absolute'}}  />
+                    <MdVolumeDown className="hudicon" fontSize="large" style={{}}  />
                   )}
                 </div>
 

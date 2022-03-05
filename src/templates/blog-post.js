@@ -85,12 +85,12 @@ const CustomBox = styled.div`
 
 
 const Pagination = props => (
-  <div className="pagination -post1" style={{maxWidth:'', position:'relative', right:'2vw'}}>
-    <ul className="" style={{display:'flex', justifyContent:'flex-end', gap:"20px", border:'0px solid purple',}}>
+  <div className="pagination -post1" style={{}}>
+    <ul className="" style={{}}>
       {props.previous && props.previous.frontmatter.template === "blog-post" && (
         // <li style={{border:'1px solid', borderRadius:'12px', filter:'drop-shadow(0 0px 6px rgba(0, 0, 0, 1))'}}>
-        <li style={{fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'1rem', borderRadius:'8px', border:'0px solid #666', filter:'drop-shadow(2px 2px 2px #000)', cursor:'pointer'}}>
-          <Link style={{color:'#fff'}}  to= {props.previous.frontmatter.slug + "/"} rel="prev">
+        <li style={{}}>
+          <Link style={{}}  to= {props.previous.frontmatter.slug + "/"} rel="prev">
             <p>
               <span className="icon -left">
                 <RiArrowLeftLine />
@@ -104,8 +104,8 @@ const Pagination = props => (
         </li>
       )}
       {props.next && props.next.frontmatter.template === "blog-post" && (
-        <li style={{fontWeight:'bold', padding:'.3rem', color:'#999', fontSize:'1rem', borderRadius:'8px', border:'0px solid #666', filter:'drop-shadow(2px 2px 2px #000)', cursor:'pointer'}}>
-          <Link  to={props.next.frontmatter.slug + "/"} rel="next">
+        <li style={{}}>
+          <Link to={props.next.frontmatter.slug + "/"} rel="next">
             <p
               style={{
               }}
