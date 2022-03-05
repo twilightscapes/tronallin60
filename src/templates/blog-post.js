@@ -425,7 +425,7 @@ const svgUrl = frontmatter.svgImage.publicURL
   const [state, setState] = useState({
     playing: true,
     controls: false,
-    light: true,
+    light: false,
     muted: false,
     loop: true,
   });
@@ -580,9 +580,9 @@ const svgUrl = frontmatter.svgImage.publicURL
             height="100%"
             url={iframeUrl}
             // url="https://youtu.be/lZzai6at_xA"
-            // playing={playing}
+            playing={playing}
             controls={controls}
-            light={false}
+            light={light}
             loop={loop}
             muted={muted}
             config={{
@@ -595,7 +595,7 @@ const svgUrl = frontmatter.svgImage.publicURL
                 playerVars: { showinfo:1, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
               },
             }}
-            playing
+
           playsinline
             playIcon={
               <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'', justifyContent:'center', alignItem:'center', paddingTop:''}}>
