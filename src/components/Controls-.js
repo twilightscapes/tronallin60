@@ -139,7 +139,7 @@ const Controls = forwardRef(
     const id = open ? "simple-popover" : undefined;
 
     return (
-      <div ref={ref} className={classes.controlsWrapper}>
+      <div ref={ref} className={classes.controlsWrapper} style={{position:'', zIndex:''}}>
         <Grid
           container
           direction="column"
@@ -155,19 +155,19 @@ const Controls = forwardRef(
             style={{ padding: 16 }}
           >
             <Grid item>
-              <Typography variant="h5" style={{ color: "#fff" }}>
+              {/* <Typography variant="h5" style={{ color: "#fff" }}>
                 Video Title
-              </Typography>
+              </Typography> */}
             </Grid>
             <Grid item>
-              <Button
+              {/* <Button
                 onClick={onBookmark}
                 variant="contained"
                 color="primary"
                 startIcon={<BookmarkIcon />}
               >
                 Bookmark
-              </Button>
+              </Button> */}
             </Grid>
           </Grid>
           <Grid container direction="row" alignItems="center" justify="center" style={{animation:'fadeout'}}>

@@ -4,7 +4,7 @@
 import React, { useState, useRef } from "react";
 
 import Controls from "../components/Controls";
-
+import screenful from "screenfull";
 import { IoArrowRedoSharp, IoArrowUndoSharp } from "react-icons/io5"
 import { jsx } from "theme-ui"
 import { Link, graphql } from "gatsby"
@@ -124,6 +124,23 @@ const Pagination = props => (
 {/* <button className="actionJackson TRON tronText" style="display: flex; justify-content: center; z-index: 2; filter: drop-shadow(rgb(0, 0, 0) 2px 2px 2px); width: 30vw; border-radius: 200px; font-size: 2vw; padding: 10% 5%;"><a href="/#match2" style="color: rgb(55, 248, 248);">Match Two <span style="font-size: 150%;">@</span></a></button> */}
 
 
+
+
+const format = (seconds) => {
+  if (isNaN(seconds)) {
+    return `00:00`;
+  }
+  const date = new Date(seconds * 1000);
+  const hh = date.getUTCHours();
+  const mm = date.getUTCMinutes();
+  const ss = date.getUTCSeconds().toString().padStart(2, "0");
+  if (hh) {
+    return `${hh}:${mm.toString().padStart(2, "0")}:${ss}`;
+  }
+  return `${mm}:${ss}`;
+};
+
+let count = 0;
 
 
 
@@ -420,21 +437,35 @@ const svgUrl = frontmatter.svgImage.publicURL
   const { iconimage } = useSiteMetadata()
 
 
+  const [showControls, setShowControls] = useState(false);
+  // const [count, setCount] = useState(0);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [timeDisplayFormat, setTimeDisplayFormat] = React.useState("normal");
+  const [bookmarks, setBookmarks] = useState([]);
   const [state, setState] = useState({
+    pip: false,
     playing: true,
     controls: false,
     light: false,
+
     muted: false,
+    played: 0,
+    duration: 0,
+    playbackRate: 1.0,
+    volume: 1,
     loop: true,
+    seeking: false,
   });
 
-  // const playerRef = useRef(null);
+  const playerRef = useRef(null);
+  const playerContainerRef = useRef(null);
   const controlsRef = useRef(null);
-
+  const canvasRef = useRef(null);
   const {
     playing,
     controls,
     light,
+
     muted,
     loop,
     playbackRate,
@@ -448,10 +479,126 @@ const svgUrl = frontmatter.svgImage.publicURL
     setState({ ...state, playing: !state.playing });
   };
 
+  const handleRewind = () => {
+    playerRef.current.seekTo(playerRef.current.getCurrentTime() - 10);
+  };
+
+  const handleFastForward = () => {
+    playerRef.current.seekTo(playerRef.current.getCurrentTime() + 10);
+  };
+
+  const handleProgress = (changeState) => {
+    if (count > 3) {
+      controlsRef.current.style.visibility = "visible";
+      count = 0;
+    }
+    if (controlsRef.current.style.visibility == "visible") {
+      count += 1;
+    }
+    if (!state.seeking) {
+      setState({ ...state, ...changeState });
+    }
+  };
+
+  const handleSeekChange = (e, newValue) => {
+    console.log({ newValue });
+    setState({ ...state, played: parseFloat(newValue / 100) });
+  };
+
+  const handleSeekMouseDown = (e) => {
+    setState({ ...state, seeking: true });
+  };
+
+  const handleSeekMouseUp = (e, newValue) => {
+    console.log({ value: e.target });
+    setState({ ...state, seeking: false });
+    // console.log(sliderRef.current.value)
+    playerRef.current.seekTo(newValue / 100, "fraction");
+  };
+
+  const handleDuration = (duration) => {
+    setState({ ...state, duration });
+  };
+
+  const handleVolumeSeekDown = (e, newValue) => {
+    setState({ ...state, seeking: false, volume: parseFloat(newValue / 100) });
+  };
+  const handleVolumeChange = (e, newValue) => {
+    // console.log(newValue);
+    setState({
+      ...state,
+      volume: parseFloat(newValue / 100),
+      muted: newValue === 0 ? true : false,
+    });
+  };
+
+  const toggleFullScreen = () => {
+    screenful.toggle(playerContainerRef.current);
+  };
+
+  const handleMouseMove = () => {
+    console.log("mousemove");
+    controlsRef.current.style.visibility = "visible";
+    count = 0;
+  };
+
+  const hanldeMouseLeave = () => {
+    controlsRef.current.style.visibility = "visible";
+    count = 0;
+  };
+
+  const handleDisplayFormat = () => {
+    setTimeDisplayFormat(
+      timeDisplayFormat == "normal" ? "remaining" : "normal"
+    );
+  };
+
+  const handlePlaybackRate = (rate) => {
+    setState({ ...state, playbackRate: rate });
+  };
+
   const hanldeMute = () => {
     setState({ ...state, muted: !state.muted });
   };
 
+  const addBookmark = () => {
+    const canvas = canvasRef.current;
+    canvas.width = 160;
+    canvas.height = 90;
+    const ctx = canvas.getContext("2d");
+
+    ctx.drawImage(
+      playerRef.current.getInternalPlayer(),
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
+    const dataUri = canvas.toDataURL();
+    canvas.width = 0;
+    canvas.height = 0;
+    const bookmarksCopy = [...bookmarks];
+    bookmarksCopy.push({
+      time: playerRef.current.getCurrentTime(),
+      display: format(playerRef.current.getCurrentTime()),
+      image: dataUri,
+    });
+    setBookmarks(bookmarksCopy);
+  };
+
+  const currentTime =
+    playerRef && playerRef.current
+      ? playerRef.current.getCurrentTime()
+      : "00:00";
+
+  const duration =
+    playerRef && playerRef.current ? playerRef.current.getDuration() : "00:00";
+  const elapsedTime =
+    timeDisplayFormat == "normal"
+      ? format(currentTime)
+      : `-${format(duration - currentTime)}`;
+
+  const totalDuration = format(duration);
   
 
   return (
@@ -561,28 +708,32 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
+    
 
 
 
-
-{/* <div
+<div
           onMouseMove={handleMouseMove}
           onMouseLeave={hanldeMouseLeave}
           ref={playerContainerRef}
-          className={classes.playerWrapper}
-        > */}
+          // className={classes.playerWrapper}
+        >
           <ReactPlayer
-            // ref={playerRef}
+            ref={playerRef}
             style={{position:'', zIndex:''}}
             width="100%"
             height="100%"
             url={iframeUrl}
             // url="https://youtu.be/lZzai6at_xA"
+            pip={pip}
             playing={playing}
-            controls={controls}
+            controls={false}
             light={light}
             loop={loop}
+            playbackRate={playbackRate}
+            volume={volume}
             muted={muted}
+            onProgress={handleProgress}
             config={{
               file: {
                 attributes: {
@@ -634,13 +785,29 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 <Controls
             ref={controlsRef}
+            onSeek={handleSeekChange}
+            onSeekMouseDown={handleSeekMouseDown}
+            onSeekMouseUp={handleSeekMouseUp}
+            onDuration={handleDuration}
+            onRewind={handleRewind}
             onPlayPause={handlePlayPause}
+            onFastForward={handleFastForward}
             playing={playing}
             played={played}
+            elapsedTime={elapsedTime}
+            totalDuration={totalDuration}
             onMute={hanldeMute}
             muted={muted}
+            onVolumeChange={handleVolumeChange}
+            onVolumeSeekDown={handleVolumeSeekDown}
+            onChangeDispayFormat={handleDisplayFormat}
+            playbackRate={playbackRate}
+            onPlaybackRateChange={handlePlaybackRate}
+            onToggleFullScreen={toggleFullScreen}
+            volume={volume}
+            onBookmark={addBookmark}
           />
-
+</div>
 
 
 {/* {Suggestion1 ? (
