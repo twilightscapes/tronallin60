@@ -1,12 +1,12 @@
 import React, { useState, useRef } from "react";
-import { Layout } from "../../components/layout";
+// import { Layout } from "../../components/layout";
 
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 // import { graphql } from "gatsby"
 // import { GatsbyImage } from 'gatsby-plugin-image'
 // import TwilightLogo from "../../static/assets/logo.svg"
 // import { StaticImage } from "gatsby-plugin-image"
-import { useSiteMetadata } from "../../hooks/use-site-metadata"
+// import { useSiteMetadata } from "../../hooks/use-site-metadata"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import ReactPlayer from 'react-player/lazy'
 import Controls from "../../components/Controls"
@@ -30,10 +30,10 @@ import screenful from "screenfull";
 // import McpEffects from "../../static/assets/mcp-effects.svg"
 // import QuoraStand from "../../static/assets/quora-ass.png"
 // import KevinFlynn from "../../static/assets/kevin-flynn.png"
-// import TronChick from "../../static/assets/tron-chick1.svg"
+import TronChick from "../../../static/assets/tron-chick1.svg"
 import { ImPlay } from "react-icons/im"
-import SorryFolks from "../../../static/assets/sorry-folks-moose.svg"
-import { RiArrowLeftSLine, RiBugLine } from "react-icons/ri"
+// import SorryFolks from "../../../static/assets/sorry-folks-moose.svg"
+// import { RiArrowLeftSLine, RiBugLine } from "react-icons/ri"
 import styled from "styled-components"
 const CustomBox = styled.div`
 
@@ -353,8 +353,9 @@ function Sirens() {
 {/* <Layout> */}
 {/* GRID INTRO */}
 
-<div id="" className="wrap-element tronpanel" style={{position:'absolute', top:'0', zIndex:'2', overflow:'', height:'100vh', width:'100vw'}}>
-<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'5vw', position:'absolute', top:'1vh', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:'5'}}>
+<div id="" className="wrap-element tronpanel" style={{position:'absolute', top:'0', zIndex:'2', overflow:'', height:'80vh', width:'100vw'}}>
+  
+<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'5vw', position:'absolute', top:'5vh', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:'1'}}>
         <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>THE SIRENS</div>
       </h1>
 
@@ -502,9 +503,11 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 
       </div>
 
+      <div style={{position:'absolute', top:'0', left:'10vw', zIndex:'', maxWidth:'30vw', height:'100vh', border:'0px solid yellow'}}>
 
 
-
+      <TronChick title="Gem - the leader of the Sirens" style={{height:'60vh', position:'absolute', zIndex:'', bottom:'-10vh', left:'-15vw', transform:'scaleX(-1)', }} />
+</div>
 
       </div>
 

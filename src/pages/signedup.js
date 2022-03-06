@@ -51,7 +51,7 @@ export default function SignedUpPage() {
    
 
       <div className="spacer33"></div> 
-      <Link to="/" className="button">
+      <Link to="/minutes/" className="button">
         <RiArrowLeftSLine className="icon -left" />
         For now, check out the latest All in 60 Seconds.
       </Link>

@@ -54,7 +54,7 @@ const NewsletterPage = () => (
 
 
             
-              <div className="txtshadow" style={{fontSize:'120%', textAlign:'center', marginTop:'10px'}}><strong>Get All The Latest Minutes</strong></div>
+              <div className="txtshadow TRON" style={{fontSize:'150%', textAlign:'center', marginTop:'10px', lineHeight:'150%'}}><strong>Don't Miss A Minute!</strong></div>
               <br />
               <span className="txtshadow" style={{fontSize:'95%'}}>Get notified when NEW Minutes drop </span>
 
@@ -65,7 +65,7 @@ const NewsletterPage = () => (
                <label style={{color:'#fff'}} htmlFor="email">
                  <input type="email" name="email" required={true}
                       placeholder="your@email.com"
-                      style={{}}/></label>
+                      style={{  background:'rgba(0,0,0,0.50)', outline:'1px solid #06f8f8', color:'#ccc'}}/></label>
                       
             
 
@@ -75,7 +75,7 @@ const NewsletterPage = () => (
             
 
             <button
-              className="button"
+              className="actionJackson"
               
               type="submit"
               style={{marginTop:'-8px', fontSize:'clamp(1rem, 1.5vw, 1.5rem)', whiteSpace:'nowrap'}}

@@ -85,11 +85,15 @@ function Marv() {
 {/* <Layout> */}
 {/* GRID INTRO */}
 
-<div id="" className="wrap-element tronpanel1" style={{position:'relative', top:'0', zIndex:'2', overflow:'', height:'100vh', width:'100vw'}}>
+<div id="" className="wrap-element tronpanel1" style={{position:'relative', top:'0', zIndex:'2', overflow:'', height:'70vh', width:'100vw'}}>
 
-<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'5vw', position:'absolute', top:'2vh', marginTop:'', width:'100%', padding:'0 0', opacity:'1', zIndex:'5'}}>
+{/* <h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'5vw', position:'absolute', top:'2vh', marginTop:'', width:'100%', padding:'0 0', opacity:'1', zIndex:'5'}}>
         <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>ENCOM OS 12</div>
         
+      </h1> */}
+
+      <h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'5vw', position:'absolute', top:'5vh', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:'1'}}>
+        <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>ENCOM OS 12</div>
       </h1>
 
       
@@ -111,7 +115,7 @@ function Marv() {
             controls={controls}
             light={false}
             loop={loop}
-            muted={muted}
+            muted={false}
             config={{
               file: {
                 attributes: {
