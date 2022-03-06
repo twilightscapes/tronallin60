@@ -33,24 +33,21 @@ import { ImPlay } from "react-icons/im"
 import styled from "styled-components"
 const CustomBox = styled.div`
 
-.wrap-element {
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  aspect-ratio: 16 / 9;
-  z-index:0;
-  max-width:100%;
-  max-height:75vh !important;
-}
-.wrap-element iframe {
+
+
+.controlsWrapper: {
+  visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
-  width: 300%; 
-  left: -100%; 
-  border: 0;
-  overflow:hidden;
-}
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+},
 
 
 
@@ -58,12 +55,7 @@ const CustomBox = styled.div`
 
 
 @media (max-width: 48em) {
-  .wrap-element {
-    padding-bottom: 0;
-    height:300px;
-    overflow:visible;
-    border:0px solid red;
-  }
+
   .pagination{maxWidth:'100vw'}
 }
 

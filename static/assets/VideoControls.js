@@ -139,7 +139,7 @@ const Controls = forwardRef(
     const id = open ? "simple-popover" : undefined;
 
     return (
-      <div ref={ref} className={classes.controlsWrapper}>
+      <div ref={ref} className="controlsWrapper">
         <Grid
           container
           direction="column"
