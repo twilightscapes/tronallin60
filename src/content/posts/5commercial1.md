@@ -1,10 +1,10 @@
 ---
 template: blog-post
-title: Please exit through Gift Shop
-slug: /giftshop
-date: 2021-12-01 01:23
-description: Please exit through Gift Shop
-youtuber: "1kIihY252eE"
+title: Commercial Interuption
+slug: /commercial-interruption
+date: 2021-05-02 01:23
+description: Please visit our sponsors
+youtuber: "3JPPFG-Np4M"
 youtuber2: ""
 youtubeshoworiginal: ""
 youtubersuggestion1: "https://youtu.be/S5S6s5dZXNM"
@@ -18,13 +18,13 @@ audioend: ""
 youtubeloop: "1"
 youtubecontrols: "0"
 youtubeautostart: "1"
-isnftforsale: ""
+isnftforsale: "1"
 svgzindex: "0"
-comments: ""
-shareable: ""
+comments: "1"
+shareable: "1"
 underlayImage: /assets/transparent.png
-featuredImage: /assets/giftshop.jpg
-svgImage: /assets/transcendence.svg
+featuredImage: /assets/commercial-interuption.jpg
+svgImage: /assets/nebula.svg
 nftlink: ""
 nftdrop: ""
 nftredeem: ""
@@ -77,7 +77,7 @@ nftredeem: ""
 
 
 
-<object style="width:100vw; height:100vh; position:absolute; top:0; right:0; left:0;" class=" " id="svg1" data="/assets/transcendence.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
+<object style="width:100vw; height:100vh; position:absolute; top:0; right:; left:;" class=" " id="svg1" data="/assets/nebula.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
 
 
 
