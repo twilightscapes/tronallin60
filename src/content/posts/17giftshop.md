@@ -23,7 +23,7 @@ svgzindex: "0"
 comments: ""
 shareable: ""
 underlayImage: /assets/transparent.png
-featuredImage: /assets/proceed-to-games.jpg
+featuredImage: /assets/giftshop.jpg
 svgImage: /assets/mcp.svg
 nftlink: ""
 nftdrop: ""
@@ -36,12 +36,6 @@ nftredeem: ""
 <div style="position:relative; top:0; z-index:0; border:px solid blue; height:100vh; width:100vw; overflow:hidden; display:flex; ">
 
 
-
-<script type="text/javascript">
-var seconds = 5;
-var url = "https://www.willmaster.com/index.php";
-setTimeout("window.location='"+url+"'",seconds*1000);
-</script>
 
 
 

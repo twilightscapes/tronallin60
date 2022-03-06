@@ -4,10 +4,10 @@ title: Meet Quorra
 slug: /meet-quorra
 date: 2021-09-01 01:23
 description: Meet Quorra
-youtuber: "CvyuuTc8F2o"
+youtuber: "sqJdG95juso"
 youtuber2: ""
 youtubeshoworiginal: "1"
-youtubersuggestion1: "https://youtu.be/ErvxEjDUO4s"
+youtubersuggestion1: "CvyuuTc8F2o"
 youtubersuggestion2: "https://youtu.be/UfWnQuAxa5Y"
 youtubersuggestion3: "https://youtu.be/LE5m5aawuao"
 youtubestart: "20"
@@ -23,13 +23,13 @@ svgzindex: "0"
 comments: "1"
 shareable: "1"
 underlayImage: /assets/transparent.png
-featuredImage: /assets/proceed-to-games.jpg
+featuredImage: /assets/meet-quorra.jpg
 svgImage: /assets/quora-strike.svg
 nftlink: ""
 nftdrop: ""
 nftredeem: ""
 ---
-<div style="position:relative; top:0; z-index:0; border:px solid blue; height:100vh; width:100vw; overflow:hidden; display:flex; ">
+<!-- <div style="position:relative; top:0; z-index:0; border:px solid blue; height:100vh; width:100vw; overflow:hidden; display:flex; ">
 
 
 <div class="" style="position:relative; z-index:0; min-width:; height:100%; padding:4vh 1rem 1rem 3rem; font-size:clamp(.7rem, 3vw, 3.2rem); left:0;, top:4vh; line-height:100%; text-shadow:0 2px 7px #000; background:rgba(0,0,0,0.50); border-radius:12px; border:0px solid yellow;">
@@ -51,22 +51,14 @@ nftredeem: ""
 
 
 <div style="position:relative; top:0; right:0; border:0px solid; z-index:1; max-width:30vw; height:100vh; background:;">
-
-
-
-<!-- <a href="/the-grid/sirens/" style="position:absolute; top:0; right:0; display:block; width:40%; height:100%; right:0; z-index:1; border:0px solid green; background:;"> -->
 <object style="height:100vh;" class="character" id="svg1" data="/assets/quora-strike.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
-<!-- </a> -->
-
-
-
-
 </div>
 
 
 
+
+</div> -->
 <!-- end -->
-</div>
 
 
 

@@ -1,17 +1,17 @@
 ---
 template: blog-post
-title: LighCycle Grid
-slug: /lightcycle-grid
-date: 2021-08-01 01:43
+title: Escape The Grid
+slug: /escape-the-grid
+date: 2021-08-11 01:43
 description: Tron in ONLY 60 seconds
-youtuber: "SqSuRdkglxM"
+youtuber: "sqJdG95juso"
 youtuber2: ""
 youtubeshoworiginal: "1"
-youtubersuggestion1: ""
+youtubersuggestion1: "3TeUWwsG9kI"
 youtubersuggestion2: ""
 youtubersuggestion3: ""
-youtubestart: "12"
-youtubeend: "49"
+youtubestart: "2"
+youtubeend: "120"
 youtubemute: "0"
 audiostart: ""
 audioend: ""
@@ -23,7 +23,7 @@ svgzindex: "0"
 comments: "1"
 shareable: "1"
 underlayImage: /assets/transparent.png
-featuredImage: /assets/lightdisc-grid.jpg
+featuredImage: /assets/escape-the-grid.jpg
 svgImage: /assets/null.svg
 nftlink: ""
 nftdrop: ""
