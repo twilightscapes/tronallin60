@@ -216,8 +216,8 @@ Contact Me<span>Ordering Questions?</span>
 
 
 <div style={{background:'rgba(0,0,0,0.50)'}}>
-<li className="carto" style={{textAlign:'', color:'#777', cursor:'not-allowed'}}>
-              <Link state={{modal: true}} className="navbar-item txtshadow" to="/grid-launcher/">
+<li className="carto" style={{textAlign:'', color:'#777', cursor:''}}>
+              <Link className="navbar-item txtshadow" to="/grid-launcher/">
               Enter the Grid
               </Link>
       </li>
@@ -228,36 +228,36 @@ Contact Me<span>Ordering Questions?</span>
               </Link>
       </li> */}
 
-      <li className="carto" style={{textAlign:'', color:'#777', cursor:'not-allowed'}}>
-              {/* <Link className="navbar-item txtshadow" to="/the-grid/disc-grid/"> */}
+      <li className="carto" style={{textAlign:'', color:'#777', cursor:''}}>
+              <Link className="navbar-item txtshadow" to="/lightdisc-grid/">
               LightDisc Grid
-              {/* </Link> */}
+              </Link>
       </li>
 
-      <li className="carto" style={{textAlign:'', color:'#777', cursor:'not-allowed'}}>
-              {/* <Link className="navbar-item txtshadow" to="/the-grid/lightcycle-grid/"> */}
+      <li className="carto" style={{textAlign:'', color:'#777', cursor:''}}>
+              <Link className="navbar-item txtshadow" to="/lightcycle-grid/">
               LightCycle Grid
-              {/* </Link> */}
+              </Link>
       </li>
 
 
-      <li className="carto" style={{textAlign:'', color:'#777', cursor:'not-allowed'}}>
-              {/* <Link className="navbar-item txtshadow" to="/the-grid/end-of-line-club/"> */}
+      <li className="carto" style={{textAlign:'', color:'#777', cursor:''}}>
+              <Link className="navbar-item txtshadow" to="/end-of-line-club/">
               End of Line Club
-              {/* </Link> */}
+              </Link>
       </li>
 
-      <li className="carto" style={{textAlign:'', color:'#777', cursor:'not-allowed'}}>
-              {/* <Link className="navbar-item txtshadow" to="/the-grid/return-to-the-source/"> */}
-              Return the Source
-              {/* </Link> */}
+      <li className="carto" style={{textAlign:'', color:'#777', cursor:''}}>
+              <Link className="navbar-item txtshadow" to="/return-to-the-source/">
+              Return to the Source
+              </Link>
       </li>
 
 
-      <li className="carto" style={{textAlign:'', color:'#777', cursor:'not-allowed'}}>
-              {/* <Link className="navbar-item txtshadow" to="/the-grid/end-of-the-grid/"> */}
+      <li className="carto" style={{textAlign:'', color:'#777', cursor:''}}>
+              <Link className="navbar-item txtshadow" to="/end-of-the-grid/">
               End of the Grid
-              {/* </Link> */}
+              </Link>
       </li>
 </div>
 
