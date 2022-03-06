@@ -2175,7 +2175,7 @@ opacity:.2;
 #sidebarMenu {
   height: 75vh;
   position: fixed;
-  z-index:3;
+  z-index:100;
   right: 0;
   top:0;
   display:flex;
@@ -2329,6 +2329,10 @@ filter: drop-shadow(1px 1px 10px var(--primary));
       right: 2%;
     }
     }
+
+
+    body.blogpost .sidebarIconToggle{display: none;}
+    
 
 
 
@@ -2718,7 +2722,7 @@ blockquote.frontquote {
   width:100vw;
   height:100%;
   position:fixed;
-  z-index: 3;
+  z-index: 99;
   opacity: 1 ;
   margin:0 auto;
   padding:0;

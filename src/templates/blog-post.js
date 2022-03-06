@@ -623,11 +623,11 @@ const svgUrl = frontmatter.svgImage.publicURL
 {/* <div className='player-wrapper intro' style={{position:'relative', bottom:'0', zIndex:'', height:'100vh', maxHeight:'', overflow:'', filter: 'drop-shadow(0 0 20px #000)',  }}> */}
 
 
-<div className="contact" style={{position:'fixed', bottom:'0', zIndex:'1',  left:'0', right:'', display:'block', justifyContent:'center', width:'500px', height:'60px', margin:'0 auto', background:'#111', opacity:'.5', borderRadius:'0 12px 0 0'  }}></div>
+<div className="contact" style={{position:'fixed', bottom:'0', zIndex:'1',  left:'0', right:'', display:'block', justifyContent:'center', width:'550px', height:'60px', margin:'0 auto', background:'#111', opacity:'.5', borderRadius:'0 12px 0 0'  }}></div>
 
 
 
-<div className="contact" style={{position:'fixed', bottom:'20px', zIndex:'1',  left:'20px', right:'', display:'flex', justifyContent:'center', width:'400px', margin:'0 auto', gap:'30px'}}>
+<div className="contact" style={{position:'fixed', bottom:'20px', zIndex:'1',  left:'20px', right:'', display:'flex', justifyContent:'center', width:'500px', margin:'0 auto', gap:'30px'}}>
 
   <Link state={{modal: true}}  to="/contact/" className=" " style={{margin:'', textDecoration:''}}>contact</Link>
 
@@ -651,6 +651,14 @@ const svgUrl = frontmatter.svgImage.publicURL
           ) : (
             ""
           )}
+
+
+<label id="menuicon1" htmlFor="openSidebarMenu" className="sidebarIconToggle1" style={{textDecoration:'underline'}}>
+
+site menu
+
+  </label>
+
 
 </div>
 
