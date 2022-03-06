@@ -60,9 +60,7 @@ const CustomBox = styled.div`
 }
 
 
-@media (min-width: 1300px) {
-  .pagination{position:relative; top:-185px;}
-  }
+
 
   // .sidebarIconToggle{bottom:40% !important;}
 
@@ -665,7 +663,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-<div className="wrap-element" style={{overflow:'hidden', height:'50vh'}}>
+<div className="wrap-element" style={{overflow:'hidden', height:'75vh', positon:'relative', top:'0'}}>
 
 {/* {Image ? (
             <GatsbyImage
