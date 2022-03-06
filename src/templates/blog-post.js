@@ -877,8 +877,8 @@ const svgUrl = frontmatter.svgImage.publicURL
               image={UnderlayImage}
               alt={frontmatter.title + " - image"}
               className="mcboaty"
-              style={{height:'auto', width:'100%', maxHeight:'100%', overflow:'hidden', position:'absolute', top:'0', zIndex:'',
-             objectFit:'contain', border:'0px solid red !important'}}
+              style={{height:'auto', width:'100vw', maxHeight:'100vh', overflow:'hidden', position:'absolute', bottom:'0', zIndex:'',
+             objectFit:'cover', border:'0px solid red !important', borderRadius:'none !important'}}
             />
             
           ) : (
