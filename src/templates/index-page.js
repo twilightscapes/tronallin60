@@ -58,6 +58,7 @@ export const pageQuery = graphql`
         youtubestart
         youtubeend
         youtubemute
+        youtubeloop
         youtubecontrols
         youtubeautostart
         svgzindex
@@ -188,7 +189,7 @@ const HomePage = ({ data }) => {
     // const ShowFeature = frontmatter.showFeature
     // const ShowInfo = frontmatter.showInfo
     // const ShowPosts = frontmatter.showPosts
-
+    // const YoutubeLoop = frontmatter.youtubeloop
     
 
 
@@ -277,13 +278,14 @@ const HomePage = ({ data }) => {
 
 {/* <HomeHolder /> */}
 
-<div className="horizontal-holder allin60panel" style={{position:'relative', }}>
+<div className="horizontal-holder allin60panel" style={{position:'relative', borderRadius:'12px', top:'0'}}>
 {/* <div className="RArrow"><span></span></div> */}
 
 
-<div id="" className="wrap-element " style={{overflow:'', width:'100vw', height:'100vh', position:'fixed', top:'0'}}>
+<div id="" className="wrap-element " style={{overflow:'', width:'100vw', height:'100vh', position:'fixed', top:'0', borderRadius:'12px',}}>
 
 <ReactPlayer
+          style={{borderRadius:'12px',}}
          className='frontbg2 '
          url="https://youtu.be/LltRzgvyrps"
          width="100%"
@@ -365,7 +367,7 @@ const HomePage = ({ data }) => {
 
 
 
-<div className=" fire" style={{margin:'', height:'100%', textDecoration:'none'}}>
+<div className=" fire" style={{margin:'', height:'100%', textDecoration:'none', borderRadius:'12px'}}>
 {/* <a title="Shawshank Redemption by Stephen King - All In 60 Seconds" href="/shawshank/" className="navbar-item button fire" style={{margin:'', height:'100%', textDecoration:'none'}}> */}
   <Panel1 />
   {/* </a> */}

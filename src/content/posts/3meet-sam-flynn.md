@@ -4,7 +4,7 @@ title: Meet Sam Flynn
 slug: /meet-sam-flynn
 date: 2021-03-11 01:43
 description: Tron in ONLY 60 seconds
-youtuber: "https://youtu.be/loGNj5jJBTQ"
+youtuber: "loGNj5jJBTQ"
 youtuber2: ""
 youtubeshoworiginal: ""
 youtubersuggestion1: ""
@@ -15,6 +15,7 @@ youtubeend: "62"
 youtubemute: "0"
 audiostart: ""
 audioend: ""
+youtubeloop: "1"
 youtubecontrols: "0"
 youtubeautostart: "1"
 isnftforsale: ""

@@ -4,7 +4,7 @@ title: Ultimate Conflict
 slug: /ultimate-conflict
 date: 2021-10-11 01:23
 description: The Ultimate Conflict
-youtuber: "https://youtu.be/JoX0bNYg1Wc"
+youtuber: "JoX0bNYg1Wc"
 youtuber2: ""
 youtubeshoworiginal: "1"
 youtubersuggestion1: "https://youtu.be/ErvxEjDUO4s"
@@ -15,6 +15,7 @@ youtubeend: "105"
 youtubemute: "0"
 audiostart: ""
 audioend: ""
+youtubeloop: "1"
 youtubecontrols: "0"
 youtubeautostart: "1"
 isnftforsale: ""

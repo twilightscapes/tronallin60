@@ -4,18 +4,19 @@ title: Proceed To Games
 slug: /proceed-to-games
 date: 2021-06-01 01:23
 description: Meet the Sirens
-youtuber: "https://youtu.be/Y7EZBP9j7h0"
+youtuber: "Y7EZBP9j7h0"
 youtuber2: ""
 youtubeshoworiginal: "1"
-youtubersuggestion1: "https://youtu.be/ErvxEjDUO4s"
-youtubersuggestion2: "https://youtu.be/UfWnQuAxa5Y"
-youtubersuggestion3: "https://youtu.be/LE5m5aawuao"
+youtubersuggestion1: ""
+youtubersuggestion2: ""
+youtubersuggestion3: ""
 youtubestart: "40"
 youtubeend: "140"
 youtubemute: "0"
 audiostart: ""
 audioend: ""
 youtubecontrols: "0"
+youtubeloop: "1"
 youtubeautostart: "1"
 isnftforsale: ""
 svgzindex: "0"

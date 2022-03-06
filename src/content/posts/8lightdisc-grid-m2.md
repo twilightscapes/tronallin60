@@ -4,11 +4,11 @@ title: LightDisc - Match 2
 slug: /match-two
 date: 2021-07-11 01:43
 description: Tron in ONLY 60 seconds
-youtuber: "YyoKXfBQgXw"
+youtuber: "https://youtu.be/sqJdG95juso"
 youtuber2: ""
 youtubeshoworiginal: "1"
-youtubersuggestion1: ""
-youtubersuggestion2: ""
+youtubersuggestion1: "https://youtu.be/sqJdG95juso"
+youtubersuggestion2: "https://youtu.be/YyoKXfBQgXw"
 youtubersuggestion3: ""
 youtubestart: "204"
 youtubeend: "221"
@@ -17,12 +17,13 @@ audiostart: ""
 audioend: ""
 youtubecontrols: "0"
 youtubeautostart: "1"
+youtubeloop: "1"
 isnftforsale: ""
 svgzindex: "0"
 comments: "1"
 shareable: "1"
 underlayImage: /assets/transparent.png
-featuredImage: /assets/lightdisc-grid.jpg
+featuredImage: /assets/lightdisc-match2.jpg
 svgImage: /assets/null.svg
 nftlink: ""
 nftdrop: ""

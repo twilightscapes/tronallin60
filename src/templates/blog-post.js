@@ -181,13 +181,13 @@ const Suggestion1 = frontmatter.youtubersuggestion1
 const Suggestion2 = frontmatter.youtubersuggestion2
 const Suggestion3 = frontmatter.youtubersuggestion3
 
+const YoutubeLoop = frontmatter.youtubeloop
 
 if (Suggestion1) {
   <ShowSuggestion />
 }
 else{
 
-  
 }
 
 function ShowSuggestion() {
@@ -232,13 +232,37 @@ Add your own in the comments below!
   )
 }
 
+
+
+
+
+
+
+
+
 const YoutuberSuggestion1 = frontmatter.youtubersuggestion1
 const YoutuberSuggestion2 = frontmatter.youtubersuggestion2
 const YoutuberSuggestion3 = frontmatter.youtubersuggestion3
 const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
-  const YouTube = frontmatter.youtuber
+//   const YouTube = frontmatter.youtuber
 
+// const Url = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
 
+// const Url = [
+//   iframeUrl,
+//   YoutuberSuggestion1,
+//   YoutuberSuggestion2,
+//   YoutuberSuggestion3
+// ]
+
+  // if (!YoutuberSuggestion1) {
+    
+  // }
+  // else{
+  
+  // }
+
+  
 
   if (!YoutuberSuggestion1) {
     <IframeSuggestions />
@@ -247,6 +271,9 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
   
     
   }
+
+
+
 
 
 
@@ -263,8 +290,8 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
           height="100%"
 
           // playing={playing}
-          // controls={true}
-          // light={true}
+          // controls={false}
+          // light={false}
           // loop={loop}
           // muted={muted}
           config={{
@@ -294,7 +321,7 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
 
 
           </button>}
-       light="../assets/transparent.png"
+      //  light="../assets/transparent.png"
           />
 </div>
 
@@ -311,14 +338,14 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
       <div>
               <ReactPlayer
               className='react repo'
-              // url={iframeUrl}
+              url={iframeUrl}
               // style={{position:'absolute', top:'0', zIndex:'100'}}
-              url={[
-                iframeUrl,
-                YoutuberSuggestion1,
-                YoutuberSuggestion2,
-                YoutuberSuggestion3
-              ]}
+              // url={[
+              //   iframeUrl,
+              //   YoutuberSuggestion1,
+              //   YoutuberSuggestion2,
+              //   YoutuberSuggestion3
+              // ]}
               width="100%"
               height="100%"
               config={{
@@ -427,6 +454,9 @@ const svgUrl = frontmatter.svgImage.publicURL
   const { iconimage } = useSiteMetadata()
 
 
+
+
+
   const [showControls, setShowControls] = useState(false);
   // const [count, setCount] = useState(0);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -445,6 +475,12 @@ const svgUrl = frontmatter.svgImage.publicURL
     volume: 1,
     loop: true,
     seeking: false,
+    url: iframeUrl,
+    // url:[
+    //   iframeUrl,
+    //   YoutuberSuggestion1,
+    // ],
+
   });
 
   const playerRef = useRef(null);
@@ -455,7 +491,7 @@ const svgUrl = frontmatter.svgImage.publicURL
     playing,
     controls,
     light,
-
+    url,
     muted,
     loop,
     playbackRate,
@@ -591,6 +627,8 @@ const svgUrl = frontmatter.svgImage.publicURL
   const totalDuration = format(duration);
   
 
+
+
   return (
     
     <Layout className="page">
@@ -627,7 +665,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-<div className="contact" style={{position:'fixed', bottom:'0', zIndex:'1',  left:'0', right:'', display:'flex', justifyContent:'center', alignItems:'center', width:'500px', height:'60px', margin:'0 auto', gap:'10px', background:'rgba(0,0,0,0.30)', borderRadius:'0 12px 0 0'}}>
+<div className="contact actionJackson" style={{position:'fixed', bottom:'0', zIndex:'1',  left:'0', right:'', display:'flex', justifyContent:'center', alignItems:'center', width:'', height:'60px', margin:'0 auto', padding:'0 1rem', gap:'10px', background:'rgba(0,0,0,0.30)', borderRadius:'0 12px 0 0', fontSize:'1rem'}}>
 
 
 <label id="menuicon1" htmlFor="openSidebarMenu" className="sidebarIconToggle1" style={{textDecoration:'underline', color:'#fff'}}>site menu</label>
@@ -720,13 +758,26 @@ const svgUrl = frontmatter.svgImage.publicURL
             style={{position:'', zIndex:''}}
             width="100%"
             height="100%"
-            url={iframeUrl}
+          //       url={[
+          //   iframeUrl,
+          //   Suggestion1,
+          //   Suggestion2,
+          //   Suggestion3
+          // ]}
+          // url={[
+          //   iframeUrl,
+          //   YoutuberSuggestion1,
+          //   YoutuberSuggestion2,
+          //   YoutuberSuggestion3
+          // ]}
+            // url={[YoutubePlaylist, IfSuggestion1, IfSuggestion2, IfSuggestion3]}
             // url="https://youtu.be/lZzai6at_xA"
+            url={url}
             pip={pip}
             playing={playing}
             controls={false}
             light={light}
-            loop={loop}
+            loop={YoutubeLoop}
             playbackRate={playbackRate}
             volume={volume}
             muted={muted}
@@ -738,7 +789,7 @@ const svgUrl = frontmatter.svgImage.publicURL
                 },
               },
               youtube: {
-                playerVars: { showinfo:1, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
+                playerVars: { showinfo:1, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute, }
               },
             }}
 
@@ -880,7 +931,8 @@ const svgUrl = frontmatter.svgImage.publicURL
             ""
        
           ) : (
-            <Iframer3 />
+            // <Iframer3 />
+            ""
           )}
 
 
@@ -1101,6 +1153,7 @@ export const pageQuery = graphql`
         audiostart
         audioend
         youtubemute
+        youtubeloop
         youtubecontrols
         youtubeautostart
         comments

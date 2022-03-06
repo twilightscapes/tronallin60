@@ -4,7 +4,7 @@ title: End of Line Club
 slug: /end-of-line-club
 date: 2021-09-11 01:23
 description: Meet Quorra
-youtuber: "https://youtu.be/SA8bdV8CJNQ"
+youtuber: "SA8bdV8CJNQ"
 youtuber2: ""
 youtubeshoworiginal: "1"
 youtubersuggestion1: "https://youtu.be/ErvxEjDUO4s"
@@ -15,6 +15,7 @@ youtubeend: "115"
 youtubemute: "0"
 audiostart: ""
 audioend: ""
+youtubeloop: "1"
 youtubecontrols: "0"
 youtubeautostart: "1"
 isnftforsale: ""

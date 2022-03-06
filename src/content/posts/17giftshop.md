@@ -4,23 +4,24 @@ title: Please exit through Gift Shop
 slug: /giftshop
 date: 2021-12-01 01:23
 description: Please exit through Gift Shop
-youtuber: ""
+youtuber: "5jlOX5z7yVo"
 youtuber2: ""
-youtubeshoworiginal: "0"
-youtubersuggestion1: "https://youtu.be/ErvxEjDUO4s"
+youtubeshoworiginal: ""
+youtubersuggestion1: "https://youtu.be/S5S6s5dZXNM"
 youtubersuggestion2: "https://youtu.be/UfWnQuAxa5Y"
 youtubersuggestion3: "https://youtu.be/LE5m5aawuao"
-youtubestart: "15"
+youtubestart: "16"
 youtubeend: "41"
 youtubemute: "0"
 audiostart: ""
 audioend: ""
+youtubeloop: "1"
 youtubecontrols: "0"
 youtubeautostart: "1"
 isnftforsale: ""
 svgzindex: "0"
-comments: "0"
-shareable: "0"
+comments: ""
+shareable: ""
 underlayImage: /assets/transparent.png
 featuredImage: /assets/proceed-to-games.jpg
 svgImage: /assets/mcp.svg

@@ -4,7 +4,7 @@ title: End Of The Grid
 slug: /end-of-the-grid
 date: 2021-11-11 01:23
 description: The end of the Grid
-youtuber: "https://youtu.be/J-FkR8L2X5E"
+youtuber: "J-FkR8L2X5E"
 youtuber2: ""
 youtubeshoworiginal: "1"
 youtubersuggestion1: "https://youtu.be/ErvxEjDUO4s"
@@ -15,6 +15,7 @@ youtubeend: "41"
 youtubemute: "0"
 audiostart: ""
 audioend: ""
+youtubeloop: ""
 youtubecontrols: "0"
 youtubeautostart: "1"
 isnftforsale: ""

@@ -233,7 +233,7 @@ class BlogIndex extends React.Component {
 {/* </article>
 </section> */}
 
-        <Pagination {...props} />
+        {/* <Pagination {...props} /> */}
 </div>
 
         

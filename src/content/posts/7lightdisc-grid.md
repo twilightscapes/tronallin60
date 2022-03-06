@@ -4,17 +4,18 @@ title: LightDisc Grid
 slug: /lightdisc-grid
 date: 2021-07-01 01:43
 description: Tron in ONLY 60 seconds
-youtuber: "https://youtu.be/YyoKXfBQgXw"
+youtuber: "https://youtu.be/sqJdG95juso"
 youtuber2: ""
-youtubeshoworiginal: "https://youtu.be/YyoKXfBQgXw"
-youtubersuggestion1: ""
-youtubersuggestion2: ""
+youtubeshoworiginal: "1"
+youtubersuggestion1: "https://youtu.be/sqJdG95juso"
+youtubersuggestion2: "https://youtu.be/YyoKXfBQgXw"
 youtubersuggestion3: ""
-youtubestart: "54"
+youtubestart: "14"
 youtubeend: "81"
 youtubemute: "0"
 audiostart: ""
 audioend: ""
+youtubeloop: "1"
 youtubecontrols: "0"
 youtubeautostart: "1"
 isnftforsale: ""

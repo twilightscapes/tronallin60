@@ -4,7 +4,7 @@ title: Return To The Source
 slug: /return-to-the-source
 date: 2021-11-01 01:23
 description: Return to the Source
-youtuber: "https://youtu.be/EZn2593JNuI"
+youtuber: "EZn2593JNuI"
 youtuber2: ""
 youtubeshoworiginal: "1"
 youtubersuggestion1: "https://youtu.be/ErvxEjDUO4s"
@@ -15,6 +15,7 @@ youtubeend: "122"
 youtubemute: "0"
 audiostart: ""
 audioend: ""
+youtubeloop: "1"
 youtubecontrols: "0"
 youtubeautostart: "1"
 isnftforsale: ""

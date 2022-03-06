@@ -93,7 +93,7 @@ function Panel1() {
 <div className="video-foreground"> */}
 {/* c_V1iD6F1kk */}
 {/* nJ38P5elTkg */}
-<div id="homestart" style={{position:'absolute', top:'-100vh'}}></div>
+<div id="homestart" style={{position:'absolute', top:'-100vh', height:'100vh'}}></div>
 <div id="" className="wrap-element tronpanel" style={{overflow:'hidden'}}>
 <ReactPlayer
          className='frontbg'
@@ -239,11 +239,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
 
 </div>
   
-            <div className="tronText TronType" style={{
-          display:'flex', justifyContent:'center', zIndex:'', filter:'drop-shadow(2px 2px 2px #000)', width:'80%', position:'absolute', top:'30vh',  padding:'2% 1rem', borderRadius:'200px', border:'3px dotted #04e2ff', lineHeight:'200%', fontSize:'clamp(1.2rem, 3vw, 2.8rem)', color:'rgb(6, 232, 240)',  textShadow:'2px 2px 2px #333', zIndex:''
-          }}>
-            CHOOSE YOUR CHARACTER
-            </div>
+       
 
           
         
@@ -251,7 +247,11 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
         </div>
 
 
-  
+        <div className="tronText TronType" style={{
+          display:'flex', justifyContent:'center', filter:'drop-shadow(2px 2px 2px #000)', width:'80%', position:'absolute', top:'40vh', left:'10%',  padding:'2% 1rem', borderRadius:'200px', border:'3px dotted #04e2ff', lineHeight:'200%', fontSize:'clamp(1.2rem, 3vw, 2.8rem)', color:'rgb(6, 232, 240)',  textShadow:'2px 2px 2px #333', zIndex:'2',
+          }}>
+            CHOOSE YOUR CHARACTER
+            </div>
 
        
 

@@ -4742,8 +4742,13 @@ height:100vh;
 .frontbg iframe{
   /* filter:brightness(0.3)contrast(4.4)hue-rotate(117deg)saturate(9.9);  */
   /* filter:brightness(0.9) hue-rotate(17deg); */
-  filter:brightness(1.2)contrast(2.4)hue-rotate(0deg)saturate(1.6); 
+  filter:brightness(1.2)contrast(2.4)hue-rotate(0deg)saturate(); 
   opacity: .4 ;
+}
+
+.frontbg2 iframe{
+  filter:brightness(1.2)contrast(1)hue-rotate(0deg)saturate();
+  opacity: .6 ;
 }
 
 
@@ -4766,9 +4771,8 @@ height:100vh;
 }
 
 
-.frontbg .video-background {
+/* .frontbg .video-background {
   position: relative;
-    /* padding-bottom: 56.25%;  */
     width: 100% !important; 
     left: inherit !important;
 }
@@ -4777,7 +4781,7 @@ height:100vh;
   background-size:100% !important;
   background-position: 50% 0 !important;
   background-color:transparent !important;
-}
+} */
 
 
 @media (max-width: 48rem) {

@@ -4,7 +4,7 @@ title: Meet Quorra
 slug: /meet-quorra
 date: 2021-09-01 01:23
 description: Meet Quorra
-youtuber: "https://youtu.be/CvyuuTc8F2o"
+youtuber: "CvyuuTc8F2o"
 youtuber2: ""
 youtubeshoworiginal: "1"
 youtubersuggestion1: "https://youtu.be/ErvxEjDUO4s"
@@ -15,6 +15,7 @@ youtubeend: "120"
 youtubemute: "0"
 audiostart: ""
 audioend: ""
+youtubeloop: "1"
 youtubecontrols: "0"
 youtubeautostart: "1"
 isnftforsale: ""

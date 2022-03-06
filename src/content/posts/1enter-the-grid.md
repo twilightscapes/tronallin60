@@ -3,18 +3,19 @@ template: blog-post
 title: Enter The Grid
 slug: /enter-the-grid
 date: 2021-01-03 01:23
-description: Kevin describes the Grid.
-youtuber: "https://youtu.be/nJ38P5elTkg"
-youtuber2: "S5S6s5dZXNM"
+description: Kevin Flynn describes the Grid.
+youtuber: "nJ38P5elTkg"
+youtuber2: ""
 youtubeshoworiginal: "1"
-youtubersuggestion1: "https://youtu.be/ErvxEjDUO4s"
-youtubersuggestion2: "https://youtu.be/UfWnQuAxa5Y"
-youtubersuggestion3: "https://youtu.be/LE5m5aawuao"
+youtubersuggestion1: ""
+youtubersuggestion2: ""
+youtubersuggestion3: ""
 youtubestart: "5"
 youtubeend: "41"
 youtubemute: "0"
-audiostart: "5"
-audioend: "41"
+audiostart: ""
+audioend: ""
+youtubeloop: "1"
 youtubecontrols: "0"
 youtubeautostart: "1"
 isnftforsale: ""
