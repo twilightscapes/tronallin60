@@ -350,11 +350,11 @@ function Sirens() {
   return (
   
 <CustomBox style={{}}>
-<Layout>
+{/* <Layout> */}
 {/* GRID INTRO */}
 
 <div id="" className="wrap-element tronpanel" style={{position:'absolute', top:'0', zIndex:'2', overflow:'', height:'100vh', width:'100vw'}}>
-<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'8vw', position:'absolute', top:'0', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:'0'}}>
+<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'5vw', position:'absolute', top:'1vh', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:'5'}}>
         <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>THE SIRENS</div>
       </h1>
 
@@ -401,7 +401,7 @@ function Sirens() {
             pip={pip}
             playing={playing}
             controls={controls}
-            light={light}
+            light={false}
             loop={loop}
             playbackRate={playbackRate}
             volume={volume}
@@ -496,7 +496,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
       <div style={{border:'0px red', display:'block', width:'100vw', height:'100vh', position:'absolute', zIndex:'1', bottom:'0', left:'', background:'transparent', display:'grid', placeContent:'center'}}>
 
 
-      <div style={{display:'', justifyContent:'', color:'#ccc', position:'relative', bottom:'-45vh',}}><a href="/proceed-to-games/" title="go back"><button className=" " style={{display:'flex', justifyContent:'center'}}>Go Back</button></a></div>
+      <div style={{display:'', justifyContent:'', color:'#ccc', position:'relative', bottom:'-40vh',}}><a href="/proceed-to-games/" title="go back"><button className=" " style={{display:'flex', justifyContent:'center'}}>Go Back</button></a></div>
       </div>
 
 
@@ -550,7 +550,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 
 
 
-</Layout>
+{/* </Layout> */}
 </CustomBox>
   );
 }

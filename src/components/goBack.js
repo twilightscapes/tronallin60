@@ -20,7 +20,7 @@ const GoBack = () => (
 
 
 
-<div style={{display:'flex', justifyContent:'center', color:'#ccc'}}><button className="back button" onClick={() => { navigate(-1) }} style={{display:'flex', justifyContent:'center'}}><span className="icon -left" style={{paddingRight:'1rem'}}><BiLeftArrow /></span> {" "}Go Back</button></div>
+<button className="actionJackson " onClick={() => { navigate(-1) }} style={{display:'flex', justifyContent:'center', width:'30vw', alignContent:'center', margin:'0 auto'}}><span className="icon -left" style={{paddingRight:'1rem'}}><BiLeftArrow /></span> {" "}Go Back</button>
 
 
 

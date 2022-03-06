@@ -43,8 +43,7 @@ const Contact = ({ data }) => {
 
 
 
-      <div className="wrapper fluff">
-        <br /><br />
+      <div className="wrapper fluff" style={{}}>
         <h1 style={{fontSize:'130%'}}>{frontmatter.title}</h1>
         <div
           className="description"
@@ -52,10 +51,11 @@ const Contact = ({ data }) => {
         />
         </div>
 
-        <div className="wrapper">
+        <div className="wrapper" style={{width:'80%', maxWidth:'900px', padding:'0 3%'}}>
         <form
           className="contact-form"
           action="/thanks"
+          state={{modal: true}}
           name="contact"
           method="POST"
           data-netlify="true"
@@ -64,27 +64,27 @@ const Contact = ({ data }) => {
           <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>
-              <input type="text" name="name" placeholder="Name" required />
+              <input type="text" name="name" placeholder="Name" required style={{  background:'rgba(0,0,0,0.50)', outline:'1px solid #06f8f8', color:'#ccc'}}/>
             </label>
           </p>
           <p>
             <label>
-              <input type="email" name="email" placeholder="your@email.com" required />
+              <input type="email" name="email" placeholder="your@email.com" required style={{  background:'rgba(0,0,0,0.50)', outline:'1px solid #06f8f8', color:'#ccc'}} />
             </label>
           </p>
           <p>
             <label>
-              <input type="text" name="subject" placeholder="Subject" required />
+              <input type="text" name="subject" placeholder="Subject" required style={{  background:'rgba(0,0,0,0.50)', outline:'1px solid #06f8f8', color:'#ccc'}} />
             </label>
           </p>
           <p>
             <label>
-              <textarea name="message" placeholder="Your Message" required></textarea>
+              <textarea name="message" placeholder="Your Message" required style={{  background:'rgba(0,0,0,0.50)', outline:'1px solid #06f8f8', color:'#ccc'}}></textarea>
             </label>
           </p>
-          <p className="text-align-right" style={{marginRight:'60px', color:'#fff'}}>
+          <div className="" style={{textAlign:'center', color:'#fff', display:'flex', justifyContent:'center'}}>
             <button
-              className="button"
+              className="actionJackson"
               
               type="submit"
             >
@@ -93,7 +93,7 @@ const Contact = ({ data }) => {
                 <RiSendPlane2Line />
               </span>
             </button>
-          </p>
+          </div>
         </form>
       </div>
       <br />

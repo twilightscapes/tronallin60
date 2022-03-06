@@ -623,16 +623,19 @@ const svgUrl = frontmatter.svgImage.publicURL
 {/* <div className='player-wrapper intro' style={{position:'relative', bottom:'0', zIndex:'', height:'100vh', maxHeight:'', overflow:'', filter: 'drop-shadow(0 0 20px #000)',  }}> */}
 
 
-<div className="contact" style={{position:'fixed', bottom:'0', zIndex:'1',  left:'0', right:'', display:'block', justifyContent:'center', width:'550px', height:'60px', margin:'0 auto', background:'#111', opacity:'.5', borderRadius:'0 12px 0 0'  }}></div>
 
 
 
-<div className="contact" style={{position:'fixed', bottom:'20px', zIndex:'1',  left:'20px', right:'', display:'flex', justifyContent:'center', width:'500px', margin:'0 auto', gap:'30px'}}>
+
+<div className="contact" style={{position:'fixed', bottom:'0', zIndex:'1',  left:'0', right:'', display:'flex', justifyContent:'center', alignItems:'center', width:'500px', height:'60px', margin:'0 auto', gap:'30px', background:'rgba(0,0,0,0.30)', borderRadius:'0 12px 0 0'}}>
+
+
+<label id="menuicon1" htmlFor="openSidebarMenu" className="sidebarIconToggle1" style={{textDecoration:'underline', color:'#fff'}}>site menu</label>
 
   <Link state={{modal: true}}  to="/contact/" className=" " style={{margin:'', textDecoration:''}}>contact</Link>
 
   <Link to="#original" style={{border:'0px solid', }}>
-  credits &amp; legal
+  credits
         </Link>
 
         {ShareThis ? (
@@ -644,7 +647,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 )}
 
 {Comments ? (
-          <Link to="#comments" style={{}}>
+          <Link to="#comments">
   comments
         </Link>
        
@@ -653,11 +656,7 @@ const svgUrl = frontmatter.svgImage.publicURL
           )}
 
 
-<label id="menuicon1" htmlFor="openSidebarMenu" className="sidebarIconToggle1" style={{textDecoration:'underline'}}>
 
-site menu
-
-  </label>
 
 
 </div>
@@ -909,12 +908,12 @@ site menu
 
 
 
-<div id="original" style={{height:'100vh', marginTop:'100vh'}}>
+<div id="original" style={{height:'100vh', marginTop:'100vh',  background:'rgba(0,0,0,0.30)', display:'grid', placeContent:'center'}}>
 
   
 
       {ShowOriginal ? (
-          <div style={{position:'relative', width:'100%', maxWidth:'800px', margin:'0 auto', textAlign:'center', display:'flex', flexDirection:'column', fontSize:'100%', borderRadius:'12px' }}>
+          <div style={{position:'relative', width:'100%', maxWidth:'800px', margin:'0 auto', textAlign:'center', display:'flex', flexDirection:'column', fontSize:'100%', border:'1px solid #333', borderRadius:'12px' }}>
 <div style={{maxWidth:'90vw', width:'100%', height:'440px', maxHeight:'40vh', padding:'0', position:'relative', bottom:'0', textAlign:'center', border:'0px solid blue', margin:'0 auto', borderRadius:'12px'}}>
   
                     <Iframer2 />
@@ -929,7 +928,7 @@ site menu
           <br />
 
 
-          <div style={{textAlign: 'center', margin: '2rem 10px 1rem 10px', justifyContent: 'center', fontSize: '.95rem', textDecoration:'none'}}>
+          <div style={{textAlign: 'center', margin: '2rem 10px 1rem 10px', justifyContent: 'center', fontSize: '.95rem', textDecoration:'none',}}>
             Legal:<br />
             <Link to="/disclaimer/">Disclaimer</Link>  |  <Link to="/privacy/">Privacy Policy</Link>  |  <Link to="/terms/">Terms of Service</Link></div>
 
@@ -951,7 +950,7 @@ site menu
 
 {ShareThis ? (
 
-<div id="sharethis" style={{height:'100vh', display:'block', width:'80%', padding:'0', margin:'0 auto'}}>
+<div id="sharethis" style={{height:'100vh', marginTop:'100vh',  background:'rgba(0,0,0,0.30)', display:'grid', placeContent:'center'}}>
 
   <br />
 <ShareSocial />
@@ -992,9 +991,8 @@ site menu
 
       {Comments ? (
 
-<div id="comments" style={{height:'100vh', display:'block', width:'80%', padding:'0', margin:'0 auto'}}>
-  <GoBack />
-  <br />
+<div id="comments" style={{height:'100vh', marginTop:'100vh',  background:'rgba(0,0,0,0.30)', display:'grid', placeContent:'center'}}>
+
 <CommentBox />
 <br />
 <GoBack />
@@ -1052,6 +1050,8 @@ site menu
    
    <br />
    <GoBack />
+   <br />
+   <br />
    <br />
    <br />
    </CustomBox>

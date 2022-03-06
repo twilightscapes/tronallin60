@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 // import { graphql } from "gatsby"
 // import { GatsbyImage } from 'gatsby-plugin-image'
 // import TwilightLogo from "../../static/assets/logo.svg"
-// import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { useSiteMetadata } from "../../hooks/use-site-metadata"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import ReactPlayer from 'react-player/lazy'
@@ -82,57 +82,34 @@ function Marv() {
   return (
   
 <CustomBox style={{}}>
-<Layout>
+{/* <Layout> */}
 {/* GRID INTRO */}
 
-<div id="" className="wrap-element tronpanel" style={{position:'absolute', top:'0', zIndex:'2', overflow:'', height:'100vh', width:'100vw'}}>
-<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'8vw', position:'absolute', top:'0', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:'0'}}>
+<div id="" className="wrap-element tronpanel1" style={{position:'relative', top:'0', zIndex:'2', overflow:'', height:'100vh', width:'100vw'}}>
+
+<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'5vw', position:'absolute', top:'2vh', marginTop:'', width:'100%', padding:'0 0', opacity:'1', zIndex:'5'}}>
         <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>ENCOM OS 12</div>
+        
       </h1>
 
-{/* <header className="wrapper" style={{textAlign:'center', position:'relative', zIndex:'0'}}>
-        <br /> <br />
+      
+      
+      <div style={{width:'100vw', height:'100vh', position:'absolute', top:'', zIndex:'', border:'0px solid yellow'}}><StaticImage src="../../../static/assets/os12-desktop.jpg" alt="OS 12" /></div>
 
-    
-    <SorryFolks style={{maxWidth:'90vw', maxHeight:'55vh', display:'grid', placeContents:'center'}}/>
-        <h1 className="TRON tronText neonText" style={{fontSize:'180%', lineHeight:'23vh',}}>This attraction is <div style={{color:'red', paddingTop:'2rem', fontSize:'150%', fontFamily:'san serit !important'}}>closed</div><br /> <div style={{marginTop:'0rem'}}>for maintenance.</div></h1>
-        <p className="tronText" style={{fontSize:'150%', padding:'2rem'}}>
-          Please check back soon!
-        </p>
-      </header> */}
-
-      {/* <div style={{display:'flex', justifyContent:'center', width:'100%', marginTop:'2rem', gap:'2rem'}}>
-        <Link to="/" className="actionJackson">
-        <RiArrowLeftSLine className="icon -left" />
-        Back to Homepage
-      </Link>
-      <Link to="/contact" className="actionJackson">
-        Report this <RiBugLine className="icon -right" />
-      </Link></div> */}
-
-   
+{/* <div className="wrap-element" style={{overflow:'hidden', position:'relative', top:'0', zIndex:'3'}}> */}
 
 
-
-{/* Panel Video */}
-{/* <div className="vidbox" style={{position:'absolute', height:'100vh', width:'100vw', bottom:'0', zIndex:''}}>
-<div className="video-background">
-<div className="video-foreground"> */}
-{/* c_V1iD6F1kk */}
-{/* nJ38P5elTkg */}
-{/* <div id="homestart" style={{position:'absolute', top:'-100vh'}}></div> */}
-
-<div className="wrap-element" style={{overflow:'hidden', position:'relative', top:'0'}}>
 
 
 <ReactPlayer
+          style={{opacity:'.4', display:'' }}
          className=''
          url="https://www.youtube.com/embed/s0fpz3DkCT4"
          width="100%"
          height="100vh"
          playing={playing}
             controls={controls}
-            light={light}
+            light={false}
             loop={loop}
             muted={muted}
             config={{
@@ -159,7 +136,7 @@ function Marv() {
     {/* <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} /> */}
             </div>
             </button>}
-         light="../assets/transparent.png"
+        //  light="../assets/transparent.png"
           />
 
 
@@ -200,7 +177,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 <div style={{border:'0px red', display:'block', width:'100vw', height:'100vh', position:'absolute', zIndex:'1', bottom:'0', left:'', background:'transparent', display:'grid', placeContent:'center'}}>
 
 
-      <div style={{display:'', justifyContent:'', color:'#ccc', position:'relative', bottom:'-45vh',}}><a href="/encom-os-12-download/" title="go back"><button className="" style={{display:'flex', justifyContent:'center'}}>Go Back</button></a></div>
+      <div style={{display:'', justifyContent:'', color:'#ccc', position:'relative', bottom:'-40vh',}}><a href="/encom-os-12-download/" title="go back"><button className="" style={{display:'flex', justifyContent:'center'}}>Go Back</button></a></div>
       </div>
 
 
@@ -210,7 +187,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 
 
 
-      </div>
+  
 
      
     
@@ -254,7 +231,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 
 
 
-</Layout>
+{/* </Layout> */}
 </CustomBox>
   );
 }
