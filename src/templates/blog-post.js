@@ -627,7 +627,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-<div className="contact" style={{position:'fixed', bottom:'0', zIndex:'1',  left:'0', right:'', display:'flex', justifyContent:'center', alignItems:'center', width:'500px', height:'60px', margin:'0 auto', gap:'30px', background:'rgba(0,0,0,0.30)', borderRadius:'0 12px 0 0'}}>
+<div className="contact" style={{position:'fixed', bottom:'0', zIndex:'1',  left:'0', right:'', display:'flex', justifyContent:'center', alignItems:'center', width:'500px', height:'60px', margin:'0 auto', gap:'10px', background:'rgba(0,0,0,0.30)', borderRadius:'0 12px 0 0'}}>
 
 
 <label id="menuicon1" htmlFor="openSidebarMenu" className="sidebarIconToggle1" style={{textDecoration:'underline', color:'#fff'}}>site menu</label>
