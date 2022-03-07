@@ -4,7 +4,7 @@ title: Please exit through Gift Shop
 slug: /giftshop
 date: 2021-12-01 01:23
 description: Please exit through Gift Shop
-youtuber: "1kIihY252eE"
+youtuber: "5jlOX5z7yVo"
 youtuber2: ""
 youtubeshoworiginal: ""
 youtubersuggestion1: "https://youtu.be/S5S6s5dZXNM"
@@ -24,7 +24,7 @@ comments: ""
 shareable: ""
 underlayImage: /assets/transparent.png
 featuredImage: /assets/giftshop.jpg
-svgImage: /assets/transcendence.svg
+svgImage: /assets/mcp.svg
 nftlink: ""
 nftdrop: ""
 nftredeem: ""
@@ -73,11 +73,11 @@ nftredeem: ""
 
 
 
-<!-- <object style="width:100%; height:100vh; position:absolute; top:0; right:0;" class="character" id="svg1" data="/assets/mcp.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object> -->
+<!-- <object style="width:100%; height:100vh; position:absolute; top:0; right:0;" class="character" id="svg1" data="/assets/mcp.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
 
 
 
-<object style="width:100vw; height:100vh; position:absolute; top:0; right:0; left:0;" class=" " id="svg1" data="/assets/transcendence.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
+<object style="width:100vw; height:100vh; position:absolute; top:0; right:0; left:0;" class="character evil" id="svg1" data="/assets/mcp-effects.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object> -->
 
 
 
