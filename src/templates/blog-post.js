@@ -668,21 +668,18 @@ const svgUrl = frontmatter.svgImage.publicURL
 <div className="contact actionJackson" style={{position:'fixed', bottom:'0', zIndex:'1', left:'0', right:'', display:'flex', justifyContent:'center', alignItems:'center', width:'', height:'60px', margin:'0 auto', padding:'0 1rem', gap:'20px', background:'rgba(0,0,0,0.30)', borderRadius:'0 12px 0 0', fontSize:'.8rem'}}>
 
 
-<label id="menuicon1" htmlFor="openSidebarMenu" className="sidebarIconToggle1" style={{textDecoration:'underline', color:'#fff'}}>menu</label>
+<label id="menuicon1" htmlFor="openSidebarMenu" className="sidebarIconToggle1" style={{textDecoration:'2px underline #07f8f8', color:'#fff'}}>menu</label>
 
-  <Link state={{modal: true}}  to="/contact/" className=" " style={{margin:'', textDecoration:''}}>contact</Link>
 
-  <Link to="#original" style={{border:'0px solid', }}>
-  credits
-        </Link>
-
-        {ShareThis ? (
+{ShareThis ? (
 <Link to="#sharethis" style={{}}>
   share
         </Link>
  ) : (
   ""
 )}
+
+
 
 {Comments ? (
           <Link to="#comments">
@@ -694,6 +691,14 @@ const svgUrl = frontmatter.svgImage.publicURL
           )}
 
 
+
+<Link to="#original" style={{border:'0px solid', }}>
+  credits
+        </Link>
+
+
+
+<Link state={{modal: true}}  to="/contact/" className=" " style={{margin:'', textDecoration:''}}>contact</Link>
 
 
 

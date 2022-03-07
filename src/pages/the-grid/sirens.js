@@ -30,7 +30,7 @@ import screenful from "screenfull";
 // import McpEffects from "../../static/assets/mcp-effects.svg"
 // import QuoraStand from "../../static/assets/quora-ass.png"
 // import KevinFlynn from "../../static/assets/kevin-flynn.png"
-// import TronChick from "../../static/assets/tron-chick1.svg"
+import TronChick from "../../../static/assets/tron-chick1.svg"
 import { ImPlay } from "react-icons/im"
 import SorryFolks from "../../../static/assets/sorry-folks-moose.svg"
 import { RiArrowLeftSLine, RiBugLine } from "react-icons/ri"
@@ -491,6 +491,21 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 
 
  
+
+<div style={{position:'absolute', bottom:'0', left:'0', zIndex:'1', maxWidth:'30vw', height:'50vh',}}>
+
+
+
+
+<object style={{height:'100%', bottom:'0', transform:'scaleX(-1)'}} class="" id="svg1" data="/assets/tron-chick1.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
+
+
+
+
+
+</div>
+
+
 
     
       <div style={{border:'0px red', display:'block', width:'100vw', height:'100vh', position:'absolute', zIndex:'1', bottom:'0', left:'', background:'transparent', display:'grid', placeContent:'center'}}>
