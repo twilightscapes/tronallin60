@@ -4,15 +4,15 @@ title: Commercial Interuption
 slug: /commercial-interruption
 date: 2021-05-02 01:23
 description: Please visit our sponsors
-youtuber: "iHxmNzMfDj4"
+youtuber: "3JPPFG-Np4M"
 youtuber2: ""
 youtubeshoworiginal: ""
 youtubersuggestion1: "https://youtu.be/S5S6s5dZXNM"
 youtubersuggestion2: "https://youtu.be/UfWnQuAxa5Y"
 youtubersuggestion3: "https://youtu.be/LE5m5aawuao"
-youtubestart: ""
-youtubeend: ""
-youtubemute: "1"
+youtubestart: "16"
+youtubeend: "41"
+youtubemute: "0"
 audiostart: ""
 audioend: ""
 youtubeloop: "1"
@@ -22,9 +22,9 @@ isnftforsale: "1"
 svgzindex: "0"
 comments: "1"
 shareable: "1"
-underlayImage: /assets/swd-foreground.png
-featuredImage: /assets/commercial-interruption.jpg
-svgImage: /assets/campfire.svg
+underlayImage: /assets/transparent.png
+featuredImage: /assets/commercial-interuption.jpg
+svgImage: /assets/nebula.svg
 nftlink: ""
 nftdrop: ""
 nftredeem: ""
@@ -77,7 +77,7 @@ nftredeem: ""
 
 
 
-<object style="width:; height:100vh; position:absolute; top:; right:; left:; bottom:0; aspect-ratio: 16 / 9 !important;" class=" " id="svg1" data="/assets/skydiamonds.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
+<object style="width:100vw; height:100vh; position:absolute; top:0; right:; left:;" class=" " id="svg1" data="/assets/nebula.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
 
 
 
