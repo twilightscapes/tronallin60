@@ -55,7 +55,7 @@ nftredeem: ""
 
 
 <!-- <a href="/the-grid/sirens/" style="position:absolute; top:0; right:0; display:block; width:40%; height:100%; right:0; z-index:1; border:0px solid green; background:;"> -->
-<object title="Gem - the leader of the Sirens" style="height:100vh;" class="character" id="svg1" data="/assets/tron-chick1.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
+<object style="height:100vh;" class="" id="svg1" data="/assets/tron-chick1.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
 <!-- </a> -->
 
 
