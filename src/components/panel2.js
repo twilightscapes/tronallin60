@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player/lazy'
 import { ImPlay } from "react-icons/im"
 import LightCycle from "../../static/assets/light-cycle.svg"
 import { StaticImage } from "gatsby-plugin-image"
-import Controls from "../components/Controls";
+import Controls from "./Controls";
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 import styled from "styled-components"
 const CustomBox = styled.div`
