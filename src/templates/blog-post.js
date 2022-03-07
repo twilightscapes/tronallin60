@@ -65,6 +65,20 @@ const CustomBox = styled.div`
   // .sidebarIconToggle{bottom:40% !important;}
 
 
+
+  #vert {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    height:100vh;
+  }
+  #vert section {
+    height:100vh;
+    scroll-snap-align: center;
+    overflow:hidden;
+    background:tranparent !important;
+  }
+
+
 }
 
 
@@ -75,7 +89,7 @@ const CustomBox = styled.div`
 
 
 const Pagination = props => (
-  <div className="pagination -post1" style={{}}>
+  <div className="pagination -post1" style={{position:'fixed', bottom:'0'}}>
     <ul className="" style={{}}>
       {props.previous && props.previous.frontmatter.template === "blog-post" && (
         // <li style={{border:'1px solid', borderRadius:'12px', filter:'drop-shadow(0 0px 6px rgba(0, 0, 0, 1))'}}>
@@ -710,10 +724,10 @@ const svgUrl = frontmatter.svgImage.publicURL
         
 
 
+<div id="vert">
 
 
-
-<div className="wrap-element" style={{overflow:'hidden', height:'75vh', positon:'relative', top:'0'}}>
+<div className="wrap-element" style={{overflow:'hidden', height:'100vh', positon:'absolutr', top:'0'}}>
 
 {/* {Image ? (
             <GatsbyImage
@@ -965,7 +979,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-<div id="original" style={{height:'100vh', marginTop:'100vh',  background:'rgba(0,0,0,0.30)', display:'grid', placeContent:'center'}}>
+<section id="original" style={{height:'100vh', marginTop:'100vh',  background:'rgba(0,0,0,0.30)', display:'grid', placeContent:'center'}}>
 
   
 
@@ -991,7 +1005,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 <br />
   <GoBack />
-</div>
+</section>
 
 
 
@@ -1007,7 +1021,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 {ShareThis ? (
 
-<div id="sharethis" style={{height:'100vh', marginTop:'100vh',  background:'rgba(0,0,0,0.30)', display:'grid', placeContent:'center'}}>
+<section id="sharethis" style={{height:'100vh', marginTop:'',  background:'rgba(0,0,0,0.30)', display:'grid', placeContent:'center'}}>
 
   <br />
 <ShareSocial />
@@ -1017,7 +1031,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-</div>
+</section>
           ) : (
             ""
           )}
@@ -1048,13 +1062,13 @@ const svgUrl = frontmatter.svgImage.publicURL
 
       {Comments ? (
 
-<div id="comments" style={{height:'100vh', marginTop:'100vh',  background:'rgba(0,0,0,0.30)', display:'grid', placeContent:'center'}}>
+<section id="comments" style={{height:'100vh', marginTop:'',  background:'rgba(0,0,0,0.30)', display:'grid', placeContent:'center'}}>
 
 <CommentBox />
 <br />
 <GoBack />
 
-</div>
+</section>
           ) : (
             ""
           )}
@@ -1105,12 +1119,18 @@ const svgUrl = frontmatter.svgImage.publicURL
       
 
    
-   <br />
+   {/* <br />
    <GoBack />
    <br />
    <br />
    <br />
-   <br />
+   <br /> */}
+
+
+   </div>
+
+
+
    </CustomBox>
    {/* <Footer /> */}
     </Layout>
