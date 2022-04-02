@@ -4,7 +4,7 @@ title: End of Line Club
 slug: /end-of-line-club
 date: 2021-09-11 01:23
 description: Meet Quorra
-youtuber: "sqJdG95juso"
+youtuber: "https://youtu.be/SA8bdV8CJNQ"
 youtuber2: ""
 youtubeshoworiginal: "1"
 youtubersuggestion1: "SA8bdV8CJNQ"
@@ -53,9 +53,9 @@ nftredeem: ""
 
 
 
- <!-- <div style="position:absolute; bottom:0; left:0; border:0px solid; z-index:; width:100vw; height:100%; background:; overflow:hidden;">
+ <div style="position:absolute; bottom:0; left:0; border:0px solid; z-index:; width:100vw; height:100%; background:; overflow:hidden;">
 <object style="width:100%; height:60%; position:absolute; bottom:0; right:30vw;" class="character evil" id="svg1" data="/assets/castor.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
-</div> -->
+</div>
 
  
 

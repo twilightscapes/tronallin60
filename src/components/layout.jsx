@@ -4,8 +4,8 @@ import * as React from "react"
 // import { Footer } from "./footer"
 import { Seo } from "./seo"
 import { Link } from 'gatsby-plugin-modal-routing-3'
-// import { ModalRoutingContext } from 'gatsby-plugin-modal-routing-3'
-// import { AiOutlineClose } from "react-icons/ai"
+import { ModalRoutingContext } from 'gatsby-plugin-modal-routing-3'
+import { AiOutlineClose } from "react-icons/ai"
 // import { FaHandPointDown } from "react-icons/fa"
 // import TwilightLogo from "../../static/assets/TSidebarHover.svg"
 import { StoreContext } from "../context/store-context"
@@ -44,6 +44,31 @@ export function Layout({ children }) {
 <>
       <Seo />
       {/* <SkipNavLink /> */}
+
+
+
+      <ModalRoutingContext.Consumer closeTimeoutMS={300} >
+{({ modal, closeTo }) => (
+<div style={{overflow:''}}>
+  {modal ? (
+    <>
+    <div style={{display:'', position:'fixed', top:'10%', right:'3%', padding:'0px', fontSize:'2rem', background:'#111 !important', opacity:'1 !important', zIndex:'55 !important', filter:' drop-shadow(0px 4px 3px #000)', color:'#fff'}}>
+    <Link state={{noScroll: true }} to={closeTo} style={{fontSize:'2rem',  textDecoration:'none', lineHeight:'', display:'flex', flexDirection:'column', color:'#fff', cursor:'pointer'}}>
+      <AiOutlineClose />
+      {/* <span className="TRON">[</span> */}
+      
+      {/* <span className="" style={{fontSize:'70%', textAlign:'center'}}>home</span> */}
+    </Link>
+    </div>
+    </>
+  ) : (
+''
+  )}
+
+</div>
+)}
+</ModalRoutingContext.Consumer>
+
 
 
 
@@ -215,8 +240,8 @@ Contact Me<span>Ordering Questions?</span>
 
 
 
-<div style={{background:'rgba(0,0,0,0.50)'}}>
-<li className="carto" style={{textAlign:'', color:'#777', cursor:''}}>
+<div style={{background:'rgba(0,0,0,0.20)'}}>
+<li className="carto" style={{textAlign:'', color:'#777', cursor:'', background:'rgba(0,0,0,0.40)'}}>
               <Link className="navbar-item txtshadow" to="/enter-the-grid/">
               Enter the Grid
               </Link>
@@ -259,7 +284,7 @@ Contact Me<span>Ordering Questions?</span>
               End of the Grid
               </Link>
       </li>
-</div>
+
 
 
 
@@ -278,12 +303,12 @@ Contact Me<span>Ordering Questions?</span>
       </li> */}
 
 
-<li className="carto" style={{textAlign:'center'}}>
+<li className="carto" style={{textAlign:'center', background:'rgba(0,0,0,0.20)'}}>
               <Link className="navbar-item txtshadow" to="/about/">
               About This Site
               </Link>
       </li> 
-      
+      </div>
     
       <li className="carta">
       <div style={{display:'flex', justifyContent:'center'}}>

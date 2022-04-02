@@ -2,10 +2,6 @@ import * as React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useLocation } from "@reach/router"
-import { Link } from 'gatsby-plugin-modal-routing-3'
-import { AiOutlineClose } from "react-icons/ai"
-
-import { ModalRoutingContext } from 'gatsby-plugin-modal-routing-3'
 
 export function Seo({
   title = "",
@@ -53,8 +49,6 @@ export function Seo({
 
 
   return (
-
-    <>
     <Helmet
       title={title}
       defaultTitle={titleDefault}
@@ -62,6 +56,7 @@ export function Seo({
     >
       <html lang="en" />
       <meta name="description" content={seo.description} />
+      <meta name="robots" content="noindex,nofollow" />
       <meta name="image" content={seo.image} />
       <meta property="og:title" content={seo.title} />
       <meta property="og:url" content={seo.url} />
@@ -81,18 +76,18 @@ export function Seo({
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href="/assets/favicon-32x32.png"
+        href="/icons/manifest-icon-192.png"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="16x16"
-        href="/assets/favicon-16x16.png"
+        href="/icons/manifest-192x192.png"
       />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/assets/apple-touch-icon.png"
+        href="/icons/manifest-192x192.png"
       />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/siteimages/apple-splashapple-icon-180.png" />
@@ -169,47 +164,5 @@ export function Seo({
     
       {children}
     </Helmet>
-
-<ModalRoutingContext.Consumer>
-{({ modal, closeTo }) => (
-  <div style={{overflow:'hidden'}}>
-    {modal ? (
-      <>
-
-
-{/*  */}
-
- 
-<div style={{position:'fixed', top:'60px', right:'5vw', padding:'10px', fontSize:'40px', background:'#111 !important', opacity:'1 !important', zIndex:'3',  filter:' drop-shadow(0px 4px 3px #000)',}}>
-          <Link state={{noScroll: true }} to={closeTo}>
-            <AiOutlineClose />
-          </Link>
-          </div>
-      
-      {/* <div style={{ flexDirection:'', color:'#ccc', position:'fixed', bottom:'30px', zIndex:'1', display:'flex', justifyContent:'center', width:'', textAlign:'center'}}>
-        <button className="" style={{display:'',}}>
-        <Link to="#pagecontent" style={{border:'0px solid', }}>
-          View More
-      
-        <div style={{fontSize:'50px', height:'20px', width:'20px', overflow:'hidden', border:'1px solid yellow'}}>&#812;todd</div>
-        </Link>
- 
-        
-
-        </button>
-      </div> */}
-
-    
-      {/* </div> */}
-      </>
-    ) : (
-''
-    )}
-
-  </div>
-)}
-</ModalRoutingContext.Consumer>
-
-</>
   )
 }

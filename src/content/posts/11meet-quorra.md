@@ -4,7 +4,7 @@ title: Meet Quorra
 slug: /meet-quorra
 date: 2021-09-01 01:23
 description: Meet Quorra
-youtuber: "sqJdG95juso"
+youtuber: "https://youtu.be/CvyuuTc8F2o"
 youtuber2: ""
 youtubeshoworiginal: "1"
 youtubersuggestion1: "CvyuuTc8F2o"
@@ -29,7 +29,7 @@ nftlink: ""
 nftdrop: ""
 nftredeem: ""
 ---
-<!-- <div style="position:relative; top:0; z-index:0; border:px solid blue; height:100vh; width:100vw; overflow:hidden; display:flex; ">
+<div style="position:relative; top:0; z-index:0; border:px solid blue; height:100vh; width:100vw; overflow:hidden; display:flex; ">
 
 
 <div class="" style="position:relative; z-index:0; min-width:; height:100%; padding:4vh 1rem 1rem 3rem; font-size:clamp(.7rem, 3vw, 3.2rem); left:0;, top:4vh; line-height:100%; text-shadow:0 2px 7px #000; background:rgba(0,0,0,0.50); border-radius:12px; border:0px solid yellow;">
@@ -58,7 +58,7 @@ nftredeem: ""
 
 
 </div> -->
-<!-- end -->
+<!-- end
 
 
 

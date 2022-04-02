@@ -4,7 +4,7 @@ title: End Of The Grid
 slug: /end-of-the-grid
 date: 2021-11-11 01:23
 description: The end of the Grid
-youtuber: "sqJdG95juso"
+youtuber: "https://youtu.be/J-FkR8L2X5E"
 youtuber2: ""
 youtubeshoworiginal: "1"
 youtubersuggestion1: "J-FkR8L2X5E"
@@ -59,11 +59,11 @@ nftredeem: ""
 
 
 
-<!-- <object style="width:100%; height:100vh; position:absolute; top:0; right:0;" class="character" id="svg1" data="/assets/mcp.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
+<object style="width:100%; height:100vh; position:absolute; top:0; right:0;" class="character" id="svg1" data="/assets/mcp.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
 
 
 
-<object style="width:100vw; height:100vh; position:absolute; top:0; right:0; left:0;" class="character evil" id="svg1" data="/assets/mcp-effects.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object> -->
+<object style="width:100vw; height:100vh; position:absolute; top:0; right:0; left:0;" class="character evil" id="svg1" data="/assets/mcp-effects.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
 
 
 

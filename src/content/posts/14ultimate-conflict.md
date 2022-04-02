@@ -4,7 +4,7 @@ title: Ultimate Conflict
 slug: /ultimate-conflict
 date: 2021-10-11 01:23
 description: The Ultimate Conflict
-youtuber: "sqJdG95juso"
+youtuber: "https://youtu.be/JoX0bNYg1Wc"
 youtuber2: ""
 youtubeshoworiginal: "1"
 youtubersuggestion1: "JoX0bNYg1Wc"
@@ -48,7 +48,7 @@ nftredeem: ""
 
 
 
-<!-- <div class="" style="position:relative; z-index:0; width:80vw; margin:0 auto; height:100%;  font-size:clamp(.7rem, 2vw, 1.2rem); left:;, top:4vh; line-height:100%; text-shadow:0 2px 7px #000; background:rgba(0,0,0,0.20); border-radius:12px; border:0px solid yellow; text-align:center;">
+<div class="" style="position:relative; z-index:0; width:80vw; margin:0 auto; height:100%;  font-size:clamp(.7rem, 2vw, 1.2rem); left:;, top:4vh; line-height:100%; text-shadow:0 2px 7px #000; background:rgba(0,0,0,0.20); border-radius:12px; border:0px solid yellow; text-align:center;">
 
 <blockquote class="tronText" style="line-height:150%; margin:2rem auto 0 auto; width:80%;">
 <p>You promised that we would
@@ -62,7 +62,7 @@ change the world, together.</p>
 <p class="TRON" style="font-size:60%;">I created the <span class="neonText">perfect system!</span></p>
 <br /><br />
 </blockquote>
-</div> -->
+</div>
 
 
 
@@ -77,12 +77,12 @@ change the world, together.</p>
 
 
 
- <!-- <div style="position:absolute; bottom:0; right:0; border:0px solid; z-index:; width:50%; height:100%; background:; overflow:hidden;">
-<img style="width:; height:90%; position:absolute; bottom:0; right:0;" class="character" src="/assets/kevin-flynn.png" alt="animated content" title="animated content" />
+ <div style="position:absolute; bottom:0; right:0; border:0px solid; z-index:; width:50%; height:100%; background:; overflow:hidden;">
+<img style="width:; max-height:90%; position:absolute; bottom:0; right:0;" class="character" src="/assets/kevin-flynn.png" alt="animated content" title="animated content" />
 </div>
 
  
  <div style="position:absolute; bottom:0; left:0; border:0px solid; z-index:; width:50%; height:100%; background:; overflow:hidden;">
-<img style="width:; height:90%; position:absolute; bottom:0; left:0;" class="character evil" src="/assets/clu.png" alt="animated content" title="animated content" />
-</div> -->
+<img style="width:; max-height:90%; position:absolute; bottom:0; left:0;" class="character evil" src="/assets/clu.png" alt="animated content" title="animated content" />
+</div>
 <!-- XjuLZwlDxh8 -->
