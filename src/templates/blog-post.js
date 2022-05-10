@@ -805,7 +805,7 @@ Click to play original video
       <Link to="/disclaimer/" style={{color:'inherit'}}>Disclaimer</Link>  |  <Link style={{color:'inherit'}} to="/privacy/">Privacy Policy</Link>  |  <Link style={{color:'inherit'}} to="/terms/">Terms of Service</Link></div>
 
 <br />
-<GoBack />
+{/* <GoBack /> */}
 </section>
 
 
@@ -827,7 +827,7 @@ Click to play original video
   <br />
 <ShareSocial />
 <br />
-<GoBack />
+{/* <GoBack /> */}
 
 
 
@@ -867,7 +867,7 @@ Click to play original video
 
 <CommentBox />
 <br />
-<GoBack />
+{/* <GoBack /> */}
 
 </section>
           ) : (
