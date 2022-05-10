@@ -34,12 +34,11 @@ nftredeem: ""
 
 <div class="" style="position:relative; z-index:0; min-width:; height:100%; padding:4vh 1rem 1rem 3rem; font-size:clamp(.7rem, 3vw, 3.2rem); left:0;, top:4vh; line-height:100%; text-shadow:0 2px 7px #000; background:rgba(0,0,0,0.50); border-radius:12px; border:0px solid yellow;">
   <p>Quorra is the last of the ISOs.</p>
-  <p>Oten referred to by Kevin Flynn as "The Miracle"</p>
+  <p>Often referred to by Kevin Flynn as "The Miracle"</p>
   <p>Quorra's favorite author is Jules Verne.</p>
   <br />
   <p>She is willing to be self-sacrificing</p>
   <p>"Removing herself from the equation", she protects those who are important.</p>
-  <p>subject to immediate de-resolution.</p>
   <br />
   <p>"His patience usually beats out my more... aggressive strategy."</p>
   <br />
