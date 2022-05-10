@@ -194,13 +194,13 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
         style={{position:'', right:'', height:'100vh'}}
        >
           
-          <Link to="/enter-the-grid/" style={{color:'#37f8f8',  height:'100vh', width:'100vw', display:'grid', placeContent:'center', border:'0px solid yellow', position:'relative', top:'100vh'}}>
+          {/* <Link to="/enter-the-grid/" style={{color:'#37f8f8',  height:'100vh', width:'100vw', display:'grid', placeContent:'center', border:'0px solid yellow', position:'relative', top:'100vh'}}>
             <div className="" style={{
           display:'flex', justifyContent:'center', marginTop:'150px', zIndex:'', filter:'drop-shadow(2px 2px 2px #000)', width:'100%',  padding:'5% 1rem', borderRadius:'200px', border:'3px dotted #666', lineHeight:'200%', fontSize:'clamp(2rem, 4vw, 3.6rem)', background:'radial-gradient(circle, rgba(10, 45, 48, 0.4) 17%, rgba(25, 96, 109, 0.4) 58%, rgba(10, 196, 206, 0.5) 97%)', textShadow:'2px 2px 2px #333'
           }}>
             Enter The Grid
             </div>
-          </Link>
+          </Link> */}
           
           </button>
         
