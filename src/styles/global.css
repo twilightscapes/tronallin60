@@ -4236,7 +4236,16 @@ height:100vh;
                              width: calc(40vw + 1px) !important;
                            transform: rotate(-90deg) translateY(-40vw) !important;
                            }
+
+
+                           .controlsbox{bottom:15vh !important;}
+
+
                          }
+
+
+
+
 /* HORIZONTAL PANELS */
 
            

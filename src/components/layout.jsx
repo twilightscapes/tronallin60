@@ -253,34 +253,34 @@ Contact Me<span>Ordering Questions?</span>
               </Link>
       </li> */}
 
-      <li className="carto" style={{textAlign:'', color:'#777', cursor:'none', pointerEvents:'none'}}>
-              <Link className="navbar-item txtshadow" to="/lightdisc-grid/" style={{color:'#555',}}>
+      <li className="carto" style={{textAlign:''}}>
+              <Link className="navbar-item txtshadow" to="/lightdisc-grid/" style={{color:'',}}>
               LightDisc Grid
               </Link>
       </li>
 
-      <li className="carto" style={{textAlign:'', color:'#777', cursor:'none', pointerEvents:'none'}}>
-              <Link className="navbar-item txtshadow" to="/lightcycle-grid/" style={{color:'#555'}}>
+      <li className="carto" style={{textAlign:''}}>
+              <Link className="navbar-item txtshadow" to="/lightcycle-grid/" style={{color:''}}>
               LightCycle Grid
               </Link>
       </li>
 
 
-      <li className="carto" style={{textAlign:'', color:'#777', cursor:'none', pointerEvents:'none'}}>
-              <Link className="navbar-item txtshadow" to="/end-of-line-club/" style={{color:'#555'}}>
+      <li className="carto" style={{textAlign:''}}>
+              <Link className="navbar-item txtshadow" to="/end-of-line-club/" style={{color:''}}>
               End of Line Club
               </Link>
       </li>
 
-      <li className="carto" style={{textAlign:'', color:'#777', cursor:'none', pointerEvents:'none'}}>
-              <Link className="navbar-item txtshadow" to="/return-to-the-source/" style={{color:'#555'}}>
+      <li className="carto" style={{textAlign:''}}>
+              <Link className="navbar-item txtshadow" to="/return-to-the-source/" style={{color:''}}>
               Return to the Source
               </Link>
       </li>
 
 
-      <li className="carto" style={{textAlign:'', color:'#777', cursor:'none', pointerEvents:'none'}}>
-              <Link className="navbar-item txtshadow" to="/end-of-the-grid/" style={{color:'#555'}}>
+      <li className="carto" style={{textAlign:''}}>
+              <Link className="navbar-item txtshadow" to="/end-of-the-grid/" style={{color:''}}>
               End of the Grid
               </Link>
       </li>
