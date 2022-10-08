@@ -4,15 +4,15 @@ title: Enter The Grid
 slug: /enter-the-grid
 date: 2021-01-03 01:23
 description: Kevin Flynn describes the Grid.
-youtuber: "nJ38P5elTkg"
+youtuber: "CKygRPp5-v0"
 youtuber2: ""
 youtubeshoworiginal: "1"
 youtubersuggestion1: ""
 youtubersuggestion2: ""
 youtubersuggestion3: ""
-youtubestart: "5"
+youtubestart: "105"
 youtubeend: "41"
-youtubemute: "0"
+youtubemute: "1"
 audiostart: ""
 audioend: ""
 youtubeloop: "1"

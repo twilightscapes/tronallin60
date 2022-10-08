@@ -34,7 +34,7 @@ export function ProductListing({ products }) {
   fontSize:'clamp(1rem, 2vw, 3rem)'
   
   }}>
-Thank you for visiting. If you enjoyed this, please support the artist by viewing/buying one of his photos or DONATE HERE. </div>
+Thank you for visiting. If you enjoyed this, please support the artist by viewing/buying one of his photos. </div>
 
 
 
