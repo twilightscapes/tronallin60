@@ -76,7 +76,7 @@ export function Layout({ children }) {
   position:'fixed', 
   zIndex:'10',
   top:'10px',
-  right:'10px',
+  left:'10px',
   width:'',
 fontSize:'1rem',
 border:'0px solid'
