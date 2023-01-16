@@ -4238,7 +4238,7 @@ height:100vh;
                            }
 
 
-                           .controlsbox{bottom:15vh !important;}
+                           .controlsbox{bottom:10vh !important;}
 
 
                          }
@@ -5022,8 +5022,8 @@ position:relative;
 border:2px solid;
 display:grid;
 place-content:center;
-width:66px;
-height:66px;
+width:46px;
+height:46px;
 font-weight:bold;
 padding:2px;
 /* color:rgb(2, 221, 250); */
@@ -5033,7 +5033,7 @@ border-radius:50%;
 cursor:pointer;          
 }
 .hudicon{
-  font-size: 60px;
+  font-size: 40px;
   position:fixed;
   
 }
