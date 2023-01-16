@@ -2355,8 +2355,8 @@ filter: drop-shadow(1px 1px 10px var(--primary));
 
 @media (max-width: 48rem) {
   .sidebarIconToggle, .toastWrapper {
-  top: 2vh;
-  right: 1vw;
+  top: 2vh !important;
+  right: 1vw !important;
   }
   }
 
