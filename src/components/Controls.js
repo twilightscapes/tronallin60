@@ -174,7 +174,7 @@ const Controls = forwardRef(
       
 
 
-      <div ref={ref} className="controlsbox" style={{width:'', height:'', border:'0px solid red', display:'flex', justifyContent:'center', bottom:'2px', position:'absolute', right:'2vw', zIndex:'55', gap:'20px'}}>
+      <div ref={ref} className="controlsbox" style={{width:'', height:'', border:'0px solid red', display:'flex', justifyContent:'center', bottom:'20vh', position:'absolute', right:'2vw', zIndex:'55', gap:'20px'}}>
 
       {/* <div className="contact" style={{position:'', bottom:'', zIndex:'',  left:'0', right:'0', display:'flex', justifyContent:'center', width:'200px', margin:'0 auto'}}>
   <Link state={{modal: true}}  to="/contact/" className="navbar-item  button fire" style={{margin:'', textDecoration:'none'}}>Contact Me</Link>
@@ -216,9 +216,9 @@ const Controls = forwardRef(
                   {muted ? (
                     <MdVolumeOff className="hudicon" fontSize="large" style={{}}  />
                   ) : volume > 0.5 ? (
-                    <MdVolumeUp className="hudicon" fontSize="large" style={{}}  />
-                  ) : (
                     <MdVolumeOff className="hudicon" fontSize="large" style={{}}  />
+                  ) : (
+                    <MdVolumeUp className="hudicon" fontSize="large" style={{}}  />
                   )}
                 </div>
 
