@@ -207,17 +207,17 @@ const Controls = forwardRef(
 
                 <div
                   // onClick={() => setState({ ...state, muted: !state.muted })}
-                  onClick={muted}
+                  onClick={onMute}
                   className="controls actionJackson"
                   style={{}}
                 >
 
       {muted ? (
-<MdVolumeOff className="hudicon" fontSize="large" style={{}}  />
-        ) : volume > 0.5 ? (
-<MdVolumeUp className="hudicon" fontSize="large" style={{}}  />
-        ) : (
 <MdVolumeDown className="hudicon" fontSize="large" style={{}}  />
+        ) : volume > 0.5 ? (
+<MdVolumeOff className="hudicon" fontSize="large" style={{}}  />
+        ) : (
+<MdVolumeUp className="hudicon" fontSize="large" style={{}}  />
         )}
 
                 </div>
