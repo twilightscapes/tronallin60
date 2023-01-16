@@ -194,7 +194,7 @@ function Sirens() {
     controls: true,
     light: false,
 
-    muted: false,
+    muted: true,
     played: 0,
     duration: 0,
     playbackRate: 1.0,
