@@ -152,7 +152,7 @@ border:'0px solid'
 
 
 
-//   <Install />
+
 
 
 
@@ -230,14 +230,14 @@ Contact Me<span>Ordering Questions?</span>
 
       
 
+{/*
+      <li className="carto" style={{textAlign:'center'}}>
+              <Link className="navbar-item txtshadow" to="/minutes/" style={{color:'#02e9fa'}}>
+              View Latest Minutes
+              </Link>
+      </li>
 
-//       <li className="carto" style={{textAlign:'center'}}>
-//               <Link className="navbar-item txtshadow" to="/minutes/" style={{color:'#02e9fa'}}>
-//               View Latest Minutes
-//               </Link>
-//       </li>
-
-
+ */}
 
 
 <div style={{background:'rgba(0,0,0,0.20)'}}>
@@ -354,7 +354,7 @@ Contact Me<span>Ordering Questions?</span>
 
 
 
-
+ {/*
       <Toast show={loading || didJustAddToCart} >
         {!didJustAddToCart ? (
           "Updating…"
@@ -365,7 +365,7 @@ Contact Me<span>Ordering Questions?</span>
           </>
         )}
       </Toast>
- 
+  */}
 
 
 
