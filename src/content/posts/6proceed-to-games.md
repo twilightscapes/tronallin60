@@ -12,7 +12,7 @@ youtubersuggestion2: ""
 youtubersuggestion3: ""
 youtubestart: "40"
 youtubeend: "140"
-youtubemute: "1"
+youtubemute: "0"
 audiostart: ""
 audioend: ""
 youtubecontrols: "0"
@@ -32,7 +32,7 @@ nftredeem: ""
 <div style="position:relative; top:0; z-index:0; border:px solid blue; height:100vh; width:100vw; overflow:hidden; display:flex; ">
 
 
-<div class="" style="position:relative; z-index:0; min-width:; height:100%; padding:4vh 1rem 1rem 3rem; font-size:clamp(.7rem, 3vw, 3.2rem); left:0;, top:4vh; line-height:100%; text-shadow:0 2px 7px #000; background:rgba(0,0,0,0.50); border-radius:12px; border:0px solid yellow;">
+<div class="" style="position:relative; z-index:0; min-width:; height:100%; padding:4vh 1rem 1rem 3rem; font-size:clamp(.7rem, 2.3vw, 3rem); left:0;, top:14vh; line-height:100%; text-shadow:0 2px 7px #000; background:rgba(0,0,0,0.50); border-radius:12px; border:0px solid yellow;">
   <p>You will receive an identity disk.</p>
   <p>Everything you do or learn</p>
   <p>will be imprinted on this disk.</p>
@@ -50,7 +50,7 @@ nftredeem: ""
 
 
 
-<div style="position:relative; top:0; right:10vw; border:0px solid; z-index:1; max-width:30vw; height:100vh; background:;">
+<div style="position:relative; top:0; right:20vw; border:0px solid; z-index:1; max-width:30vw; height:100vh; background:;">
 
 
 
