@@ -32,7 +32,7 @@ nftredeem: ""
 <div style="position:relative; top:0; z-index:0; border:px solid blue; height:100vh; width:100vw; overflow:hidden; display:flex; justify-content:space-between; ">
 
 
-<div class="" style="position:relative; z-index:0; min-width:; height:100%; padding:14vh 1rem 1rem 3rem; font-size:clamp(.7rem, 2.3vw, 3rem); left:0;, top:4vh; line-height:100%; text-shadow:0 2px 7px #000; background:rgba(0,0,0,0.50); border-radius:12px; border:0px solid yellow;">
+<div class="" style="position:relative; z-index:0; min-width:50vw; height:100%; padding:14vh 1rem 1rem 3rem; font-size:clamp(.7rem, 2.3vw, 3rem); left:0;, top:4vh; line-height:100%; text-shadow:0 2px 7px #000; background:rgba(0,0,0,0.50); border-radius:12px; border:0px solid yellow;">
   <p>You will receive an identity disk.</p>
   <p>Everything you do or learn</p>
   <p>will be imprinted on this disk.</p>
