@@ -16,75 +16,7 @@ import { Link } from "gatsby"
 
 
 
-// const useStyles = makeStyles((theme) => ({
-//   controlsWrapper: {
-//     visibility: "",
-//     position: "absolute",
-//     top: 0,
-//     left: 0,
-//     right: 0,
-//     bottom: 0,
-//     height: "100%",
-//     // background: "rgba(0,0,0,0.6)",
-//     display: "flex",
-//     flexDirection: "column",
-//     justifyContent: "space-between",
-//   },
 
-//   button: {
-//     margin: theme.spacing(1),
-//   },
-//   controlIcons: {
-//     color: "#777",
-
-//     fontSize: 50,
-//     transform: "scale(0.9)",
-//     "&:hover": {
-//       color: "#fff",
-//       transform: "scale(1)",
-//     },
-//   },
-
-//   bottomIcons: {
-//     color: "#999",
-//     "&:hover": {
-//       color: "#fff",
-//     },
-//   },
-
-//   volumeSlider: {
-//     width: 100,
-//   },
-// }));
-
-// const PrettoSlider = withStyles({
-//   root: {
-//     height: 8,
-//   },
-//   thumb: {
-//     height: 24,
-//     width: 24,
-//     backgroundColor: "#fff",
-//     border: "2px solid currentColor",
-//     marginTop: -8,
-//     marginLeft: -12,
-//     "&:focus, &:hover, &$active": {
-//       boxShadow: "inherit",
-//     },
-//   },
-//   active: {},
-//   valueLabel: {
-//     left: "calc(-50% + 4px)",
-//   },
-//   track: {
-//     height: 8,
-//     borderRadius: 4,
-//   },
-//   rail: {
-//     height: 8,
-//     borderRadius: 4,
-//   },
-// })(Slider);
 
 function ValueLabelComponent(props) {
   const { children, open, value } = props;
@@ -174,7 +106,7 @@ const Controls = forwardRef(
       
 
 
-      <div ref={ref} className="controlsbox" style={{width:'', height:'', border:'0px solid red', display:'flex', justifyContent:'center', bottom:'150px', position:'fixed', right:'2vw', zIndex:'55', gap:'20px'}}>
+      <div ref={ref} className="controlsbox" style={{width:'', height:'', border:'0px solid red', display:'flex', justifyContent:'center', bottom:'20px', position:'fixed', right:'30px', zIndex:'55', gap:'20px'}}>
 
       {/* <div className="contact" style={{position:'', bottom:'', zIndex:'',  left:'0', right:'0', display:'flex', justifyContent:'center', width:'200px', margin:'0 auto'}}>
   <Link state={{modal: true}}  to="/contact/" className="navbar-item  button fire" style={{margin:'', textDecoration:'none'}}>Contact Me</Link>
