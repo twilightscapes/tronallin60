@@ -207,7 +207,7 @@ const Controls = forwardRef(
 
                 <div
                   // onClick={() => setState({ ...state, muted: !state.muted })}
-                  onClick={onMute}
+                  onClick={muted}
                   className="controls actionJackson"
                   style={{
 
