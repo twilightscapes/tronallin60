@@ -2355,8 +2355,8 @@ filter: drop-shadow(1px 1px 10px var(--primary));
 
 @media (max-width: 48rem) {
   .sidebarIconToggle, .toastWrapper {
-  bottom: 30vh;
-  right: 0;
+  top: 2vh;
+  right: 1vw;
   }
   }
 
@@ -5034,7 +5034,7 @@ cursor:pointer;
 }
 .hudicon{
   font-size: 60px;
-  position:absolute;
+  position:fixed;
   
 }
 
@@ -5074,10 +5074,10 @@ cursor:pointer;
     border:0px solid red;
   } */
   .pagination{position:absolute; top:75vh;}
-	  .hudicon{
+  .hudicon{
     font-size: 30px;
   }
-	.controls{height:36px; width:36px;}
+  .controls{height:36px; width:36px;}
 }
 
 /* @media (min-width: 1300px) {
