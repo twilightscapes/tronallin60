@@ -5077,6 +5077,7 @@ cursor:pointer;
 	  .hudicon{
     font-size: 30px;
   }
+	.controls{height:36px; width:36px;}
 }
 
 /* @media (min-width: 1300px) {
