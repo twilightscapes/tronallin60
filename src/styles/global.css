@@ -2331,8 +2331,8 @@ input[type=checkbox] {
   cursor: pointer;
   position: fixed;
   z-index: 3;
-  bottom: 35%;
-  right: 2%;
+  /* bottom: 35%;
+  right: 2%; */
   /* height: 100px;
   width: 100px; */
   color: #999;
@@ -2353,12 +2353,12 @@ filter: drop-shadow(1px 1px 10px var(--primary));
   text-shadow:1px 1px 0px #000;
 }
 
-@media (max-width: 48rem) {
+/* @media (max-width: 48rem) { */
   .sidebarIconToggle, .toastWrapper {
-  top: 2vh !important;
+  top: 4vh !important;
   right: 1vw !important;
   }
-  }
+  /* } */
 
 
 
@@ -2369,12 +2369,12 @@ filter: drop-shadow(1px 1px 10px var(--primary));
   }
   } */
 
-  @media (min-width: 1300px) {
+  /* @media (min-width: 1300px) {
     .sidebarIconToggle {
       top: 45%;
       right: 2%;
     }
-    }
+    } */
 
 
     /* body.blogpost .sidebarIconToggle{display: none;} */
