@@ -5073,7 +5073,7 @@ cursor:pointer;
     top:0 !important;
     border:0px solid red;
   } */
-  .pagination{position:absolute; top:75vh;}
+  .pagination{position:absolute; top:70vh;}
   .hudicon{
     font-size: 30px;
   }
