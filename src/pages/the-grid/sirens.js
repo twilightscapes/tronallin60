@@ -414,7 +414,7 @@ function Sirens() {
                 },
               },
               youtube: {
-                playerVars: { showinfo:0, autoplay:1, controls:0, mute:0, start:20, end:120, loop:1  }
+                playerVars: { showinfo:0, autoplay:1, controls:0, mute:1, start:20, end:120, loop:1  }
               },
             }}
             playsinline
