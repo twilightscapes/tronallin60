@@ -5074,6 +5074,9 @@ cursor:pointer;
     border:0px solid red;
   } */
   .pagination{position:absolute; top:75vh;}
+	  .hudicon{
+    font-size: 30px;
+  }
 }
 
 /* @media (min-width: 1300px) {
