@@ -213,11 +213,11 @@ const Controls = forwardRef(
                 >
 
       {muted ? (
-<MdVolumeUp className="hudicon" fontSize="large" style={{}}  />
+<MdVolumeOff className="hudicon" fontSize="large" style={{}}  />
         ) : volume > 0.5 ? (
 <MdVolumeUp className="hudicon" fontSize="large" style={{}}  />
         ) : (
-<MdVolumeOff className="hudicon" fontSize="large" style={{}}  />
+<MdVolumeDown className="hudicon" fontSize="large" style={{}}  />
         )}
 
                 </div>
