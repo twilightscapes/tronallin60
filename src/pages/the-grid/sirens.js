@@ -350,7 +350,7 @@ function Sirens() {
   return (
   
 <CustomBox style={{}}>
-{/* <Layout> */}
+<Layout>
 {/* GRID INTRO */}
 
 <div id="" className="wrap-element tronpanel" style={{position:'absolute', top:'0', zIndex:'2', overflow:'', height:'100vh', width:'100vw'}}>
@@ -565,7 +565,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 
 
 
-{/* </Layout> */}
+</Layout>
 </CustomBox>
   );
 }
